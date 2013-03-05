@@ -1,0 +1,109 @@
+
+\usepackage{ifthen}
+\date{\today}
+
+\chead{Antoine de \bsc{Roquemaurel} --- Clément \bsc{Vannier}}
+\rhead{TP\no\numTD}
+\lhead{\titre}
+%\makeindex
+
+\lfoot{Université Paul Sabatier Toulouse III}
+\rfoot{\sigle\semestre}
+%\rfoot{}
+\cfoot{--~~\thepage~~--}
+
+\makeglossary
+\makeatletter
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+
+\def\haut#1#2#3{%
+	\hbox to \hsize{%
+		\rlap{\vtop{\raggedright #1}
+	}%
+	\hss
+	\clap{\vtop{\centering #2}
+}%
+\hss
+\llap{\vtop{\raggedleft #3}}}}%
+\def\bas#1#2#3{%
+	\hbox to \hsize{%
+		\rlap{\vbox{
+			\raggedright #1
+		}
+	}%
+	\hss \clap{\vbox{\centering #2}}%
+	\hss
+	\llap{\vbox{\raggedleft #3}}}
+}%
+\def\maketitle{%
+	\thispagestyle{empty}{%
+		\haut{}{\@blurb}{}
+		%	
+		%\vfill
+
+		\begin{center}
+			\vspace{-2.0cm}
+			\usefont{OT1}{ptm}{m}{n}
+			\huge \@numeroTD \@title
+		\end{center}
+		\par
+		\hrule height 1pt
+		\par
+		\vspace{1cm}
+		\bas{}{}{}
+}%
+}
+\def\date#1{\def\@date{#1}}
+\def\author#1{\def\@author{#1}}
+\def\numeroTD#1{\def\@numeroTD{#1}}
+\def\title#1{\def\@title{#1}}
+\def\location#1{\def\@location{#1}}
+\def\blurb#1{\def\@blurb{#1}}
+\date{\today}
+\newboolean{monBool}
+\setboolean{monBool}{true}
+\author{}
+\title{}
+\ifthenelse{\equal{\numTD}{}}{
+\numeroTD{}
+}
+{
+	\numeroTD{TD \no\numTD~--- }
+}
+\location{Amiens}\blurb{}
+%\makeatother
+\title{\titre}
+\author{%Semestre \semestre
+}
+
+\location{Toulouse}
+\blurb{%
+\vspace{-35px}
+\begin{flushleft}
+	Université Paul Sabatier -- Toulouse III\\
+	IUT A - Toulouse Rangueil\\
+\end{flushleft}
+\begin{flushright}
+	\vspace{-45px}
+	\Large \textbf \module \\
+	\normalsize \textit \today\\
+	Semestre \semestre
+	\vspace{30px}
+\end{flushright}
+Antoine de \bsc{Roquemaurel} et Clément \bsc{Vannier}
+}%
+
+
+
+%\title{Cours \\ \titre}
+%\date{\today\\ Semestre \semestre}
+
+%\lhead{Cours: \titre}
+%\chead{}
+%\rhead{\thepage}
+
+%\lfoot{Université Paul Sabatier Toulouse III}
+%\cfoot{\thepage}
+%\rfoot{\sigle\semestre}
+
+\pagestyle{fancy}

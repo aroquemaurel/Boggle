@@ -1,0 +1,20 @@
+\definecolor{exemple}{HTML}{dde5ed}
+\definecolor{remarque}{HTML}{dde5ed}
+\newcommand{\exemple}[1]{
+	\begin{center}
+	\medskip
+	\colorbox{exemple}{
+	\begin{minipage}{0.8\textwidth}\textbf{Ex }\medskip#1 \medskip\end{minipage}
+	}
+	\medskip
+	\end{center}
+}
+\newcommand{\remarque}[1]{
+	\begin{center}
+	\medskip
+	\colorbox{remarque}{
+		\begin{minipage}{0.8\textwidth}\medskip\includegraphics[height=10px]{images/remarque.png} #1 \medskip\end{minipage}
+	}
+	\medskip
+	\end{center}
+}

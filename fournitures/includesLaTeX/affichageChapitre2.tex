@@ -1,0 +1,44 @@
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+
+\newlength{\sectiontitleindent}
+\newlength{\subsectiontitleindent}
+\newlength{\subsubsectiontitleindent}
+\setlength{\sectiontitleindent}{-1cm}
+\setlength{\subsectiontitleindent}{-.5cm}
+\setlength{\subsubsectiontitleindent}{-.25cm}
+
+\renewcommand{\section}{%
+	\@startsection%
+	{section}%
+	{1}%
+	{\sectiontitleindent}%
+	{-3.5ex plus -1ex minus -.2ex}%
+	{2.3ex plus.2ex}%
+	{\sectionfont\Large}
+}
+\renewcommand{\subsection}{%
+	\@startsection%
+	{subsection}%
+	{2}%
+	{\subsectiontitleindent}%
+	{-3.5ex plus -1ex minus -.2ex}%
+	{2.3ex plus.2ex}%
+	{\sectionfont\large}
+}
+
+\renewcommand{\subsubsection}{%
+	\@startsection%
+	{subsubsection}%
+	{3}%
+	{\subsubsectiontitleindent}%
+	{-3.5ex plus -1ex minus -.2ex}%
+	{2.3ex plus.2ex}%
+	{\sectionfont\normalsize}
+}
+
+\makeatother
+
+\newcommand{\lien}[1]{
+ $\vartriangleright$ \url{#1}
+ }
