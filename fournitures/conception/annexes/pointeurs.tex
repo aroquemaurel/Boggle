@@ -1,0 +1,106 @@
+\chapter{Cours sur les pointeurs en C}\label{pointeurs}
+Déjà vu par le passages de paramètres, nous allons donc ici commencer par un rappel, et nous verrons l'allocation dynamique de mémoire.
+\section{Syntaxe}
+	\subsection{Déclaration}
+\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Syntaxe de déclaration d'un pointeur]
+typePointé* nomPointeur
+\end{lstlisting}
+\lstinputlisting[caption=Exemple de déclaration, numbers=none,language=C]{annexes/ptr1.c}
+	\subsection{Utilisation}
+\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Syntaxe utilisation d'un pointeur]
+nomPointeur // manipule l'adresse
+*nomPointeur //manipule la zone pointée
+\end{lstlisting}
+\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Exemple d'utilisation d'un pointeur]
+pe=&n; //opérateur d'adressage
+\end{lstlisting}
+
+\subsection{Constante}
+	\texttt{NULL} représente une adresse inexistante.
+	\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Exemple d'utilisation de la constante \texttt{NULL}]
+pe = NULL;
+*pe; // Erreur à l'exécution
+	\end{lstlisting}
+
+\section{Opérateur autorisés sur les pointeurs}
+\subsection{L'affectation}
+\begin{verbatim}
+nomPointeur =  expression correspondant à une adresse ou à NULL
+\end{verbatim}
+
+\subsection{Addition et la soustraction entre un pointeur et un entier}
+\begin{verbatim}
+nomPointeur = nomPointeur + 10; 
+nomPointeur = nomPointeur - 15; 
+\end{verbatim}
+On obtient une expression correspondant à une adresse
+\begin{verbatim}
+pe = pe+10; //pe contient l'adresse du 10e entier après la valeu initalie de pe.
+\end{verbatim}
+\attention{À utiliser que si pe pointe sur un tableau}
+
+\subsection{Soustraction de deux pointeurs}
+Renvoi un entier donnant le nombre d'éléments pointés entre les deux pointeurs
+\attention{Uniquement si les deux pointeurs sont sur le même tableau}
+
+\subsection{Comparaison sur des pointeurs}
+Ce sont les opérateurs de comparaison classique : \texttt{= =} et \texttt{!=}
+
+\subsection{Allocation dynamique de mémoire}
+\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Syntaxe d'allocation dynamique]
+nomPointeur = (typePointeur) malloc(sizeof(typePointé));
+nomPointeur = (typePointé*) malloc(n*sizeof(typePointé));
+\end{lstlisting}
+\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Exemple d'allocation dynamique]
+	int *e;
+	pe = (int*) malloc(sizeof(int));
+\end{lstlisting}
+\begin{enumerate}
+	\item Le programme demande au gestionnaire mémoire à avoir une place de la taille \texttt{sizeof(int)}
+	\item Si la place est disponible retourne l'adresse demandée ou la première case du <<tableau>> dynamique
+	\item Sinon retourne \texttt{NULL}
+\end{enumerate}
+
+\subsection{Libération dynamique de mémoire}
+\begin{lstlisting}[language=C, numbers=none,frame=none, caption=Syntaxe de libération de mémoire]
+free(nomPointeur);
+\end{lstlisting}
+\begin{enumerate}
+	\item Le programme contact le gestionnaire mémoire 
+	\item Le gestionnaire mémoire <<libère>> la place
+\end{enumerate}
+
+Cela veut dire que la place n'est plus réservé au programme, elle pourra être alloué à un autre programme.
+\attention{Le gestionnaire de mémoire ne met pas à jour la case mémoire, celle-ci contient toujours la valeur, si personne ne récupère la case, il sera toujours
+possible d'accéder à la donnée. C'est donc aléatoire, c'est une source d'erreurs.}
+
+\section{Pointeur sur fonction}
+Un pointeur de fonction est un pointeur qui contient l'adresse d'une fonction.
+
+\subsection{Syntaxe}
+\begin{lstlisting}[language=C, numbers=none,caption=Déclaration d'un pointeur de fonction]
+typederetour (*nomPtrFonction)(liteDesParametres type1 p1, type2 p2, type3 p3);
+\end{lstlisting}
+
+\subsection{Utilisation}
+\begin{lstlisting}[language=C, numbers=none,caption=Utilisation d'un pointeur de fonction]
+	nomPtrFonction (liteDesArguments);
+\end{lstlisting}
+\subsection{Exemple}
+\begin{lstlisting}[language=C, numbers=none,caption=Exemple d'utilisation d'un pointeur de fonction]
+	/* Module 1 */
+int fctTest(int(*f)(int), int p) {
+	return f(p);
+}
+	/* Module 2 */
+#include "module1.h"
+int toto(int a) {
+	return a*a;
+}
+int main(void) {
+	int res = fctTest(&toto, 10);
+}
+
+\end{lstlisting}
+
+

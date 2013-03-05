@@ -1,0 +1,270 @@
+\section{Pointeurs}
+\subsection{Exercice 1}
+\lstinputlisting[language=C, caption=Pointeurs -- Exercice 1]{annexes/exercices/pointeurs.c}
+
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{1}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&\\
+	\hline
+	q&\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{2}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&NULL\\
+	\hline
+	q&\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{3}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&NULL\\
+	\hline
+	q&NULL\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{4}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&@1\\
+	\hline
+	q&NULL\\
+	\hline
+	@1&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{5}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&@1\\
+	\hline
+	q&@2\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{6}\\
+	@2&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&@1\\
+	\hline
+	q&@2\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{7}\\
+	@2&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&@1\\
+	\hline
+	q&@2\\
+	\hline
+	@1&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{8}\\
+	@2&10\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&@1\\
+	\hline
+	q&@2\\
+	\hline
+	@1&\\	
+	\hline
+\end{tabular}
+
+\subsection{Exercice 2}
+\lstinputlisting[language=C, caption=Pointeurs -- Exercice 2]{annexes/exercices/pointeurs2.c}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{1}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&\\
+	\hline
+	&\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{2 malloc OK}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p& @1\\
+	\hline
+	&\\
+	\hline
+	@1&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{2 malloc non OK}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&NULL\\
+	\hline
+	&\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{3 malloc OK}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&@1\\
+	\hline
+	&\\
+	\hline
+	@1&10\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}|}
+	\multicolumn{2}{c|}{3 malloc non OK}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	p&NULL\\
+	\hline
+	&\\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\remarque{Dans le du malloc qui ne marche pas, ce que contient la mémoire est inconnu, si on accède à *p nous auron une segmentation fault. Ainsi on
+rajoute un test}
+
+\subsection{Exercice 3}
+\lstinputlisting[language=C, caption=Pointeurs -- Exercice 3]{annexes/exercices/pointeurs3.c}
+\begin{tabular}{c|p{1cm}}
+	\multicolumn{2}{c|}{1}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	c.val &\\
+	\hline
+	c.suiv & \\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}}
+	\multicolumn{2}{c|}{2}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	c.val & 10\\
+	\hline
+	c.suiv & \\
+	\hline
+	&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}}
+	\multicolumn{2}{c|}{3}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	c.val & 10\\
+	\hline
+	c.suiv & @1\\
+	\hline
+	@1&\\	
+	\hline
+\end{tabular}
+\begin{tabular}{c|p{1cm}}
+	\multicolumn{2}{c|}{4}\\
+	&\\
+	\hline
+	&\\	
+	\hline
+	&\\
+	\hline
+	c.val & 10\\
+	\hline
+	c.suiv & @1\\
+	\hline
+	@1&11\\	
+	\hline
+\end{tabular}
+
+\subsection{Exercice 4 -- Même exercice avec une autre valeur}
+\lstinputlisting[language=C, caption=pointeurs -- Exercice 4]{annexes/exercices/pointeurs4.c}

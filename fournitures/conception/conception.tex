@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper,openany]{book}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\input{../includesLaTeX/couleurs.tex}
+
+\usepackage[utf8]{inputenc} \usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[top=1.7cm, bottom=1.7cm, left=1.7cm, right=1.7cm]{geometry}
+\usepackage{verbatim}
+\usepackage[urlbordercolor={1 1 1}, linkbordercolor={1 1 1}, linkcolor=vert1, urlcolor=bleu, colorlinks=true]{hyperref}
+\usepackage{tikz} %Vectoriel
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{multido}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[francais]{minitoc}
+
+\newcommand{\titre}{Dossier de spécifications des besoins logiciels}
+
+\newcommand{\pole}{}
+\newcommand{\sigle}{}
+
+\newcommand{\semestre}{4}
+
+\input{../includesLaTeX/listings.tex}
+\input{../includesLaTeX/l2/docsProjet.tex}
+\input{../includesLaTeX/remarquesExempleAttention.tex}
+\input{../includesLaTeX/polices.tex}
+\input{../includesLaTeX/affichageChapitre.tex}
+\newcommand{\pfp}{\texttt{pfp}}
+
+\newcommand{\ifp}{\texttt{if}}
+\newcommand{\elsep}{\texttt{else}}
+
+\makeatother
+\includeonly {
+}
+\begin{document}
+	\dominitoc
+	\setcounter{tocdepth}{1}
+	\setcounter{secnumdepth}{3}
+	\setcounter{minitocdepth}{1}
+	\maketitle
+	\chapter*{Avant-propos}
+	\tableofcontents
+	\chapter{Description globale}
+	% TODO
+	\section{Environement}
+	\section{Profil des utilisateurs}
+	\chapter{Spécifications générales}
+	% TODO
+	\section{Description des services attendus}
+	\section{Description générale des fonctions}
+	\chapter{Exigences opérationnelles}
+	% TODO
+	\section{Contrainte d'exploitation}
+	\section{Modes de fonctionnement}
+	\section{Capacités}
+	\section{Perormances}
+	\appendix
+	\listoffigures
+\end{document}
+
