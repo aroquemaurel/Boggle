@@ -12,8 +12,8 @@
 \usepackage{listings}
 \usepackage{fancyhdr}
 \usepackage{multido}
-\usepackage{amssymb}
 \usepackage{float}
+\usepackage{amssymb}
 
 \newcommand{\titre}{Dossier de spécifications des besoins logiciels}
 
@@ -48,7 +48,6 @@
 		\subsection{Contexte de l'application}
 		Cette application sera développé par Antoine de \bsc{Roquemaurel} et Fabrice \bsc{Valleix} dans le cadre du projet logiciel du 
 		semestre 4 de la L2 Informatique de l'université Toulouse III -- Paul Sabatier.
-
 	
 	\section{Description globale} 
 	Le logiciel sera un jeu de Boggle$^{\tiny\textregistered}$.
@@ -60,39 +59,65 @@
 	\subsection{Environnement}
 		Le logiciel pourra être utilisé sur un ordinateur classique, sous GNU/Linux, aucun matériel externe ne sera nécessaire au bon fonctionnement du
 		programme, de même le serveur d'interface graphique \texttt{X} ne sera pas utile, en effet le programme fonctionnera en mode texte ou semi graphique.
-
-		Aucun matériel externe ne sera nécessaire.
 	\subsection{Profil des utilisateurs}
-		Le logiciel possédera un unique acteur.
+		Le logiciel possédera un unique profil d'utilisateur.
 		\begin{description}
-			\item[Le joueur] Il veut faire une partie de Boggle, l'ordinateur en génére une puis le joueur cherche des mots pendant 3 minutes en
-				essayant de faire le plus de points possible.
+			\item[Le joueur] Il veut faire une partie de Boggle pour s'amuser ou passer le temps. L'ordinateur génère une grille de Boggle puis le
+				joueur cherche des mots pendant 3 minutes en essayant de faire le plus de points possible. Il peut éventuellement défier un ami afin de
+				savoir lequel des deux obtiendra le plus de points.
 		\end{description}
 
-	\section{Spécifications générales} % TODO
+	\section{Spécifications générales}
 	\subsection{Description des services attendus}
+	Les servies attendus de l'application sont au nombres de deux.
 		\begin{description}
-			\item[Résoudre une grille par l'ordinateur]
-			\item[Générer une grille]
-			\item[Jouer] 
+			\item[Résoudre une grille par l'ordinateur] L'application doit être capable de résoudre une grille de Boggle, ceci peut importe la taille de
+				la grille.
+			\item[Effectuer une partie]  Et enfin, l'utilisateur devra pouvoir effectuer une partie de Boggle.
 		\end{description}
 	\subsection{Description générale des fonctions}
+	Les fonctions sont réparties en deux catégories: celle qui seront utilisés pour la résolution d'une grille et celle indispensable pour effectuer
+	une partie de Boggle.
+	\subsubsection{Effectuer une partie de Boggle}
 		\begin{description}
-			\item[Génration d'une grille] 
-			\item[Lancement d'une partie] 
-			\item[Proposition d'un mot] 
-			\item[Demande d'aide pour une lettre donnée]
-			\item[Affichage de la solution] 
-			\item[Calcul du nombre de points obtenus] 
+				\item[Génération d'une grille] L'application doit pouvoir générer une grille de Boggle, celle-ci devra être adapté à la langue Française, en
+				effet les lettres auront des probabilités d'apparaître en fonction de leur utilisation en Français, ceci afin d'éviter les grilles où
+				l'utilisateur ne peut rien faire.
+				\item[Lancer le compte à rebours] Au départ de la partie, un compte à rebours de trois minutes doit être lancé, à la fin des trois
+					minutes, l'utilisateur ne peut plus proposer de nouveau mot.
+				\item[Proposition d'un mot] L'utilisateur peut proposer un mot, l'ordinateur l'accepte ou le refuse en fonction des critères suivants:
+					\begin{itemize}
+						\item Présent dans la langue Française
+						\item Longueur du mot supérieur ou égal à 3
+						\item Suite de lettre dans la grille
+						\item Mot non déjà utilisé
+					\end{itemize}
+				\item[Calcul du nombre de points obtenus] À la fin d'une partie, l'application doit afficher le nombre de points du joueur, et le
+					nombre de points qu'il aurait pus faire s'il avait découvert l'intégralité des mots présents dans la grille, plus un mot est long
+					plus il rapporte de points. Les points sont calculés ainsi:
+					\begin{itemize}
+						\item 3 et 4 lettres : 1 point
+						\item 5 lettres : 2 points
+						\item 6 lettres : 3 points
+						\item 7 lettres : 5 points
+						\item 8 lettres et plus : 11 points
+					\end{itemize}
 		\end{description}
-		
-		% Générer nouvelle grille
-		% Commencer partie (lancer timer)
-		% Proposer un mot
-			% Accepté ou refusé
-		% Demander de l'aide pour une lettre donnée
-		% Afficher solution
-		% Calculer nombre de points obtenus
+	\subsubsection{Résoudre une grille de Boggle}
+		\begin{description}
+			\item[Résoudre une grille par l'ordinateur] 
+				L'application doit être capable de résoudre une grille de Boggle afin de pouvoir afficher la solution à l'utilisateur une foi qu'il a
+				finis une partie. Pour cela il doit afficher tous les mots qui aurait pus être trouvés.
+			\item[Demande d'aide pour une lettre donnée] Pour une lettre donné, l'application doit afficher la longueur du mot le plus long qui
+				commence par les lettres sélectionnés.
+			\item[Affichage de la solution] 
+				Afin d'afficher la solution l'application utilisera son résolveur. Il résout la grille et afficher ensuite tous les mots qui sont
+				présent dans la grille avec les point correspondants.
+		\end{description}
+		\begin{figure}[H]
+			\includegraphics[width=15cm]{usecase.eps}
+			\caption{Diagramme de cas d'utilisations}
+		\end{figure}
 
 	\section{Exigences opérationnelles} % TODO
 	\subsection{Contrainte d'exploitation}
@@ -103,19 +128,16 @@
 		\item Le mode pseudo graphique
 	\end{itemize}
 	Ces deux modes seront choisis en fonction des arguments du programme, par défaut l'application sera lancée avec le mode pseudo graphique.
-		% Deux modes de fonctionnement : Mode texte ou pseudo-graphique
 	\subsection{Capacités}
 		% 
 	\subsection{Performances}
 		% 
 
 	\section{Scénarii d'utilisations}
-		% Résolver une grille
-			 % Fournir grille
-			 % Si la grille est correct
-				 % Afficher solution
-			 % Sinon exception
 		% Faire une partie (3 minutes)
+			% Demander la taille de la grille
+				% Taille n'est pas bonne
+					% out
 			% Générer grille
 			% lancer timer
 			% Proposer mots
@@ -125,7 +147,5 @@
 			% timer claque
 				% Calculer nombre de point total
 				% Afficher mots manquants
-	\appendix
-	\listoffigures
 \end{document}
 

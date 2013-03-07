@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.3)  5 MAR 2013 18:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.3)  7 MAR 2013 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -780,25 +780,25 @@ Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count133
+\float@exts=\toks31
+\float@box=\box37
+\@float@everytoks=\toks32
+\@floatcapt=\box38
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks31
+\@emptytoks=\toks33
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count133
-\float@exts=\toks32
-\float@box=\box37
-\@float@everytoks=\toks33
-\@floatcapt=\box38
-)
 (../includesLaTeX/listings.tex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -815,15 +815,15 @@ Writing index file specifications.idx
 Writing glossary file specifications.glo 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 94.
+less on input line 95.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 96.
+less on input line 97.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 98.
+less on input line 99.
 
 ) (../includesLaTeX/remarquesExempleAttention.tex)
 (../includesLaTeX/polices.tex
@@ -1021,56 +1021,80 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 54.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 53.
 
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 54.
+LaTeX Warning: Command \textregistered invalid in math mode on input line 53.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 54.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 53.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 53.
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 54.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 53.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 54.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 53.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 54.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 62.
+(Font)              <5> on input line 53.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 61.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3] (./specifications.lof)
-\tf@lof=\write8
-\openout8 = `specifications.lof'.
+) [3]
+Overfull \hbox (2.53769pt too wide) in paragraph at lines 95--98
+[]\T1/lmr/m/n/12 À la fin d'une par-tie, l'ap-pli-ca-tion doit af-fi-cher le no
+mbre
+ []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+[4]
+Package epstopdf Info: Source file: <usecase.eps>
+(epstopdf)                    date: 2013-03-07 17:21:26
+(epstopdf)                    size: 45567 bytes
+(epstopdf)             Output file: <usecase-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-03-07 17:23:39
+(epstopdf)                    size: 20821 bytes
+(epstopdf)             Command: <repstopdf --outfile=usecase-eps-converted-to.p
+df usecase.eps>
+(epstopdf)             \includegraphics on input line 118.
+Package epstopdf Info: Output file is already uptodate.
+ <usecase-eps-converted-to.pdf, id=111, 807.015pt x 314.17375pt>
+File: usecase-eps-converted-to.pdf Graphic file (type pdf)
 
-(./specifications.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+<use usecase-eps-converted-to.pdf>
+Package pdftex.def Info: usecase-eps-converted-to.pdf used on input line 118.
+(pdftex.def)             Requested size: 426.79134pt x 166.15175pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.150 \end{document}
+                     <./usecase-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+ (./specifications.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `specifications.out' has not changed.
 (rerunfilecheck)             Checksum: 82245D375749F682472CD3BB2FEC01F9;1010.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
  ) 
 Here is how much of TeX's memory you used:
- 17110 strings out of 493485
- 290553 string characters out of 3143527
- 387950 words of memory out of 3000000
- 20008 multiletter control sequences out of 15000+200000
- 53300 words of font info for 57 fonts, out of 3000000 for 9000
+ 17121 strings out of 493485
+ 290751 string characters out of 3143527
+ 391961 words of memory out of 3000000
+ 20015 multiletter control sequences out of 15000+200000
+ 54535 words of font info for 58 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,11n,55p,425b,434s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,11n,55p,425b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/typ
@@ -1080,10 +1104,10 @@ ic/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb>
-Output written on specifications.pdf (4 pages, 135955 bytes).
+Output written on specifications.pdf (5 pages, 161155 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
