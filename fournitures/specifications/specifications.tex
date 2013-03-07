@@ -41,16 +41,16 @@
 	\maketitle
 	\tableofcontents
 	\newpage
-	\section{Avant-propos}
+	\section{Introduction}
 		\subsection{But du document}
 	Le but de ce document est de lister toutes les fonctionnalités du futur logiciel et de son contexte d’utilisation (utilisateurs, autres composantes,
 	matériel,  etc.).
 		\subsection{Contexte de l'application}
 		Cette application sera développé par Antoine de \bsc{Roquemaurel} et Fabrice \bsc{Valleix} dans le cadre du projet logiciel du 
-		semestre 4 promotion 2012 -- 2013 de la L2 Informatique de l'université Toulouse III -- Paul Sabatier.
+		4\ieme{} semestre de l'année scolaire 2012--2013 de la L2 Informatique de l'université Toulouse III -- Paul Sabatier.
 	
 	\section{Description globale} 
-	Le logiciel sera un jeu de Boggle$^{\tiny\textregistered}$.
+	Le logiciel sera un jeu de Boggle$^{\tiny\textregistered}$ basé sur un dictionnaire en langue Française.
 
 	Le jeu prend la forme d'une grille carrée, la taille étant donné par l'utilisateur. Dans chaque case de la grille est présente une lettre, au
 	commencement du jeu, un compte à rebours de trois minutes est lancé, durant ces trois minutes le joueur doit chercher le plus de mots pouvant être
@@ -68,7 +68,7 @@
 
 	\section{Spécifications générales}
 	\subsection{Description des services attendus}
-	Les servies attendus de l'application sont au nombres de deux.
+	Les services attendus de l'application sont au nombres de deux.
 		\begin{description}
 			\item[Résoudre une grille par l'ordinateur] L'application doit être capable de résoudre une grille de Boggle, ceci peut importe la taille de
 				la grille.
@@ -79,14 +79,15 @@
 	une partie de Boggle.
 	\subsubsection{Effectuer une partie de Boggle}
 		\begin{description}
-				\item[Génération d'une grille] L'application doit pouvoir générer une grille de Boggle, celle-ci devra être adapté à la langue Française, en
+				\item[Génération d'une grille] L'application doit pouvoir générer une grille de Boggle, celle-ci devra être adaptée à la langue Française, en
 				effet les lettres auront des probabilités d'apparaître en fonction de leur utilisation en Français, ceci afin d'éviter les grilles où
 				l'utilisateur ne peut rien faire.
 				
-				Cette génération se fera en fonction de la taille fournie par l'utilisateur, cette taille doit être comprise entre 2 et 15.
-				\item[Lancer le compte à rebours] Au départ de la partie, un compte à rebours de trois minutes doit être lancé, à la fin des trois
+				Cette génération se fera en fonction de la taille de la grille fournie par l'utilisateur, cette taille doit être comprise entre 2 et 15.
+				\item[Lancer le compte à rebours] Au départ de la partie, un compte à rebours de trois minutes doit être lancé. À la fin des trois
 					minutes, l'utilisateur ne peut plus proposer de nouveau mot.
-				\item[Proposition d'un mot] L'utilisateur peut proposer un mot, l'ordinateur l'accepte ou le refuse en fonction des critères suivants:
+				\item[Proposition d'un mot] L'utilisateur peut proposer un mot, l'ordinateur l'accepte ou le refuse en fonction des critères suivants
+					qui doivent tous être respectés:
 					\begin{itemize}
 						\item Présent dans la langue Française
 						\item Longueur du mot supérieur ou égal à 3
@@ -103,17 +104,17 @@
 						\item 7 lettres : 5 points
 						\item 8 lettres et plus : 11 points
 					\end{itemize}
-				\item[Possibilité de mettre fin au compte à rebours] L'utilisateur à la possibilité s'il le souhaite de terminer la partie avant que le
+				\item[Possibilité de mettre fin au compte à rebours] L'utilisateur à la possibilité de terminer la partie avant que le
 					compte à rebours arrive à zéro. Il peut vouloir mettre fin au compte à rebours parce qu'il pense avoir trouver
 					tous les mots de la grille par exemple.
 		\end{description}
 	\subsubsection{Résoudre une grille de Boggle}
 		\begin{description}
 			\item[Résoudre une grille par l'ordinateur] 
-				L'ordinateur doit pouvoir afficher la solution de la grille, c'est-à-dire une fois la partie finit l'ordinateur affiche tous les mots
-				possibles pour la grille.
+				L'ordinateur doit pouvoir afficher la solution de la grille, c'est-à-dire une fois la partie finie l'ordinateur affiche tous les mots
+				que l'utilisateur n'a pas trouvé.
 			\item[Demande d'aide pour une lettre donnée] Pour une lettre donné, l'application doit afficher la longueur du mot le plus long qui
-				commence par les lettres sélectionnés.
+				commence par les lettres sélectionnées.
 			\item[Affichage de la solution] 
 				Afin d'afficher la solution l'application utilisera son résolveur. Il résout la grille et afficher ensuite tous les mots qui sont
 				présent dans la grille avec les point correspondants.
@@ -125,47 +126,45 @@
 		\end{figure}
 
 	\section{Exigences opérationnelles} 
-	\subsection{Contrainte d'exploitation}
 	\subsection{Modes de fonctionnement}
-	Le logiciel disposera de deux modes de fonctionnement différents :
+	Le logiciel disposera de deux modes de fonctionnements différents :
 	\begin{itemize}
 		\item Le mode texte
 		\item Le mode pseudo graphique
 	\end{itemize}
 	Ces deux modes seront choisis en fonction des arguments du programme, par défaut l'application sera lancée avec le mode pseudo graphique.
 	\subsection{Capacités}
-		% 
+	L'utilisateur doit fournir une taille de grille comprise entre 2 et 15.
 	\subsection{Performances}
-	Le temps de génération d'une grille et l'affichage de la solution seront fonctions de la taille fournie par l'utilisateur. Cependant dans une
-	utilisation normale, l'application ne devra pas mettre plus de 30 secondes à générer la grille et à fournir la solution.
+	Le temps de génération d'une grille et l'affichage de la solution seront fonctions de la taille fournie par l'utilisateur. Cependant dans le pire
+	des cas, l'application ne devra pas mettre plus de 30 secondes à générer la grille et à fournir la solution.
 
 	\section{Scénarios d'utilisations}
 	\subsection{Scénario d'utilisation nominal}
 	Voici un exemple de scénario possible dans son utilisation nominale.
 		\begin{enumerate}
-			\item L'utilisateur fournis la taille de la grille de Boggle
-			\item Le système génère la grille
-			\item Le système lancer un compte à rebours de 3 minutes
-			\item L'utilisateur propose un mot
-			\item Le système accepte le mot
-			\item L'utilisateur propose un mot
-			\item Le système accepte le mot
-			\item L'utilisateur propose un mot
-			\item Le système refuse le mot
-			\item L'utilisateur propose un mot
-			\item Le système refuse un mot
-			\item Le compte à rebours arrive à 0
-			\item Le système affiche le nombre de points obtenus
-			\item Le système affiche la solution
+			\item Le système \textbf{demande la taille} de la grille de Boggle à l'utilisateur
+			\item L'utilisateur \textbf{fournis la taille} de la grille 
+			\item Le système \textbf{génère} la grille
+			\item Le système lance un \textbf{compte à rebours} de 3 minutes
+			\item L'utilisateur \textbf{propose} un mot
+			\item Le système \textbf{accepte} le mot
+			\item L'utilisateur \textbf{propose} un mot
+			\item Le système \textbf{accepte} le mot
+			\item L'utilisateur \textbf{propose} un mot
+			\item Le système \textbf{refuse }le mot
+			\item L'utilisateur \textbf{propose} un mot
+			\item Le système \textbf{refuse} le mot
+			\item Le \textbf{compte à rebours} arrive à 0
+			\item Le système affiche le \textbf{nombre de points} obtenus
+			\item Le système affiche la \textbf{solution}
 		\end{enumerate}
 
-		Un scénario alternatif pourrait apparaître à l'étape 8, l'utilisateur termine la partie, à ce moment là il se retrouverai automatiquement à
+		Un scénario alternatif pourrait apparaître aux étapes 5, 7, 9 et 11 l'utilisateur termine la partie, à ce moment là il se retrouverai automatiquement à
 		l'étape 13.
 	\subsubsection{Scénarios d'erreurs}
-	\begin{itemize}
-		\item À l'étape numéro 1 l'utilisateur fournis un nombre négatif, décimal ou non compris entre 2 et 15, le système affiche un message d'erreur
+		À l'étape numéro 1 si l'utilisateur ne fournis pas un nombre entier compris entre 2 et 15, le système affiche un message d'erreur
 			et relance l'étape numéro 1.
-	\end{itemize}
 	
 \end{document}
 
