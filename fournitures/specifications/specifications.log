@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.3)  7 MAR 2013 19:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.3)  7 MAR 2013 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1053,7 +1053,7 @@ Package epstopdf Info: Source file: <usecase.eps>
 df usecase.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
- <usecase-eps-converted-to.pdf, id=111, 807.015pt x 314.17375pt>
+ <usecase-eps-converted-to.pdf, id=116, 807.015pt x 314.17375pt>
 File: usecase-eps-converted-to.pdf Graphic file (type pdf)
 
 <use usecase-eps-converted-to.pdf>
@@ -1074,7 +1074,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `specifications.out' has not changed.
-(rerunfilecheck)             Checksum: 6289D4FCCDC9EB51EDCE7B4B7F5EDB66;1019.
+(rerunfilecheck)             Checksum: DE48FABBDD088D1A1BC46C90456B0871;1091.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1082,10 +1082,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 17141 strings out of 493485
- 290906 string characters out of 3143527
+ 17142 strings out of 493485
+ 290917 string characters out of 3143527
  391961 words of memory out of 3000000
- 20016 multiletter control sequences out of 15000+200000
+ 20017 multiletter control sequences out of 15000+200000
  57527 words of font info for 59 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,11n,55p,425b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1098,10 +1098,10 @@ ic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
 c/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on specifications.pdf (6 pages, 179556 bytes).
+Output written on specifications.pdf (6 pages, 179639 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
+ 192 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

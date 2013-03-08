@@ -4,6 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>lib/dictionnaire.h</itemPath>
+      <itemPath>lib/jeu.h</itemPath>
+      <itemPath>lib/plateau.h</itemPath>
+      <itemPath>lib/resolveur.h</itemPath>
+      <itemPath>lib/util.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +17,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>src/dictionnaire.c</itemPath>
+      <itemPath>src/jeu.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>src/plateau.c</itemPath>
+      <itemPath>src/resolveur.c</itemPath>
+      <itemPath>src/util.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -34,8 +44,33 @@
         <compilerSet>default</compilerSet>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
       </compileType>
+      <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/jeu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/plateau.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/resolveur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/util.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/dictionnaire.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/jeu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/plateau.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/resolveur.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/util.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -57,7 +92,27 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/jeu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/plateau.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/resolveur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/util.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/dictionnaire.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/jeu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/plateau.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/resolveur.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/util.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>

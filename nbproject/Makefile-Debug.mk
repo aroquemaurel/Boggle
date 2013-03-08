@@ -35,7 +35,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/src/dictionnaire.o \
+	${OBJECTDIR}/src/jeu.o \
+	${OBJECTDIR}/src/plateau.o \
+	${OBJECTDIR}/src/resolveur.o \
+	${OBJECTDIR}/src/util.o
 
 
 # C Compiler Flags
@@ -65,7 +70,32 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle: ${OBJECTFILES}
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -Ilib -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/src/dictionnaire.o: src/dictionnaire.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/dictionnaire.o src/dictionnaire.c
+
+${OBJECTDIR}/src/jeu.o: src/jeu.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/jeu.o src/jeu.c
+
+${OBJECTDIR}/src/plateau.o: src/plateau.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/plateau.o src/plateau.c
+
+${OBJECTDIR}/src/resolveur.o: src/resolveur.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
+
+${OBJECTDIR}/src/util.o: src/util.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/util.o src/util.c
 
 # Subprojects
 .build-subprojects:
