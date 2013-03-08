@@ -14,6 +14,6 @@ typedef struct {
 } Plateau ;
 
 Plateau plateau_nouveau(const unsigned int pTailleGrille);
-void plateau_remplirGrilleAleatoirement(Plateau* pPlateau);
+void plateau_remplirGrilleAleatoire(Plateau* pPlateau);
 #endif	/* PLATEAU_H */
 

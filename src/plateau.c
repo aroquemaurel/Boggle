@@ -5,11 +5,11 @@ Plateau plateau_nouveau(const unsigned int pTailleGrille) {
     nouveauPlateau.tailleGrille = pTailleGrille;
     
     // malloc
-    plateau_remplirGrilleAleatoirement(&nouveauPlateau);
+    plateau_remplirGrilleAleatoire(&nouveauPlateau);
     
     return nouveauPlateau;
 }
 
-void plateau_remplirGrilleAleatoirement(Plateau* pPlateau) {
+void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
     
 }
