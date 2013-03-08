@@ -8,11 +8,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "dictionnaire.h"
 /*
  * 
- */
+*/
 int main(int argc, char** argv) {
-    
+Dico test = dictionnaire_nouveau("coucou");
+    printf("%d", dictonnaire_motEstPresent(test, "salut"));
     return (EXIT_SUCCESS);
 }
 
