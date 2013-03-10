@@ -10,7 +10,7 @@ void util_afficherTableAscii() {
         printf("%c : %d\n", i, i);
     }
 }
-char* util_supprimerAccents(char* pChaine) {
+char* util_supprimerAccents(const char* pChaine) {
     char* retour = calloc(100, sizeof(char));
     wchar_t* buffer = calloc(100, sizeof(wchar_t));
     mbstowcs(buffer,pChaine,100);
