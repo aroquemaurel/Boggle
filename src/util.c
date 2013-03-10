@@ -1,18 +1,20 @@
 #include <string.h>
 #include <wchar.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "util.h"
 void util_affichageDebug(const char* pNomFonction, const char* pChaine) {
     // TODO
 }
-void util_afficherTableAscii() {
+void util_afficherTableAscii(void) {
     for (int i = 0 ; i < 256 ; ++i) {
         printf("%c : %d\n", i, i);
     }
 }
 char* util_supprimerAccents(const char* pChaine) {
-    char* retour = calloc(100, sizeof(char));
-    wchar_t* buffer = calloc(100, sizeof(wchar_t));
+    char* retour = malloc(100*sizeof(char));
+    wchar_t* buffer = malloc(100*sizeof(wchar_t));
     mbstowcs(buffer,pChaine,100);
 
     for(int i=0 ;  i < wcslen(buffer) ; ++i) {
