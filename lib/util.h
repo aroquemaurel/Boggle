@@ -9,6 +9,6 @@
 #define	UTIL_H
 
 void util_affichageDebug(const char* pNomFonction, const char* pChaine);
-
+char* util_supprimerAccents(char* pChaine);
 #endif	/* UTIL_H */
 
