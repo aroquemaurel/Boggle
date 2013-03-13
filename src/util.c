@@ -4,8 +4,12 @@
 #include <stdlib.h>
 
 #include "util.h"
+#include "jeu.h"
+
 void util_affichageDebug(const char* pNomFonction, const char* pChaine) {
-    // TODO
+    if(MODE_DEBUG) {
+        printf("[%s]: %s", pNomFonction, pChaine);
+    }
 }
 void util_afficherTableAscii(void) {
     for (int i = 0 ; i < 256 ; ++i) {

@@ -45,6 +45,7 @@
       </toolsSet>
       <compileType>
         <cTool>
+          <standard>3</standard>
           <incDir>
             <pElem>lib</pElem>
           </incDir>

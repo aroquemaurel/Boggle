@@ -1,6 +1,8 @@
+#include <string.h>
+
 #include "dictionnaire.h"
 #include "util.h"
-#include <string.h>
+
 Dico dictionnaire_nouveau(const char* pNomFichier) {
     Dico nouveauDico = fopen(pNomFichier, "r+");
     if(nouveauDico == NULL) {
@@ -22,7 +24,7 @@ bool dictonnaire_motEstPresent(Dico pDictionnaire, const char* pMot) {
 
 double dictionnaire_probaLettre(const char pLettre) {
     double proba = 0.0;
-    // TODO switch A=>Z
+
     switch(pLettre) {
         case 'A':
             proba = 0.0;

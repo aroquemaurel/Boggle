@@ -8,7 +8,9 @@
 #ifndef UTIL_H
 #define	UTIL_H
 
-void util_affichageDebug(const char* pNomFonction, const char* pChaine);
+#define MODE_DEBUG 1 
+
+inline void util_affichageDebug(const char* pNomFonction, const char* pChaine);
 char* util_supprimerAccents(const char* pChaine);
 #endif	/* UTIL_H */
 

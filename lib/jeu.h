@@ -8,7 +8,7 @@
 #ifndef JEU_H
 #define	JEU_H
 
-#define MODE_DEBUG true
+
 
 
 #endif	/* JEU_H */
