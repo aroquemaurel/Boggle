@@ -1,12 +1,12 @@
-\BOOKMARK [0][-]{chapter.1}{Description globale}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Environement}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Profil des utilisateurs}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Sp\351cifications g\351n\351rales}{}% 4
-\BOOKMARK [1][-]{section.2.1}{Description des services attendus}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{Description g\351n\351rale des fonctions}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter.3}{Exigences op\351rationnelles}{}% 7
-\BOOKMARK [1][-]{section.3.1}{Contrainte d'exploitation}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{Modes de fonctionnement}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.3}{Capacit\351s}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.4}{Perormances}{chapter.3}% 11
-\BOOKMARK [0][-]{appendix.A}{Table des figures}{}% 12
+\BOOKMARK [1][-]{section.1}{But du document}{}% 1
+\BOOKMARK [1][-]{section.2}{Diagramme de d\351composition en modules}{}% 2
+\BOOKMARK [1][-]{section.3}{Description des diff\351rents modules}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Module Plateau}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Module Dictionnaire}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Module Jeu}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Module R\351solveur}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Module Interface}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Module Utile}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{R\351partition des t\342ches entre chaque membre du groupe}{}% 10
+\BOOKMARK [1][-]{section.5}{Calendrier de r\351alisation des t\342ches}{}% 11
+\BOOKMARK [1][-]{section.6}{Plan de tests}{}% 12

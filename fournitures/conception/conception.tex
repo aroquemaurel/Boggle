@@ -1,6 +1,6 @@
-\documentclass[12pt,a4paper,openany]{book}
+\documentclass[12pt,a4paper,openany]{article}
 \usepackage{lmodern}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \input{../includesLaTeX/couleurs.tex}
 
 \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc}
@@ -12,11 +12,10 @@
 \usepackage{listings}
 \usepackage{fancyhdr}
 \usepackage{multido}
-\usepackage{amssymb}
 \usepackage{float}
-\usepackage[francais]{minitoc}
+\usepackage{amssymb}
 
-\newcommand{\titre}{Dossier de spécifications des besoins logiciels}
+\newcommand{\titre}{Dossier de conception préliminaire}
 
 \newcommand{\pole}{}
 \newcommand{\sigle}{}
@@ -24,10 +23,10 @@
 \newcommand{\semestre}{4}
 
 \input{../includesLaTeX/listings.tex}
-\input{../includesLaTeX/l2/docsProjet.tex}
+\input{../includesLaTeX/l2/docsProjet2.tex}
 \input{../includesLaTeX/remarquesExempleAttention.tex}
 \input{../includesLaTeX/polices.tex}
-\input{../includesLaTeX/affichageChapitre.tex}
+\input{../includesLaTeX/affichageChapitre2.tex}
 \newcommand{\pfp}{\texttt{pfp}}
 
 \newcommand{\ifp}{\texttt{if}}
@@ -37,28 +36,74 @@
 \includeonly {
 }
 \begin{document}
-	\dominitoc
-	\setcounter{tocdepth}{1}
+	\setcounter{tocdepth}{2}
 	\setcounter{secnumdepth}{3}
-	\setcounter{minitocdepth}{1}
 	\maketitle
-	\chapter*{Avant-propos}
 	\tableofcontents
-	\chapter{Description globale}
+	\newpage
+	\section{But du document}
+	C'est une description de haut niveau du produit, c'est-à-dire l'architecture générale du système, en termes de << modules >>, de sous modules et de leurs
+	interactions. De plus, chaque module doit être décrit (définition des interfaces et des fonctionnalités générales). Ce document doit en premier lieu asseoir
+	la confiance en la finalité et la faisabilité du produit, et, en second lieu, servir de base pour l'estimation des tâches à effectuer et du calendrier de
+	leur réalisation.
+
+	Le << Dossier de Conception Préliminaire >> doit également mettre en évidence le plan de tests, en termes de besoins de l'utilisateur, et montrer que l'on peut
+	y satisfaire grâce à l'architecture proposée.
+	\section{Diagramme de décomposition en modules}
 	% TODO
-	\section{Environement}
-	\section{Profil des utilisateurs}
-	\chapter{Spécifications générales}
-	% TODO
-	\section{Description des services attendus}
-	\section{Description générale des fonctions}
-	\chapter{Exigences opérationnelles}
-	% TODO
-	\section{Contrainte d'exploitation}
-	\section{Modes de fonctionnement}
-	\section{Capacités}
-	\section{Perormances}
-	\appendix
-	\listoffigures
+	\section{Description des différents modules}
+		\subsection{Module \texttt{Plateau}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Gérer la grille de Boggle\\
+			\textbf{Type de données} & Tableau à deux dimensions de \texttt{char} \\
+			\textbf{Dépendances} & Aucune \\
+			\textbf{Fonctionnalités fournies} & Générer la grille, Retourner la lettre concernant une case donnée\\
+		\end{tabular}
+		\caption{Module \texttt{Plateau}}
+	\end{table}
+		\subsection{Module \texttt{Dictionnaire}}
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Gérer le dictionnaire du Boggle\\
+			\textbf{Type de données} & Fichier \texttt{FILE*} pointant sur le dictionnaire\\
+			\textbf{Dépendances} & Aucune\\
+			\textbf{Fonctionnalités fournies} & Ouvrir le dictionnaire, parcourir le dictionnaire, dire si un mot est présent dans le dictionnaire ou non. 
+		\end{tabular}
+		\subsection{Module \texttt{Résolveur}}
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Résoudre une grille de Boggle\\
+			\textbf{Type de données} & Structure contenant la grille de Boggle, le dictionnaire et un tableau de \texttt{char*} avec tous les mots possibles\\
+			\textbf{Dépendances} & \texttt{Dictionnaire}, \texttt{Plateau}\\
+			\textbf{Fonctionnalités fournies} & Résoudre la grille, signaler si un mot est présent dans la grille, retourner la liste des mots de la grille
+			commençant par une lettre. 
+		\end{tabular}
+		\subsection{Module \texttt{Jeu}}
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Jouer au Boggle \\ 
+			\textbf{Type de données} & \\ 
+			\textbf{Dépendances} & Plateau, InterfaceGraphique, InterfaceTexte, Résolveur\\
+			\textbf{Fonctionnalités fournies} & Proposer une lettre, Lancer le compte à rebours, SIgnaler si un mot proposé est correct, retourner le nombre de
+			point obtenus, signaler si le joueur à gagner le jeu ou non
+		\end{tabular}
+		\subsection{Module \texttt{Interface}}
+		\subsection{Module \texttt{Utile}}
+	\section{Répartition des tâches entre chaque membre du groupe}
+		\begin{table}[H]
+		\rowcolors{2}{grisgris}{}
+			\centering
+		\begin{tabular}{m{12cm} m{5cm}}
+			\rowcolor{gris}\textbf{Tâche} & \textbf{Membre}\\
+			..& Fabrice \\
+			..& Antoine\\
+			..& Antoine\\
+		\end{tabular}
+		\caption{Répartition des tâches}
+	\end{table}
+	\section{Calendrier de réalisation des tâches}
+	\section{Plan de tests}
+	
+	
 \end{document}
 
