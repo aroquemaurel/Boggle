@@ -35,12 +35,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/src/dictionnaire.o \
-	${OBJECTDIR}/src/jeu.o \
-	${OBJECTDIR}/src/plateau.o \
 	${OBJECTDIR}/src/resolveur.o \
-	${OBJECTDIR}/src/util.o
+	${OBJECTDIR}/src/plateau.o \
+	${OBJECTDIR}/src/jeu.o \
+	${OBJECTDIR}/src/util.o \
+	${OBJECTDIR}/main.o
 
 
 # C Compiler Flags
@@ -65,37 +65,37 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/main.o: main.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/src/dictionnaire.o: src/dictionnaire.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/dictionnaire.o src/dictionnaire.c
 
-${OBJECTDIR}/src/jeu.o: src/jeu.c 
+${OBJECTDIR}/src/resolveur.o: src/resolveur.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/jeu.o src/jeu.c
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
 
 ${OBJECTDIR}/src/plateau.o: src/plateau.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/plateau.o src/plateau.c
 
-${OBJECTDIR}/src/resolveur.o: src/resolveur.c 
+${OBJECTDIR}/src/jeu.o: src/jeu.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/jeu.o src/jeu.c
 
 ${OBJECTDIR}/src/util.o: src/util.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/util.o src/util.c
+
+${OBJECTDIR}/main.o: main.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:

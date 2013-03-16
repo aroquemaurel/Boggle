@@ -1,9 +1,4 @@
 \select@language {french}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Description globale}{5}{chapter.1}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Sp\IeC {\'e}cifications g\IeC {\'e}n\IeC {\'e}rales}{6}{chapter.2}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Exigences op\IeC {\'e}rationnelles}{7}{chapter.3}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Table des figures}{8}{appendix.A}
+\contentsline {figure}{\numberline {1}{\ignorespaces Diagramme de d\IeC {\'e}composition en modules}}{3}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Liste des t\IeC {\^a}ches et leur r\IeC {\'e}partition}}{6}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagramme de Gantt}}{7}{figure.3}

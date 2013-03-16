@@ -49,54 +49,79 @@
 
 	Le << Dossier de Conception Préliminaire >> doit également mettre en évidence le plan de tests, en termes de besoins de l'utilisateur, et montrer que l'on peut
 	y satisfaire grâce à l'architecture proposée.
-	\section{Diagramme de décomposition en modules}
-	% TODO
-	\section{Description des différents modules}
-		\subsection{Module \texttt{Plateau}}
+	\section{Diagramme de décomposition en modules}\label{diagModules}
+	La description détaillée des différents modules est disponible section \ref{listeModules}. 
+	\remarque{Afin de ne pas surcharger le schéma, le module \texttt{Utile} n'a
+	pas été représenté ici, en effet tous les modules du projet sont susceptibles d'en avoir besoin, de plus ce module ne contient pas de fonctions spécifiques
+	au projet mais des fonctions utiles travaillant sur des types de bases.}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{diagrammeModules.eps}
+		\caption{Diagramme de décomposition en modules}
+	\end{figure}
+	\section{Description des différents modules}\label{listeModules}
+	Un diagramme représentant l'interaction entre les différents modules est disponible section \ref{diagModules}.
+	\subsection{Module \texttt{Utile}}\label{utile}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Toutes les fonctions de bases utiles au projet, ces fonctions tra\-vaillent sur des types de bases et ne sont pas spécifiques au
+			projet, mais ce module permet de mieux organiser le code. \\
+			\textbf{Type de données} & Contient uniquement des traitements\\ 
+			\textbf{Dépendances} & Aucune\\ 
+			\textbf{Fonctionnalités fournies} & La liste sera complété au fur et a mesure du projet en
+			fonction des besoin nécessaires, en voici déjà quelques une: supprimer les accents d'une chaine de caractère, mettre une chaine de caractère en
+			majuscule, n'afficher un message qu'en cas de mode debug, trouver la première chaine de caractère présente dans un tableau, retourner un booléen en
+			fonction d'une certaine probabilité, etc\ldots 
+		\end{tabular}
+		\caption{Module \texttt{Utile}}
+	\end{table}
+	\subsection{Module \texttt{Plateau}}\label{plateau}
 		\begin{table}[H]
 		\rowcolors{1}{grisgris}{}
 			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Gérer la grille de Boggle\\
 			\textbf{Type de données} & Tableau à deux dimensions de \texttt{char} \\
-			\textbf{Dépendances} & Aucune \\
+			\textbf{Dépendances} & \texttt{Utile}(\ref{utile})\\
 			\textbf{Fonctionnalités fournies} & Générer la grille, Retourner la lettre concernant une case donnée\\
 		\end{tabular}
 		\caption{Module \texttt{Plateau}}
 	\end{table}
-		\subsection{Module \texttt{Dictionnaire}}
+	\subsection{Module \texttt{Dictionnaire}}\label{dictionnaire}
 		\begin{table}[H]
 		\rowcolors{1}{grisgris}{}
 			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Gérer le dictionnaire du Boggle\\
 			\textbf{Type de données} & Fichier \texttt{FILE*} pointant sur le dictionnaire\\
-			\textbf{Dépendances} & Aucune\\
+			\textbf{Dépendances} & \texttt{Utile}(\ref{utile})\\
 			\textbf{Fonctionnalités fournies} & Ouvrir le dictionnaire, parcourir le dictionnaire, dire si un mot est présent dans le dictionnaire ou non. 
 		\end{tabular}
-		\caption{Module \texttt{Plateau}}
+		\caption{Module \texttt{Dictionnaire}}
 	\end{table}
-		\subsection{Module \texttt{Résolveur}}
+	\subsection{Module \texttt{Resolveur}}\label{resolveur}
 		\begin{table}[H]
 		\rowcolors{1}{grisgris}{}
 			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Résoudre une grille de Boggle\\
 			\textbf{Type de données} & Structure contenant la grille de Boggle, le dictionnaire et un tableau de \texttt{char*} avec tous les mots possibles\\
-			\textbf{Dépendances} & \texttt{Dictionnaire}, \texttt{Plateau}\\
+			\textbf{Dépendances} & \texttt{Dictionnaire}(\ref{dictionnaire}), \texttt{Plateau}(\ref{plateau}), \texttt{Utile}(\ref{utile})\\
 			\textbf{Fonctionnalités fournies} & Résoudre la grille, signaler si un mot est présent dans la grille, retourner la liste des mots de la grille
 			commençant par une lettre. 
 		\end{tabular}
-		\caption{Module \texttt{Plateau}}
+		\caption{Module \texttt{Resolveur}}
 	\end{table}
-		\subsection{Module \texttt{Jeu}}
+	\subsection{Module \texttt{Jeu}}\label{jeu}
 		\begin{table}[H]
 		\rowcolors{1}{grisgris}{}
 			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Jouer au Boggle \\ 
 			\textbf{Type de données} & Structure contenant le Plateau et le Résolveur\\ 
-			\textbf{Dépendances} & \texttt{Plateau}, \texttt{Resolveur}\\
+			\textbf{Dépendances} & \texttt{Plateau}(\ref{plateau}), \texttt{Resolveur}(\ref{resolveur}), \texttt{Utile}(\ref{utile})\\
 			\textbf{Fonctionnalités fournies} & Proposer une lettre, Lancer le compte à rebours, Signaler si un mot proposé est correct, retourner le nombre de
 			point obtenus, signaler si le joueur à gagner le jeu ou non
 		\end{tabular}
@@ -109,7 +134,7 @@
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Afficher et permettre de jouer au Boggle en mode texte\\ 
 			\textbf{Type de données} & \texttt{Jeu}\\ 
-			\textbf{Dépendances} & \texttt{Jeu}\\ 
+			\textbf{Dépendances} & \texttt{Jeu}(\ref{jeu}), \texttt{Utile}(\ref{utile})\\ 
 			\textbf{Fonctionnalités fournies} & Toutes les fonctions d'affichage et de saisie
 		\end{tabular}
 		\caption{Module \texttt{InterfaceTexte}}
@@ -120,42 +145,59 @@
 			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Afficher et permettre de jouer au Boggle en mode semi graphique\\ 
-			\textbf{Type de données} & \texttt{Jeu}\\ 
-			\textbf{Dépendances} & \texttt{Jeu}, bibliothèque externe \texttt{ncurses}\\ 
+			\textbf{Type de données} & \texttt{Jeu}(\ref{jeu})\\ 
+			\textbf{Dépendances} & \texttt{Jeu}, bibliothèque externe \texttt{ncurses}, \texttt{Utile}\\ 
 			\textbf{Fonctionnalités fournies} & Toutes les fonctions d'affichage et de saisie
 		\end{tabular}
 		\caption{Module \texttt{InterfaceGraphique}}
 	\end{table}
-		\subsection{Module \texttt{Utile}}
-		\begin{table}[H]
-		\rowcolors{1}{grisgris}{}
-			\centering
-		\begin{tabular}{p{5cm} p{12cm}}
-			\textbf{Rôle} & Toutes les fonctions de bases utiles au projet. \\
-			\textbf{Type de données} & Contient uniquement des traitements\\ 
-			\textbf{Dépendances} & Aucune\\ 
-			\textbf{Fonctionnalités fournies} & La liste sera complété au fur et a mesure du projet en
-			fonction des besoin nécessaires, en voici déjà quelques une: supprimer les accents d'une chaine de caractère, mettre une chaine de caractère en
-			majuscule, n'afficher un message qu'en cas de mode debug, trouver la première chaine de caractère présente dans un tableau, retourner un booléen en
-			fonction d'une certaine probabilité, etc\ldots 
-		\end{tabular}
-		\caption{Module \texttt{Utile}}
-	\end{table}
-	\section{Répartition des tâches entre chaque membre du groupe}
-		\begin{table}[H]
-		\rowcolors{2}{grisgris}{}
-			\centering
-		\begin{tabular}{m{12cm} m{5cm}}
-			\rowcolor{gris}\textbf{Tâche} & \textbf{Membre}\\
-			..& Fabrice \\
-			..& Antoine\\
-			..& Antoine\\
-		\end{tabular}
-		\caption{Répartition des tâches}
-	\end{table}
+	\section{Répartition des tâches entre chaque membre}
+	Un module sera toujours affecté à un membre du groupe, celui-ci sera en charge de vérifier que le module avance dans le temps impartis, et de s'occuper de
+	l'intégration. Chacune des tâches seront affecté à un membre du groupe qui devra implémenter la tâche dans les délais prévus.
+
+	Le module \texttt{Utile} ne possède personne qui lui est assigné, en effet ce module se remplira en fonction de l'avancement des autres modules, et sera donc
+	développé par les deux membres du binôme tout au long du projet.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[angle=-90,width=15.2cm]{taches.pdf}
+		\caption{Liste des tâches et leur répartition}
+	\end{figure}
 	\section{Calendrier de réalisation des tâches}
-	\section{Plan de tests}
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[angle=-90,width=14.2cm]{gantt.png}
+		\caption{Diagramme de Gantt}
+	\end{figure}
+%	\section{Plan de tests}
+%	Chaque fonction de chaque module sera testée à l'aide de tests unitaire, s'appuyant sur la bibliothèque \texttt{cunit}. Chacun des tests unitaire au pour but
+%	de tester un et un seul cas, mais l'ensemble des tests unitaires d'un module devront avoir passer en revue tous les cas possibles d'appel d'une fonction :
+%	Que ce soit un cas nominal, ou un cas d'erreur, ainsi chacune des lignes de code auront été testé, si ce n'est pas le cas, du code mort aura été détecté.
+
+%	Une fois que chaque fonction aura passé les tests, nous allons faire des tests d'intégration, ceux-ci sont différents en fonction du module. Une fois tous
+%	les modules testé, nous ferons un test fonctionnel de l'application, avec le mode texte, puis le mode semi graphique.
+%	\subsection{Plateau}
+%		Un test fonctionnel aura lieu afin de tester le module, pour cela, nous appellons la fonction de génération de grille et vérifierons qu'elle ai bien
+%		génére en fonction des tailles que nous lui donnons. 
+%
+%		Ce test s'effectuera tout d'abord dans son fonctionnement nominal, pour toutes les tailles que l'utilisateur est suceptible de rentrer (de 2 à 15, cette
+%		taille étant fixée dans les spécifications), ensuite un test s'effectuera sur des valeurs alternatives : nombre négatif, flottants, supérieur à 15
+%		etc\ldots
+%	\subsection{Résolveur}
+%		Afin de tester le résolveur, nous essayerons avec des grilles prédéfinis de tailles variables, et vérifierons que le résolveur retourne bien tous les
+%		mots présent dans ces grilles, ceci sans erreurs.
+%	\subsection{Jeu}
+%	Afin de tester ce module, une interface est indispensable, ainsi nous nous en tiendrons aux tests unitaires, afin de vérifier que toutes les fonctions du
+%	module fonctionnent, ensuite ce module sera testé via l'intermédiaire de l'interface en mode texte.
+%	\subsection{InterfaceGraphique et InterfaceTexte}
+%	Ces deux modules seront testés de la même manière, nous passerons une grille prédéfini, et ferons une partie, ceci afin de vérifier l'affichage, la saisie
+%	etc\ldots
+	% Test fonctionnel de l'application en mode text et en mode semi-graphique avec une grille non générée
+	% Test fonctionnel de chacun des modules
+	\newpage
+	\appendix
+	\section{Annexes}
+	\listoffigures
+	\listoftables
 	
 \end{document}
 

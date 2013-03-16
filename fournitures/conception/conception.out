@@ -1,13 +1,15 @@
 \BOOKMARK [1][-]{section.1}{But du document}{}% 1
 \BOOKMARK [1][-]{section.2}{Diagramme de d\351composition en modules}{}% 2
 \BOOKMARK [1][-]{section.3}{Description des diff\351rents modules}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Module Plateau}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Module Dictionnaire}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Module R\351solveur}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.4}{Module Jeu}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.5}{Module InterfaceTexte}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.6}{Module InterfaceGraphique}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.7}{Module Utile}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{R\351partition des t\342ches entre chaque membre du groupe}{}% 11
+\BOOKMARK [2][-]{subsection.3.1}{Module Utile}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Module Plateau}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Module Dictionnaire}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Module Resolveur}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Module Jeu}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Module InterfaceTexte}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{Module InterfaceGraphique}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{R\351partition des t\342ches entre chaque membre}{}% 11
 \BOOKMARK [1][-]{section.5}{Calendrier de r\351alisation des t\342ches}{}% 12
-\BOOKMARK [1][-]{section.6}{Plan de tests}{}% 13
+\BOOKMARK [1][-]{appendix.A}{Annexes}{}% 13
+\BOOKMARK [2][-]{subsection.A.1}{Table des figures}{appendix.A}% 14
+\BOOKMARK [2][-]{subsection.A.2}{Liste des tableaux}{appendix.A}% 15

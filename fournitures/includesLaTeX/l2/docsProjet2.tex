@@ -109,14 +109,15 @@ Projet tuteuré\\
 }
 \makeatletter
 \renewcommand*{\lstlistlistingname}{Liste des codes sources}
+\renewcommand{\listfigurename}{Liste des figures}
 \renewcommand\listoffigures{%
-    \chapter{\listfigurename}%
+    \subsection{\listfigurename}%
       \@mkboth{\MakeUppercase\listfigurename}%
               {\MakeUppercase\listfigurename}%
        \@starttoc{lof}%
     }
     \renewcommand\listoftables{%
-    \chapter{\listtablename}%
+    \subsection{\listtablename}%
     \@mkboth{\MakeUppercase{\listtablename}}%
             {\MakeUppercase{\listtablename}}%
     \@starttoc{lot}
@@ -124,7 +125,7 @@ Projet tuteuré\\
 
     \renewcommand\lstlistoflistings{%
     \begingroup
-    \chapter{\lstlistlistingname}%
+    \subsection{\lstlistlistingname}%
     \parskip\z@\parindent\z@\parfillskip \z@ \@plus 1fil%
     \@starttoc{lol}%
     \endgroup
