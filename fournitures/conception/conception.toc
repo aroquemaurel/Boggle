@@ -4,10 +4,11 @@
 \contentsline {section}{\numberline {3}Description des diff\IeC {\'e}rents modules}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Module \texttt {Plateau}}{3}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Module \texttt {Dictionnaire}}{3}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Module \texttt {Jeu}}{3}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Module \texttt {R\IeC {\'e}solveur}}{4}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Module \texttt {Interface}}{4}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Module \texttt {Utile}}{4}{subsection.3.6}
-\contentsline {section}{\numberline {4}R\IeC {\'e}partition des t\IeC {\^a}ches entre chaque membre du groupe}{4}{section.4}
-\contentsline {section}{\numberline {5}Calendrier de r\IeC {\'e}alisation des t\IeC {\^a}ches}{4}{section.5}
-\contentsline {section}{\numberline {6}Plan de tests}{4}{section.6}
+\contentsline {subsection}{\numberline {3.3}Module \texttt {R\IeC {\'e}solveur}}{3}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Module \texttt {Jeu}}{4}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Module \texttt {InterfaceTexte}}{4}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Module \texttt {InterfaceGraphique}}{4}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Module \texttt {Utile}}{4}{subsection.3.7}
+\contentsline {section}{\numberline {4}R\IeC {\'e}partition des t\IeC {\^a}ches entre chaque membre du groupe}{5}{section.4}
+\contentsline {section}{\numberline {5}Calendrier de r\IeC {\'e}alisation des t\IeC {\^a}ches}{5}{section.5}
+\contentsline {section}{\numberline {6}Plan de tests}{5}{section.6}

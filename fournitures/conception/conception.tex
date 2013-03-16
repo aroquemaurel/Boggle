@@ -65,13 +65,21 @@
 		\caption{Module \texttt{Plateau}}
 	\end{table}
 		\subsection{Module \texttt{Dictionnaire}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Gérer le dictionnaire du Boggle\\
 			\textbf{Type de données} & Fichier \texttt{FILE*} pointant sur le dictionnaire\\
 			\textbf{Dépendances} & Aucune\\
 			\textbf{Fonctionnalités fournies} & Ouvrir le dictionnaire, parcourir le dictionnaire, dire si un mot est présent dans le dictionnaire ou non. 
 		\end{tabular}
+		\caption{Module \texttt{Plateau}}
+	\end{table}
 		\subsection{Module \texttt{Résolveur}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Résoudre une grille de Boggle\\
 			\textbf{Type de données} & Structure contenant la grille de Boggle, le dictionnaire et un tableau de \texttt{char*} avec tous les mots possibles\\
@@ -79,16 +87,60 @@
 			\textbf{Fonctionnalités fournies} & Résoudre la grille, signaler si un mot est présent dans la grille, retourner la liste des mots de la grille
 			commençant par une lettre. 
 		\end{tabular}
+		\caption{Module \texttt{Plateau}}
+	\end{table}
 		\subsection{Module \texttt{Jeu}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Jouer au Boggle \\ 
-			\textbf{Type de données} & \\ 
-			\textbf{Dépendances} & Plateau, InterfaceGraphique, InterfaceTexte, Résolveur\\
-			\textbf{Fonctionnalités fournies} & Proposer une lettre, Lancer le compte à rebours, SIgnaler si un mot proposé est correct, retourner le nombre de
+			\textbf{Type de données} & Structure contenant le Plateau et le Résolveur\\ 
+			\textbf{Dépendances} & \texttt{Plateau}, \texttt{Resolveur}\\
+			\textbf{Fonctionnalités fournies} & Proposer une lettre, Lancer le compte à rebours, Signaler si un mot proposé est correct, retourner le nombre de
 			point obtenus, signaler si le joueur à gagner le jeu ou non
 		\end{tabular}
-		\subsection{Module \texttt{Interface}}
+		\caption{Module \texttt{Jeu}}
+	\end{table}
+		\subsection{Module \texttt{InterfaceTexte}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Afficher et permettre de jouer au Boggle en mode texte\\ 
+			\textbf{Type de données} & \texttt{Jeu}\\ 
+			\textbf{Dépendances} & \texttt{Jeu}\\ 
+			\textbf{Fonctionnalités fournies} & Toutes les fonctions d'affichage et de saisie
+		\end{tabular}
+		\caption{Module \texttt{InterfaceTexte}}
+	\end{table}
+		\subsection{Module \texttt{InterfaceGraphique}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Afficher et permettre de jouer au Boggle en mode semi graphique\\ 
+			\textbf{Type de données} & \texttt{Jeu}\\ 
+			\textbf{Dépendances} & \texttt{Jeu}, bibliothèque externe \texttt{ncurses}\\ 
+			\textbf{Fonctionnalités fournies} & Toutes les fonctions d'affichage et de saisie
+		\end{tabular}
+		\caption{Module \texttt{InterfaceGraphique}}
+	\end{table}
 		\subsection{Module \texttt{Utile}}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Toutes les fonctions de bases utiles au projet. \\
+			\textbf{Type de données} & Contient uniquement des traitements\\ 
+			\textbf{Dépendances} & Aucune\\ 
+			\textbf{Fonctionnalités fournies} & La liste sera complété au fur et a mesure du projet en
+			fonction des besoin nécessaires, en voici déjà quelques une: supprimer les accents d'une chaine de caractère, mettre une chaine de caractère en
+			majuscule, n'afficher un message qu'en cas de mode debug, trouver la première chaine de caractère présente dans un tableau, retourner un booléen en
+			fonction d'une certaine probabilité, etc\ldots 
+		\end{tabular}
+		\caption{Module \texttt{Utile}}
+	\end{table}
 	\section{Répartition des tâches entre chaque membre du groupe}
 		\begin{table}[H]
 		\rowcolors{2}{grisgris}{}
