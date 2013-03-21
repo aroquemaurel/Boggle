@@ -16,7 +16,8 @@
 \contentsline {subsection}{\numberline {6.2}Dictionnaire}{8}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}R\IeC {\'e}solveur}{8}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Jeu}{9}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}InterfaceGraphique et InterfaceTexte}{9}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.5}\texttt {InterfaceGraphique} et \texttt {InterfaceTexte}}{9}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Globalit\IeC {\'e}}{9}{subsection.6.6}
 \contentsline {section}{\numberline {A}Annexes}{10}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}Table des figures}{10}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Liste des tableaux}{10}{subsection.A.2}

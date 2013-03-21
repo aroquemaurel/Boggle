@@ -97,7 +97,7 @@
 			\textbf{Rôle} & Gérer le dictionnaire du Boggle\\
 			\textbf{Type de données} & Fichier \texttt{FILE*} pointant sur le dictionnaire\\
 			\textbf{Dépendances} & \texttt{Utile}(\ref{utile})\\
-			\textbf{Fonctionnalités fournies} & Ouvrir le dictionnaire, parcourir le dictionnaire, dire si un mot est présent dans le dictionnaire ou non. 
+			\textbf{Fonctionnalités fournies} & Initialiser le dictionnaire, parcourir le dictionnaire, dire si un mot est présent dans le dictionnaire ou non. 
 		\end{tabular}
 		\caption{Module \texttt{Dictionnaire}}
 	\end{table}
@@ -171,21 +171,25 @@
 	\section{Plan de tests}
 	Chaque fonction de chaque module sera testée à l'aide de tests unitaire, s'appuyant sur la bibliothèque \texttt{cunit}. Chacun des tests unitaire au pour but
 	de tester un et un seul cas, mais l'ensemble des tests unitaires d'un module devront avoir passer en revue tous les cas possibles d'appel d'une fonction :
-	Que ce soit un cas nominal, ou un cas d'erreur, ainsi chacune des lignes de code auront été testé, si ce n'est pas le cas, du code mort aura été détecté. 
+	Que ce soit un cas nominal, ou un cas d'erreur, ainsi chacune des lignes de code auront été testé, si ce n'est pas possible, du code mort aura été détecté. 
 
 	Une fois que chaque fonction aura passé les tests unitaires, nous allons tester les modules séparément afin de vérifier que toutes les fonctions fonctionnent
 	bien entre elle, ces tests seront différents en fonctions des modules.
 
 	\subsection{Plateau}
 		Un test fonctionnel aura lieu afin de tester le module, pour cela, nous appellerons la fonction de génération de grille et vérifierons qu'elle a bien
-		génére en fonction des tailles que nous lui donnons. 
+		généré une grille en fonction des tailles que nous lui donnons. Un jeu de grille sera généré, afin de vérifier que les lettres présentes dans la grilles
+		le sont en fonction de leur utilisation dans la langue Française, un facteur de probabilité entrant en compte, il n'est pas possible d'attendre une
+		réponse exacte.
 
 		Ce test s'effectuera tout d'abord dans son fonctionnement nominal, pour toutes les tailles que l'utilisateur est susceptible de rentrer (de 2 à 15, cette
 		taille étant fixée dans les spécifications), ensuite un test s'effectuera sur des valeurs alternatives : nombre négatif, flottants, supérieur à 15
 		etc\ldots et nous vérifierons que les erreurs sont bien gérés.
 	\subsection{Dictionnaire}
-		Afin de tester le dictionnaire, les tests unitaires suffiront, en effet, il faudrait vérifier que la fonction qui retourne si un mot est présent dans le
-		dictionnaire est correcte.
+		Afin de tester le dictionnaire, il faudra vérifier que la fonction permettant de savoir si un mot est présent dans le
+		dictionnaire est correcte. Afin de tester cette fonction nous aurons un jeu d'essai comportant des mots présents, ou non dans la dictionnaire, au début
+		du dictionnaire, à la fin, ou au milieu, des mots de longueur variable allant de 3 caractères, jusqu'à des mots de 20 caractères  
+		et vérifierons que les retour de fonctions sont bien ceux attendus.
 
 	\subsection{Résolveur}
 		Pour tester le Résolveur, nous essayerons avec des grilles prédéfinis de tailles variables, et vérifierons que le résolveur retourne bien tous les
@@ -201,7 +205,7 @@
 	Afin de tester ce module, une interface est indispensable, ainsi nous nous en tiendrons aux tests unitaires, afin de vérifier que toutes les fonctions du
 	module fonctionnent, ensuite ce module sera testé via l'intermédiaire de l'interface en mode texte.
 
-	\subsection{\texttt{InterfaceGraphique} et InterfaceTexte}
+	\subsection{\texttt{InterfaceGraphique} et \texttt{InterfaceTexte}}
 	Ces deux modules sont les interfaces du jeu, il est difficile de faire des tests automatisé pour les interfaces, de plus ces deux modules sont intimement
 	liés au contrôleur, \texttt{Jeu}, ainsi nous ne pourrons pas tester les interfaces séparément des autres modules, ces deux interfaces seront donc testé à
 	l'aide d'un test fonctionnel lors d'une partie de Boggle. Ce test s'effectuera avec une grille prédéfinie.
