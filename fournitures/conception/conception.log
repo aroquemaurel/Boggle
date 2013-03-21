@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.12)  20 MAR 2013 21:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.12)  21 MAR 2013 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,7 +1027,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2
 
 ]
-</home/aroquemaurel/cours/includesLaTeX/images/remarque.png, id=130, 22.94286pt
+</home/aroquemaurel/cours/includesLaTeX/images/remarque.png, id=135, 22.94286pt
  x 22.94286pt>
 File: /home/aroquemaurel/cours/includesLaTeX/images/remarque.png Graphic file (
 type png)
@@ -1047,7 +1047,7 @@ rted-to.pdf diagrammeModules.eps>
 (epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
-<diagrammeModules-eps-converted-to.pdf, id=132, 538.01pt x 441.65pt>
+<diagrammeModules-eps-converted-to.pdf, id=137, 538.01pt x 441.65pt>
 File: diagrammeModules-eps-converted-to.pdf Graphic file (type pdf)
 
 <use diagrammeModules-eps-converted-to.pdf>
@@ -1129,7 +1129,7 @@ Overfull \hbox (6.92813pt too wide) in paragraph at lines 146--152
  [][] 
  []
 
-<taches.pdf, id=161, 732.81781pt x 445.90588pt>
+<taches.pdf, id=167, 732.81781pt x 445.90588pt>
 File: taches.pdf Graphic file (type pdf)
  <use taches.pdf>
 Package pdftex.def Info: taches.pdf used on input line 162.
@@ -1155,7 +1155,7 @@ icate ignored
                                                   \fi \fi 
 l.165 	\section
                {Calendrier de réalisation des tâches}]
-<gantt.png, id=170, 1141.26375pt x 668.4975pt>
+<gantt.png, id=175, 1141.26375pt x 668.4975pt>
 File: gantt.png Graphic file (type png)
  <use gantt.png>
 Package pdftex.def Info: gantt.png used on input line 168.
@@ -1181,32 +1181,26 @@ l.175
 \tf@lot=\write9
 \openout9 = `conception.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
 
 (./conception.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package rerunfilecheck Info: File `conception.out' has not changed.
+(rerunfilecheck)             Checksum: A4525C169AED9995963EDBE10C9414B8;1432.
 
-
-Package rerunfilecheck Warning: File `conception.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `conception.out':
-(rerunfilecheck)             Before: C92D822E120C228157F9179AF50CFFEB;1370
-(rerunfilecheck)             After:  A4525C169AED9995963EDBE10C9414B8;1432.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 17239 strings out of 495059
- 292341 string characters out of 3182030
+ 17240 strings out of 495059
+ 292357 string characters out of 3182030
  398120 words of memory out of 3000000
- 19986 multiletter control sequences out of 15000+200000
+ 19987 multiletter control sequences out of 15000+200000
  43650 words of font info for 51 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,12n,55p,421b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1219,10 +1213,10 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 exlive/texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb>
-Output written on conception.pdf (10 pages, 268052 bytes).
+Output written on conception.pdf (10 pages, 268433 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
  44 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
