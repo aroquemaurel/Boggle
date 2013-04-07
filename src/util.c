@@ -2,6 +2,8 @@
 #include <wchar.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <time.h>
 
 #include "util.h"
 #include "jeu.h"
@@ -50,4 +52,13 @@ char* util_supprimerAccents(const char* pChaine) {
     }
 
     return retour;
+}
+
+char util_nbAleatoire(const char pDebut, const char pFin) {
+    static bool premier = true;
+    if(premier) {
+        srand(time(NULL));
+        premier = false;
+    }
+        return rand() % (pFin + 1 - pDebut) + pDebut;
 }

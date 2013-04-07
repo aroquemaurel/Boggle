@@ -14,6 +14,5 @@ typedef FILE* Dico;
 
 Dico dictionnaire_nouveau(const char* pNomFichier);
 bool dictonnaire_motEstPresent(Dico pDictionnaire, const char* pMot);
-double dictionnaire_probaLettre(const char pLettre);
 #endif	/* DICTIONNAIRE_H */
 

@@ -11,15 +11,19 @@
 
 #include "dictionnaire.h"
 #include "util.h"
+#include "plateau.h"
 
 /*
  * 
 */
 int main(int argc, char** argv) {
     setlocale(LC_CTYPE, "");
-    Dico test = dictionnaire_nouveau("coucou");
+    //Dico test = dictionnaire_nouveau("coucou");
     char* testChaine = "abcdefgééôèé";
     char* truc;
+    Plateau plateau = plateau_nouveau(3);
+    plateau_afficher(plateau);
+    plateau_detruire(&plateau);
     /*wchar_t* x = calloc(100, sizeof(wchar_t));
     wchar_t* y = calloc(100, sizeof(char));
 
@@ -35,8 +39,8 @@ int main(int argc, char** argv) {
     //printf(" %d ", (unsigned char) testChaine[4]);
     //printf("%d", dictonnaire_motEstPresent(test, "salut"));
     //util_afficherTableAscii();
-    truc = util_supprimerAccents(testChaine);
-    printf("%s", truc);
+    //truc = util_supprimerAccents(testChaine);
+    //printf("%s", truc);
     return (EXIT_SUCCESS);
 }
 
