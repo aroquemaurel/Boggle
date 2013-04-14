@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "solution.h"
 #include "plateau.h"
 #include "util.h"
 
@@ -9,7 +10,7 @@ Plateau plateau_nouveau(const unsigned int pTailleGrille) {
     
     nouveauPlateau.grille = malloc(sizeof(char*)*pTailleGrille);
     nouveauPlateau.grid = malloc(sizeof(char*)*pTailleGrille);
-
+    nouveauPlateau.solution = solution_creer();
     for(int i=0; i < pTailleGrille ; ++i) {
         nouveauPlateau.grille[i] = malloc(sizeof(char)*pTailleGrille);
         nouveauPlateau.grid[i] = malloc(sizeof(char*)*pTailleGrille);
@@ -29,7 +30,9 @@ Plateau plateau_detruire(Plateau* pPlateau) {
     pPlateau->grille = NULL;
     pPlateau->grid = NULL;
     pPlateau->tailleGrille = 0;
+    solution_detruire(&(pPlateau->solution));
 }
+
 void plateau_afficher(const Plateau pPlateau) {
     for(int i=0 ; i < pPlateau.tailleGrille ; ++i) {
         for(int j=0 ; j < pPlateau.tailleGrille ; ++j) {
@@ -56,6 +59,16 @@ void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
             pPlateau->grid[j][i] = 0;
         }
     }
+    
+// ** Solution de cette grille**
+// DENIERA
+// QUARRE ENRAIE DENIER CARRAI BRINDE BRANDE BERNAI
+// VRAIE REINE RAINE NIERA NARRA ERINE DENIE DENIA DENAR DARNE DAINE CARRE CARRA BRAND BRAIE
+// BRADE BERNE BERNA ARQUA ARBRE ANIER
+// VRAI RIAD REIN RANI RAND RAIE RADE NIER INDE ERRA DENI DARI BRIN BRIE BRAN BRAI BINE BINA
+// AIRE AINE ADNE
+// VAU VAR RUA RIE RIA RAI RAD RAC NIE NIB NIA IRE IRA DAN CAR BRU BER ARE ANE AIR AIE
+
 }
 
 
