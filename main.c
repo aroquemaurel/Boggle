@@ -17,17 +17,19 @@
 /*
  * 
 */
-int main(int argc, char** argv) {
+int main(void) {
     setlocale(LC_CTYPE, "");
     Dico test = dictionnaire_nouveau("Complet.txt");
     char choices[256];
     Plateau plateau = plateau_nouveau(4);
-    //plateau_remplirGrilleAleatoire(&plateau);
-    plateau_remplirGrillePredefinie(&plateau);
-    plateau_afficher(plateau);
+    plateau_remplirGrilleAleatoire(&plateau);
+    //plateau_remplirGrillePredefinie(&plateau);
+    //plateau_afficher(plateau);
     resolveur(&plateau, choices, test);
-    char* testChaine = "abcdefgééôèé";
-    char* truc;
+    //solution_afficher(plateau.solution);
+    plateau_detruire(&plateau);
+//    char* testChaine = "abcdefgééôèé";
+//    char* truc;
 //	printf("%d", dictonnaire_chercherMot(test,"coucou"));
  //   Plateau plateau = plateau_nouveau(3);
 //    plateau_afficher(plateau);
