@@ -4,11 +4,24 @@
 #include "util.h"
 
 Dico dictionnaire_nouveau(const char* pNomFichier) {
-    Dico nouveauDico = fopen(pNomFichier, "r+");
-    if(nouveauDico == NULL) {
+    Dico nouveauDico;
+    long int test;
+    int i = 0;
+    char buff[32];
+    char caractereCourant = '\0';
+    nouveauDico.dico = fopen(pNomFichier, "r+");
+    if(nouveauDico.dico == NULL) {
         perror("Le nom de fichier du dictionnaire n'existe pas");
     }
-    
+    rewind(nouveauDico.dico);
+    while (fgets(buff, 30, nouveauDico.dico) != NULL) {
+        if(caractereCourant != buff[0]) {
+            caractereCourant = buff[0];
+            nouveauDico.marqueurs[i] = ftell(nouveauDico.dico);
+            ++i;
+        }
+     }      
+
     return nouveauDico;
 }
 
@@ -18,38 +31,32 @@ Dico dictionnaire_nouveau(const char* pNomFichier) {
  * */
 int dictonnaire_chercherMot(Dico pDictionnaire, char* pMot) {
     char buff[256];
-	char buff2[256];
-	int retour;
-    fgets(buff, 30, pDictionnaire);
-     do {
-        buff[strlen(buff)-2] = '\0'; // On enlève le \r et le \n (Merci windows...⁾
-      //   printf("strcmp: %d(%s %s)\n", strcmp(buff, pMot),buff, pMot);
-     } while (strcmp(buff, pMot) < 0 && fgets(buff, 30, pDictionnaire) != NULL);     
-     rewind(pDictionnaire);
-   //  printf("SORTIEBOUCLE\n", pMot, buff);
-     
-	 if(strcmp(buff, pMot) == 0) {
-                retour = 1;
-                printf("%s\n", pMot);
-	 } else {
-                if(strlen(pMot) <= strlen(buff2)) {                     
-			util_substr(buff,0,strlen(pMot)-1,buff2);
-                        //printf("%s %s", pMot, buff2);
-			if(strcmp(pMot, buff2) == 0) {
+    char buff2[256];
+    int retour;
 
-                            //printf("%s\n", buff2);
-                 //           printf("if2\n", pMot);
-                                retour = 1;
-			} else {
-                   ///         printf("if3\n", pMot);
-                                retour = 0;
-			}
-		 } else {
-        //            printf("if4\n", pMot);
-			 retour = 0;
-		 }
-	 }
-     
+    fseek(pDictionnaire.dico, pDictionnaire.marqueurs[pMot[0]-65], SEEK_SET);    
+    fgets(buff, 30, pDictionnaire.dico);
+    do {
+        buff[strlen(buff)-2] = '\0'; // On enlève le \r et le \n (Merci windows...⁾
+     } while (strcmp(buff, pMot) < 0 && fgets(buff, 30, pDictionnaire.dico) != NULL);     
+
+    if(strcmp(buff, pMot) == 0) {
+        retour = 10;
+    } else {
+            util_substr(buff,0,strlen(pMot)-1,buff2);
+
+        if(strlen(pMot) <= strlen(buff2)) {            
+            if(strcmp(pMot, buff2) == 0) {
+                retour = 1;
+            } else {
+                retour = 0;
+            }
+        } else {
+
+            retour = 0;
+        }
+    }
+
     return (retour); 
 }
 

@@ -8,7 +8,7 @@
 #include "util.h"
 #include "jeu.h"
 
-void util_affichageDebug(const char* pNomFonction, const char* pChaine) {
+ void util_affichageDebug(const char* pNomFonction, const char* pChaine) {
     if(MODE_DEBUG) {
         printf("[%s]: %s", pNomFonction, pChaine);
     }
