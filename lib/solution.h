@@ -18,5 +18,6 @@ Solution solution_creer(void);
 void solution_ajouterMot(Solution* pSolution, const char* mot);
 void solution_afficher(const Solution pSolution);
 void solution_detruire(Solution* pSolution);
+_Bool solution_motEstPresent(const Solution pSolution, const char* pMot);
 #endif	/* SOLUTION_H */
 

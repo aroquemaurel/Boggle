@@ -36,10 +36,8 @@ int dictonnaire_chercherMot(Dico pDictionnaire, char* pMot) {
 
     fseek(pDictionnaire.dico, pDictionnaire.marqueurs[pMot[0]-65], SEEK_SET);    
     fgets(buff, 30, pDictionnaire.dico);
-    do {
-        buff[strlen(buff)-2] = '\0'; // On enlève le \r et le \n (Merci windows...⁾
-     } while (strcmp(buff, pMot) < 0 && fgets(buff, 30, pDictionnaire.dico) != NULL);     
-
+    while (strcmp(buff, pMot) < 0 && fgets(buff, 30, pDictionnaire.dico) != NULL);     
+buff[strlen(buff)-2] = '\0';
     if(strcmp(buff, pMot) == 0) {
         retour = 10;
     } else {

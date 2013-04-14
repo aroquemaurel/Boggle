@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/jeu.o \
 	${OBJECTDIR}/src/plateau.o \
 	${OBJECTDIR}/src/resolveur.o \
+	${OBJECTDIR}/src/solution.o \
 	${OBJECTDIR}/src/util.o
 
 
@@ -91,6 +92,11 @@ ${OBJECTDIR}/src/resolveur.o: src/resolveur.c
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
+
+${OBJECTDIR}/src/solution.o: src/solution.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/solution.o src/solution.c
 
 ${OBJECTDIR}/src/util.o: src/util.c 
 	${MKDIR} -p ${OBJECTDIR}/src

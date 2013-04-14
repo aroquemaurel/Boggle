@@ -17,7 +17,7 @@
 /*
  * 
 */
-int main(int argc, char** argv) {
+int main(void) {
     setlocale(LC_CTYPE, "");
     Dico test = dictionnaire_nouveau("Complet.txt");
     char choices[256];
@@ -26,29 +26,10 @@ int main(int argc, char** argv) {
     plateau_remplirGrillePredefinie(&plateau);
     plateau_afficher(plateau);
     resolveur(&plateau, choices, test);
-    char* testChaine = "abcdefgééôèé";
-    char* truc;
-//	printf("%d", dictonnaire_chercherMot(test,"coucou"));
- //   Plateau plateau = plateau_nouveau(3);
-//    plateau_afficher(plateau);
- //   plateau_detruire(&plateau);
-    /*wchar_t* x = calloc(100, sizeof(wchar_t));
-    wchar_t* y = calloc(100, sizeof(char));
+    solution_afficher(plateau.solution);
+    //plateau_detruire(&plateau);
 
-    fread(y, 1, 99, stdin);
-    mbstowcs(x,y,100);*/
-    /*if(x[0] = 'è') {
-        printf("ooooh");
-        
-        free(x);
-        free (y);
-    }*/
-    //printf("\n%c", testChaine);
-    //printf(" %d ", (unsigned char) testChaine[4]);
-    //printf("%d", dictonnaire_motEstPresent(test, "salut"));
-    //util_afficherTableAscii();
-    //truc = util_supprimerAccents(testChaine);
-    //printf("%s", truc);
+
     return (EXIT_SUCCESS);
 }
 

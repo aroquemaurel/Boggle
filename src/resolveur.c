@@ -50,5 +50,5 @@ void resolveur(Plateau* pPlateau, char* choices, Dico pDico) {
             recurse(pPlateau, i, j, 0, choices, pDico);
         }
     }
-
+    util_quickSort(pPlateau->solution.mots, 0, pPlateau->solution.nbMots-1);
 }

@@ -16,5 +16,7 @@ char util_nbAleatoire(const char pDebut, const char pFin);
 /* *
  * Retourne le nombre de caractères lus */
 int util_substr(const char *chaine, int debut, int fin, char *result);
+void util_echanger(char* tableau[], int a, int b);
+void util_quickSort(char* tableau[], int debut, int fin);
 #endif	/* UTIL_H */
 
