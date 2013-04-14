@@ -62,3 +62,10 @@ char util_nbAleatoire(const char pDebut, const char pFin) {
     }
         return rand() % (pFin + 1 - pDebut) + pDebut;
 }
+
+int util_substr(const char *chaine, int debut, int fin, char *result) {  
+	result[fin+1-debut]='\0';
+	memcpy(result,(char *)chaine+debut,fin+1-debut); 
+
+	return (fin+1-debut);
+}

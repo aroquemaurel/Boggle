@@ -12,18 +12,26 @@
 #include "dictionnaire.h"
 #include "util.h"
 #include "plateau.h"
+#include "resolveur.h"
 
 /*
  * 
 */
 int main(int argc, char** argv) {
     setlocale(LC_CTYPE, "");
-    //Dico test = dictionnaire_nouveau("coucou");
+    Dico test = dictionnaire_nouveau("Complet.txt");
+    char choices[256];
+    Plateau plateau = plateau_nouveau(4);
+    //plateau_remplirGrilleAleatoire(&plateau);
+    plateau_remplirGrillePredefinie(&plateau);
+    plateau_afficher(plateau);
+    resolveur(&plateau, choices, test);
     char* testChaine = "abcdefgééôèé";
     char* truc;
-    Plateau plateau = plateau_nouveau(3);
-    plateau_afficher(plateau);
-    plateau_detruire(&plateau);
+//	printf("%d", dictonnaire_chercherMot(test,"coucou"));
+ //   Plateau plateau = plateau_nouveau(3);
+//    plateau_afficher(plateau);
+ //   plateau_detruire(&plateau);
     /*wchar_t* x = calloc(100, sizeof(wchar_t));
     wchar_t* y = calloc(100, sizeof(char));
 

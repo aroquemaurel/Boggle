@@ -13,6 +13,7 @@
 typedef FILE* Dico;
 
 Dico dictionnaire_nouveau(const char* pNomFichier);
-bool dictonnaire_motEstPresent(Dico pDictionnaire, const char* pMot);
+int dictonnaire_chercherMot(Dico pDictionnaire, char* pMot);
+
 #endif	/* DICTIONNAIRE_H */
 
