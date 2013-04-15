@@ -21,7 +21,7 @@ void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDi
     choices[depth] = '\0';
     
     if(depth >= TAILLE_MOT_MIN) {
-        res = dictonnaire_chercherMot(pDico, choices);
+        res = dictonnaire_motDansDico(pDico, choices);
         if(res == 10) { // ajouter mot dans solution
             solution_ajouterMot(&(pPlateau->solution), choices);
         }

@@ -17,7 +17,9 @@ typedef struct {
 
 Dico dictionnaire_nouveau(const char* pNomFichier);
 Dico dictionnaire_positionnerMarqueurs(Dico* pDico);
-int dictonnaire_chercherMot(Dico pDictionnaire, char* pMot);
-
+int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot);
+void dictionnaire_rechercheDichotomique(Dico pDictionnaire, 
+                                        char* pMotAChercher, 
+                                        char* pMotLePlusProche);
 #endif	/* DICTIONNAIRE_H */
 

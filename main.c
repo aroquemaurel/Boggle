@@ -21,13 +21,14 @@ int main(void) {
     setlocale(LC_CTYPE, "");
     Dico test = dictionnaire_nouveau("Complet.txt");
     char choices[256];
-    Plateau plateau = plateau_nouveau(4);
-    //plateau_remplirGrilleAleatoire(&plateau);
-    plateau_remplirGrillePredefinie(&plateau);
+    //printf("\n==%d", dictonnaire_chercherMot(test, "SLKDJFHLKSDFJH"));
+    Plateau plateau = plateau_nouveau(8);
+    plateau_remplirGrilleAleatoire(&plateau);
+    //plateau_remplirGrillePredefinie(&plateau);
     plateau_afficher(plateau);
     resolveur(&plateau, choices, test);
     solution_afficher(plateau.solution);
-    //plateau_detruire(&plateau);
+    plateau_detruire(&plateau);
 
 
     return (EXIT_SUCCESS);

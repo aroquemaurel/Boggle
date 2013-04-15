@@ -70,28 +70,21 @@ int util_substr(const char *chaine, int debut, int fin, char *result) {
 	return (fin+1-debut);
 }
 
-void util_echanger(char* tableau[], int a, int b)
-{
+void util_echanger(char* tableau[], int a, int b) {
     char* temp = tableau[a];
     tableau[a] = tableau[b];
     tableau[b] = temp;
 }
  
-void util_quickSort(char* tableau[], int debut, int fin)
-{
+void util_quickSort(char* tableau[], int debut, int fin) {
     int gauche = debut-1;
     int droite = fin+1;
     const char* pivot = tableau[debut];
  
-    /* Si le tableau est de longueur nulle, il n'y a rien à faire. */
     if(debut >= fin)
         return;
  
-    /* Sinon, on parcourt le tableau, une fois de droite à gauche, et une
-       autre de gauche à droite, à la recherche d'éléments mal placés,
-       que l'on permute. Si les deux parcours se croisent, on arrête. */
-    while(1)
-    {
+    while(1) {
         do droite--; while(strcmp(tableau[droite],pivot) > 0);
         do gauche++; while(strcmp(tableau[gauche], pivot) < 0);
  
@@ -100,9 +93,16 @@ void util_quickSort(char* tableau[], int debut, int fin)
         else break;
     }
  
-    /* Maintenant, tous les éléments inférieurs au pivot sont avant ceux
-       supérieurs au pivot. On a donc deux groupes de cases à trier. On utilise
-       pour cela... la méthode quickSort elle-même ! */
     util_quickSort(tableau, debut, droite);
     util_quickSort(tableau, droite+1, fin);
+}
+
+void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {
+    int deplacement = (pSens == MOT_PRECEDENT) ? -1 : 1;
+        fseek(pFichier, deplacement, SEEK_CUR); 
+    while( fgetc(pFichier) != '\r') {
+        fseek(pFichier, deplacement-1, SEEK_CUR); 
+    } 
+    fseek(pFichier, 1, SEEK_CUR);
+
 }

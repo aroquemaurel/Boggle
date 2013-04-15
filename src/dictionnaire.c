@@ -21,6 +21,7 @@ Dico dictionnaire_nouveau(const char* pNomFichier) {
             ++i;
         }
      }      
+    nouveauDico.marqueurs[i] = ftell(nouveauDico.dico);
 
     return nouveauDico;
 }
@@ -29,20 +30,16 @@ Dico dictionnaire_nouveau(const char* pNomFichier) {
 /** 
  * @return -1 Mot absent. 0 Mot exact trouvé. ou un autre entier contenant le nombre de lettre manquante pour être dans le dico
  * */
-int dictonnaire_chercherMot(Dico pDictionnaire, char* pMot) {
+int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot) {
     char buff[256];
     char buff2[256];
     int retour;
 
-    fseek(pDictionnaire.dico, pDictionnaire.marqueurs[pMot[0]-65], SEEK_SET);    
-    fgets(buff, 30, pDictionnaire.dico);
-    while (strcmp(buff, pMot) < 0 && fgets(buff, 30, pDictionnaire.dico) != NULL);     
-buff[strlen(buff)-2] = '\0';
+    dictionnaire_rechercheDichotomique(pDictionnaire, pMot, buff);
     if(strcmp(buff, pMot) == 0) {
-        retour = 10;
+        retour = 10;    // C'est lot mot exact
     } else {
-            util_substr(buff,0,strlen(pMot)-1,buff2);
-
+        util_substr(buff,0,strlen(pMot)-1,buff2); // on regarde si la racine du mot correspond à notre mot
         if(strlen(pMot) <= strlen(buff2)) {            
             if(strcmp(pMot, buff2) == 0) {
                 retour = 1;
@@ -50,7 +47,6 @@ buff[strlen(buff)-2] = '\0';
                 retour = 0;
             }
         } else {
-
             retour = 0;
         }
     }
@@ -58,3 +54,29 @@ buff[strlen(buff)-2] = '\0';
     return (retour); 
 }
 
+void dictionnaire_rechercheDichotomique(Dico pDictionnaire, char* pMotAChercher, char* pMotLePlusProche) {
+    long int debut = pDictionnaire.marqueurs[pMotAChercher[0]-65];
+    long int fin = pDictionnaire.marqueurs[(pMotAChercher[0]-65)+1];
+    long int milieu = 0;
+    int cmp;
+    while(debut < fin) {    
+        milieu = (debut + fin) /2;
+        fseek(pDictionnaire.dico, milieu, SEEK_SET);    
+        util_deplacerCurseurDunMot(pDictionnaire.dico, MOT_PRECEDENT);
+        
+        fgets(pMotLePlusProche, 30, pDictionnaire.dico);
+        pMotLePlusProche[strlen(pMotLePlusProche)-2] = '\0';
+        
+        cmp = strcmp(pMotLePlusProche, pMotAChercher);
+        if(cmp == 0) {
+            break;
+        } else if (cmp < 0) {// T[m] < X
+            debut = ftell(pDictionnaire.dico);
+        } else { 
+            fseek(pDictionnaire.dico, -2, SEEK_CUR);
+           util_deplacerCurseurDunMot(pDictionnaire.dico, MOT_PRECEDENT); 
+            fin = ftell(pDictionnaire.dico); 
+        }
+    } 
+
+}

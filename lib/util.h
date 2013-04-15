@@ -7,8 +7,11 @@
 
 #ifndef UTIL_H
 #define	UTIL_H
+#include <stdio.h>
 
 #define MODE_DEBUG 1 
+#define MOT_PRECEDENT 1
+#define MOT_SUIVANT 1
 
 inline void util_affichageDebug(const char* pNomFonction, const char* pChaine);
 char* util_supprimerAccents(const char* pChaine);
@@ -18,5 +21,7 @@ char util_nbAleatoire(const char pDebut, const char pFin);
 int util_substr(const char *chaine, int debut, int fin, char *result);
 void util_echanger(char* tableau[], int a, int b);
 void util_quickSort(char* tableau[], int debut, int fin);
+
+void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens);
 #endif	/* UTIL_H */
 
