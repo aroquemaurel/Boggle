@@ -18,12 +18,11 @@ typedef struct {
     Solution solution;
 } Plateau ;
 
-Plateau plateau_nouveau(const unsigned int pTailleGrille);
+Plateau plateau_nouveau(const unsigned char pTailleGrille);
 void plateau_remplirGrilleAleatoire(Plateau* pPlateau);
 void plateau_remplirGrillePredefinie(Plateau* pPlateau);
 double plateau_probaLettre(const char pLettre);
 char plateau_choisirLettre(void);
-void plateau_afficher(const Plateau pPlateau);
 Plateau plateau_detruire(Plateau* pPlateau);
 #endif	/* PLATEAU_H */
 

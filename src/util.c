@@ -53,7 +53,11 @@ char* util_supprimerAccents(const char* pChaine) {
 
     return retour;
 }
-
+void util_uppercase(char* pChaine) {
+	for(int i = 0 ; i  < strlen(pChaine) ; ++i) {
+		pChaine[i] -= 32;
+	}
+}
 char util_nbAleatoire(const char pDebut, const char pFin) {
     static bool premier = true;
     if(premier) {

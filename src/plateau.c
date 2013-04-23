@@ -4,7 +4,7 @@
 #include "plateau.h"
 #include "util.h"
 
-Plateau plateau_nouveau(const unsigned int pTailleGrille) {
+Plateau plateau_nouveau(const unsigned char pTailleGrille) {
     Plateau nouveauPlateau;
     nouveauPlateau.tailleGrille = pTailleGrille;
     
@@ -33,14 +33,7 @@ Plateau plateau_detruire(Plateau* pPlateau) {
     solution_detruire(&(pPlateau->solution));
 }
 
-void plateau_afficher(const Plateau pPlateau) {
-    for(int i=0 ; i < pPlateau.tailleGrille ; ++i) {
-        for(int j=0 ; j < pPlateau.tailleGrille ; ++j) {
-            printf("%c ", pPlateau.grille[i][j]);
-        }
-        printf("\n");
-    }
-}
+
 void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
     for(int i=0 ; i < pPlateau->tailleGrille ; ++i) {
         for(int j=0 ; j < pPlateau->tailleGrille ; ++j) {

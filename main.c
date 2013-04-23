@@ -13,24 +13,16 @@
 #include "util.h"
 #include "plateau.h"
 #include "resolveur.h"
+#include "jeu.h"
 
 /*
  * 
 */
 int main(void) {
     setlocale(LC_CTYPE, "");
-    Dico test = dictionnaire_nouveau("Complet.txt");
     char choices[256];
-    //printf("\n==%d", dictonnaire_chercherMot(test, "SLKDJFHLKSDFJH"));
-    Plateau plateau = plateau_nouveau(8);
-    plateau_remplirGrilleAleatoire(&plateau);
-    //plateau_remplirGrillePredefinie(&plateau);
-    plateau_afficher(plateau);
-    resolveur(&plateau, choices, test);
-    solution_afficher(plateau.solution);
-    plateau_detruire(&plateau);
-
-
+    Jeu jeu = jeu_initialiser("Complet.txt", 4);
+   jeu_lancerModeTexte(jeu);
     return (EXIT_SUCCESS);
 }
 
