@@ -1,4 +1,4 @@
-#include "interfaceText.h"
+#include "interfaceTexte.h"
 
 void interfaceTexte_afficherPlateau(const Plateau pPlateau) {
     for(int i=0 ; i < pPlateau.tailleGrille ; ++i) {

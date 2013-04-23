@@ -15,7 +15,6 @@ Plateau plateau_nouveau(const unsigned char pTailleGrille) {
         nouveauPlateau.grille[i] = malloc(sizeof(char)*pTailleGrille);
         nouveauPlateau.grid[i] = malloc(sizeof(char*)*pTailleGrille);
     }
-    plateau_remplirGrilleAleatoire(&nouveauPlateau);
     
     return nouveauPlateau;
 }

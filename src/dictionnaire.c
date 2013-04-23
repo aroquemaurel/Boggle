@@ -12,6 +12,7 @@ Dico dictionnaire_nouveau(const char* pNomFichier) {
     nouveauDico.dico = fopen(pNomFichier, "r+");
     if(nouveauDico.dico == NULL) {
         perror("Le nom de fichier du dictionnaire n'existe pas");
+        exit(1);
     }
     rewind(nouveauDico.dico);
     while (fgets(buff, 30, nouveauDico.dico) != NULL) {

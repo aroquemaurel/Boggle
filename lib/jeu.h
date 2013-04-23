@@ -7,9 +7,11 @@ typedef struct {
     Plateau plateau;
     Dico dico;
     time_t timestampDepart;
+    Solution solutionUtilisateur;
 } Jeu;
 
 Jeu jeu_initialiser(const char* pNomDico, const unsigned char pTaillePlateau);
 void jeu_lancer(Jeu* pJeu);
+_Bool jeu_proposerMot(Jeu* pJeu, const char* pMot);
 bool jeu_compteurClaque(const Jeu pJeu);
 #endif	/* JEU_H */

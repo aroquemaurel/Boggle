@@ -8,6 +8,7 @@
 #ifndef RESOLVEUR_H
 #define	RESOLVEUR_H
 #include "plateau.h"
+#include "dictionnaire.h"
 
 void resolveur(Plateau* pPlateau, char* choices, Dico pDico);
 
