@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/src/dictionnaire.o \
+	${OBJECTDIR}/src/interfaceNcurses.o \
 	${OBJECTDIR}/src/interfaceTexte.o \
 	${OBJECTDIR}/src/jeu.o \
 	${OBJECTDIR}/src/plateau.o \
@@ -78,6 +79,11 @@ ${OBJECTDIR}/src/dictionnaire.o: src/dictionnaire.c
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/dictionnaire.o src/dictionnaire.c
+
+${OBJECTDIR}/src/interfaceNcurses.o: src/interfaceNcurses.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/interfaceNcurses.o src/interfaceNcurses.c
 
 ${OBJECTDIR}/src/interfaceTexte.o: src/interfaceTexte.c 
 	${MKDIR} -p ${OBJECTDIR}/src

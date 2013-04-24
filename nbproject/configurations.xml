@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>lib/dictionnaire.h</itemPath>
+      <itemPath>lib/interfaceNcurses.h</itemPath>
       <itemPath>lib/interfaceTexte.h</itemPath>
       <itemPath>lib/jeu.h</itemPath>
       <itemPath>lib/plateau.h</itemPath>
@@ -21,6 +22,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/dictionnaire.c</itemPath>
+      <itemPath>src/interfaceNcurses.c</itemPath>
       <itemPath>src/interfaceTexte.c</itemPath>
       <itemPath>src/jeu.c</itemPath>
       <itemPath>main.c</itemPath>
@@ -54,11 +56,14 @@
           <incDir>
             <pElem>lib</pElem>
           </incDir>
+          <commandLine>-lncurses</commandLine>
         </cTool>
       </compileType>
       <item path="Complet.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lib/interfaceNcurses.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/interfaceTexte.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -75,6 +80,8 @@
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="src/dictionnaire.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/interfaceNcurses.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="src/interfaceTexte.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -112,6 +119,8 @@
       </item>
       <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="lib/interfaceNcurses.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/interfaceTexte.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/jeu.h" ex="false" tool="3" flavor2="0">
@@ -127,6 +136,8 @@
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="src/dictionnaire.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/interfaceNcurses.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="src/interfaceTexte.c" ex="false" tool="0" flavor2="0">
       </item>

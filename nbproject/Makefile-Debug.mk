@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/src/dictionnaire.o \
+	${OBJECTDIR}/src/interfaceNcurses.o \
 	${OBJECTDIR}/src/interfaceTexte.o \
 	${OBJECTDIR}/src/jeu.o \
 	${OBJECTDIR}/src/plateau.o \
@@ -46,7 +47,7 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=
+CFLAGS=-lncurses
 
 # CC Compiler Flags
 CCFLAGS=
@@ -72,42 +73,47 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle: ${OBJECTFILES}
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
 
 ${OBJECTDIR}/src/dictionnaire.o: src/dictionnaire.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/dictionnaire.o src/dictionnaire.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/dictionnaire.o src/dictionnaire.c
+
+${OBJECTDIR}/src/interfaceNcurses.o: src/interfaceNcurses.c 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/interfaceNcurses.o src/interfaceNcurses.c
 
 ${OBJECTDIR}/src/interfaceTexte.o: src/interfaceTexte.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/interfaceTexte.o src/interfaceTexte.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/interfaceTexte.o src/interfaceTexte.c
 
 ${OBJECTDIR}/src/jeu.o: src/jeu.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/jeu.o src/jeu.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/jeu.o src/jeu.c
 
 ${OBJECTDIR}/src/plateau.o: src/plateau.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/plateau.o src/plateau.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/plateau.o src/plateau.c
 
 ${OBJECTDIR}/src/resolveur.o: src/resolveur.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
 
 ${OBJECTDIR}/src/solution.o: src/solution.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/solution.o src/solution.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/solution.o src/solution.c
 
 ${OBJECTDIR}/src/util.o: src/util.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -g -Ilib -std=c99 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/util.o src/util.c
+	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/util.o src/util.c
 
 # Subprojects
 .build-subprojects:
