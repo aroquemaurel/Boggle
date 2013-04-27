@@ -40,6 +40,7 @@ void solution_afficher(const Solution pSolution) {
     for(int i = 0 ; i < pSolution.nbMots ; ++i) {
         printf("%s\n", pSolution.mots[i]);
     }
+    printf("%d mots. nombre de points : %d\n", pSolution.nbMots, solution_nbPoints(pSolution));    
 }
 
 void solution_detruire(Solution* pSolution) {

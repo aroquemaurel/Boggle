@@ -53,7 +53,7 @@ char* util_supprimerAccents(const char* pChaine) {
 
     return retour;
 }
-void util_uppercase(char* pChaine) {
+void util_uppercase(char* pChaine) { // FIXME vérifier que le mot n'est pas en majuscule
 	for(int i = 0 ; i  < strlen(pChaine) ; ++i) {
 		pChaine[i] -= 32;
 	}

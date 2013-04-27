@@ -1,15 +1,18 @@
 #include <ncurses.h>
 #include <stdlib.h>
+#include <string.h>
 #include "interfaceNcurses.h"
 #include "plateau.h"
 #include "jeu.h"
 
-void interfaceNcurses_afficherPlateau(const Plateau pPlateau) { 
-//    for(int i = 0 ; i < pPlateau.tailleGrille ; ++i) {
-   //     for(int j = 0 ; j < pPlateau.tailleGrille ; ++j) {
-          //  mvprintw(i, j, " %c ", pPlateau.grille[i][j]);
-     //   }
- //   }
+void interfaceNcurses_afficherPlateau(const Plateau pPlateau, const Case pCase) { 
+//    for(int j = 0 ; j < pPlateau.tailleGrille ; ++j) {
+ //        for(int i = 0 ; i < pPlateau.tailleGrille ; ++i) {
+             // TODO afficher en couleurs si séléctionnée
+//            mvprintw(i+4, j*3+5, "%d%c", (pICaseActuel == i && pJCaseActuel ==j), pPlateau.grille[i][j]);
+  //      }
+  //   }
+ 
 }
 
 WINDOW* interfaceNcurses_initialiser() {
@@ -22,9 +25,9 @@ WINDOW* interfaceNcurses_initialiser() {
     }
     noecho();                  /*  Turn off key echoing                 */
     keypad(fenetre, TRUE);     /*  Enable the keypad for non-char keys  */
-    mvprintw(7, 10, "Jeu de Boggle");
+    mvprintw(0, 4, "=== Jeu de Boggle ===");
     refresh();
-       
+    
         /*  Clean up after ourselves  */
 
     return fenetre;
@@ -38,21 +41,85 @@ void interfaceNcurses_terminer(WINDOW* fenetre) {
 void jeu_lancerModeNcurses(Jeu pJeu) {
     char proposition[32];
     int ch;
+    Case selectedCase;
+    Case lastChoseCase;
     WINDOW* fenetre;
+    
+    selectedCase.i = 0;
+    selectedCase.j = 0;
+    lastChoseCase = selectedCase;
+    
+    char mot[32] = "";
     jeu_lancer(&pJeu);
     fenetre = interfaceNcurses_initialiser();
             /*  Loop until user presses 'q'  */
-
+                    for(int i = 0 ; i < 31 ; ++i) {
+                    mot[i] = '\0';
+                }
     while ( (ch = getch()) != 'q' ) { // TODO tantque compteur non claqué
-        //mvprintw(0, 0, "You pressed:");
-       // interfaceNcurses_afficherPlateau(pJeu.plateau);
-        for(int i = 0 ; i < pJeu.plateau.tailleGrille ; ++i) {
-             for(int j = 0 ; j < pJeu.plateau.tailleGrille ; ++j) {
-                mvprintw(i*2+10, j*3+20, "%c", pJeu.plateau.grille[i][j]);
-            }
-         }
+        switch(ch) {
+            case KEY_LEFT:
+                // FIXME déplacement lettres
+                if(strlen(mot) == 0 || (selectedCase.j == lastChoseCase.j) || (selectedCase.j == lastChoseCase.j+1)) {
+                selectedCase.j = (selectedCase.j-1 >= 0) 
+                                        ? selectedCase.j-1 : selectedCase.j;
+                }
+            break;
+            case KEY_RIGHT:
+                if(strlen(mot) == 0 || (selectedCase.j == lastChoseCase.j) || (selectedCase.j == lastChoseCase.j-1)) {
+                selectedCase.j = (selectedCase.j+1 < pJeu.plateau.tailleGrille) 
+                                        ? selectedCase.j+1 : selectedCase.j;
+                }
+                break;
+            case KEY_UP:
+                if(strlen(mot) == 0 || (selectedCase.i == lastChoseCase.i) || (selectedCase.i == lastChoseCase.i+1)) {
+                selectedCase.i = (selectedCase.i-1 < pJeu.plateau.tailleGrille) 
+                                        ? selectedCase.i-1 : selectedCase.i;                
+                }
+                break;
+            case KEY_DOWN:
+                if(strlen(mot) == 0 || (selectedCase.i == lastChoseCase.i) || (selectedCase.i == lastChoseCase.i-1)) {
+                selectedCase.i = (selectedCase.i+1 <= pJeu.plateau.tailleGrille) 
+                        ? selectedCase.i+1 : selectedCase.i;
+                }
+                break;
+            case KEY_BACKSPACE: // TODO changer touche, lire la doc => space
+                mot[strlen(mot)] = pJeu.plateau.grille[selectedCase.i][selectedCase.j];
+                mvprintw(0, 50, "%s", mot);
+                for(int i = 0 ; i < 31 ; ++i) {
+                        mvprintw(0, 50+strlen(mot)+i, " ");
+                }
+                lastChoseCase = selectedCase;
+                break;
+            case KEY_ENTER:
+                // refresh la ligne TODO
+                mvprintw(1, 50, "%s", (jeu_proposerMot(&pJeu, mot) ? "Mot correct" : "Mot Incorrect"));
+                
+                // refresh la ligne TODO
+                for(int i = 0 ; i < 31 ; ++i) {
+                    mvprintw(0, 50+i, " ");
+                }
+                
+                for(int i = 0 ; i < 31 ; ++i) {
+                    mot[i] = '\0';
+                }
+                break;
+                        
+        }
+ /*       mvprintw(0, 50, "You pressed\n");
+        mvprintw(0, 50, "You pressed\n");
+        mvprintw(1, 50, "You pressed\n");
+        mvprintw(2, 50, "You pressed\n");
+        mvprintw(3, 50, "You pressed\n");
+        mvprintw(4, 50, "You pressed\n"); */
+//        interfaceNcurses_afficherPlateau(pJeu.plateau, iCaseActuel, jCaseActuel);
+            for(int j = 0 ; j < pJeu.plateau.tailleGrille ; ++j) {
+         for(int i = 0 ; i < pJeu.plateau.tailleGrille ; ++i) {
+             // TODO afficher en couleurs si séléctionnée
+            mvprintw(i+4, j*3+5, "%d%c", (selectedCase.i == i && selectedCase.j ==j), pJeu.plateau.grille[i][j]);
+       }
+     }
 	/*  Delete the old response line, and print a new one  */
-
 	deleteln();
 	refresh();
     }

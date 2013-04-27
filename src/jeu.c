@@ -28,8 +28,8 @@ Jeu jeu_initialiser(const char* pNomDico, const unsigned char pTaillePlateau) {
 void jeu_lancer(Jeu* pJeu) {
     char choices[256];
     
-   // plateau_remplirGrilleAleatoire(&(pJeu->plateau));
-     plateau_remplirGrillePredefinie(&(pJeu->plateau));
+    plateau_remplirGrilleAleatoire(&(pJeu->plateau));
+//    plateau_remplirGrillePredefinie(&(pJeu->plateau));
     resolveur(&(pJeu->plateau), choices, pJeu->dico);
     
     // départ compteur
@@ -37,13 +37,14 @@ void jeu_lancer(Jeu* pJeu) {
 _Bool jeu_proposerMot(Jeu* pJeu, const char* pMot) {
 	char* mot = util_supprimerAccents(pMot);
 	_Bool retour;
-	util_uppercase(pMot);
+	//util_uppercase(pMot);
 
 	retour = solution_motEstPresent(pJeu->plateau.solution, pMot);
 	if(retour) {
-		solution_ajouterMot(&(pJeu->solutionUtilisateur), pMot);
+            solution_ajouterMot(&(pJeu->solutionUtilisateur), pMot);
 	}
 	free(mot);
+        
 
 	return (retour);
 }

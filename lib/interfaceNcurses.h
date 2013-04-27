@@ -9,7 +9,14 @@
 #define	INTERFACENCURSES_H
 #include "plateau.h"
 #include "jeu.h"
-void interfaceNcurses_afficherPlateau(const Plateau pPlateau);
+
+typedef struct {
+    unsigned char i;
+    unsigned char j;
+} Case;
+
+void interfaceNcurses_afficherPlateau(const Plateau pPlateau, Case pCase);
+
 void jeu_lancerModeNcurses(Jeu pJeu);
 
 
