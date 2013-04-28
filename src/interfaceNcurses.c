@@ -39,17 +39,17 @@ void interfaceNcurses_terminer(WINDOW* fenetre) {
     refresh();
 }
 void jeu_lancerModeNcurses(Jeu pJeu) {
-    char proposition[32];
-    int ch;
     Case selectedCase;
     Case lastChoseCase;
+    Case usedCase[32];
     WINDOW* fenetre;
+    char mot[32] = "";
+    int ch;
     
     selectedCase.i = 0;
     selectedCase.j = 0;
-    lastChoseCase = selectedCase;
-    
-    char mot[32] = "";
+    lastChoseCase = selectedCase; 
+
     jeu_lancer(&pJeu);
     fenetre = interfaceNcurses_initialiser();
             /*  Loop until user presses 'q'  */
@@ -84,25 +84,29 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                 }
                 break;
             case KEY_BACKSPACE: // TODO changer touche, lire la doc => space
-                mot[strlen(mot)] = pJeu.plateau.grille[selectedCase.i][selectedCase.j];
-                mvprintw(0, 50, "%s", mot);
-                for(int i = 0 ; i < 31 ; ++i) {
-                        mvprintw(0, 50+strlen(mot)+i, " ");
+                if(selectedCase.i != lastChoseCase.i || selectedCase.j != lastChoseCase.j) {
+                    mot[strlen(mot)] = pJeu.plateau.grille[selectedCase.i][selectedCase.j];
+                    usedCase[strlen(mot)] = selectedCase;
+                    mvprintw(0, 50, "%s", mot);
+                    for(int i = 0 ; i < 31 ; ++i) {
+                            mvprintw(0, 50+strlen(mot)+i, " ");
+                    }
+                    lastChoseCase = selectedCase;
                 }
-                lastChoseCase = selectedCase;
                 break;
-            case KEY_ENTER:
+            case KEY_ENTER:                
                 // refresh la ligne TODO
                 mvprintw(1, 50, "%s", (jeu_proposerMot(&pJeu, mot) ? "Mot correct" : "Mot Incorrect"));
-                
+
                 // refresh la ligne TODO
                 for(int i = 0 ; i < 31 ; ++i) {
                     mvprintw(0, 50+i, " ");
                 }
-                
+
                 for(int i = 0 ; i < 31 ; ++i) {
                     mot[i] = '\0';
                 }
+            
                 break;
                         
         }
