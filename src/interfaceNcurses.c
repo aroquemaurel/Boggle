@@ -46,7 +46,7 @@ void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Case pSelecte
              if(util_isInArray(pUsedCase, pLgUsedCase+1, buff)) {
                 attron(COLOR_PAIR(COULEUR_CASE_CHOISI));
              }             
-             if((pSelectedCase.i == i && pSelectedCase.j ==j)) {
+             if((pSelectedCase.i == i) && (pSelectedCase.j ==j)) {
             	attron(COLOR_PAIR(COULEUR_SELECTION_CASE));
              }
              mvprintw(i+6, j*3+5, " %c ", pPlateau.grille[i][j]);
@@ -93,18 +93,18 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
         switch(ch) {
             case KEY_LEFT:
                 // FIXME déplacement lettres
-                if(strlen(mot) == 0 || (selectedCase.j == lastChoseCase.j) || (selectedCase.j == lastChoseCase.j+1)) {
+                if((strlen(mot) == 0) || (selectedCase.j == lastChoseCase.j) || (selectedCase.j == lastChoseCase.j+1)) {
                     selectedCase.j = (selectedCase.j-1 >= 0) ? selectedCase.j-1 : selectedCase.j;
                }
             break;
             case KEY_RIGHT:
-                if(strlen(mot) == 0 || (selectedCase.j == lastChoseCase.j) || (selectedCase.j == lastChoseCase.j-1)) {
+                if((strlen(mot) == 0) || (selectedCase.j == lastChoseCase.j) || (selectedCase.j == lastChoseCase.j-1)) {
                 selectedCase.j = (selectedCase.j+1 < pJeu.plateau.tailleGrille) 
                                         ? selectedCase.j+1 : selectedCase.j;
                 }
                 break;
             case KEY_UP:
-                if(strlen(mot) == 0 || (selectedCase.i == lastChoseCase.i) || (selectedCase.i == lastChoseCase.i+1)) {
+                if((strlen(mot) == 0) || (selectedCase.i == lastChoseCase.i) || (selectedCase.i == lastChoseCase.i+1)) {
                 selectedCase.i = (selectedCase.i-1 < pJeu.plateau.tailleGrille) 
                                         ? selectedCase.i-1 : selectedCase.i;                
                 }
@@ -116,8 +116,8 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                 }
                 break;
             case ' ':  //touche espace
-               if((selectedCase.i != lastChoseCase.i || selectedCase.j != lastChoseCase.j) 
-                        && !util_isInArray(usedCase, strlen(mot)+1, selectedCase)) {
+               if(((selectedCase.i != lastChoseCase.i) || (selectedCase.j != lastChoseCase.j)) 
+                        && (!util_isInArray(usedCase, strlen(mot)+1, selectedCase))) {
                     mot[strlen(mot)] = pJeu.plateau.grille[selectedCase.i][selectedCase.j];
                     usedCase[strlen(mot)] = selectedCase;
                     mvprintw(0, 50, "%s", mot);
@@ -145,7 +145,8 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
 
 	//deleteln();
 	refresh();
-    } while ( ((ch = getch()) != 'q' ) && !jeu_compteurClaque(pJeu)); // TODO tantque compteur non claqué;
+    ch = getch();
+    } while ((ch != 'q') && (!jeu_compteurClaque(pJeu))); 
 
     interfaceNcurses_terminer(fenetre);
 }

@@ -55,7 +55,7 @@ int solution_nbPoints(Solution pSolution) {
     int taille;
     for(int i = 0 ; i < pSolution.nbMots ; ++i) {
         taille = strlen(pSolution.mots[i]);
-        if(taille == 3 || taille == 4) {
+        if((taille == 3) || (taille == 4)) {
             retour += 1;
         } else if (taille == 5) {
             retour += 2;  

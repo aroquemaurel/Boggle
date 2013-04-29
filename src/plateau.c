@@ -47,7 +47,8 @@ void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
     int k;
     for(int i=0 ; i < pPlateau->tailleGrille ; ++i) {
         for(int j=0 ; j < pPlateau->tailleGrille ; ++j) {
-            pPlateau->grille[j][i] = grille[k++];;
+            pPlateau->grille[j][i] = grille[k];
+            ++k;
             pPlateau->grid[j][i] = 0;
         }
     }

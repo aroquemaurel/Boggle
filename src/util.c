@@ -14,11 +14,13 @@
         printf("[%s]: %s", pNomFonction, pChaine);
     }
 }
-void util_afficherTableAscii(void) {
+
+ void util_afficherTableAscii(void) {
     for (int i = 0 ; i < 256 ; ++i) {
         printf("%c : %d\n", i, i);
     }
 }
+
 char* util_supprimerAccents(const char* pChaine) {
     char* retour = malloc(100*sizeof(char));
     wchar_t* buffer = malloc(100*sizeof(wchar_t));
@@ -62,9 +64,10 @@ char* util_supprimerAccents(const char* pChaine) {
 
     return retour;
 }
+
 void util_uppercase(char* pChaine) { // FIXME vérifier que le mot n'est pas en majuscule
 	for(int i = 0 ; i  < strlen(pChaine) ; ++i) {
-            if(pChaine[i] >= 'a' && pChaine[i] <= 'z') {
+            if((pChaine[i] >= 'a') && (pChaine[i] <= 'z')) {
 		pChaine[i] -= 32;
             }
 	}
@@ -124,7 +127,7 @@ void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {
 
 _Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase) {
     for(int i = 0 ; i < pTaille ; ++i) {
-        if(pTableau[i].i == pCase.i && pTableau[i].j == pCase.j) {
+        if((pTableau[i].i == pCase.i) && (pTableau[i].j == pCase.j)) {
             return true;
         }
     }

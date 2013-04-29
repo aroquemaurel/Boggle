@@ -1,4 +1,5 @@
 #include <stdbool.h>
+
 #include <string.h>
 #include "util.h"
 #include "dictionnaire.h"
@@ -17,7 +18,8 @@ void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDi
     }
     
     pPlateau->grid[x][y] = 1;
-    choices[depth++] = pPlateau->grille[x][y];
+    choices[depth] = pPlateau->grille[x][y];
+    ++depth;
     choices[depth] = '\0';
     
     if(depth >= TAILLE_MOT_MIN) {

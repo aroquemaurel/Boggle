@@ -64,7 +64,7 @@ void jeu_lancerModeTexte(Jeu pJeu) {
         printf("encore %f secondes", (jeu_tempsRestant(pJeu)));
         scanf("%s", &proposition);
 		printf("\n%s", jeu_proposerMot(&pJeu, proposition) ? " Mot Incorrect " : " Mot Correct ");
-    }while((strcmp(proposition, "-1") != 0) && !jeu_compteurClaque(pJeu));
+    }while((strcmp(proposition, "-1") != 0) && (!jeu_compteurClaque(pJeu)));
     solution_afficher(pJeu.solutionUtilisateur);
      solution_afficher(pJeu.plateau.solution);
     jeu_stopper(pJeu);
