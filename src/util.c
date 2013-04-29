@@ -131,3 +131,8 @@ _Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase) 
     
     return false;
 }
+
+void util_conversionTemps(const time_t pTimestamp, int* pMinutes, int* pSecondes) {
+    *pMinutes = (pTimestamp / 60 % 60);
+    *pSecondes  = pTimestamp % 60;
+}

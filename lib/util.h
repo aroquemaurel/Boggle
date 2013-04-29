@@ -8,6 +8,7 @@
 #ifndef UTIL_H
 #define	UTIL_H
 #include <stdio.h>
+#include <time.h>
 #include "case.h"
 #define MODE_DEBUG 1 
 #define MOT_PRECEDENT 1
@@ -24,5 +25,6 @@ void util_quickSort(char* tableau[], int debut, int fin);
 
 void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens);
 _Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase);
+void util_conversionTemps(const time_t pTimestamp, int* pMinutes, int* pSecondes);
 #endif	/* UTIL_H */
 
