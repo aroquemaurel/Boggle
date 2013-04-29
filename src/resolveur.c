@@ -8,7 +8,7 @@
 void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDico) {
     int res;
     
-    if(x < 0 || y < 0 || x >= pPlateau->tailleGrille || y >= pPlateau->tailleGrille) {
+    if((x < 0) || (y < 0) || (x >= pPlateau->tailleGrille) || (y >= pPlateau->tailleGrille)) {
         return ;
     }
     
