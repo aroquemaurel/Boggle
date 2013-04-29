@@ -8,7 +8,7 @@
 #ifndef UTIL_H
 #define	UTIL_H
 #include <stdio.h>
-
+#include "case.h"
 #define MODE_DEBUG 1 
 #define MOT_PRECEDENT 1
 #define MOT_SUIVANT 1
@@ -23,5 +23,6 @@ void util_echanger(char* tableau[], int a, int b);
 void util_quickSort(char* tableau[], int debut, int fin);
 
 void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens);
+_Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase);
 #endif	/* UTIL_H */
 

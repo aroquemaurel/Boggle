@@ -24,6 +24,9 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
+          <runcommandpicklistitem>export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/aroquemaurel/boggle/Cunit/lib  &amp;&amp; "${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/aroquemaurel/boggle/Cunit/lib"  &amp;&amp; "${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>./script.sh &amp;&amp; "${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
         </runcommandpicklist>
         <runcommand>"${OUTPUT_PATH}"</runcommand>
@@ -33,6 +36,7 @@
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>
+          <variable name="LD_LIBRARY_PATH" value="/home/aroquemaurel/boggle/Cunit/lib"/>
         </environment>
       </runprofile>
     </conf>

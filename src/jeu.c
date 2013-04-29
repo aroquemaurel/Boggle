@@ -8,9 +8,9 @@
 #include "plateau.h"
 #include "dictionnaire.h"
 #include "interfaceTexte.h"
-
+// TODO Afficher quand un mot a déjà été mis
 double jeu_tempsRestant(const Jeu pJeu) {
-	return (-(time(NULL) - pJeu.timestampDepart) + 10);
+	return (-(time(NULL) - pJeu.timestampDepart) + 180);
 }
 
 bool jeu_compteurClaque(const Jeu pJeu) {
@@ -63,11 +63,12 @@ void jeu_lancerModeTexte(Jeu pJeu) {
   do {
         printf("encore %f secondes", (jeu_tempsRestant(pJeu)));
         scanf("%s", &proposition);
-		printf("\n%s", jeu_proposerMot(&pJeu, proposition) ? "Good" : "Bad");
+		printf("\n%s", jeu_proposerMot(&pJeu, proposition) ? " Mot Incorrect " : " Mot Correct ");
     }while((strcmp(proposition, "-1") != 0) && !jeu_compteurClaque(pJeu));
     solution_afficher(pJeu.solutionUtilisateur);
-	jeu_stopper(pJeu);
+     solution_afficher(pJeu.plateau.solution);
+    jeu_stopper(pJeu);
   //  printf("\nProposer des mots : ");
-//    solution_afficher(pJeu.plateau.solution);
+    
 }
 

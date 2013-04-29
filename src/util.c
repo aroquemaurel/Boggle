@@ -7,6 +7,7 @@
 
 #include "util.h"
 #include "jeu.h"
+#include "case.h"
 
  void util_affichageDebug(const char* pNomFonction, const char* pChaine) {
     if(MODE_DEBUG) {
@@ -30,6 +31,14 @@ char* util_supprimerAccents(const char* pChaine) {
             case L'ê':
             case L'ë':              
                 retour[i] = 'e';
+                break;
+            case L'É':
+            case L'È':
+            case L'Ê':
+                retour[i] = 'E';
+                break;
+            case L'À':
+                retour[i] = 'A';
                 break;
             case L'ô':
             case L'ö':
@@ -55,7 +64,9 @@ char* util_supprimerAccents(const char* pChaine) {
 }
 void util_uppercase(char* pChaine) { // FIXME vérifier que le mot n'est pas en majuscule
 	for(int i = 0 ; i  < strlen(pChaine) ; ++i) {
+            if(pChaine[i] >= 'a' && pChaine[i] <= 'z') {
 		pChaine[i] -= 32;
+            }
 	}
 }
 char util_nbAleatoire(const char pDebut, const char pFin) {
@@ -109,4 +120,14 @@ void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {
     } 
     fseek(pFichier, 1, SEEK_CUR);
 
+}
+
+_Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase) {
+    for(int i = 0 ; i < pTaille ; ++i) {
+        if(pTableau[i].i == pCase.i && pTableau[i].j == pCase.j) {
+            return true;
+        }
+    }
+    
+    return false;
 }

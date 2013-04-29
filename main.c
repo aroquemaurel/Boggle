@@ -22,9 +22,9 @@
 int main(void) {
     setlocale(LC_CTYPE, "");
     char choices[256];
-    Jeu jeu = jeu_initialiser("Complet.txt", 8);
+    Jeu jeu = jeu_initialiser("Complet.txt", 6);
    //jeu_lancerModeTexte(jeu);
-    jeu_lancerModeNcurses(jeu);
+   jeu_lancerModeNcurses(jeu);
     return (EXIT_SUCCESS);
 }
 

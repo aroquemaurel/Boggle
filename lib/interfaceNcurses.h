@@ -9,11 +9,10 @@
 #define	INTERFACENCURSES_H
 #include "plateau.h"
 #include "jeu.h"
+#include "case.h"
+#define COULEUR_SELECTION_CASE 1
+#define COULEUR_CASE_CHOISI 2
 
-typedef struct {
-    unsigned char i;
-    unsigned char j;
-} Case;
 
 void interfaceNcurses_afficherPlateau(const Plateau pPlateau, Case pCase);
 

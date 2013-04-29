@@ -39,7 +39,8 @@ int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot) {
     dictionnaire_rechercheDichotomique(pDictionnaire, pMot, buff);
     if(strcmp(buff, pMot) == 0) {
         retour = 10;    // C'est lot mot exact
-    } else {
+    } else { //FIXME Mots en diagonale.
+        //return 1; 
         util_substr(buff,0,strlen(pMot)-1,buff2); // on regarde si la racine du mot correspond à notre mot
         if(strlen(pMot) <= strlen(buff2)) {            
             if(strcmp(pMot, buff2) == 0) {

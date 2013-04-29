@@ -4,6 +4,7 @@
 #include "interfaceNcurses.h"
 #include "plateau.h"
 #include "jeu.h"
+#include "util.h"
 
 void interfaceNcurses_afficherPlateau(const Plateau pPlateau, const Case pCase) { 
 //    for(int j = 0 ; j < pPlateau.tailleGrille ; ++j) {
@@ -25,6 +26,10 @@ WINDOW* interfaceNcurses_initialiser() {
     }
     noecho();                  /*  Turn off key echoing                 */
     keypad(fenetre, TRUE);     /*  Enable the keypad for non-char keys  */
+    start_color();
+    init_pair(COULEUR_SELECTION_CASE, COLOR_BLACK, COLOR_WHITE);
+    init_pair(COULEUR_CASE_CHOISI, COLOR_WHITE, COLOR_BLUE);    
+
     mvprintw(0, 4, "=== Jeu de Boggle ===");
     refresh();
     
@@ -37,11 +42,13 @@ void interfaceNcurses_terminer(WINDOW* fenetre) {
     delwin(fenetre);
     endwin();
     refresh();
+    
 }
 void jeu_lancerModeNcurses(Jeu pJeu) {
     Case selectedCase;
     Case lastChoseCase;
     Case usedCase[32];
+    Case buff;
     WINDOW* fenetre;
     char mot[32] = "";
     int ch;
@@ -84,7 +91,8 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                 }
                 break;
             case KEY_BACKSPACE: // TODO changer touche, lire la doc => space
-                if(selectedCase.i != lastChoseCase.i || selectedCase.j != lastChoseCase.j) {
+               if((selectedCase.i != lastChoseCase.i || selectedCase.j != lastChoseCase.j) 
+                        && !util_isInArray(usedCase, strlen(mot)+1, selectedCase)) {
                     mot[strlen(mot)] = pJeu.plateau.grille[selectedCase.i][selectedCase.j];
                     usedCase[strlen(mot)] = selectedCase;
                     mvprintw(0, 50, "%s", mot);
@@ -106,7 +114,8 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                 for(int i = 0 ; i < 31 ; ++i) {
                     mot[i] = '\0';
                 }
-            
+                            lastChoseCase.i = -1;
+                lastChoseCase.j = -1;
                 break;
                         
         }
@@ -119,8 +128,17 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
 //        interfaceNcurses_afficherPlateau(pJeu.plateau, iCaseActuel, jCaseActuel);
             for(int j = 0 ; j < pJeu.plateau.tailleGrille ; ++j) {
          for(int i = 0 ; i < pJeu.plateau.tailleGrille ; ++i) {
-             // TODO afficher en couleurs si séléctionnée
-            mvprintw(i+4, j*3+5, "%d%c", (selectedCase.i == i && selectedCase.j ==j), pJeu.plateau.grille[i][j]);
+             buff.i = i;
+             buff.j = j;
+             if(util_isInArray(usedCase, strlen(mot)+1, buff)) {
+                attron(COLOR_PAIR(COULEUR_CASE_CHOISI));
+             }             
+             if((selectedCase.i == i && selectedCase.j ==j)) {
+            	attron(COLOR_PAIR(COULEUR_SELECTION_CASE));
+             }
+             mvprintw(i+4, j*3+5, "%c", pJeu.plateau.grille[i][j]);
+            attroff(COLOR_PAIR(COULEUR_SELECTION_CASE));
+            attroff(COLOR_PAIR(COULEUR_CASE_CHOISI));
        }
      }
 	/*  Delete the old response line, and print a new one  */
