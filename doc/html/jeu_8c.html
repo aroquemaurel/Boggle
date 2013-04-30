@@ -2,113 +2,75 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <title>Jeu de Boggle: Référence du fichier jeu.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
-</script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
-   <div id="projectname">Jeu de Boggle
-   &#160;<span id="projectnumber">1</span>
-   </div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- Généré par Doxygen 1.8.1.2 -->
+<!-- Généré par Doxygen 1.7.1 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
 </script>
-  <div id="navrow1" class="tabs">
+<div class="navigation" id="top">
+  <div class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
-      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
+  <div class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
 </div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('jeu_8c.html','');});
-</script>
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
 <div class="header">
   <div class="summary">
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier jeu.c</div>  </div>
-</div><!--header-->
+<h1>Référence du fichier jeu.c</h1>  </div>
+</div>
 <div class="contents">
 
 <p>Gestion du jeu de Boggle Les fonctions permettant de gérer le <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> de Boggle.  
-<a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<a href="#_details">Plus de détails...</a></p>
+<code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
 <code>#include &quot;util.h&quot;</code><br/>
 <code>#include &quot;resolveur.h&quot;</code><br/>
@@ -116,232 +78,237 @@ $(document).ready(function(){initNavTree('jeu_8c.html','');});
 <code>#include &quot;plateau.h&quot;</code><br/>
 <code>#include &quot;dictionnaire.h&quot;</code><br/>
 <code>#include &quot;interfaceTexte.h&quot;</code><br/>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a59f32d1375181989b1aa94b838631929"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a59f32d1375181989b1aa94b838631929">jeu_tempsRestant</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
-<tr class="memdesc:a59f32d1375181989b1aa94b838631929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre de secondes restantes avant la fin du jeu.  <a href="#a59f32d1375181989b1aa94b838631929"></a><br/></td></tr>
-<tr class="memitem:a856c5fb8ebf30b42d3b0dccc0b3ad2e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a856c5fb8ebf30b42d3b0dccc0b3ad2e4">jeu_compteurClaque</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
-<tr class="memdesc:a856c5fb8ebf30b42d3b0dccc0b3ad2e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne vrai si le temps est écoulé faux sinon.  <a href="#a856c5fb8ebf30b42d3b0dccc0b3ad2e4"></a><br/></td></tr>
-<tr class="memitem:a617372bb03d9df71cd954f10d8486602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJeu.html">Jeu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a617372bb03d9df71cd954f10d8486602">jeu_nouveau</a> (const char *pNomDico, const unsigned char pTaillePlateau)</td></tr>
-<tr class="memdesc:a617372bb03d9df71cd954f10d8486602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un nouveau jeu.  <a href="#a617372bb03d9df71cd954f10d8486602"></a><br/></td></tr>
-<tr class="memitem:ac9f225a777f911ea04166e4d8b8323b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#ac9f225a777f911ea04166e4d8b8323b2">jeu_lancer</a> (<a class="el" href="structJeu.html">Jeu</a> *pJeu)</td></tr>
-<tr class="memdesc:ac9f225a777f911ea04166e4d8b8323b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance le jeu.  <a href="#ac9f225a777f911ea04166e4d8b8323b2"></a><br/></td></tr>
-<tr class="memitem:aee397c079a99210e5594e36b08db11c4"><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#aee397c079a99210e5594e36b08db11c4">jeu_proposerMot</a> (<a class="el" href="structJeu.html">Jeu</a> *pJeu, const char *pMot)</td></tr>
-<tr class="memdesc:aee397c079a99210e5594e36b08db11c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proposer un mot.  <a href="#aee397c079a99210e5594e36b08db11c4"></a><br/></td></tr>
-<tr class="memitem:a112bcfc7f5159ea64a21cacb92c944ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a112bcfc7f5159ea64a21cacb92c944ea">jeu_stopper</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
-<tr class="memdesc:a112bcfc7f5159ea64a21cacb92c944ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fin du jeu.  <a href="#a112bcfc7f5159ea64a21cacb92c944ea"></a><br/></td></tr>
-<tr class="memitem:a4c8b971a83c16ff0b7a62457c4ef050e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a4c8b971a83c16ff0b7a62457c4ef050e">jeu_lancerModeTexte</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
-<tr class="memdesc:a4c8b971a83c16ff0b7a62457c4ef050e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance le jeu en mode texte.  <a href="#a4c8b971a83c16ff0b7a62457c4ef050e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a59f32d1375181989b1aa94b838631929">jeu_tempsRestant</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retourne le nombre de secondes restantes avant la fin du jeu.  <a href="#a59f32d1375181989b1aa94b838631929"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a856c5fb8ebf30b42d3b0dccc0b3ad2e4">jeu_compteurClaque</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retourne vrai si le temps est écoulé faux sinon.  <a href="#a856c5fb8ebf30b42d3b0dccc0b3ad2e4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJeu.html">Jeu</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a617372bb03d9df71cd954f10d8486602">jeu_nouveau</a> (const char *pNomDico, const unsigned char pTaillePlateau)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Créer un nouveau jeu.  <a href="#a617372bb03d9df71cd954f10d8486602"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#ac9f225a777f911ea04166e4d8b8323b2">jeu_lancer</a> (<a class="el" href="structJeu.html">Jeu</a> *pJeu)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lance le jeu.  <a href="#ac9f225a777f911ea04166e4d8b8323b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">_Bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#aee397c079a99210e5594e36b08db11c4">jeu_proposerMot</a> (<a class="el" href="structJeu.html">Jeu</a> *pJeu, const char *pMot)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Proposer un mot.  <a href="#aee397c079a99210e5594e36b08db11c4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a112bcfc7f5159ea64a21cacb92c944ea">jeu_stopper</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fin du jeu.  <a href="#a112bcfc7f5159ea64a21cacb92c944ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html#a4c8b971a83c16ff0b7a62457c4ef050e">jeu_lancerModeTexte</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lance le jeu en mode texte.  <a href="#a4c8b971a83c16ff0b7a62457c4ef050e"></a><br/></td></tr>
 </table>
-<a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Gestion du jeu de Boggle Les fonctions permettant de gérer le <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> de Boggle. </p>
-<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>, Resolveur, <a class="el" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>, <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> </dd></dl>
-</div><h2>Documentation des fonctions</h2>
-<a class="anchor" id="a856c5fb8ebf30b42d3b0dccc0b3ad2e4"></a>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<p>Gestion du jeu de Boggle Les fonctions permettant de gérer le <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> de Boggle. </p>
+<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>, Resolveur, <a class="el" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>, <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> </dd></dl>
+<hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a856c5fb8ebf30b42d3b0dccc0b3ad2e4"></a><!-- doxytag: member="jeu.c::jeu_compteurClaque" ref="a856c5fb8ebf30b42d3b0dccc0b3ad2e4" args="(const Jeu pJeu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool jeu_compteurClaque </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structJeu.html">Jeu</a>&#160;</td>
-          <td class="paramname"><em>pJeu</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structJeu.html">Jeu</a>&nbsp;</td>
+          <td class="paramname"> <em>pJeu</em></td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Retourne vrai si le temps est écoulé faux sinon. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pJeu</td><td>Le jeu pourlequel on veut saoir si le temps est écoulé </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pJeu</em>&nbsp;</td><td>Le jeu pourlequel on veut saoir si le temps est écoulé </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Vrai si le temps est écoulé faux sinon </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Vrai si le temps est écoulé faux sinon </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ac9f225a777f911ea04166e4d8b8323b2"></a>
+<a class="anchor" id="ac9f225a777f911ea04166e4d8b8323b2"></a><!-- doxytag: member="jeu.c::jeu_lancer" ref="ac9f225a777f911ea04166e4d8b8323b2" args="(Jeu *pJeu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void jeu_lancer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a> *&#160;</td>
-          <td class="paramname"><em>pJeu</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a> *&nbsp;</td>
+          <td class="paramname"> <em>pJeu</em></td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Lance le jeu. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pJeu</td><td>Le jeu à lancer </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pJeu</em>&nbsp;</td><td>Le jeu à lancer </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a4c8b971a83c16ff0b7a62457c4ef050e"></a>
+<a class="anchor" id="a4c8b971a83c16ff0b7a62457c4ef050e"></a><!-- doxytag: member="jeu.c::jeu_lancerModeTexte" ref="a4c8b971a83c16ff0b7a62457c4ef050e" args="(Jeu pJeu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void jeu_lancerModeTexte </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a>&#160;</td>
-          <td class="paramname"><em>pJeu</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a>&nbsp;</td>
+          <td class="paramname"> <em>pJeu</em></td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Lance le jeu en mode texte. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pJeu</td><td>le jeu à lancer </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pJeu</em>&nbsp;</td><td>le jeu à lancer </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a617372bb03d9df71cd954f10d8486602"></a>
+<a class="anchor" id="a617372bb03d9df71cd954f10d8486602"></a><!-- doxytag: member="jeu.c::jeu_nouveau" ref="a617372bb03d9df71cd954f10d8486602" args="(const char *pNomDico, const unsigned char pTaillePlateau)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structJeu.html">Jeu</a> jeu_nouveau </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>pNomDico</em>, </td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pNomDico</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned char&#160;</td>
-          <td class="paramname"><em>pTaillePlateau</em>&#160;</td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>pTaillePlateau</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Créer un nouveau jeu. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pNomDico</td><td>Le dictionnaire utilisé dans le <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> </td></tr>
-    <tr><td class="paramname">pTaillePlateau</td><td>La taille du plateau à créer </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pNomDico</em>&nbsp;</td><td>Le dictionnaire utilisé dans le <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pTaillePlateau</em>&nbsp;</td><td>La taille du plateau à créer </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Le nouveau <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le nouveau <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aee397c079a99210e5594e36b08db11c4"></a>
+<a class="anchor" id="aee397c079a99210e5594e36b08db11c4"></a><!-- doxytag: member="jeu.c::jeu_proposerMot" ref="aee397c079a99210e5594e36b08db11c4" args="(Jeu *pJeu, const char *pMot)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">_Bool jeu_proposerMot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a> *&#160;</td>
-          <td class="paramname"><em>pJeu</em>, </td>
+          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a> *&nbsp;</td>
+          <td class="paramname"> <em>pJeu</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>pMot</em>&#160;</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pMot</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Proposer un mot. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pJeu</td><td>Le jeu pour lequel on veut proposer un mot </td></tr>
-    <tr><td class="paramname">pMot</td><td>Le mot proposé </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pJeu</em>&nbsp;</td><td>Le jeu pour lequel on veut proposer un mot </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pMot</em>&nbsp;</td><td>Le mot proposé </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Vrai si le mot est validé </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Vrai si le mot est validé </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a112bcfc7f5159ea64a21cacb92c944ea"></a>
+<a class="anchor" id="a112bcfc7f5159ea64a21cacb92c944ea"></a><!-- doxytag: member="jeu.c::jeu_stopper" ref="a112bcfc7f5159ea64a21cacb92c944ea" args="(Jeu pJeu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void jeu_stopper </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a>&#160;</td>
-          <td class="paramname"><em>pJeu</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a>&nbsp;</td>
+          <td class="paramname"> <em>pJeu</em></td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Fin du jeu. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pJeu</td><td>Le jeu à terminer </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pJeu</em>&nbsp;</td><td>Le jeu à terminer </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a59f32d1375181989b1aa94b838631929"></a>
+<a class="anchor" id="a59f32d1375181989b1aa94b838631929"></a><!-- doxytag: member="jeu.c::jeu_tempsRestant" ref="a59f32d1375181989b1aa94b838631929" args="(const Jeu pJeu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">time_t jeu_tempsRestant </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structJeu.html">Jeu</a>&#160;</td>
-          <td class="paramname"><em>pJeu</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structJeu.html">Jeu</a>&nbsp;</td>
+          <td class="paramname"> <em>pJeu</em></td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
+</div>
+<div class="memdoc">
 
 <p>Retourne le nombre de secondes restantes avant la fin du jeu. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pJeu</td><td>Le jeu pour lequel on veut savoir le temps restant </td></tr>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pJeu</em>&nbsp;</td><td>Le jeu pour lequel on veut savoir le temps restant </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de secondes restantes </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le nombre de secondes restantes </dd></dl>
 
 </div>
 </div>
-</div><!-- contents -->
-</div><!-- doc-content -->
-<!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="jeu_8c.html">jeu.c</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 10:29:28 pour Jeu de Boggle par
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
-  </ul>
 </div>
+<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:35:55 pour Jeu de Boggle par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
 </html>

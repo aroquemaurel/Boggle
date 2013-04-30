@@ -1,16 +1,14 @@
-\documentclass{book}
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
 \usepackage{makeidx}
-\usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{listings}
 \usepackage{color}
-\usepackage{ifthen}
-\usepackage[table]{xcolor}
 \usepackage{textcomp}
 \usepackage{alltt}
+\usepackage{times}
 \usepackage{ifpdf}
 \ifpdf
 \usepackage[pdftex,
@@ -31,32 +29,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 
-\usepackage{mathptmx}
-\usepackage[scaled=.90]{helvet}
-\usepackage{courier}
-\usepackage{sectsty}
-\usepackage{amssymb}
-\usepackage[titles]{tocloft}
 \usepackage{doxygen}
 \lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=4,numbers=left }
 \makeindex
 \setcounter{tocdepth}{3}
 \renewcommand{\footrulewidth}{0.4pt}
-\renewcommand{\familydefault}{\sfdefault}
-\hfuzz=15pt
-\setlength{\emergencystretch}{15pt}
-\hbadness=750
-\tolerance=750
 \begin{document}
-\hypersetup{pageanchor=false,citecolor=blue}
+\hypersetup{pageanchor=false}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}
 {\Large Jeu de Boggle \\[1ex]\large 1 }\\
 \vspace*{1cm}
-{\large Généré par Doxygen 1.8.1.2}\\
+{\large Généré par Doxygen 1.7.1}\\
 \vspace*{0.5cm}
-{\small Mardi Avril 30 2013 10:29:28}\\
+{\small Tue Apr 30 2013 10:35:55}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -64,7 +51,7 @@
 \tableofcontents
 \clearemptydoublepage
 \pagenumbering{arabic}
-\hypersetup{pageanchor=true,citecolor=blue}
+\hypersetup{pageanchor=true}
 \chapter{Index des structures de données}
 \input{annotated}
 \chapter{Index des fichiers}

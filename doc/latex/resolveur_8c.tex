@@ -1,77 +1,64 @@
-\hypertarget{resolveur_8c}{\section{Référence du fichier resolveur.\-c}
-\label{resolveur_8c}\index{resolveur.\-c@{resolveur.\-c}}
+\hypertarget{resolveur_8c}{
+\section{Référence du fichier resolveur.c}
+\label{resolveur_8c}\index{resolveur.c@{resolveur.c}}
 }
 
 
 Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans le module \hyperlink{structSolution}{Solution}.  
 
 
-{\ttfamily \#include $<$string.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}dictionnaire.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}resolveur.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}solution.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}dictionnaire.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}resolveur.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}solution.h\char`\"{}}\par
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{resolveur_8c_a1eacf34755bde03a6bc60c79383bd657}{recurse} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau, int x, int y, int depth, char $\ast$choices, \hyperlink{structDico}{Dico} p\-Dico)
-\begin{DoxyCompactList}\small\item\em Fonction privée récursive permettant de résoudre une grille de Boggle. \end{DoxyCompactList}\item 
-void \hyperlink{resolveur_8c_a8696ca50e0d0e6d4c05399c26372709d}{resolveur} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau, \hyperlink{structDico}{Dico} p\-Dico)
-\begin{DoxyCompactList}\small\item\em Résoud une grille de boggle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{resolveur_8c_a1eacf34755bde03a6bc60c79383bd657}{recurse} (\hyperlink{structPlateau}{Plateau} $\ast$pPlateau, int x, int y, int depth, char $\ast$choices, \hyperlink{structDico}{Dico} pDico)
+\begin{DoxyCompactList}\small\item\em Fonction privée récursive permettant de résoudre une grille de Boggle. \item\end{DoxyCompactList}\item 
+void \hyperlink{resolveur_8c_a8696ca50e0d0e6d4c05399c26372709d}{resolveur} (\hyperlink{structPlateau}{Plateau} $\ast$pPlateau, \hyperlink{structDico}{Dico} pDico)
+\begin{DoxyCompactList}\small\item\em Résoud une grille de boggle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
 Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans le module \hyperlink{structSolution}{Solution}. 
 
 \subsection{Documentation des fonctions}
-\hypertarget{resolveur_8c_a1eacf34755bde03a6bc60c79383bd657}{\index{resolveur.\-c@{resolveur.\-c}!recurse@{recurse}}
-\index{recurse@{recurse}!resolveur.c@{resolveur.\-c}}
+\hypertarget{resolveur_8c_a1eacf34755bde03a6bc60c79383bd657}{
+\index{resolveur.c@{resolveur.c}!recurse@{recurse}}
+\index{recurse@{recurse}!resolveur.c@{resolveur.c}}
 \subsubsection[{recurse}]{\setlength{\rightskip}{0pt plus 5cm}void recurse (
 \begin{DoxyParamCaption}
-\item[{{\bf Plateau} $\ast$}]{p\-Plateau, }
-\item[{int}]{x, }
-\item[{int}]{y, }
-\item[{int}]{depth, }
-\item[{char $\ast$}]{choices, }
-\item[{{\bf Dico}}]{p\-Dico}
+\item[{{\bf Plateau} $\ast$}]{ pPlateau, }
+\item[{int}]{ x, }
+\item[{int}]{ y, }
+\item[{int}]{ depth, }
+\item[{char $\ast$}]{ choices, }
+\item[{{\bf Dico}}]{ pDico}
 \end{DoxyParamCaption}
-)}}\label{resolveur_8c_a1eacf34755bde03a6bc60c79383bd657}
+)}}
+\label{resolveur_8c_a1eacf34755bde03a6bc60c79383bd657}
 
 
 Fonction privée récursive permettant de résoudre une grille de Boggle. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em p\-Plateau} & Le lateau à résoudre \\
-\hline
-{\em x} & L'abscisse de la lettre pour laquelle on part \\
-\hline
-{\em y} & L'ordonné de la lettre pour laquelle on part \\
-\hline
-{\em depth} & La profondeur à laquelle on se trouve \\
-\hline
-{\em choices} & Le mot formé actuellement \\
-\hline
-{\em p\-Dico} & Le dictionnaire dans laquel chercher les mots \\
-\hline
-\end{DoxyParams}
-\hypertarget{resolveur_8c_a8696ca50e0d0e6d4c05399c26372709d}{\index{resolveur.\-c@{resolveur.\-c}!resolveur@{resolveur}}
-\index{resolveur@{resolveur}!resolveur.c@{resolveur.\-c}}
+\item[{\em pPlateau}]Le lateau à résoudre \item[{\em x}]L'abscisse de la lettre pour laquelle on part \item[{\em y}]L'ordonné de la lettre pour laquelle on part \item[{\em depth}]La profondeur à laquelle on se trouve \item[{\em choices}]Le mot formé actuellement \item[{\em pDico}]Le dictionnaire dans laquel chercher les mots \end{DoxyParams}
+\hypertarget{resolveur_8c_a8696ca50e0d0e6d4c05399c26372709d}{
+\index{resolveur.c@{resolveur.c}!resolveur@{resolveur}}
+\index{resolveur@{resolveur}!resolveur.c@{resolveur.c}}
 \subsubsection[{resolveur}]{\setlength{\rightskip}{0pt plus 5cm}void resolveur (
 \begin{DoxyParamCaption}
-\item[{{\bf Plateau} $\ast$}]{p\-Plateau, }
-\item[{{\bf Dico}}]{p\-Dico}
+\item[{{\bf Plateau} $\ast$}]{ pPlateau, }
+\item[{{\bf Dico}}]{ pDico}
 \end{DoxyParamCaption}
-)}}\label{resolveur_8c_a8696ca50e0d0e6d4c05399c26372709d}
+)}}
+\label{resolveur_8c_a8696ca50e0d0e6d4c05399c26372709d}
 
 
 Résoud une grille de boggle. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em p\-Plateau} & Le plateau à résoudre \\
-\hline
-{\em choices} & \\
-\hline
-{\em p\-Dico} & le dictionnaire \\
-\hline
-\end{DoxyParams}
+\item[{\em pPlateau}]Le plateau à résoudre \item[{\em choices}]\item[{\em pDico}]le dictionnaire \end{DoxyParams}
