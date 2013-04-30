@@ -1,0 +1,89 @@
+\hypertarget{dictionnaire_8c}{\section{Référence du fichier dictionnaire.\-c}
+\label{dictionnaire_8c}\index{dictionnaire.\-c@{dictionnaire.\-c}}
+}
+
+
+Gestion du dictionnaire Fonctions de gestion du dictionnaire, le dictionnaire doit être dans un fichier texte avec un mot différent par ligne.  
+
+
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}dictionnaire.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\-h\char`\"{}}\\*
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structDico}{Dico} \hyperlink{dictionnaire_8c_aaff8a3a953fc8b9b360ab39040ff3e5f}{dictionnaire\-\_\-nouveau} (const char $\ast$p\-Nom\-Fichier)
+\begin{DoxyCompactList}\small\item\em Créer un nouveau dictionnaire à partir d'un fichier. \end{DoxyCompactList}\item 
+int \hyperlink{dictionnaire_8c_a168479ad26583f7fe844a1341a57df1d}{dictonnaire\-\_\-mot\-Dans\-Dico} (\hyperlink{structDico}{Dico} p\-Dictionnaire, char $\ast$p\-Mot)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si un mot est présent dans le dictionnaire. \end{DoxyCompactList}\item 
+void \hyperlink{dictionnaire_8c_a61286b4c5730255db1df056e375d406e}{dictionnaire\-\_\-recherche\-Dichotomique} (\hyperlink{structDico}{Dico} p\-Dictionnaire, char $\ast$p\-Mot\-A\-Chercher, char $\ast$p\-Mot\-Le\-Plus\-Proche)
+\begin{DoxyCompactList}\small\item\em Effectue une recherche dichotomique de p\-Mot\-A\-Chercher dans le dictionnaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Gestion du dictionnaire Fonctions de gestion du dictionnaire, le dictionnaire doit être dans un fichier texte avec un mot différent par ligne. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{dictionnaire_8c_aaff8a3a953fc8b9b360ab39040ff3e5f}{\index{dictionnaire.\-c@{dictionnaire.\-c}!dictionnaire\-\_\-nouveau@{dictionnaire\-\_\-nouveau}}
+\index{dictionnaire\-\_\-nouveau@{dictionnaire\-\_\-nouveau}!dictionnaire.c@{dictionnaire.\-c}}
+\subsubsection[{dictionnaire\-\_\-nouveau}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dico} dictionnaire\-\_\-nouveau (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\-Nom\-Fichier}
+\end{DoxyParamCaption}
+)}}\label{dictionnaire_8c_aaff8a3a953fc8b9b360ab39040ff3e5f}
+
+
+Créer un nouveau dictionnaire à partir d'un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Nom\-Fichier} & Le fichier contenant les mots du dictionnaire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nouveau dictionnaire 
+\end{DoxyReturn}
+\hypertarget{dictionnaire_8c_a61286b4c5730255db1df056e375d406e}{\index{dictionnaire.\-c@{dictionnaire.\-c}!dictionnaire\-\_\-recherche\-Dichotomique@{dictionnaire\-\_\-recherche\-Dichotomique}}
+\index{dictionnaire\-\_\-recherche\-Dichotomique@{dictionnaire\-\_\-recherche\-Dichotomique}!dictionnaire.c@{dictionnaire.\-c}}
+\subsubsection[{dictionnaire\-\_\-recherche\-Dichotomique}]{\setlength{\rightskip}{0pt plus 5cm}void dictionnaire\-\_\-recherche\-Dichotomique (
+\begin{DoxyParamCaption}
+\item[{{\bf Dico}}]{p\-Dictionnaire, }
+\item[{char $\ast$}]{p\-Mot\-A\-Chercher, }
+\item[{char $\ast$}]{p\-Mot\-Le\-Plus\-Proche}
+\end{DoxyParamCaption}
+)}}\label{dictionnaire_8c_a61286b4c5730255db1df056e375d406e}
+
+
+Effectue une recherche dichotomique de p\-Mot\-A\-Chercher dans le dictionnaire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Dictionnaire} & Le dictionnaire dans lequel chercher \\
+\hline
+{\em p\-Mot\-A\-Chercher} & Le mot à chercher \\
+\hline
+{\em p\-Mot\-Le\-Plus\-Proche} & Le mot le plus proche trouvé, si p\-Mot\-Le\-Plus\-Proche == p\-Mot\-A\-Chercher, il est présent dans le dictionnaire \\
+\hline
+\end{DoxyParams}
+\hypertarget{dictionnaire_8c_a168479ad26583f7fe844a1341a57df1d}{\index{dictionnaire.\-c@{dictionnaire.\-c}!dictonnaire\-\_\-mot\-Dans\-Dico@{dictonnaire\-\_\-mot\-Dans\-Dico}}
+\index{dictonnaire\-\_\-mot\-Dans\-Dico@{dictonnaire\-\_\-mot\-Dans\-Dico}!dictionnaire.c@{dictionnaire.\-c}}
+\subsubsection[{dictonnaire\-\_\-mot\-Dans\-Dico}]{\setlength{\rightskip}{0pt plus 5cm}int dictonnaire\-\_\-mot\-Dans\-Dico (
+\begin{DoxyParamCaption}
+\item[{{\bf Dico}}]{p\-Dictionnaire, }
+\item[{char $\ast$}]{p\-Mot}
+\end{DoxyParamCaption}
+)}}\label{dictionnaire_8c_a168479ad26583f7fe844a1341a57df1d}
+
+
+Permet de savoir si un mot est présent dans le dictionnaire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Dictionnaire} & Le dictionnaire dans lequel chercher \\
+\hline
+{\em p\-Mot} & Le mot à chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si le mot est absent, 1 si des mots commencent par p\-Mot et 10 si le mot exact est trouvé. 
+\end{DoxyReturn}

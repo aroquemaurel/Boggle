@@ -1,0 +1,118 @@
+\hypertarget{structCU__RunSummary}{\section{Référence de la structure C\-U\-\_\-\-Run\-Summary}
+\label{structCU__RunSummary}\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}}
+}
+
+
+Data type for holding statistics and assertion failures for a test run.  
+
+
+
+
+{\ttfamily \#include $<$Test\-Run.\-h$>$}
+
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structCU__RunSummary_ae426617945d15652562f4d2b5d243f51}{n\-Suites\-Run}
+\begin{DoxyCompactList}\small\item\em Number of suites completed during run. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_a7ef012ea5105cd86ff16bf131f1d0ac2}{n\-Suites\-Failed}
+\begin{DoxyCompactList}\small\item\em Number of suites for which initialization failed. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_a08b166bdf14cc18cbfa77a47fb911904}{n\-Suites\-Inactive}
+\begin{DoxyCompactList}\small\item\em Number of suites which were inactive. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_a15da425a520dfb2628febc5313c92aa7}{n\-Tests\-Run}
+\begin{DoxyCompactList}\small\item\em Number of tests completed during run. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_a3a3be4dfb55ceffdb2ffacdac9796d24}{n\-Tests\-Failed}
+\begin{DoxyCompactList}\small\item\em Number of tests containing failed assertions. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_ae6a7f6466d38db9adc3dae4b8cf89699}{n\-Tests\-Inactive}
+\begin{DoxyCompactList}\small\item\em Number of tests which were inactive (in active suites). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_a90899c9309e2b4374443a7d5ab226a90}{n\-Asserts}
+\begin{DoxyCompactList}\small\item\em Number of assertions tested during run. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_ad5e24306584ab2f165a435b648513b9c}{n\-Asserts\-Failed}
+\begin{DoxyCompactList}\small\item\em Number of failed assertions. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__RunSummary_a1a2d40200bf4a3f15fd94f4f0e1faa40}{n\-Failure\-Records}
+\begin{DoxyCompactList}\small\item\em Number of failure records generated. \end{DoxyCompactList}\item 
+double \hyperlink{structCU__RunSummary_a92859c6c5275ddb58d1db27a485a557c}{Elapsed\-Time}
+\begin{DoxyCompactList}\small\item\em Elapsed time for run in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Data type for holding statistics and assertion failures for a test run. 
+
+
+
+\subsection{Documentation des champs}
+\hypertarget{structCU__RunSummary_a92859c6c5275ddb58d1db27a485a557c}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!Elapsed\-Time@{Elapsed\-Time}}
+\index{Elapsed\-Time@{Elapsed\-Time}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{Elapsed\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double C\-U\-\_\-\-Run\-Summary\-::\-Elapsed\-Time}}\label{structCU__RunSummary_a92859c6c5275ddb58d1db27a485a557c}
+
+
+Elapsed time for run in seconds. 
+
+\hypertarget{structCU__RunSummary_a90899c9309e2b4374443a7d5ab226a90}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Asserts@{n\-Asserts}}
+\index{n\-Asserts@{n\-Asserts}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Asserts}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Asserts}}\label{structCU__RunSummary_a90899c9309e2b4374443a7d5ab226a90}
+
+
+Number of assertions tested during run. 
+
+\hypertarget{structCU__RunSummary_ad5e24306584ab2f165a435b648513b9c}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Asserts\-Failed@{n\-Asserts\-Failed}}
+\index{n\-Asserts\-Failed@{n\-Asserts\-Failed}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Asserts\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Asserts\-Failed}}\label{structCU__RunSummary_ad5e24306584ab2f165a435b648513b9c}
+
+
+Number of failed assertions. 
+
+\hypertarget{structCU__RunSummary_a1a2d40200bf4a3f15fd94f4f0e1faa40}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Failure\-Records@{n\-Failure\-Records}}
+\index{n\-Failure\-Records@{n\-Failure\-Records}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Failure\-Records}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Failure\-Records}}\label{structCU__RunSummary_a1a2d40200bf4a3f15fd94f4f0e1faa40}
+
+
+Number of failure records generated. 
+
+\hypertarget{structCU__RunSummary_a7ef012ea5105cd86ff16bf131f1d0ac2}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Suites\-Failed@{n\-Suites\-Failed}}
+\index{n\-Suites\-Failed@{n\-Suites\-Failed}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Suites\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Suites\-Failed}}\label{structCU__RunSummary_a7ef012ea5105cd86ff16bf131f1d0ac2}
+
+
+Number of suites for which initialization failed. 
+
+\hypertarget{structCU__RunSummary_a08b166bdf14cc18cbfa77a47fb911904}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Suites\-Inactive@{n\-Suites\-Inactive}}
+\index{n\-Suites\-Inactive@{n\-Suites\-Inactive}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Suites\-Inactive}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Suites\-Inactive}}\label{structCU__RunSummary_a08b166bdf14cc18cbfa77a47fb911904}
+
+
+Number of suites which were inactive. 
+
+\hypertarget{structCU__RunSummary_ae426617945d15652562f4d2b5d243f51}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Suites\-Run@{n\-Suites\-Run}}
+\index{n\-Suites\-Run@{n\-Suites\-Run}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Suites\-Run}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Suites\-Run}}\label{structCU__RunSummary_ae426617945d15652562f4d2b5d243f51}
+
+
+Number of suites completed during run. 
+
+\hypertarget{structCU__RunSummary_a3a3be4dfb55ceffdb2ffacdac9796d24}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Tests\-Failed@{n\-Tests\-Failed}}
+\index{n\-Tests\-Failed@{n\-Tests\-Failed}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Tests\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Tests\-Failed}}\label{structCU__RunSummary_a3a3be4dfb55ceffdb2ffacdac9796d24}
+
+
+Number of tests containing failed assertions. 
+
+\hypertarget{structCU__RunSummary_ae6a7f6466d38db9adc3dae4b8cf89699}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Tests\-Inactive@{n\-Tests\-Inactive}}
+\index{n\-Tests\-Inactive@{n\-Tests\-Inactive}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Tests\-Inactive}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Tests\-Inactive}}\label{structCU__RunSummary_ae6a7f6466d38db9adc3dae4b8cf89699}
+
+
+Number of tests which were inactive (in active suites). 
+
+\hypertarget{structCU__RunSummary_a15da425a520dfb2628febc5313c92aa7}{\index{C\-U\-\_\-\-Run\-Summary@{C\-U\-\_\-\-Run\-Summary}!n\-Tests\-Run@{n\-Tests\-Run}}
+\index{n\-Tests\-Run@{n\-Tests\-Run}!CU_RunSummary@{C\-U\-\_\-\-Run\-Summary}}
+\subsubsection[{n\-Tests\-Run}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Run\-Summary\-::n\-Tests\-Run}}\label{structCU__RunSummary_a15da425a520dfb2628febc5313c92aa7}
+
+
+Number of tests completed during run. 
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+lib/\-C\-Unit/\hyperlink{TestRun_8h}{Test\-Run.\-h}\end{DoxyCompactItemize}

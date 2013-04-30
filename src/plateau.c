@@ -1,9 +1,19 @@
+/**
+ * \file plateau.c
+ * \brief Gestion du plateau de Jeu
+ * Fonctions se rapportant à un plateau de jeu, sera sert à gérer la grille de Boggle
+ */
 #include <stdlib.h>
 
 #include "solution.h"
 #include "plateau.h"
 #include "util.h"
 
+/**
+ * Créer un nouveau plateau
+ * @param pTailleGrille La taille de la grille à créer
+ * @return Le nouveau plateau
+ */
 Plateau plateau_nouveau(const unsigned char pTailleGrille) {
     Plateau nouveauPlateau;
     nouveauPlateau.tailleGrille = pTailleGrille;
@@ -18,8 +28,11 @@ Plateau plateau_nouveau(const unsigned char pTailleGrille) {
     
     return nouveauPlateau;
 }
-
-Plateau plateau_detruire(Plateau* pPlateau) {
+/**
+ * Détruit le plateau pPlateau
+ * @param pPlateau Le plateau à détruire
+ */
+void plateau_detruire(Plateau* pPlateau) {
     for(int i=0; i < pPlateau->tailleGrille ; ++i) {
         free((pPlateau->grille[i]));
         free((pPlateau->grid[i]));
@@ -32,7 +45,10 @@ Plateau plateau_detruire(Plateau* pPlateau) {
     solution_detruire(&(pPlateau->solution));
 }
 
-
+/**
+ * Rempli une grille aléatoirement dans le plateau
+ * @param pPlateau Le plateau à remplire
+ */
 void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
     for(int i=0 ; i < pPlateau->tailleGrille ; ++i) {
         for(int j=0 ; j < pPlateau->tailleGrille ; ++j) {
@@ -42,6 +58,15 @@ void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
     }
 }
 
+/**
+ * Rempli le plateau avec une grille prédéfinie de taille 4*4
+ * E D R C
+ * A N V C
+ * I R Q A
+ * E B R U
+ * 
+ * @param pPlateau Le plateau à remplire
+ */
 void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
     char* grille = "EDRCANVCIRQAEBRU";
     int k;
@@ -64,7 +89,12 @@ void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
 
 }
 
-
+/**
+ * Choisi une letre avec la probabilité des lettres en fonctions de leurs importance d'apparition
+ * dans la langue française
+ * 
+ * @return La lettre choisie
+ */
 char plateau_choisirLettre(void) {
     char lettre;
     lettre = util_nbAleatoire('A', 'Z');
@@ -74,6 +104,12 @@ char plateau_choisirLettre(void) {
     
     return lettre;
 }
+
+/**
+ * Retourne la probabilité d'apparition de la lettre passée en paramètre
+ * @param pLettre La lettre pour laquelle retourner la probabilité
+ * @return La probabilité
+ */
 double plateau_probaLettre(const char pLettre) {
     double proba = 0.0;
 

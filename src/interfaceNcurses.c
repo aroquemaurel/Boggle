@@ -1,3 +1,9 @@
+/**
+ * \file interfaceNcurses.c
+ * \brief Affichage avec la bibliothèque Ncurses
+ * Affiche et permet de jouer au jeu de Boggle avec un affichage utilisant la bibliothèque Ncurses
+ */
+
 #include <ncurses.h>
 #include <panel.h>
 #include <stdlib.h>

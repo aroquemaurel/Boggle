@@ -4,6 +4,10 @@
 
 #include "solution.h"
 
+/**
+ * Créer la structure de données la solution
+ * @return La nouvelle solution
+ */
 Solution solution_creer(void) {
     Solution nouvelleSolution;
 
@@ -12,6 +16,13 @@ Solution solution_creer(void) {
 
     return nouvelleSolution;
 }
+
+/**
+ * Retourne vrai si le mot pMot est présent dans la solution
+ * @param pSolution La solution dans laquelle chercher
+ * @param pMot Le mot à chercher
+ * @return Vrai si pMot est présent dans pSolution
+ */
 _Bool solution_motEstPresent(const Solution pSolution, const char* pMot) {
     _Bool retour = false;            
 
@@ -25,6 +36,11 @@ _Bool solution_motEstPresent(const Solution pSolution, const char* pMot) {
     return retour;
 }
 
+/**
+ * Ajoute un mot dans la solution pSolution
+ * @param pSolution La solution dans laquelle ajouter le mot
+ * @param mot Le mot à ajouter
+ */
 void solution_ajouterMot(Solution* pSolution, const char* mot) {
     int i;
     if(!solution_motEstPresent(*pSolution, mot)) {
@@ -34,6 +50,12 @@ void solution_ajouterMot(Solution* pSolution, const char* mot) {
         ++(pSolution->nbMots);
     }
 }
+
+// TODO déplacer mode text
+/**
+ * Affiche la solution en mode texte
+ * @param pSolution la solution à afficher
+ */
 void solution_afficher(const Solution pSolution) {
     printf("%d mots. nombre de points : %d\n", pSolution.nbMots, solution_nbPoints(pSolution));
     for(int i = 0 ; i < pSolution.nbMots ; ++i) {
@@ -42,6 +64,10 @@ void solution_afficher(const Solution pSolution) {
     printf("%d mots. nombre de points : %d\n", pSolution.nbMots, solution_nbPoints(pSolution));    
 }
 
+/**
+ * Détruit la solution
+ * @param pSolution La solution à détruire
+ */
 void solution_detruire(Solution* pSolution) {
     for(int i = 0 ; i < pSolution->nbMots ; ++i) {
         free(pSolution->mots[i]);
@@ -49,6 +75,11 @@ void solution_detruire(Solution* pSolution) {
     free(pSolution->mots);
 }
 
+/**
+ * Retourn le nombre de points pouvant être obtenus avec la solution pSolution
+ * @param pSolution la solutino pour laquelle compter le nombre de points
+ * @return Le nombres de points à compter
+ */
 int solution_nbPoints(Solution pSolution) {
     int retour = 0;
     int taille;

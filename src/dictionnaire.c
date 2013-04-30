@@ -1,8 +1,20 @@
+/**
+ * \file dictionnaire.c
+ * \brief Gestion du dictionnaire
+ * Fonctions de gestion du dictionnaire, le dictionnaire doit être dans un fichier
+ * texte avec un mot différent par ligne.
+ */
+
 #include <string.h>
 
 #include "dictionnaire.h"
 #include "util.h"
 
+/**
+ * Créer un nouveau dictionnaire à partir d'un fichier
+ * @param pNomFichier Le fichier contenant les mots du dictionnaire.
+ * @return Le nouveau dictionnaire
+ */
 Dico dictionnaire_nouveau(const char* pNomFichier) {
     Dico nouveauDico;
     long int test;
@@ -29,7 +41,10 @@ Dico dictionnaire_nouveau(const char* pNomFichier) {
 
 
 /** 
- * @return -1 Mot absent. 0 Mot exact trouvé. ou un autre entier contenant le nombre de lettre manquante pour être dans le dico
+ * Permet de savoir si un mot est présent dans le dictionnaire
+ * @param pDictionnaire Le dictionnaire dans lequel chercher
+ * @param pMot Le mot à chercher
+ * @return 0 si le mot est absent, 1 si des mots commencent par pMot et 10 si le mot exact est trouvé.
  * */
 int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot) {
     char buff[256];
@@ -55,6 +70,12 @@ int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot) {
     return (retour); 
 }
 
+/**
+ * Effectue une recherche dichotomique de pMotAChercher dans le dictionnaire
+ * @param pDictionnaire Le dictionnaire dans lequel chercher
+ * @param pMotAChercher Le mot à chercher
+ * @param pMotLePlusProche Le mot le plus proche trouvé, si pMotLePlusProche == pMotAChercher, il est présent dans le dictionnaire
+ */
 void dictionnaire_rechercheDichotomique(Dico pDictionnaire, char* pMotAChercher, char* pMotLePlusProche) {
     long int debut = pDictionnaire.marqueurs[pMotAChercher[0]-65];
     long int fin = pDictionnaire.marqueurs[(pMotAChercher[0]-65)+1];

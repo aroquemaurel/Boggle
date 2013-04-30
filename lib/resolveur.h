@@ -10,7 +10,7 @@
 #include "plateau.h"
 #include "dictionnaire.h"
 
-void resolveur(Plateau* pPlateau, char* choices, Dico pDico);
+void resolveur(Plateau* pPlateau, Dico pDico);
 
 #endif	/* RESOLVEUR_H */
 

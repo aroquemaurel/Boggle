@@ -1,0 +1,115 @@
+\hypertarget{structCU__Suite}{\section{Référence de la structure C\-U\-\_\-\-Suite}
+\label{structCU__Suite}\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}}
+}
+
+
+C\-Unit suite data type.  
+
+
+
+
+{\ttfamily \#include $<$Test\-D\-B.\-h$>$}
+
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structCU__Suite_ac70274e00c1c5b7b6a8368c9a0ab6195}{p\-Name}
+\begin{DoxyCompactList}\small\item\em Suite name. \end{DoxyCompactList}\item 
+\hyperlink{group__Framework_gabd98d449e979a6379b06551242106dd4}{C\-U\-\_\-\-B\-O\-O\-L} \hyperlink{structCU__Suite_aeee5e5385d60b0d36b3e2507d4f579dc}{f\-Active}
+\begin{DoxyCompactList}\small\item\em Flag for whether suite is executed during a run. \end{DoxyCompactList}\item 
+\hyperlink{group__Framework_ga249c43fbe4e53452b3f90db1437da04b}{C\-U\-\_\-p\-Test} \hyperlink{structCU__Suite_ad56c4b9f273fdc8c3f504b62178dfdd6}{p\-Test}
+\begin{DoxyCompactList}\small\item\em Pointer to the 1st test in the suite. \end{DoxyCompactList}\item 
+\hyperlink{group__Framework_gaab4b8ad3aa3a3c222c43c8a330de11e3}{C\-U\-\_\-\-Initialize\-Func} \hyperlink{structCU__Suite_a572516b68f25492ac8e8ac720debfdb3}{p\-Initialize\-Func}
+\begin{DoxyCompactList}\small\item\em Pointer to the suite initialization function. \end{DoxyCompactList}\item 
+\hyperlink{group__Framework_ga90966c0bede742195897c3aeff4c342b}{C\-U\-\_\-\-Cleanup\-Func} \hyperlink{structCU__Suite_aee36fd856e07775ba3cbb91af2219c25}{p\-Cleanup\-Func}
+\begin{DoxyCompactList}\small\item\em Pointer to the suite cleanup function. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structCU__Suite_ac35747775ea5ffbb4cc1a2eb17dd1ca3}{ui\-Number\-Of\-Tests}
+\begin{DoxyCompactList}\small\item\em Number of tests in the suite. \end{DoxyCompactList}\item 
+struct \hyperlink{structCU__Suite}{C\-U\-\_\-\-Suite} $\ast$ \hyperlink{structCU__Suite_a695a5eb0087e2d64adc53da4518de69c}{p\-Next}
+\begin{DoxyCompactList}\small\item\em Pointer to the next suite in linked list. \end{DoxyCompactList}\item 
+struct \hyperlink{structCU__Suite}{C\-U\-\_\-\-Suite} $\ast$ \hyperlink{structCU__Suite_aa161293fb2ba337e52e1f6c9f5d68448}{p\-Prev}
+\begin{DoxyCompactList}\small\item\em Pointer to the previous suite in linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+C\-Unit suite data type. 
+
+\hyperlink{structCU__Suite}{C\-U\-\_\-\-Suite} is a linked list of \hyperlink{structCU__Test}{C\-U\-\_\-\-Test} containers. Each suite has a name, a count of registered unit tests, and a flag for whether the suite is active during test runs. It also holds pointers to optional initialization and cleanup functions. If non-\/\-N\-U\-L\-L, these are called before and after running the suite's tests, respectively. In addition, the suite holds a pointer to the head of the linked list of associated \hyperlink{structCU__Test}{C\-U\-\_\-\-Test} objects. Finally, pointers to the next and previous suites in the linked list are maintained.\par
+\par
+
+
+Generally, the linked list includes suites which are associated with each other in a \hyperlink{structCU__TestRegistry}{C\-U\-\_\-\-Test\-Registry}. As a result, suites are run in the order in which they are registered (see \hyperlink{group__Framework_ga94b8f1bbbd93b154a60bb1d43391b48a}{C\-U\-\_\-add\-\_\-suite()}).\par
+\par
+
+
+It is recommended that name of each \hyperlink{structCU__Suite}{C\-U\-\_\-\-Suite} in a test registry have a unique name. Otherwise, only the first-\/registered suite having a given name will be accessible by name. There are no restrictions on the contained tests. This means that the same \hyperlink{structCU__Test}{C\-U\-\_\-\-Test} could, in principle, be run more than once fron different suites.
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{structCU__Test}{C\-U\-\_\-\-Test} 
+
+\hyperlink{structCU__TestRegistry}{C\-U\-\_\-\-Test\-Registry} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des champs}
+\hypertarget{structCU__Suite_aeee5e5385d60b0d36b3e2507d4f579dc}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!f\-Active@{f\-Active}}
+\index{f\-Active@{f\-Active}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{f\-Active}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-\_\-\-B\-O\-O\-L} C\-U\-\_\-\-Suite\-::f\-Active}}\label{structCU__Suite_aeee5e5385d60b0d36b3e2507d4f579dc}
+
+
+Flag for whether suite is executed during a run. 
+
+\hypertarget{structCU__Suite_aee36fd856e07775ba3cbb91af2219c25}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!p\-Cleanup\-Func@{p\-Cleanup\-Func}}
+\index{p\-Cleanup\-Func@{p\-Cleanup\-Func}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{p\-Cleanup\-Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-\_\-\-Cleanup\-Func} C\-U\-\_\-\-Suite\-::p\-Cleanup\-Func}}\label{structCU__Suite_aee36fd856e07775ba3cbb91af2219c25}
+
+
+Pointer to the suite cleanup function. 
+
+\hypertarget{structCU__Suite_a572516b68f25492ac8e8ac720debfdb3}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!p\-Initialize\-Func@{p\-Initialize\-Func}}
+\index{p\-Initialize\-Func@{p\-Initialize\-Func}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{p\-Initialize\-Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-\_\-\-Initialize\-Func} C\-U\-\_\-\-Suite\-::p\-Initialize\-Func}}\label{structCU__Suite_a572516b68f25492ac8e8ac720debfdb3}
+
+
+Pointer to the suite initialization function. 
+
+\hypertarget{structCU__Suite_ac70274e00c1c5b7b6a8368c9a0ab6195}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!p\-Name@{p\-Name}}
+\index{p\-Name@{p\-Name}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{p\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ C\-U\-\_\-\-Suite\-::p\-Name}}\label{structCU__Suite_ac70274e00c1c5b7b6a8368c9a0ab6195}
+
+
+Suite name. 
+
+\hypertarget{structCU__Suite_a695a5eb0087e2d64adc53da4518de69c}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!p\-Next@{p\-Next}}
+\index{p\-Next@{p\-Next}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{p\-Next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf C\-U\-\_\-\-Suite}$\ast$ C\-U\-\_\-\-Suite\-::p\-Next}}\label{structCU__Suite_a695a5eb0087e2d64adc53da4518de69c}
+
+
+Pointer to the next suite in linked list. 
+
+\hypertarget{structCU__Suite_aa161293fb2ba337e52e1f6c9f5d68448}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!p\-Prev@{p\-Prev}}
+\index{p\-Prev@{p\-Prev}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{p\-Prev}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf C\-U\-\_\-\-Suite}$\ast$ C\-U\-\_\-\-Suite\-::p\-Prev}}\label{structCU__Suite_aa161293fb2ba337e52e1f6c9f5d68448}
+
+
+Pointer to the previous suite in linked list. 
+
+\hypertarget{structCU__Suite_ad56c4b9f273fdc8c3f504b62178dfdd6}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!p\-Test@{p\-Test}}
+\index{p\-Test@{p\-Test}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{p\-Test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-\_\-p\-Test} C\-U\-\_\-\-Suite\-::p\-Test}}\label{structCU__Suite_ad56c4b9f273fdc8c3f504b62178dfdd6}
+
+
+Pointer to the 1st test in the suite. 
+
+\hypertarget{structCU__Suite_ac35747775ea5ffbb4cc1a2eb17dd1ca3}{\index{C\-U\-\_\-\-Suite@{C\-U\-\_\-\-Suite}!ui\-Number\-Of\-Tests@{ui\-Number\-Of\-Tests}}
+\index{ui\-Number\-Of\-Tests@{ui\-Number\-Of\-Tests}!CU_Suite@{C\-U\-\_\-\-Suite}}
+\subsubsection[{ui\-Number\-Of\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-U\-\_\-\-Suite\-::ui\-Number\-Of\-Tests}}\label{structCU__Suite_ac35747775ea5ffbb4cc1a2eb17dd1ca3}
+
+
+Number of tests in the suite. 
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+lib/\-C\-Unit/\hyperlink{TestDB_8h}{Test\-D\-B.\-h}\end{DoxyCompactItemize}

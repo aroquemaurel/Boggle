@@ -1,0 +1,58 @@
+\hypertarget{structCU__SuiteInfo}{\section{Référence de la structure C\-U\-\_\-\-Suite\-Info}
+\label{structCU__SuiteInfo}\index{C\-U\-\_\-\-Suite\-Info@{C\-U\-\_\-\-Suite\-Info}}
+}
+
+
+Suite parameters.  
+
+
+
+
+{\ttfamily \#include $<$Test\-D\-B.\-h$>$}
+
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structCU__SuiteInfo_adfd97039a37a46383eba735f20dc4831}{p\-Name}
+\begin{DoxyCompactList}\small\item\em Suite name. \end{DoxyCompactList}\item 
+\hyperlink{group__Framework_gaab4b8ad3aa3a3c222c43c8a330de11e3}{C\-U\-\_\-\-Initialize\-Func} \hyperlink{structCU__SuiteInfo_a2716df9d804ab99c9b84b78b7f951aa2}{p\-Init\-Func}
+\begin{DoxyCompactList}\small\item\em Suite initialization function. \end{DoxyCompactList}\item 
+\hypertarget{structCU__SuiteInfo_a61c244259454b00b3ceb94663ebfbf5a}{\hyperlink{group__Framework_ga90966c0bede742195897c3aeff4c342b}{C\-U\-\_\-\-Cleanup\-Func} \hyperlink{structCU__SuiteInfo_a61c244259454b00b3ceb94663ebfbf5a}{p\-Cleanup\-Func}}\label{structCU__SuiteInfo_a61c244259454b00b3ceb94663ebfbf5a}
+
+\begin{DoxyCompactList}\small\item\em Suite cleanup function. \end{DoxyCompactList}\item 
+\hyperlink{structCU__TestInfo}{C\-U\-\_\-\-Test\-Info} $\ast$ \hyperlink{structCU__SuiteInfo_a1fdb8ec9bbc72962dbbc95f156856463}{p\-Tests}
+\begin{DoxyCompactList}\small\item\em Test case array -\/ must be N\-U\-L\-L terminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Suite parameters. 
+
+This data type is provided to assist C\-Unit users manage collections of tests and suites. It is intended to be used to build arrays of suite parameters that can be passed to a bulk registration function such as C\-U\-\_\-register\-\_\-suite() or \hyperlink{group__Framework_ga331001da0a8bd8faececdb48e7ad3f96}{C\-U\-\_\-register\-\_\-suites()}. 
+
+\subsection{Documentation des champs}
+\hypertarget{structCU__SuiteInfo_a2716df9d804ab99c9b84b78b7f951aa2}{\index{C\-U\-\_\-\-Suite\-Info@{C\-U\-\_\-\-Suite\-Info}!p\-Init\-Func@{p\-Init\-Func}}
+\index{p\-Init\-Func@{p\-Init\-Func}!CU_SuiteInfo@{C\-U\-\_\-\-Suite\-Info}}
+\subsubsection[{p\-Init\-Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-\_\-\-Initialize\-Func} C\-U\-\_\-\-Suite\-Info\-::p\-Init\-Func}}\label{structCU__SuiteInfo_a2716df9d804ab99c9b84b78b7f951aa2}
+
+
+Suite initialization function. 
+
+\hypertarget{structCU__SuiteInfo_adfd97039a37a46383eba735f20dc4831}{\index{C\-U\-\_\-\-Suite\-Info@{C\-U\-\_\-\-Suite\-Info}!p\-Name@{p\-Name}}
+\index{p\-Name@{p\-Name}!CU_SuiteInfo@{C\-U\-\_\-\-Suite\-Info}}
+\subsubsection[{p\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ C\-U\-\_\-\-Suite\-Info\-::p\-Name}}\label{structCU__SuiteInfo_adfd97039a37a46383eba735f20dc4831}
+
+
+Suite name. 
+
+\hypertarget{structCU__SuiteInfo_a1fdb8ec9bbc72962dbbc95f156856463}{\index{C\-U\-\_\-\-Suite\-Info@{C\-U\-\_\-\-Suite\-Info}!p\-Tests@{p\-Tests}}
+\index{p\-Tests@{p\-Tests}!CU_SuiteInfo@{C\-U\-\_\-\-Suite\-Info}}
+\subsubsection[{p\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-\_\-\-Test\-Info}$\ast$ C\-U\-\_\-\-Suite\-Info\-::p\-Tests}}\label{structCU__SuiteInfo_a1fdb8ec9bbc72962dbbc95f156856463}
+
+
+Test case array -\/ must be N\-U\-L\-L terminated. 
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \-:\begin{DoxyCompactItemize}
+\item 
+lib/\-C\-Unit/\hyperlink{TestDB_8h}{Test\-D\-B.\-h}\end{DoxyCompactItemize}

@@ -10,9 +10,9 @@ typedef struct {
     Solution solutionUtilisateur;
 } Jeu;
 
-Jeu jeu_initialiser(const char* pNomDico, const unsigned char pTaillePlateau);
+Jeu jeu_nouveau(const char* pNomDico, const unsigned char pTaillePlateau);
 void jeu_lancer(Jeu* pJeu);
 _Bool jeu_proposerMot(Jeu* pJeu, const char* pMot);
 bool jeu_compteurClaque(const Jeu pJeu);
-double jeu_tempsRestant(const Jeu pJeu);
+time_t jeu_tempsRestant(const Jeu pJeu);
 #endif	/* JEU_H */

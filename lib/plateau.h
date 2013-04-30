@@ -23,6 +23,6 @@ void plateau_remplirGrilleAleatoire(Plateau* pPlateau);
 void plateau_remplirGrillePredefinie(Plateau* pPlateau);
 double plateau_probaLettre(const char pLettre);
 char plateau_choisirLettre(void);
-Plateau plateau_detruire(Plateau* pPlateau);
+void plateau_detruire(Plateau* pPlateau);
 #endif	/* PLATEAU_H */
 

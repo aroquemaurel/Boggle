@@ -1,0 +1,63 @@
+\hypertarget{group__Automated}{\section{Automated}
+\label{group__Automated}\index{Automated@{Automated}}
+}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T void \hyperlink{group__Automated_ga4204c6d187aa6c366a8f4e0ba50645b4}{C\-U\-\_\-automated\-\_\-run\-\_\-tests} (void)
+\begin{DoxyCompactList}\small\item\em Runs C\-Unit tests using the automated interface. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T \hyperlink{group__Framework_ga743a2a025ee3eb792d7d85f0eea347e6}{C\-U\-\_\-\-Error\-Code} \hyperlink{group__Automated_ga4bf1c3a0b54cb2a12d634e7e022edf30}{C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file} (void)
+\begin{DoxyCompactList}\small\item\em Generates an xml file containing a list of all tests in all suites in the active registry. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T void \hyperlink{group__Automated_ga60583b154146b787f03267fc320f86e5}{C\-U\-\_\-set\-\_\-output\-\_\-filename} (const char $\ast$sz\-Filename\-Root)
+\begin{DoxyCompactList}\small\item\em Sets the root file name for automated test output files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{group__Automated_ga4204c6d187aa6c366a8f4e0ba50645b4}{\index{Automated@{Automated}!C\-U\-\_\-automated\-\_\-run\-\_\-tests@{C\-U\-\_\-automated\-\_\-run\-\_\-tests}}
+\index{C\-U\-\_\-automated\-\_\-run\-\_\-tests@{C\-U\-\_\-automated\-\_\-run\-\_\-tests}!Automated@{Automated}}
+\subsubsection[{C\-U\-\_\-automated\-\_\-run\-\_\-tests}]{\setlength{\rightskip}{0pt plus 5cm}C\-U\-\_\-\-E\-X\-P\-O\-R\-T void C\-U\-\_\-automated\-\_\-run\-\_\-tests (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__Automated_ga4204c6d187aa6c366a8f4e0ba50645b4}
+
+
+Runs C\-Unit tests using the automated interface. 
+
+This function sets appropriate callback functions, initializes the test output files, and calls the appropriate functions to list the tests and run them. If an output file name root has not been specified using \hyperlink{group__Automated_ga60583b154146b787f03267fc320f86e5}{C\-U\-\_\-set\-\_\-output\-\_\-filename()}, a generic root will be applied. It is an error to call this function before the C\-Unit test registry has been initialized (check by assertion). \hypertarget{group__Automated_ga4bf1c3a0b54cb2a12d634e7e022edf30}{\index{Automated@{Automated}!C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file@{C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file}}
+\index{C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file@{C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file}!Automated@{Automated}}
+\subsubsection[{C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}C\-U\-\_\-\-E\-X\-P\-O\-R\-T {\bf C\-U\-\_\-\-Error\-Code} C\-U\-\_\-list\-\_\-tests\-\_\-to\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__Automated_ga4bf1c3a0b54cb2a12d634e7e022edf30}
+
+
+Generates an xml file containing a list of all tests in all suites in the active registry. 
+
+The output file will be named according to the most recent call to \hyperlink{group__Automated_ga60583b154146b787f03267fc320f86e5}{C\-U\-\_\-set\-\_\-output\-\_\-filename()}, or a default if not previously set.
+
+\begin{DoxyReturn}{Renvoie}
+An error code indicating the error status. 
+\end{DoxyReturn}
+\hypertarget{group__Automated_ga60583b154146b787f03267fc320f86e5}{\index{Automated@{Automated}!C\-U\-\_\-set\-\_\-output\-\_\-filename@{C\-U\-\_\-set\-\_\-output\-\_\-filename}}
+\index{C\-U\-\_\-set\-\_\-output\-\_\-filename@{C\-U\-\_\-set\-\_\-output\-\_\-filename}!Automated@{Automated}}
+\subsubsection[{C\-U\-\_\-set\-\_\-output\-\_\-filename}]{\setlength{\rightskip}{0pt plus 5cm}C\-U\-\_\-\-E\-X\-P\-O\-R\-T void C\-U\-\_\-set\-\_\-output\-\_\-filename (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\-Filename\-Root}
+\end{DoxyParamCaption}
+)}}\label{group__Automated_ga60583b154146b787f03267fc320f86e5}
+
+
+Sets the root file name for automated test output files. 
+
+The strings \char`\"{}-\/\-Listing.\-xml\char`\"{} and \char`\"{}-\/\-Results.\-xml\char`\"{} are appended to the specified root to generate the filenames. If sz\-Filename\-Root is empty, the default root (\char`\"{}\-C\-Unit\-Automated\char`\"{}) is used.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sz\-Filename\-Root} & String containing root to use for file names. \\
+\hline
+\end{DoxyParams}

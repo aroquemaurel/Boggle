@@ -1,11 +1,24 @@
-#include <stdbool.h>
-
+/**
+ * \file resolveur.c
+ * \brief Gestion du résolveur
+ * Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans
+ * le module Solution
+ */
 #include <string.h>
-#include "util.h"
-#include "dictionnaire.h"
 
+#include "dictionnaire.h"
 #include "resolveur.h"
 #include "solution.h"
+
+/**
+ * Fonction privée récursive permettant de résoudre une grille de Boggle
+ * @param pPlateau Le lateau à résoudre
+ * @param x L'abscisse de la lettre pour laquelle on part
+ * @param y L'ordonné de la lettre pour laquelle on part
+ * @param depth La profondeur à laquelle on se trouve
+ * @param choices Le mot formé actuellement
+ * @param pDico Le dictionnaire dans laquel chercher les mots
+ */
 void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDico) {
     int res;
     
@@ -46,7 +59,15 @@ void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDi
     pPlateau->grid[x][y] = 0;
 }
 
-void resolveur(Plateau* pPlateau, char* choices, Dico pDico) {
+/**
+ * Résoud une grille de boggle
+ * @param pPlateau Le plateau à résoudre
+ * @param choices 
+ * @param pDico le dictionnaire
+ */
+void resolveur(Plateau* pPlateau, Dico pDico) {
+    char choices[256];
+    
     for(int j = 0 ; j < pPlateau->tailleGrille ; ++j) {
         for(int i = 0 ; i < pPlateau->tailleGrille ; ++i) {
             recurse(pPlateau, i, j, 0, choices, pDico);

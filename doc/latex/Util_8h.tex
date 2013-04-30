@@ -1,0 +1,36 @@
+\hypertarget{Util_8h}{\section{Référence du fichier lib/\-C\-Unit/\-Util.h}
+\label{Util_8h}\index{lib/\-C\-Unit/\-Util.\-h@{lib/\-C\-Unit/\-Util.\-h}}
+}
+
+
+Utility functions (user interface).  
+
+
+{\ttfamily \#include \char`\"{}C\-Unit.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Framework_ga089820634e54b8284d03d85e8b8e41a7}{C\-U\-N\-I\-T\-\_\-\-M\-A\-X\-\_\-\-E\-N\-T\-I\-T\-Y\-\_\-\-L\-E\-N}~5
+\begin{DoxyCompactList}\small\item\em Maximum number of characters in a translated xml entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T size\-\_\-t \hyperlink{group__Framework_ga24f4ea5ebafd70276bdc1bcdf1b89393}{C\-U\-\_\-translate\-\_\-special\-\_\-characters} (const char $\ast$sz\-Src, char $\ast$sz\-Dest, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em Converts special characters in sz\-Src to xml entity codes and stores result in sz\-Dest. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T size\-\_\-t \hyperlink{group__Framework_gaed0d90c9fdd0c46b6043fb2b8ae570f4}{C\-U\-\_\-translated\-\_\-strlen} (const char $\ast$sz\-Src)
+\begin{DoxyCompactList}\small\item\em Calculates the length of a translated string. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T int \hyperlink{group__Framework_gab88ddd1b0e508bf6210808d34285659e}{C\-U\-\_\-compare\-\_\-strings} (const char $\ast$sz\-Src, const char $\ast$sz\-Dest)
+\begin{DoxyCompactList}\small\item\em Case-\/insensitive string comparison. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T void \hyperlink{group__Framework_gade303bc81f692aa882189eb14484be8f}{C\-U\-\_\-trim\-\_\-left} (char $\ast$sz\-String)
+\begin{DoxyCompactList}\small\item\em Trims leading whitespace from the specified string. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T void \hyperlink{group__Framework_ga728a4e98bd73682b97cede1429547d6d}{C\-U\-\_\-trim\-\_\-right} (char $\ast$sz\-String)
+\begin{DoxyCompactList}\small\item\em Trims trailing whitespace from the specified string. \end{DoxyCompactList}\item 
+C\-U\-\_\-\-E\-X\-P\-O\-R\-T void \hyperlink{group__Framework_gab4f507101595640f759647d13f0e0a00}{C\-U\-\_\-trim} (char $\ast$sz\-String)
+\begin{DoxyCompactList}\small\item\em Trims leading and trailing whitespace from the specified string. \end{DoxyCompactList}\item 
+\hypertarget{group__Framework_ga645f6e889b0c3be2f6e0217f9bfef092}{C\-U\-\_\-\-E\-X\-P\-O\-R\-T size\-\_\-t \hyperlink{group__Framework_ga645f6e889b0c3be2f6e0217f9bfef092}{C\-U\-\_\-number\-\_\-width} (int number)}\label{group__Framework_ga645f6e889b0c3be2f6e0217f9bfef092}
+
+\begin{DoxyCompactList}\small\item\em Calulates the number of places required to display number in decimal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Utility functions (user interface). 
