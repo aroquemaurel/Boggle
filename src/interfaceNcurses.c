@@ -34,7 +34,8 @@ WINDOW* interfaceNcurses_initialiser(void) {
     return fenetre;
 }
 
-void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Case pSelectedCase, const Case* pUsedCase, const int pLgUsedCase) {
+void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Case pSelectedCase, 
+                                    const Case* pUsedCase, const int pLgUsedCase) {
     Case buff;
     
     for (int j = 0 ; j < pPlateau.tailleGrille ; ++j) {
@@ -108,7 +109,7 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                 }
                 break;
             case KEY_DOWN:
-                if(strlen(mot) == 0 || (selectedCase.i == lastChoseCase.i) || (selectedCase.i == lastChoseCase.i-1)) {
+                if((strlen(mot) == 0) || (selectedCase.i == lastChoseCase.i) || (selectedCase.i == lastChoseCase.i-1)) {
                 selectedCase.i = (selectedCase.i+1 < pJeu.plateau.tailleGrille) 
                         ? selectedCase.i+1 : selectedCase.i;
                 }

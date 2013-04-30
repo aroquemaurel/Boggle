@@ -130,13 +130,14 @@ void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {
 }
 
 _Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase) {
-    for(int i = 0 ; i < pTaille ; ++i) {
+    _Bool continuer = true;
+    for(int i = 0 ; (i < pTaille && continuer) ; ++i) {
         if((pTableau[i].i == pCase.i) && (pTableau[i].j == pCase.j)) {
-            return true;
+            continuer = false;
         }
     }
     
-    return false;
+    return !continuer;
 }
 
 void util_conversionTemps(const time_t pTimestamp, int* pMinutes, int* pSecondes) {

@@ -65,6 +65,8 @@ int solution_nbPoints(Solution pSolution) {
             retour += 5;   
         } else if (taille >= 8) {
             retour += 11;    
+        } else {
+            retour += 0;
         }
     }
     
