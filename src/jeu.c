@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
+
 #include "util.h"
 #include "resolveur.h"
 #include "jeu.h"
@@ -31,13 +30,11 @@ void jeu_lancer(Jeu* pJeu) {
     plateau_remplirGrilleAleatoire(&(pJeu->plateau));
 //    plateau_remplirGrillePredefinie(&(pJeu->plateau));
     resolveur(&(pJeu->plateau), choices, pJeu->dico);
-    
-    // départ compteur
 }
 _Bool jeu_proposerMot(Jeu* pJeu, const char* pMot) {
 	char* mot = util_supprimerAccents(pMot);
 	_Bool retour;
-	//util_uppercase(pMot);
+	//util_uppercase(pMot); // TODO
 
 	retour = solution_motEstPresent(pJeu->plateau.solution, pMot);
 	if(retour) {
@@ -68,7 +65,5 @@ void jeu_lancerModeTexte(Jeu pJeu) {
     solution_afficher(pJeu.solutionUtilisateur);
      solution_afficher(pJeu.plateau.solution);
     jeu_stopper(pJeu);
-  //  printf("\nProposer des mots : ");
-    
 }
 

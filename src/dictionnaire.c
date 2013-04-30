@@ -40,7 +40,6 @@ int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot) {
     if(strcmp(buff, pMot) == 0) {
         retour = 10;    // C'est lot mot exact
     } else { //FIXME Mots en diagonale.
-        //return 1; 
         util_substr(buff,0,strlen(pMot)-1,buff2); // on regarde si la racine du mot correspond à notre mot
         if(strlen(pMot) <= strlen(buff2)) {            
             if(strcmp(pMot, buff2) == 0) {
@@ -71,7 +70,7 @@ void dictionnaire_rechercheDichotomique(Dico pDictionnaire, char* pMotAChercher,
         
         cmp = strcmp(pMotLePlusProche, pMotAChercher);
         if(cmp == 0) {
-            break;
+            break; // FIXME break complètement dégueulasse. Attendre tests unitaires
         } else if (cmp < 0) {// T[m] < X
             debut = ftell(pDictionnaire.dico);
         } else { 

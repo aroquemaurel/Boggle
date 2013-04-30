@@ -8,7 +8,3 @@ void interfaceTexte_afficherPlateau(const Plateau pPlateau) {
         printf("\n");
     }
 }
-
-void interfaceTexte_proposerMOt() {
-    
-}

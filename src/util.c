@@ -1,9 +1,7 @@
 #include <string.h>
 #include <wchar.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <time.h>
 
 #include "util.h"
 #include "jeu.h"
@@ -59,6 +57,7 @@ char* util_supprimerAccents(const char* pChaine) {
                 break;
             default:
                 retour[i] = pChaine[i];
+                break;
         }
     }
 
@@ -99,20 +98,25 @@ void util_quickSort(char* tableau[], int debut, int fin) {
     int droite = fin+1;
     const char* pivot = tableau[debut];
  
-    if(debut >= fin)
-        return;
- 
-    while(1) {
-        do droite--; while(strcmp(tableau[droite],pivot) > 0);
-        do gauche++; while(strcmp(tableau[gauche], pivot) < 0);
- 
-        if(gauche < droite)
-            util_echanger(tableau, gauche, droite);
-        else break;
+    if(debut < fin)  {
+        while(1) { // FIXME supprimer ce break complètement dégueulasse.
+            do {
+                droite--; 
+            } while(strcmp(tableau[droite],pivot) > 0);
+            do {
+                gauche++; 
+            } while(strcmp(tableau[gauche], pivot) < 0);
+
+            if(gauche < droite) {
+                util_echanger(tableau, gauche, droite);
+            } else {
+                break;
+            }
+        }
+
+        util_quickSort(tableau, debut, droite);
+        util_quickSort(tableau, droite+1, fin);
     }
- 
-    util_quickSort(tableau, debut, droite);
-    util_quickSort(tableau, droite+1, fin);
 }
 
 void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {

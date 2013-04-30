@@ -31,7 +31,7 @@ void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDi
         res = 1;
     }
     
-    if(res && depth < TAILLE_MOT_MAX) {        
+    if((res) && (depth < TAILLE_MOT_MAX)) {        
         recurse(pPlateau, x-1, y-1, depth, choices, pDico);
         recurse(pPlateau, x, y-1, depth, choices, pDico);
         recurse(pPlateau, x+1, y-1, depth, choices, pDico);

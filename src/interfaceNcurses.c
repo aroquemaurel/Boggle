@@ -17,11 +17,9 @@ void interfaceNcurses_afficherSolution(const Solution pSolution) {
 }
 
 WINDOW* interfaceNcurses_initialiser(void) {
-    WINDOW * fenetre;
-    PANEL* panelGrille;
-    
+    WINDOW* fenetre = initscr();
     /*  Initialize ncurses  */
-    if ( (fenetre = initscr()) == NULL ) {
+    if (fenetre == NULL) {
         fprintf(stderr, "Error initializing ncurses.\n");
         exit(EXIT_FAILURE);
     }
@@ -133,6 +131,8 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                 }
                 lastChoseCase.i = -1;
                 lastChoseCase.j = -1;
+                break;
+            default:
                 break;
         }
 

@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+
 #include "solution.h"
 #include "plateau.h"
 #include "util.h"
@@ -158,6 +158,7 @@ double plateau_probaLettre(const char pLettre) {
             break;
         default:
             util_affichageDebug("dictionnaire_probaLettre", "La lettre n'existe pas");
+            break;
     }
     return proba; 
 }
