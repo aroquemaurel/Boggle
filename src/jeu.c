@@ -2,7 +2,7 @@
  * \file jeu.c
  * \brief Gestion du jeu de Boggle
  *  Les fonctions permettant de gérer le Jeu de Boggle.
- * \see Plateau, Resolveur
+ * \see Plateau, Resolveur, Dico, Solution
  */
 
 #include <stdlib.h>

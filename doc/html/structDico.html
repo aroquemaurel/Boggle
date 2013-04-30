@@ -67,6 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;structures&#160;de&#160;données</span></a></li>
+      <li><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -89,7 +90,7 @@ $(document).ready(function(){initNavTree('structDico.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,14 +106,46 @@ $(document).ready(function(){initNavTree('structDico.html','');});
 <div class="title">Référence de la structure Dico</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Dictionnaire Contient le dictionnaire du jeu.  
+ <a href="structDico.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dictionnaire_8h_source.html">dictionnaire.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Champs de données</h2></td></tr>
-<tr class="memitem:aa608808df162aebf2b2bfbc4723cfad6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa608808df162aebf2b2bfbc4723cfad6"></a>
-FILE *&#160;</td><td class="memItemRight" valign="bottom"><b>dico</b></td></tr>
-<tr class="memitem:a1a8a33881f938f4ddd946edc97ae82f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a8a33881f938f4ddd946edc97ae82f8"></a>
-long int&#160;</td><td class="memItemRight" valign="bottom"><b>marqueurs</b> [32]</td></tr>
+<tr class="memitem:aa608808df162aebf2b2bfbc4723cfad6"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDico.html#aa608808df162aebf2b2bfbc4723cfad6">dico</a></td></tr>
+<tr class="memitem:a1a8a33881f938f4ddd946edc97ae82f8"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDico.html#a1a8a33881f938f4ddd946edc97ae82f8">marqueurs</a> [32]</td></tr>
 </table>
+<a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Dictionnaire Contient le dictionnaire du jeu. </p>
+</div><h2>Documentation des champs</h2>
+<a class="anchor" id="aa608808df162aebf2b2bfbc4723cfad6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* Dico::dico</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fichier contenant le dictionnaire, celui-ci doit être un fichier texte avec un mot par ligne </p>
+
+</div>
+</div>
+<a class="anchor" id="a1a8a33881f938f4ddd946edc97ae82f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long int Dico::marqueurs[32]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contient les positions de chacunes des lettres de l'alphabets dans le fichier </p>
+
+</div>
+</div>
 <hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
 <li><a class="el" href="dictionnaire_8h_source.html">dictionnaire.h</a></li>
 </ul>
@@ -122,7 +155,7 @@ long int&#160;</td><td class="memItemRight" valign="bottom"><b>marqueurs</b> [32
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structDico.html">Dico</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 10:07:23 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Avril 30 2013 10:29:28 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -10,9 +10,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+/**
+ * \struct Dico
+ * \brief Dictionnaire
+ * Contient le dictionnaire du jeu.
+ */
 typedef struct {
-    FILE* dico;
-    long int marqueurs[32];
+    FILE* dico; /*!< Fichier contenant le dictionnaire, celui-ci doit être un fichier texte avec un mot par ligne*/
+    long int marqueurs[32]; /*!< Contient les positions de chacunes des lettres de l'alphabets dans le fichier */
 } Dico;
 
 Dico dictionnaire_nouveau(const char* pNomFichier);

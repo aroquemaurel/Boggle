@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['strcondition',['strCondition',['../structCU__FailureRecord.html#a645edad1e32b1533bd55c501b2c4d591',1,'CU_FailureRecord']]],
-  ['strfilename',['strFileName',['../structCU__FailureRecord.html#a5b72f6fe23e35605545809f435884da3',1,'CU_FailureRecord']]]
+  ['solution',['solution',['../structPlateau.html#aed88af50891b17edcd3ba97d7098dfde',1,'Plateau']]],
+  ['solutionutilisateur',['solutionUtilisateur',['../structJeu.html#ae8e1dca71285915404d1de4ff609a1d6',1,'Jeu']]]
 ];
