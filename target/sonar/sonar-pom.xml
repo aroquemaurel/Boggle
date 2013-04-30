@@ -7,7 +7,7 @@
   <version>1.0</version>
   <name>Boggle</name>
   <build>
-    <sourceDirectory>/development/cours/L2/projet4/boggle/src, lib</sourceDirectory>
+    <sourceDirectory>/development/cours/L2/projet4/boggle/src, lib/*h</sourceDirectory>
     <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>/development/cours/L2/projet4/boggle/src/test/java</testSourceDirectory>
     <outputDirectory>/development/cours/L2/projet4/boggle/target/classes</outputDirectory>
