@@ -1,3 +1,6 @@
+/**
+ * \file interfaceTexte.h
+ */
 #ifndef INTERFACETEXT_H
 #define	INTERFACETEXT_H
 

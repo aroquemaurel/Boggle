@@ -1,8 +1,5 @@
-/* 
- * File:   util.h
- * Author: aroquemaurel
- *
- * Created on 8 mars 2013, 11:39
+/** 
+ * \file util.h
  */
 
 #ifndef UTIL_H

@@ -1,8 +1,5 @@
-/* 
- * File:   plateau.h
- * Author: aroquemaurel
- *
- * Created on 8 mars 2013, 11:05
+/**
+ * \file plateau.h
  */
 
 #ifndef PLATEAU_H

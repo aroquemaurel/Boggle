@@ -1,8 +1,5 @@
-/* 
- * File:   solution.h
- * Author: aroquemaurel
- *
- * Created on 14 avril 2013, 20:47
+/**
+ * \file solution.h
  */
 
 #ifndef SOLUTION_H

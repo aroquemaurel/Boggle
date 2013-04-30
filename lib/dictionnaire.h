@@ -1,8 +1,5 @@
-/* 
- * File:   dictionnaire.h
- * Author: aroquemaurel
- *
- * Created on 8 mars 2013, 11:04
+/**
+ * \file dictionnaire.h
  */
 
 #ifndef DICTIONNAIRE_H

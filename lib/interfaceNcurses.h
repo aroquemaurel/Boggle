@@ -1,8 +1,5 @@
-/* 
- * File:   interfaceNcurses.h
- * Author: aroquemaurel
- *
- * Created on 24 avril 2013, 00:45
+/**
+ * \file interfaceNcurses.h
  */
 
 #ifndef INTERFACENCURSES_H

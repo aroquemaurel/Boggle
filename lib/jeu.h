@@ -1,3 +1,6 @@
+/**
+ * \file jeu.h
+ */
 #ifndef JEU_H
 #define	JEU_H
 #include <time.h>

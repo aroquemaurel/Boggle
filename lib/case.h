@@ -1,8 +1,5 @@
-/* 
- * File:   case.h
- * Author: aroquemaurel
- *
- * Created on 28 avril 2013, 12:29
+/** 
+ * \file case.h
  */
 
 #ifndef CASE_H
