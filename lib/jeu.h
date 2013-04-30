@@ -1,6 +1,10 @@
 /**
  * \file jeu.h
+ * \brief Gestion du jeu de Boggle
+ *  Les fonctions permettant de gérer le Jeu de Boggle.
+ * \see Plateau, Resolveur, Dico, Solution
  */
+
 #ifndef JEU_H
 #define	JEU_H
 #include <time.h>

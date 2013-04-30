@@ -4,6 +4,7 @@
  * Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans
  * le module Solution
  */
+
 #include <string.h>
 
 #include "util.h"

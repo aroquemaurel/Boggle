@@ -3,6 +3,7 @@
  * \brief Gestion du plateau de Jeu
  * Fonctions se rapportant à un plateau de jeu, sera sert à gérer la grille de Boggle
  */
+
 #include <stdlib.h>
 
 #include "solution.h"

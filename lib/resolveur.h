@@ -1,5 +1,8 @@
 /**
  * \file resolveur.h
+ * \brief Gestion du résolveur
+ * Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans
+ * le module Solution
  */
 
 #ifndef RESOLVEUR_H

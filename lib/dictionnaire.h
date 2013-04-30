@@ -1,6 +1,10 @@
 /**
  * \file dictionnaire.h
+ * \brief Gestion du dictionnaire
+ * Fonctions de gestion du dictionnaire, le dictionnaire doit être dans un fichier
+ * texte avec un mot différent par ligne.
  */
+
 
 #ifndef DICTIONNAIRE_H
 #define	DICTIONNAIRE_H

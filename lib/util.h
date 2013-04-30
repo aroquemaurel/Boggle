@@ -1,5 +1,8 @@
 /** 
  * \file util.h
+ * \brief Fonctions utiles à l'ensemble du projet
+ * Toutes les fonctions de bases utiles au projet, ces fonctions travaillent 
+ * sur des types de bae et ne sont pas spécfiques au projet, ce module permet de meux organiser le code
  */
 
 #ifndef UTIL_H

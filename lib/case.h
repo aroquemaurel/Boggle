@@ -1,5 +1,7 @@
-/** 
+/** *
  * \file case.h
+ * \brief Structure de données d'une case
+ * Structure de données d'une case du plateau.
  */
 
 #ifndef CASE_H

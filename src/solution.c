@@ -1,3 +1,10 @@
+/**
+ * \file solution.c
+ * \brief Gère la solution d'une grille de boggle
+ * Toutes les fonctions se rapportant à la solution d'une grille
+ * \see plateau
+ */
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>

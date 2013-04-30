@@ -1,7 +1,9 @@
 /**
  * \file solution.h
+ * \brief Gère la solution d'une grille de boggle
+ * Toutes les fonctions se rapportant à la solution d'une grille
+ * \see plateau
  */
-
 #ifndef SOLUTION_H
 #define	SOLUTION_H
 

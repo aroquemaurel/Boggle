@@ -1,5 +1,7 @@
 /**
  * \file plateau.h
+ * \brief Gestion du plateau de Jeu
+ * Fonctions se rapportant à un plateau de jeu, sera sert à gérer la grille de Boggle
  */
 
 #ifndef PLATEAU_H
