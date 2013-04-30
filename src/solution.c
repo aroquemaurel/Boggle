@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
@@ -31,7 +30,7 @@ void solution_ajouterMot(Solution* pSolution, const char* mot) {
     if(!solution_motEstPresent(*pSolution, mot)) {
         pSolution->mots = realloc(pSolution->mots, (pSolution->nbMots+1) * sizeof(char*));
         pSolution->mots[pSolution->nbMots] = malloc((strlen(mot)+1) * sizeof(char));
-        strcpy(pSolution->mots[pSolution->nbMots], mot);
+        strncpy(pSolution->mots[pSolution->nbMots], mot, sizeof(mot));
         ++(pSolution->nbMots);
     }
 }
