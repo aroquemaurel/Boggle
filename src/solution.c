@@ -52,19 +52,6 @@ void solution_ajouterMot(Solution* pSolution, const char* mot) {
     }
 }
 
-// TODO déplacer mode text
-/**
- * Affiche la solution en mode texte
- * @param pSolution la solution à afficher
- */
-void solution_afficher(const Solution pSolution) {
-    printf("%d mots. nombre de points : %d\n", pSolution.nbMots, solution_nbPoints(pSolution));
-    for(int i = 0 ; i < pSolution.nbMots ; ++i) {
-        printf("%s\n", pSolution.mots[i]);
-    }
-    printf("%d mots. nombre de points : %d\n", pSolution.nbMots, solution_nbPoints(pSolution));    
-}
-
 /**
  * Détruit la solution
  * @param pSolution La solution à détruire

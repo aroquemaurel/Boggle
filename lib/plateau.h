@@ -6,7 +6,8 @@
  */
 
 #ifndef PLATEAU_H
-#define	PLATEAU_H
+#define PLATEAU_H
+
 #include "solution.h"
 #define TAILLE_MOT_MIN 3
 #define TAILLE_MOT_MAX 32
