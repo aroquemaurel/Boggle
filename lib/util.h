@@ -15,7 +15,7 @@
 #define MOT_PRECEDENT 1
 #define MOT_SUIVANT 1
 
-inline void util_affichageDebug(const char* pNomFonction, const char* pChaine);
+void util_affichageDebug(const char* pNomFonction, const char* pChaine);
 char* util_supprimerAccents(const char* pChaine);
 char util_nbAleatoire(const char pDebut, const char pFin);
 

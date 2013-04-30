@@ -21,8 +21,10 @@ void interfaceNcurses_afficherSolution(const Solution pSolution);
 void jeu_lancerModeNcurses(Jeu pJeu);
 WINDOW* interfaceNcurses_initialiser(void);
 void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Case pSelectedCase, const Case* pUsedCase, const int pLgUsedCase);
-void interfaceNcurses_terminer(WINDOW* fenetre);
-void jeu_lancerModeNcurses(Jeu pJeu);
-
+void interfaceNcurses_terminer(WINDOW* fenetre, Jeu pJeu);
+void interfaceNcurses_afficherFenetreJeu(const Jeu pJeu, char* pMot, const Case pSelectedCase, Case* pUsedCase);
+void interfaceNcurses_afficherBoiteDialogue(const Jeu pJeu);
+void interfaceNcurses_afficherFenetreSolution(const Jeu pJeu);
+int interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu);
 #endif	/* INTERFACENCURSES_H */
 

@@ -65,7 +65,7 @@
           <incDir>
             <pElem>lib</pElem>
           </incDir>
-          <commandLine>-lncurses -lpanel -LCunit/lib -lcunit</commandLine>
+          <commandLine>-lncurses -lpanel -lmenu -LCunit/lib -lcunit</commandLine>
         </cTool>
         <linkerTool>
           <linkerAddLib>

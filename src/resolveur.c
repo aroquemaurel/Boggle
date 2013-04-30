@@ -6,6 +6,7 @@
  */
 #include <string.h>
 
+#include "util.h"
 #include "dictionnaire.h"
 #include "resolveur.h"
 #include "solution.h"

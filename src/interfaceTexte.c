@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "interfaceTexte.h"
 
 void interfaceTexte_afficherPlateau(const Plateau pPlateau) {

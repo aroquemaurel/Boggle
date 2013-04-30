@@ -21,7 +21,7 @@
  * @return Le nombre de secondes restantes
  */
 time_t jeu_tempsRestant(const Jeu pJeu) {
-	return (-(time(NULL) - pJeu.timestampDepart) + 180);
+	return (-(time(NULL) - pJeu.timestampDepart) + pJeu.lgTimer); // TODO paramètre
 }
 
 /**
@@ -37,14 +37,16 @@ bool jeu_compteurClaque(const Jeu pJeu) {
  * Créer un nouveau jeu
  * @param pNomDico Le dictionnaire utilisé dans le Jeu
  * @param pTaillePlateau La taille du plateau à créer
+ * @param pLgTimer La longeur du timer en secondes
  * @return Le nouveau Jeu
  */
-Jeu jeu_nouveau(const char* pNomDico, const unsigned char pTaillePlateau) {
+Jeu jeu_nouveau(const char* pNomDico, const unsigned char pTaillePlateau, const unsigned int pLgTimer) {
     Jeu nouveauJeu;
     nouveauJeu.plateau = plateau_nouveau(pTaillePlateau);
     nouveauJeu.dico = dictionnaire_nouveau(pNomDico);
     nouveauJeu.timestampDepart = time(NULL);
     nouveauJeu.solutionUtilisateur = solution_creer();
+    nouveauJeu.lgTimer = pLgTimer;
     return nouveauJeu;
 }
 
