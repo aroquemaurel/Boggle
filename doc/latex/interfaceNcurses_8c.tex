@@ -1,35 +1,46 @@
-\hypertarget{interfaceNcurses_8c}{\section{Référence du fichier interface\-Ncurses.\-c}
-\label{interfaceNcurses_8c}\index{interface\-Ncurses.\-c@{interface\-Ncurses.\-c}}
+\hypertarget{interfaceNcurses_8c}{
+\section{Référence du fichier interfaceNcurses.c}
+\label{interfaceNcurses_8c}\index{interfaceNcurses.c@{interfaceNcurses.c}}
 }
 
 
 Affichage avec la bibliothèque Ncurses Affiche et permet de jouer au jeu de Boggle avec un affichage utilisant la bibliothèque Ncurses.  
 
 
-{\ttfamily \#include $<$ncurses.\-h$>$}\\*
-{\ttfamily \#include $<$panel.\-h$>$}\\*
-{\ttfamily \#include $<$stdlib.\-h$>$}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}interface\-Ncurses.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}plateau.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}jeu.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}util.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$ncurses.h$>$}\par
+{\ttfamily \#include $<$panel.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}interfaceNcurses.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}plateau.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}jeu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}util.h\char`\"{}}\par
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interfaceNcurses_8c_a27c4bdc3571ec76bc5f31b11847c0680}{void {\bfseries interface\-Ncurses\-\_\-afficher\-Solution} (const \hyperlink{structSolution}{Solution} p\-Solution)}\label{interfaceNcurses_8c_a27c4bdc3571ec76bc5f31b11847c0680}
+\hypertarget{interfaceNcurses_8c_a27c4bdc3571ec76bc5f31b11847c0680}{
+void {\bfseries interfaceNcurses\_\-afficherSolution} (const \hyperlink{structSolution}{Solution} pSolution)}
+\label{interfaceNcurses_8c_a27c4bdc3571ec76bc5f31b11847c0680}
 
 \item 
-\hypertarget{interfaceNcurses_8c_a11139ea3bdd922798149d2fa93e93457}{W\-I\-N\-D\-O\-W $\ast$ {\bfseries interface\-Ncurses\-\_\-initialiser} (void)}\label{interfaceNcurses_8c_a11139ea3bdd922798149d2fa93e93457}
+\hypertarget{interfaceNcurses_8c_a11139ea3bdd922798149d2fa93e93457}{
+WINDOW $\ast$ {\bfseries interfaceNcurses\_\-initialiser} (void)}
+\label{interfaceNcurses_8c_a11139ea3bdd922798149d2fa93e93457}
 
 \item 
-\hypertarget{interfaceNcurses_8c_a7f08cba800239f2e0bdfa3ed50303595}{void {\bfseries interface\-Ncurses\-\_\-afficher\-Grille} (const \hyperlink{structPlateau}{Plateau} p\-Plateau, const \hyperlink{structCase}{Case} p\-Selected\-Case, const \hyperlink{structCase}{Case} $\ast$p\-Used\-Case, const int p\-Lg\-Used\-Case)}\label{interfaceNcurses_8c_a7f08cba800239f2e0bdfa3ed50303595}
+\hypertarget{interfaceNcurses_8c_a7f08cba800239f2e0bdfa3ed50303595}{
+void {\bfseries interfaceNcurses\_\-afficherGrille} (const \hyperlink{structPlateau}{Plateau} pPlateau, const \hyperlink{structCase}{Case} pSelectedCase, const \hyperlink{structCase}{Case} $\ast$pUsedCase, const int pLgUsedCase)}
+\label{interfaceNcurses_8c_a7f08cba800239f2e0bdfa3ed50303595}
 
 \item 
-\hypertarget{interfaceNcurses_8c_a4edbf66cd641eea3968bdf62814805b9}{void {\bfseries interface\-Ncurses\-\_\-terminer} (W\-I\-N\-D\-O\-W $\ast$fenetre)}\label{interfaceNcurses_8c_a4edbf66cd641eea3968bdf62814805b9}
+\hypertarget{interfaceNcurses_8c_a4edbf66cd641eea3968bdf62814805b9}{
+void {\bfseries interfaceNcurses\_\-terminer} (WINDOW $\ast$fenetre)}
+\label{interfaceNcurses_8c_a4edbf66cd641eea3968bdf62814805b9}
 
 \item 
-\hypertarget{interfaceNcurses_8c_ad8d628ccec45bfb57ace978b88a6dd0e}{void {\bfseries jeu\-\_\-lancer\-Mode\-Ncurses} (\hyperlink{structJeu}{Jeu} p\-Jeu)}\label{interfaceNcurses_8c_ad8d628ccec45bfb57ace978b88a6dd0e}
+\hypertarget{interfaceNcurses_8c_ad8d628ccec45bfb57ace978b88a6dd0e}{
+void {\bfseries jeu\_\-lancerModeNcurses} (\hyperlink{structJeu}{Jeu} pJeu)}
+\label{interfaceNcurses_8c_ad8d628ccec45bfb57ace978b88a6dd0e}
 
 \end{DoxyCompactItemize}
 
