@@ -11,11 +11,16 @@
 #define TAILLE_MOT_MIN 3
 #define TAILLE_MOT_MAX 32
 
+/**
+ * \struct Plateau
+ * \brief Grille du jeu
+ * Contient une grille permettant de jouer au Boggle
+ */ 
 typedef struct {
-    char** grille;
-    unsigned int tailleGrille;
+    char** grille; /*!< La grille de boggle */
+    unsigned int tailleGrille; /*!< La taille de la grille */
     int** grid;
-    Solution solution;
+    Solution solution; /*!< La solution complète de cette grille de Boggle */
 } Plateau ;
 
 Plateau plateau_nouveau(const unsigned char pTailleGrille);

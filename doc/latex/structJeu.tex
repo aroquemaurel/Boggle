@@ -2,30 +2,56 @@
 \section{Référence de la structure Jeu}
 \label{structJeu}\index{Jeu@{Jeu}}
 }
+
+
+Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu.  
+
+
+
+
+{\ttfamily \#include $<$jeu.h$>$}
+
 \subsection*{Champs de données}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structJeu_af2931c71f6de940ec7ed3fcd2f9d7158}{
-\hyperlink{structPlateau}{Plateau} {\bfseries plateau}}
-\label{structJeu_af2931c71f6de940ec7ed3fcd2f9d7158}
-
+\hyperlink{structPlateau}{Plateau} \hyperlink{structJeu_af2931c71f6de940ec7ed3fcd2f9d7158}{plateau}
 \item 
-\hypertarget{structJeu_a6bda384c6fca4e83ae15ac69f2228a41}{
-\hyperlink{structDico}{Dico} {\bfseries dico}}
-\label{structJeu_a6bda384c6fca4e83ae15ac69f2228a41}
-
+\hyperlink{structDico}{Dico} \hyperlink{structJeu_a6bda384c6fca4e83ae15ac69f2228a41}{dico}
 \item 
-\hypertarget{structJeu_af48a5fddf1dc40b7c4a85918d73f201d}{
-time\_\-t {\bfseries timestampDepart}}
-\label{structJeu_af48a5fddf1dc40b7c4a85918d73f201d}
-
+time\_\-t \hyperlink{structJeu_af48a5fddf1dc40b7c4a85918d73f201d}{timestampDepart}
 \item 
-\hypertarget{structJeu_ae8e1dca71285915404d1de4ff609a1d6}{
-\hyperlink{structSolution}{Solution} {\bfseries solutionUtilisateur}}
-\label{structJeu_ae8e1dca71285915404d1de4ff609a1d6}
-
+\hyperlink{structSolution}{Solution} \hyperlink{structJeu_ae8e1dca71285915404d1de4ff609a1d6}{solutionUtilisateur}
 \end{DoxyCompactItemize}
 
+
+\subsection{Description détaillée}
+Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu. \begin{DoxySeeAlso}{Voir également}
+\hyperlink{structDico}{Dico}, \hyperlink{structPlateau}{Plateau}, \hyperlink{structSolution}{Solution} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des champs}
+\hypertarget{structJeu_a6bda384c6fca4e83ae15ac69f2228a41}{
+\index{Jeu@{Jeu}!dico@{dico}}
+\index{dico@{dico}!Jeu@{Jeu}}
+\subsubsection[{dico}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dico} {\bf Jeu::dico}}}
+\label{structJeu_a6bda384c6fca4e83ae15ac69f2228a41}
+Le dictionnaire \hypertarget{structJeu_af2931c71f6de940ec7ed3fcd2f9d7158}{
+\index{Jeu@{Jeu}!plateau@{plateau}}
+\index{plateau@{plateau}!Jeu@{Jeu}}
+\subsubsection[{plateau}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Plateau} {\bf Jeu::plateau}}}
+\label{structJeu_af2931c71f6de940ec7ed3fcd2f9d7158}
+Le plateau de \hyperlink{structJeu}{Jeu} \hypertarget{structJeu_ae8e1dca71285915404d1de4ff609a1d6}{
+\index{Jeu@{Jeu}!solutionUtilisateur@{solutionUtilisateur}}
+\index{solutionUtilisateur@{solutionUtilisateur}!Jeu@{Jeu}}
+\subsubsection[{solutionUtilisateur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Solution} {\bf Jeu::solutionUtilisateur}}}
+\label{structJeu_ae8e1dca71285915404d1de4ff609a1d6}
+La solution que propose l'utilisateur, celle-\/ci peut ne pas être complète, mais tous les mots présents dans cette solution sont présent dans la grille \hypertarget{structJeu_af48a5fddf1dc40b7c4a85918d73f201d}{
+\index{Jeu@{Jeu}!timestampDepart@{timestampDepart}}
+\index{timestampDepart@{timestampDepart}!Jeu@{Jeu}}
+\subsubsection[{timestampDepart}]{\setlength{\rightskip}{0pt plus 5cm}time\_\-t {\bf Jeu::timestampDepart}}}
+\label{structJeu_af48a5fddf1dc40b7c4a85918d73f201d}
+Le timestamp auquel on a commencé à jouer 
 
 La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
 \item 

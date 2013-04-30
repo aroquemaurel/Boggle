@@ -74,23 +74,22 @@ function toggleVisibility(linkObj) {
 <a name="l00008"></a>00008 <span class="preprocessor">#ifndef SOLUTION_H</span>
 <a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define SOLUTION_H</span>
 <a name="l00010"></a>00010 <span class="preprocessor"></span>
-<a name="l00011"></a><a class="code" href="structSolution.html">00011</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00012"></a>00012     <span class="keywordtype">char</span>** mots;
-<a name="l00013"></a>00013     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbMots;
-<a name="l00014"></a>00014     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbPointsTotal;
-<a name="l00015"></a>00015 } <a class="code" href="structSolution.html">Solution</a>;
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <a class="code" href="structSolution.html">Solution</a> solution_creer(<span class="keywordtype">void</span>);
-<a name="l00018"></a>00018 <span class="keywordtype">void</span> solution_ajouterMot(<a class="code" href="structSolution.html">Solution</a>* pSolution, <span class="keyword">const</span> <span class="keywordtype">char</span>* mot);
-<a name="l00019"></a>00019 <span class="keywordtype">void</span> solution_afficher(<span class="keyword">const</span> <a class="code" href="structSolution.html">Solution</a> pSolution);
-<a name="l00020"></a>00020 <span class="keywordtype">void</span> solution_detruire(<a class="code" href="structSolution.html">Solution</a>* pSolution);
-<a name="l00021"></a>00021 _Bool solution_motEstPresent(<span class="keyword">const</span> <a class="code" href="structSolution.html">Solution</a> pSolution, <span class="keyword">const</span> <span class="keywordtype">char</span>* pMot);
-<a name="l00022"></a>00022 <span class="keywordtype">int</span> solution_nbPoints(<a class="code" href="structSolution.html">Solution</a> pSolution);
-<a name="l00023"></a>00023 <span class="preprocessor">#endif  </span><span class="comment">/* SOLUTION_H */</span>
-<a name="l00024"></a>00024 
+<a name="l00016"></a><a class="code" href="structSolution.html">00016</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00017"></a><a class="code" href="structSolution.html#ab511245410043c846351c6acf272d656">00017</a>     <span class="keywordtype">char</span>** mots; 
+<a name="l00018"></a><a class="code" href="structSolution.html#a60e0881a49e593091d2210dd49f2f51a">00018</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbMots; 
+<a name="l00019"></a>00019 } <a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a>;
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> solution_creer(<span class="keywordtype">void</span>);
+<a name="l00022"></a>00022 <span class="keywordtype">void</span> solution_ajouterMot(<a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a>* pSolution, <span class="keyword">const</span> <span class="keywordtype">char</span>* mot);
+<a name="l00023"></a>00023 <span class="keywordtype">void</span> solution_afficher(<span class="keyword">const</span> <a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> pSolution);
+<a name="l00024"></a>00024 <span class="keywordtype">void</span> solution_detruire(<a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a>* pSolution);
+<a name="l00025"></a>00025 _Bool solution_motEstPresent(<span class="keyword">const</span> <a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> pSolution, <span class="keyword">const</span> <span class="keywordtype">char</span>* pMot);
+<a name="l00026"></a>00026 <span class="keywordtype">int</span> solution_nbPoints(<a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> pSolution);
+<a name="l00027"></a>00027 <span class="preprocessor">#endif  </span><span class="comment">/* SOLUTION_H */</span>
+<a name="l00028"></a>00028 
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:34:47 pour Jeu de Boggle par&nbsp;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:35:55 pour Jeu de Boggle par&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

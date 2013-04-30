@@ -57,6 +57,7 @@ function toggleVisibility(linkObj) {
     <ul class="tablist">
       <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
       <li><a href="classes.html"><span>Index&nbsp;des&nbsp;structures&nbsp;de&nbsp;données</span></a></li>
+      <li><a href="functions.html"><span>Champs&nbsp;de&nbsp;donnée</span></a></li>
     </ul>
   </div>
 </div>
@@ -67,23 +68,84 @@ function toggleVisibility(linkObj) {
 <h1>Référence de la structure Jeu</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Jeu" --><table class="memberdecls">
+<!-- doxytag: class="Jeu" -->
+<p>Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu.  
+<a href="#_details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="jeu_8h_source.html">jeu.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Champs de données</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2931c71f6de940ec7ed3fcd2f9d7158"></a><!-- doxytag: member="Jeu::plateau" ref="af2931c71f6de940ec7ed3fcd2f9d7158" args="" -->
-<a class="el" href="structPlateau.html">Plateau</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>plateau</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bda384c6fca4e83ae15ac69f2228a41"></a><!-- doxytag: member="Jeu::dico" ref="a6bda384c6fca4e83ae15ac69f2228a41" args="" -->
-<a class="el" href="structDico.html">Dico</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>dico</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af48a5fddf1dc40b7c4a85918d73f201d"></a><!-- doxytag: member="Jeu::timestampDepart" ref="af48a5fddf1dc40b7c4a85918d73f201d" args="" -->
-time_t&nbsp;</td><td class="memItemRight" valign="bottom"><b>timestampDepart</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8e1dca71285915404d1de4ff609a1d6"></a><!-- doxytag: member="Jeu::solutionUtilisateur" ref="ae8e1dca71285915404d1de4ff609a1d6" args="" -->
-<a class="el" href="structSolution.html">Solution</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>solutionUtilisateur</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPlateau.html">Plateau</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#af2931c71f6de940ec7ed3fcd2f9d7158">plateau</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDico.html">Dico</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#a6bda384c6fca4e83ae15ac69f2228a41">dico</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#af48a5fddf1dc40b7c4a85918d73f201d">timestampDepart</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSolution.html">Solution</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#ae8e1dca71285915404d1de4ff609a1d6">solutionUtilisateur</a></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<p>Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu. </p>
+<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>, <a class="el" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>, <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> </dd></dl>
+<hr/><h2>Documentation des champs</h2>
+<a class="anchor" id="a6bda384c6fca4e83ae15ac69f2228a41"></a><!-- doxytag: member="Jeu::dico" ref="a6bda384c6fca4e83ae15ac69f2228a41" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDico.html">Dico</a> <a class="el" href="structJeu.html#a6bda384c6fca4e83ae15ac69f2228a41">Jeu::dico</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Le dictionnaire </p>
+
+</div>
+</div>
+<a class="anchor" id="af2931c71f6de940ec7ed3fcd2f9d7158"></a><!-- doxytag: member="Jeu::plateau" ref="af2931c71f6de940ec7ed3fcd2f9d7158" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPlateau.html">Plateau</a> <a class="el" href="structJeu.html#af2931c71f6de940ec7ed3fcd2f9d7158">Jeu::plateau</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Le plateau de <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8e1dca71285915404d1de4ff609a1d6"></a><!-- doxytag: member="Jeu::solutionUtilisateur" ref="ae8e1dca71285915404d1de4ff609a1d6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSolution.html">Solution</a> <a class="el" href="structJeu.html#ae8e1dca71285915404d1de4ff609a1d6">Jeu::solutionUtilisateur</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>La solution que propose l'utilisateur, celle-ci peut ne pas être complète, mais tous les mots présents dans cette solution sont présent dans la grille </p>
+
+</div>
+</div>
+<a class="anchor" id="af48a5fddf1dc40b7c4a85918d73f201d"></a><!-- doxytag: member="Jeu::timestampDepart" ref="af48a5fddf1dc40b7c4a85918d73f201d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t <a class="el" href="structJeu.html#af48a5fddf1dc40b7c4a85918d73f201d">Jeu::timestampDepart</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Le timestamp auquel on a commencé à jouer </p>
+
+</div>
+</div>
 <hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
 <li><a class="el" href="jeu_8h_source.html">jeu.h</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:34:47 pour Jeu de Boggle par&nbsp;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:35:55 pour Jeu de Boggle par&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

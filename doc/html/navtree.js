@@ -3,7 +3,11 @@ var NAVTREE =
   [ "Jeu de Boggle", "index.html", [
     [ "Structures de données", null, [
       [ "Structures de données", "annotated.html", "annotated" ],
-      [ "Index des structures de données", "classes.html", null ]
+      [ "Index des structures de données", "classes.html", null ],
+      [ "Champs de donnée", "functions.html", [
+        [ "Tout", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
     ] ],
     [ "Fichiers", null, [
       [ "Liste des fichiers", "files.html", "files" ],

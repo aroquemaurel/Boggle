@@ -76,22 +76,22 @@ function toggleVisibility(linkObj) {
 <a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdbool.h&gt;</span>
 <a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="structDico.html">00013</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00014"></a>00014     FILE* dico;
-<a name="l00015"></a>00015     <span class="keywordtype">long</span> <span class="keywordtype">int</span> marqueurs[32];
-<a name="l00016"></a>00016 } <a class="code" href="structDico.html">Dico</a>;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <a class="code" href="structDico.html">Dico</a> <a class="code" href="dictionnaire_8c.html#aaff8a3a953fc8b9b360ab39040ff3e5f" title="Créer un nouveau dictionnaire à partir d&amp;#39;un fichier.">dictionnaire_nouveau</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pNomFichier);
-<a name="l00019"></a>00019 <a class="code" href="structDico.html">Dico</a> dictionnaire_positionnerMarqueurs(<a class="code" href="structDico.html">Dico</a>* pDico);
-<a name="l00020"></a>00020 <span class="keywordtype">int</span> <a class="code" href="dictionnaire_8c.html#a168479ad26583f7fe844a1341a57df1d" title="Permet de savoir si un mot est présent dans le dictionnaire.">dictonnaire_motDansDico</a>(<a class="code" href="structDico.html">Dico</a> pDictionnaire, <span class="keywordtype">char</span>* pMot);
-<a name="l00021"></a>00021 <span class="keywordtype">void</span> <a class="code" href="dictionnaire_8c.html#a61286b4c5730255db1df056e375d406e" title="Effectue une recherche dichotomique de pMotAChercher dans le dictionnaire.">dictionnaire_rechercheDichotomique</a>(<a class="code" href="structDico.html">Dico</a> pDictionnaire, 
-<a name="l00022"></a>00022                                         <span class="keywordtype">char</span>* pMotAChercher, 
-<a name="l00023"></a>00023                                         <span class="keywordtype">char</span>* pMotLePlusProche);
-<a name="l00024"></a>00024 <span class="preprocessor">#endif  </span><span class="comment">/* DICTIONNAIRE_H */</span>
-<a name="l00025"></a>00025 
+<a name="l00018"></a><a class="code" href="structDico.html">00018</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00019"></a><a class="code" href="structDico.html#aa608808df162aebf2b2bfbc4723cfad6">00019</a>     FILE* dico; 
+<a name="l00020"></a><a class="code" href="structDico.html#a1a8a33881f938f4ddd946edc97ae82f8">00020</a>     <span class="keywordtype">long</span> <span class="keywordtype">int</span> marqueurs[32]; 
+<a name="l00021"></a>00021 } <a class="code" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>;
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <a class="code" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a> <a class="code" href="dictionnaire_8c.html#aaff8a3a953fc8b9b360ab39040ff3e5f" title="Créer un nouveau dictionnaire à partir d&amp;#39;un fichier.">dictionnaire_nouveau</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pNomFichier);
+<a name="l00024"></a>00024 <a class="code" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a> dictionnaire_positionnerMarqueurs(<a class="code" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>* pDico);
+<a name="l00025"></a>00025 <span class="keywordtype">int</span> <a class="code" href="dictionnaire_8c.html#a168479ad26583f7fe844a1341a57df1d" title="Permet de savoir si un mot est présent dans le dictionnaire.">dictonnaire_motDansDico</a>(<a class="code" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a> pDictionnaire, <span class="keywordtype">char</span>* pMot);
+<a name="l00026"></a>00026 <span class="keywordtype">void</span> <a class="code" href="dictionnaire_8c.html#a61286b4c5730255db1df056e375d406e" title="Effectue une recherche dichotomique de pMotAChercher dans le dictionnaire.">dictionnaire_rechercheDichotomique</a>(<a class="code" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a> pDictionnaire, 
+<a name="l00027"></a>00027                                         <span class="keywordtype">char</span>* pMotAChercher, 
+<a name="l00028"></a>00028                                         <span class="keywordtype">char</span>* pMotLePlusProche);
+<a name="l00029"></a>00029 <span class="preprocessor">#endif  </span><span class="comment">/* DICTIONNAIRE_H */</span>
+<a name="l00030"></a>00030 
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:34:47 pour Jeu de Boggle par&nbsp;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:35:55 pour Jeu de Boggle par&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

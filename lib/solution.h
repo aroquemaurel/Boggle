@@ -8,10 +8,14 @@
 #ifndef SOLUTION_H
 #define	SOLUTION_H
 
+/**
+ * \struct Solution
+ * \brief Solution du jeu
+ * Contient une solution pour une grille de Boggle
+ */
 typedef struct {
-    char** mots;
-    unsigned int nbMots;
-    unsigned int nbPointsTotal;
+    char** mots; /*!< Les mots présents dans la solution */
+    unsigned int nbMots; /*!< Le nombre de mots que contient la solution */
 } Solution;
 
 Solution solution_creer(void);
