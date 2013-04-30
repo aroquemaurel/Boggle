@@ -15,11 +15,21 @@
 #include "jeu.h"
 #include "util.h"
 
-int func(char* name);
+int fctMenu(char* name);
+
+/**
+ * Afficher un titre à la fenêtre
+ * @param pTitle Le titre à afficher
+ */
 void interfaceNcurses_afficherTitre(const char* pTitle) {
     mvprintw(0, 4, "==== %s ====", pTitle);
     mvprintw(1, 4, "Pressez la touche q pour sortir");
 }
+
+/**
+ * Affiche la solution passée en paramètre
+ * @param pSolution La solution à afficher
+ */
 void interfaceNcurses_afficherSolution(const Solution pSolution) {
     int j = 0, k = 0;
     mvprintw(5, 55, "%d mots (%d points)", pSolution.nbMots, solution_nbPoints(pSolution));        
@@ -33,6 +43,10 @@ void interfaceNcurses_afficherSolution(const Solution pSolution) {
     }    
 }
 
+/**
+ * Initialise l'interface Ncurses
+ * @return La fenêtre créée
+ */
 WINDOW* interfaceNcurses_initialiser(void) {
     WINDOW* fenetre = initscr();
     /*  Initialize ncurses  */
@@ -51,6 +65,13 @@ WINDOW* interfaceNcurses_initialiser(void) {
     return fenetre;
 }
 
+/**
+ * Affiche la grille, composée de couleurs en fonctions des différentes cases
+ * @param pPlateau La grille à afficher
+ * @param pSelectedCase La case séléctionnée
+ * @param pUsedCase Les cases utilisés pour le mot courant
+ * @param pLgUsedCase La longueur du mot courant
+ */
 void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Case pSelectedCase, 
                                     const Case* pUsedCase, const int pLgUsedCase) {
     Case buff;
@@ -77,6 +98,11 @@ void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Case pSelecte
     }
 }
 
+/**
+ * Termine le jeu
+ * @param fenetre La fenêtre à détruire
+ * @param pJeu le jeu à terminer
+ */
 void interfaceNcurses_terminer(WINDOW* fenetre, Jeu pJeu) {
     delwin(fenetre);
     endwin();
@@ -84,6 +110,10 @@ void interfaceNcurses_terminer(WINDOW* fenetre, Jeu pJeu) {
     jeu_stopper(pJeu);
 }
 
+/**
+ * Lance le mode Ncurses
+ * @param pJeu Le jeu à lancer
+ */
 void jeu_lancerModeNcurses(Jeu pJeu) {
     Case selectedCase;
     Case lastChoseCase;
@@ -160,6 +190,10 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
     interfaceNcurses_terminer(fenetre, pJeu);
 }
 
+/**
+ * Affiche une boite de dialogue de fin de Jeu
+ * @param pJeu Le jeu 
+ */
 void interfaceNcurses_afficherBoiteDialogue(const Jeu pJeu) {
     WINDOW* winBoiteDialogue;
     char* label= "Fin du jeu";
@@ -167,6 +201,14 @@ void interfaceNcurses_afficherBoiteDialogue(const Jeu pJeu) {
     win_show(winBoiteDialogue, label, 1, pJeu);
     interfaceNcurses_menu(winBoiteDialogue, pJeu);
 }
+
+/**
+ * Affiche la fenêtre permettant de jouer
+ * @param pJeu Le jeu
+ * @param pMot Le mot courant
+ * @param pSelectedCase La case séléctionnée
+ * @param pUsedCase Les cases utilisés pour créer le mot pMot
+ */
 void interfaceNcurses_afficherFenetreJeu(const Jeu pJeu, char* pMot, const Case pSelectedCase, Case* pUsedCase) {
     int minutes, secondes;
     
@@ -193,7 +235,13 @@ void win_show(WINDOW *win, char *label, Jeu pJeu) {
 	print_in_middle(win, 1, 0, width, label, pJeu);
 }
 
-int interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu) {
+/**
+ * Affiche un menu permettant de choisir entre quitter et afficher la solution
+ * @param pDialogBoxWin La fenêtre danslequel s'affiche le menu
+ * @param pJeu Le jeu
+ * @return 
+ */
+void interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu) {
     ITEM** items = calloc(3, sizeof(ITEM));
     ITEM* cur;  
     MENU* menu;
@@ -209,8 +257,8 @@ int interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu) {
     items[1] = new_item("2", "Afficher la solution");
     items[2] = (ITEM*) NULL;
     
-    set_item_userptr(items[0],func);
-    set_item_userptr(items[1],func);
+    set_item_userptr(items[0],fctMenu);
+    set_item_userptr(items[1],fctMenu);
     menu = new_menu((ITEM**) items);
     
     set_menu_win(menu, winMenu);
@@ -242,6 +290,11 @@ int interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu) {
         }
     } while(continuer);
 }
+
+/**
+ * Affiche la fenêtre avec la solution complète du jeu
+ * @param pJeu Le jeu
+ */
 void interfaceNcurses_afficherFenetreSolution(const Jeu pJeu) {
     WINDOW* winSolution = newwin(0,0,0,0);
     Case buff;
@@ -288,15 +341,17 @@ void print_in_middle(WINDOW *win, int starty, int startx, int width, char *strin
     
 }
 
-int func(char* name) {
+/**
+ * Retourne le numéro de l'item appelé
+ * @param Le nom de l'item
+ * @return Le numéro de l'item appelé
+ */
+int fctMenu(char* name) {
     move(20,0);
     clrtoeol();
     if(strcmp(name, "1") == 0) {
         return 1;
     } else if(strcmp(name, "2") == 0) {
         return 2;
-        // TODO afficher la solution
     }
-    mvprintw(20,0, "Item selected %d", name);
-    
 }

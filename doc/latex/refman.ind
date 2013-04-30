@@ -16,15 +16,21 @@
     \subitem {dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}, 
 		\hyperpage{9}
     \subitem {dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}recherche\discretionary {-}{}{}Dichotomique}, 
-		\hyperpage{10}
+		\hyperpage{9}
     \subitem {dictonnaire\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Dans\discretionary {-}{}{}Dico}, 
 		\hyperpage{10}
   \item {dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}
     \subitem {dictionnaire.\discretionary {-}{}{}c}, \hyperpage{9}
   \item {dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}recherche\discretionary {-}{}{}Dichotomique}
-    \subitem {dictionnaire.\discretionary {-}{}{}c}, \hyperpage{10}
+    \subitem {dictionnaire.\discretionary {-}{}{}c}, \hyperpage{9}
   \item {dictonnaire\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Dans\discretionary {-}{}{}Dico}
     \subitem {dictionnaire.\discretionary {-}{}{}c}, \hyperpage{10}
+
+  \indexspace
+
+  \item {fct\discretionary {-}{}{}Menu}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{11}
 
   \indexspace
 
@@ -37,6 +43,54 @@
     \subitem {Case}, \hyperpage{5}
   \item {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
 		\hyperpage{10}
+    \subitem {fct\discretionary {-}{}{}Menu}, \hyperpage{11}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Boite\discretionary {-}{}{}Dialogue}, 
+		\hyperpage{11}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Jeu}, 
+		\hyperpage{11}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Solution}, 
+		\hyperpage{11}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Grille}, 
+		\hyperpage{11}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Solution}, 
+		\hyperpage{12}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Titre}, 
+		\hyperpage{12}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}initialiser}, 
+		\hyperpage{12}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}menu}, 
+		\hyperpage{12}
+    \subitem {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}terminer}, 
+		\hyperpage{12}
+    \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Ncurses}, 
+		\hyperpage{13}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Boite\discretionary {-}{}{}Dialogue}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{11}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Jeu}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{11}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Solution}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{11}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Grille}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{11}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Solution}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{12}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Titre}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{12}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}initialiser}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{12}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}menu}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{12}
+  \item {interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}terminer}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{12}
 
   \indexspace
 
@@ -46,36 +100,35 @@
     \subitem {dico}, \hyperpage{6}
     \subitem {plateau}, \hyperpage{6}
     \subitem {solution\discretionary {-}{}{}Utilisateur}, \hyperpage{6}
-    \subitem {timestamp\discretionary {-}{}{}Depart}, \hyperpage{6}
-  \item {jeu.\discretionary {-}{}{}c}, \hyperpage{11}
+    \subitem {timestamp\discretionary {-}{}{}Depart}, \hyperpage{7}
+  \item {jeu.\discretionary {-}{}{}c}, \hyperpage{13}
     \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}compteur\discretionary {-}{}{}Claque}, 
-		\hyperpage{11}
+		\hyperpage{13}
     \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer}, 
-		\hyperpage{11}
-    \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Texte}, 
-		\hyperpage{12}
+		\hyperpage{13}
     \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}, 
-		\hyperpage{12}
+		\hyperpage{14}
     \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}proposer\discretionary {-}{}{}Mot}, 
-		\hyperpage{12}
+		\hyperpage{14}
     \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}stopper}, 
-		\hyperpage{12}
+		\hyperpage{14}
     \subitem {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}temps\discretionary {-}{}{}Restant}, 
-		\hyperpage{12}
+		\hyperpage{14}
   \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}compteur\discretionary {-}{}{}Claque}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{11}
+    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{13}
   \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{11}
-  \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Texte}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{12}
+    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{13}
+  \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Ncurses}
+    \subitem {interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}, 
+		\hyperpage{13}
   \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{12}
+    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{14}
   \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}proposer\discretionary {-}{}{}Mot}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{12}
+    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{14}
   \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}stopper}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{12}
+    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{14}
   \item {jeu\discretionary {-}{}{}\_\discretionary {-}{}{}temps\discretionary {-}{}{}Restant}
-    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{12}
+    \subitem {jeu.\discretionary {-}{}{}c}, \hyperpage{14}
 
   \indexspace
 
@@ -97,41 +150,41 @@
     \subitem {taille\discretionary {-}{}{}Grille}, \hyperpage{7}
   \item {plateau}
     \subitem {Jeu}, \hyperpage{6}
-  \item {plateau.\discretionary {-}{}{}c}, \hyperpage{13}
+  \item {plateau.\discretionary {-}{}{}c}, \hyperpage{15}
     \subitem {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}choisir\discretionary {-}{}{}Lettre}, 
-		\hyperpage{13}
+		\hyperpage{15}
     \subitem {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}, 
-		\hyperpage{13}
+		\hyperpage{15}
     \subitem {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}, 
-		\hyperpage{13}
+		\hyperpage{15}
     \subitem {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}proba\discretionary {-}{}{}Lettre}, 
-		\hyperpage{14}
+		\hyperpage{16}
     \subitem {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Aleatoire}, 
-		\hyperpage{14}
+		\hyperpage{16}
     \subitem {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Predefinie}, 
-		\hyperpage{14}
+		\hyperpage{16}
   \item {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}choisir\discretionary {-}{}{}Lettre}
-    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{13}
+    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{15}
   \item {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}
-    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{13}
+    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{15}
   \item {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}
-    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{13}
+    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{15}
   \item {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}proba\discretionary {-}{}{}Lettre}
-    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{14}
+    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{16}
   \item {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Aleatoire}
-    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{14}
+    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{16}
   \item {plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Predefinie}
-    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{14}
+    \subitem {plateau.\discretionary {-}{}{}c}, \hyperpage{16}
 
   \indexspace
 
   \item {recurse}
-    \subitem {resolveur.\discretionary {-}{}{}c}, \hyperpage{15}
+    \subitem {resolveur.\discretionary {-}{}{}c}, \hyperpage{17}
   \item {resolveur}
-    \subitem {resolveur.\discretionary {-}{}{}c}, \hyperpage{15}
-  \item {resolveur.\discretionary {-}{}{}c}, \hyperpage{14}
-    \subitem {recurse}, \hyperpage{15}
-    \subitem {resolveur}, \hyperpage{15}
+    \subitem {resolveur.\discretionary {-}{}{}c}, \hyperpage{17}
+  \item {resolveur.\discretionary {-}{}{}c}, \hyperpage{16}
+    \subitem {recurse}, \hyperpage{17}
+    \subitem {resolveur}, \hyperpage{17}
 
   \indexspace
 
@@ -148,50 +201,50 @@
   \item {taille\discretionary {-}{}{}Grille}
     \subitem {Plateau}, \hyperpage{7}
   \item {timestamp\discretionary {-}{}{}Depart}
-    \subitem {Jeu}, \hyperpage{6}
+    \subitem {Jeu}, \hyperpage{7}
 
   \indexspace
 
-  \item {util.\discretionary {-}{}{}c}, \hyperpage{15}
+  \item {util.\discretionary {-}{}{}c}, \hyperpage{17}
     \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}affichage\discretionary {-}{}{}Debug}, 
-		\hyperpage{16}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}, 
-		\hyperpage{16}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}, 
-		\hyperpage{16}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}, 
-		\hyperpage{16}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}, 
-		\hyperpage{16}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}, 
-		\hyperpage{17}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}, 
-		\hyperpage{17}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}, 
-		\hyperpage{17}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}, 
-		\hyperpage{17}
-    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}uppercase}, 
 		\hyperpage{18}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}, 
+		\hyperpage{18}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}, 
+		\hyperpage{18}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}, 
+		\hyperpage{18}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}, 
+		\hyperpage{18}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}, 
+		\hyperpage{19}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}, 
+		\hyperpage{19}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}, 
+		\hyperpage{19}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}, 
+		\hyperpage{19}
+    \subitem {util\discretionary {-}{}{}\_\discretionary {-}{}{}uppercase}, 
+		\hyperpage{20}
   \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}affichage\discretionary {-}{}{}Debug}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{16}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{16}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{16}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{16}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{16}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{17}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{17}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{17}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}
-    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{17}
-  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}uppercase}
     \subitem {util.\discretionary {-}{}{}c}, \hyperpage{18}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{18}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{18}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{18}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{18}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{19}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{19}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{19}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{19}
+  \item {util\discretionary {-}{}{}\_\discretionary {-}{}{}uppercase}
+    \subitem {util.\discretionary {-}{}{}c}, \hyperpage{20}
 
 \end{theindex}

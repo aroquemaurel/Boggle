@@ -1,46 +1,43 @@
-\hypertarget{plateau_8c}{
-\section{Référence du fichier plateau.c}
-\label{plateau_8c}\index{plateau.c@{plateau.c}}
+\hypertarget{plateau_8c}{\section{Référence du fichier plateau.\-c}
+\label{plateau_8c}\index{plateau.\-c@{plateau.\-c}}
 }
 
 
 Gestion du plateau de \hyperlink{structJeu}{Jeu} Fonctions se rapportant à un plateau de jeu, sera sert à gérer la grille de Boggle.  
 
 
-{\ttfamily \#include $<$stdlib.h$>$}\par
-{\ttfamily \#include \char`\"{}solution.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}plateau.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}util.h\char`\"{}}\par
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}solution.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}plateau.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\-h\char`\"{}}\\*
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structPlateau}{Plateau} \hyperlink{plateau_8c_a227b9ee882d6ee30797b4dd978a26633}{plateau\_\-nouveau} (const unsigned char pTailleGrille)
-\begin{DoxyCompactList}\small\item\em Créer un nouveau plateau. \item\end{DoxyCompactList}\item 
-void \hyperlink{plateau_8c_afeb9fd22a43c9a29c9815be5ffbc254d}{plateau\_\-detruire} (\hyperlink{structPlateau}{Plateau} $\ast$pPlateau)
-\begin{DoxyCompactList}\small\item\em Détruit le plateau pPlateau. \item\end{DoxyCompactList}\item 
-void \hyperlink{plateau_8c_a23a1db5b648d7483da8619e880506725}{plateau\_\-remplirGrilleAleatoire} (\hyperlink{structPlateau}{Plateau} $\ast$pPlateau)
-\begin{DoxyCompactList}\small\item\em Rempli une grille aléatoirement dans le plateau. \item\end{DoxyCompactList}\item 
-void \hyperlink{plateau_8c_aa2bb750ea8570ed32eb894c7249d2e35}{plateau\_\-remplirGrillePredefinie} (\hyperlink{structPlateau}{Plateau} $\ast$pPlateau)
-\begin{DoxyCompactList}\small\item\em Rempli le plateau avec une grille prédéfinie de taille 4$\ast$4 E D R C A N V C I R Q A E B R U. \item\end{DoxyCompactList}\item 
-char \hyperlink{plateau_8c_a859a80b6e007a4f7e9fff96414f24384}{plateau\_\-choisirLettre} (void)
-\begin{DoxyCompactList}\small\item\em Choisi une letre avec la probabilité des lettres en fonctions de leurs importance d'apparition dans la langue française. \item\end{DoxyCompactList}\item 
-double \hyperlink{plateau_8c_ac564837afaa7e07ed257caf8639a5879}{plateau\_\-probaLettre} (const char pLettre)
-\begin{DoxyCompactList}\small\item\em Retourne la probabilité d'apparition de la lettre passée en paramètre. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{structPlateau}{Plateau} \hyperlink{plateau_8c_a227b9ee882d6ee30797b4dd978a26633}{plateau\-\_\-nouveau} (const unsigned char p\-Taille\-Grille)
+\begin{DoxyCompactList}\small\item\em Créer un nouveau plateau. \end{DoxyCompactList}\item 
+void \hyperlink{plateau_8c_afeb9fd22a43c9a29c9815be5ffbc254d}{plateau\-\_\-detruire} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau)
+\begin{DoxyCompactList}\small\item\em Détruit le plateau p\-Plateau. \end{DoxyCompactList}\item 
+void \hyperlink{plateau_8c_a23a1db5b648d7483da8619e880506725}{plateau\-\_\-remplir\-Grille\-Aleatoire} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau)
+\begin{DoxyCompactList}\small\item\em Rempli une grille aléatoirement dans le plateau. \end{DoxyCompactList}\item 
+void \hyperlink{plateau_8c_aa2bb750ea8570ed32eb894c7249d2e35}{plateau\-\_\-remplir\-Grille\-Predefinie} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau)
+\begin{DoxyCompactList}\small\item\em Rempli le plateau avec une grille prédéfinie de taille 4$\ast$4 E D R C A N V C I R Q A E B R U. \end{DoxyCompactList}\item 
+char \hyperlink{plateau_8c_a859a80b6e007a4f7e9fff96414f24384}{plateau\-\_\-choisir\-Lettre} (void)
+\begin{DoxyCompactList}\small\item\em Choisi une letre avec la probabilité des lettres en fonctions de leurs importance d'apparition dans la langue française. \end{DoxyCompactList}\item 
+double \hyperlink{plateau_8c_ac564837afaa7e07ed257caf8639a5879}{plateau\-\_\-proba\-Lettre} (const char p\-Lettre)
+\begin{DoxyCompactList}\small\item\em Retourne la probabilité d'apparition de la lettre passée en paramètre. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
 Gestion du plateau de \hyperlink{structJeu}{Jeu} Fonctions se rapportant à un plateau de jeu, sera sert à gérer la grille de Boggle. 
 
 \subsection{Documentation des fonctions}
-\hypertarget{plateau_8c_a859a80b6e007a4f7e9fff96414f24384}{
-\index{plateau.c@{plateau.c}!plateau\_\-choisirLettre@{plateau\_\-choisirLettre}}
-\index{plateau\_\-choisirLettre@{plateau\_\-choisirLettre}!plateau.c@{plateau.c}}
-\subsubsection[{plateau\_\-choisirLettre}]{\setlength{\rightskip}{0pt plus 5cm}char plateau\_\-choisirLettre (
+\hypertarget{plateau_8c_a859a80b6e007a4f7e9fff96414f24384}{\index{plateau.\-c@{plateau.\-c}!plateau\-\_\-choisir\-Lettre@{plateau\-\_\-choisir\-Lettre}}
+\index{plateau\-\_\-choisir\-Lettre@{plateau\-\_\-choisir\-Lettre}!plateau.c@{plateau.\-c}}
+\subsubsection[{plateau\-\_\-choisir\-Lettre}]{\setlength{\rightskip}{0pt plus 5cm}char plateau\-\_\-choisir\-Lettre (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}
-\label{plateau_8c_a859a80b6e007a4f7e9fff96414f24384}
+)}}\label{plateau_8c_a859a80b6e007a4f7e9fff96414f24384}
 
 
 Choisi une letre avec la probabilité des lettres en fonctions de leurs importance d'apparition dans la langue française. 
@@ -48,89 +45,89 @@ Choisi une letre avec la probabilité des lettres en fonctions de leurs importan
 \begin{DoxyReturn}{Renvoie}
 La lettre choisie 
 \end{DoxyReturn}
-\hypertarget{plateau_8c_afeb9fd22a43c9a29c9815be5ffbc254d}{
-\index{plateau.c@{plateau.c}!plateau\_\-detruire@{plateau\_\-detruire}}
-\index{plateau\_\-detruire@{plateau\_\-detruire}!plateau.c@{plateau.c}}
-\subsubsection[{plateau\_\-detruire}]{\setlength{\rightskip}{0pt plus 5cm}void plateau\_\-detruire (
+\hypertarget{plateau_8c_afeb9fd22a43c9a29c9815be5ffbc254d}{\index{plateau.\-c@{plateau.\-c}!plateau\-\_\-detruire@{plateau\-\_\-detruire}}
+\index{plateau\-\_\-detruire@{plateau\-\_\-detruire}!plateau.c@{plateau.\-c}}
+\subsubsection[{plateau\-\_\-detruire}]{\setlength{\rightskip}{0pt plus 5cm}void plateau\-\_\-detruire (
 \begin{DoxyParamCaption}
-\item[{{\bf Plateau} $\ast$}]{ pPlateau}
+\item[{{\bf Plateau} $\ast$}]{p\-Plateau}
 \end{DoxyParamCaption}
-)}}
-\label{plateau_8c_afeb9fd22a43c9a29c9815be5ffbc254d}
+)}}\label{plateau_8c_afeb9fd22a43c9a29c9815be5ffbc254d}
 
 
-Détruit le plateau pPlateau. 
+Détruit le plateau p\-Plateau. 
 
 
 \begin{DoxyParams}{Paramètres}
-\item[{\em pPlateau}]Le plateau à détruire \end{DoxyParams}
-\hypertarget{plateau_8c_a227b9ee882d6ee30797b4dd978a26633}{
-\index{plateau.c@{plateau.c}!plateau\_\-nouveau@{plateau\_\-nouveau}}
-\index{plateau\_\-nouveau@{plateau\_\-nouveau}!plateau.c@{plateau.c}}
-\subsubsection[{plateau\_\-nouveau}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Plateau} plateau\_\-nouveau (
+{\em p\-Plateau} & Le plateau à détruire \\
+\hline
+\end{DoxyParams}
+\hypertarget{plateau_8c_a227b9ee882d6ee30797b4dd978a26633}{\index{plateau.\-c@{plateau.\-c}!plateau\-\_\-nouveau@{plateau\-\_\-nouveau}}
+\index{plateau\-\_\-nouveau@{plateau\-\_\-nouveau}!plateau.c@{plateau.\-c}}
+\subsubsection[{plateau\-\_\-nouveau}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Plateau} plateau\-\_\-nouveau (
 \begin{DoxyParamCaption}
-\item[{const unsigned char}]{ pTailleGrille}
+\item[{const unsigned char}]{p\-Taille\-Grille}
 \end{DoxyParamCaption}
-)}}
-\label{plateau_8c_a227b9ee882d6ee30797b4dd978a26633}
+)}}\label{plateau_8c_a227b9ee882d6ee30797b4dd978a26633}
 
 
 Créer un nouveau plateau. 
 
 
 \begin{DoxyParams}{Paramètres}
-\item[{\em pTailleGrille}]La taille de la grille à créer \end{DoxyParams}
+{\em p\-Taille\-Grille} & La taille de la grille à créer \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
 Le nouveau plateau 
 \end{DoxyReturn}
-\hypertarget{plateau_8c_ac564837afaa7e07ed257caf8639a5879}{
-\index{plateau.c@{plateau.c}!plateau\_\-probaLettre@{plateau\_\-probaLettre}}
-\index{plateau\_\-probaLettre@{plateau\_\-probaLettre}!plateau.c@{plateau.c}}
-\subsubsection[{plateau\_\-probaLettre}]{\setlength{\rightskip}{0pt plus 5cm}double plateau\_\-probaLettre (
+\hypertarget{plateau_8c_ac564837afaa7e07ed257caf8639a5879}{\index{plateau.\-c@{plateau.\-c}!plateau\-\_\-proba\-Lettre@{plateau\-\_\-proba\-Lettre}}
+\index{plateau\-\_\-proba\-Lettre@{plateau\-\_\-proba\-Lettre}!plateau.c@{plateau.\-c}}
+\subsubsection[{plateau\-\_\-proba\-Lettre}]{\setlength{\rightskip}{0pt plus 5cm}double plateau\-\_\-proba\-Lettre (
 \begin{DoxyParamCaption}
-\item[{const char}]{ pLettre}
+\item[{const char}]{p\-Lettre}
 \end{DoxyParamCaption}
-)}}
-\label{plateau_8c_ac564837afaa7e07ed257caf8639a5879}
+)}}\label{plateau_8c_ac564837afaa7e07ed257caf8639a5879}
 
 
 Retourne la probabilité d'apparition de la lettre passée en paramètre. 
 
 
 \begin{DoxyParams}{Paramètres}
-\item[{\em pLettre}]La lettre pour laquelle retourner la probabilité \end{DoxyParams}
+{\em p\-Lettre} & La lettre pour laquelle retourner la probabilité \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
 La probabilité 
 \end{DoxyReturn}
-\hypertarget{plateau_8c_a23a1db5b648d7483da8619e880506725}{
-\index{plateau.c@{plateau.c}!plateau\_\-remplirGrilleAleatoire@{plateau\_\-remplirGrilleAleatoire}}
-\index{plateau\_\-remplirGrilleAleatoire@{plateau\_\-remplirGrilleAleatoire}!plateau.c@{plateau.c}}
-\subsubsection[{plateau\_\-remplirGrilleAleatoire}]{\setlength{\rightskip}{0pt plus 5cm}void plateau\_\-remplirGrilleAleatoire (
+\hypertarget{plateau_8c_a23a1db5b648d7483da8619e880506725}{\index{plateau.\-c@{plateau.\-c}!plateau\-\_\-remplir\-Grille\-Aleatoire@{plateau\-\_\-remplir\-Grille\-Aleatoire}}
+\index{plateau\-\_\-remplir\-Grille\-Aleatoire@{plateau\-\_\-remplir\-Grille\-Aleatoire}!plateau.c@{plateau.\-c}}
+\subsubsection[{plateau\-\_\-remplir\-Grille\-Aleatoire}]{\setlength{\rightskip}{0pt plus 5cm}void plateau\-\_\-remplir\-Grille\-Aleatoire (
 \begin{DoxyParamCaption}
-\item[{{\bf Plateau} $\ast$}]{ pPlateau}
+\item[{{\bf Plateau} $\ast$}]{p\-Plateau}
 \end{DoxyParamCaption}
-)}}
-\label{plateau_8c_a23a1db5b648d7483da8619e880506725}
+)}}\label{plateau_8c_a23a1db5b648d7483da8619e880506725}
 
 
 Rempli une grille aléatoirement dans le plateau. 
 
 
 \begin{DoxyParams}{Paramètres}
-\item[{\em pPlateau}]Le plateau à remplire \end{DoxyParams}
-\hypertarget{plateau_8c_aa2bb750ea8570ed32eb894c7249d2e35}{
-\index{plateau.c@{plateau.c}!plateau\_\-remplirGrillePredefinie@{plateau\_\-remplirGrillePredefinie}}
-\index{plateau\_\-remplirGrillePredefinie@{plateau\_\-remplirGrillePredefinie}!plateau.c@{plateau.c}}
-\subsubsection[{plateau\_\-remplirGrillePredefinie}]{\setlength{\rightskip}{0pt plus 5cm}void plateau\_\-remplirGrillePredefinie (
+{\em p\-Plateau} & Le plateau à remplire \\
+\hline
+\end{DoxyParams}
+\hypertarget{plateau_8c_aa2bb750ea8570ed32eb894c7249d2e35}{\index{plateau.\-c@{plateau.\-c}!plateau\-\_\-remplir\-Grille\-Predefinie@{plateau\-\_\-remplir\-Grille\-Predefinie}}
+\index{plateau\-\_\-remplir\-Grille\-Predefinie@{plateau\-\_\-remplir\-Grille\-Predefinie}!plateau.c@{plateau.\-c}}
+\subsubsection[{plateau\-\_\-remplir\-Grille\-Predefinie}]{\setlength{\rightskip}{0pt plus 5cm}void plateau\-\_\-remplir\-Grille\-Predefinie (
 \begin{DoxyParamCaption}
-\item[{{\bf Plateau} $\ast$}]{ pPlateau}
+\item[{{\bf Plateau} $\ast$}]{p\-Plateau}
 \end{DoxyParamCaption}
-)}}
-\label{plateau_8c_aa2bb750ea8570ed32eb894c7249d2e35}
+)}}\label{plateau_8c_aa2bb750ea8570ed32eb894c7249d2e35}
 
 
 Rempli le plateau avec une grille prédéfinie de taille 4$\ast$4 E D R C A N V C I R Q A E B R U. 
 
 
 \begin{DoxyParams}{Paramètres}
-\item[{\em pPlateau}]Le plateau à remplire \end{DoxyParams}
+{\em p\-Plateau} & Le plateau à remplire \\
+\hline
+\end{DoxyParams}

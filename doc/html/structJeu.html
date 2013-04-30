@@ -2,141 +2,177 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <title>Jeu de Boggle: Référence de la structure Jeu</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<!-- Généré par Doxygen 1.7.1 -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Jeu de Boggle
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
-function hasClass(ele,cls) {
-  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-}
-
-function addClass(ele,cls) {
-  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
-}
-
-function removeClass(ele,cls) {
-  if (hasClass(ele,cls)) {
-    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-    ele.className=ele.className.replace(reg,' ');
-  }
-}
-
-function toggleVisibility(linkObj) {
- var base = linkObj.getAttribute('id');
- var summary = document.getElementById(base + '-summary');
- var content = document.getElementById(base + '-content');
- var trigger = document.getElementById(base + '-trigger');
- if ( hasClass(linkObj,'closed') ) {
-   summary.style.display = 'none';
-   content.style.display = 'block';
-   trigger.src = 'open.png';
-   removeClass(linkObj,'closed');
-   addClass(linkObj,'opened');
- } else if ( hasClass(linkObj,'opened') ) {
-   summary.style.display = 'block';
-   content.style.display = 'none';
-   trigger.src = 'closed.png';
-   removeClass(linkObj,'opened');
-   addClass(linkObj,'closed');
- }
- return false;
-}
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
-<div class="navigation" id="top">
-  <div class="tabs">
+  <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
     </ul>
   </div>
-  <div class="tabs2">
+  <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
-      <li><a href="classes.html"><span>Index&nbsp;des&nbsp;structures&nbsp;de&nbsp;données</span></a></li>
-      <li><a href="functions.html"><span>Champs&nbsp;de&nbsp;donnée</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;structures&#160;de&#160;données</span></a></li>
+      <li><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
     </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('structJeu.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Champs de données</a>  </div>
   <div class="headertitle">
-<h1>Référence de la structure Jeu</h1>  </div>
-</div>
+<div class="title">Référence de la structure Jeu</div>  </div>
+</div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Jeu" -->
+
 <p>Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu.  
-<a href="#_details">Plus de détails...</a></p>
+ <a href="structJeu.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="jeu_8h_source.html">jeu.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Champs de données</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPlateau.html">Plateau</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#af2931c71f6de940ec7ed3fcd2f9d7158">plateau</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDico.html">Dico</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#a6bda384c6fca4e83ae15ac69f2228a41">dico</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#af48a5fddf1dc40b7c4a85918d73f201d">timestampDepart</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSolution.html">Solution</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#ae8e1dca71285915404d1de4ff609a1d6">solutionUtilisateur</a></td></tr>
+<tr class="memitem:af2931c71f6de940ec7ed3fcd2f9d7158"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPlateau.html">Plateau</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#af2931c71f6de940ec7ed3fcd2f9d7158">plateau</a></td></tr>
+<tr class="memitem:a6bda384c6fca4e83ae15ac69f2228a41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDico.html">Dico</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#a6bda384c6fca4e83ae15ac69f2228a41">dico</a></td></tr>
+<tr class="memitem:af48a5fddf1dc40b7c4a85918d73f201d"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#af48a5fddf1dc40b7c4a85918d73f201d">timestampDepart</a></td></tr>
+<tr class="memitem:ae8e1dca71285915404d1de4ff609a1d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSolution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJeu.html#ae8e1dca71285915404d1de4ff609a1d6">solutionUtilisateur</a></td></tr>
+<tr class="memitem:ab04f7d1519162e9e351d7d90139fbc7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab04f7d1519162e9e351d7d90139fbc7f"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>lgTimer</b></td></tr>
 </table>
-<hr/><a name="_details"></a><h2>Description détaillée</h2>
-<p>Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu. </p>
-<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>, <a class="el" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>, <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> </dd></dl>
-<hr/><h2>Documentation des champs</h2>
-<a class="anchor" id="a6bda384c6fca4e83ae15ac69f2228a41"></a><!-- doxytag: member="Jeu::dico" ref="a6bda384c6fca4e83ae15ac69f2228a41" args="" -->
+<a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon déroulement du jeu. </p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="structDico.html" title="Dictionnaire Contient le dictionnaire du jeu.">Dico</a>, <a class="el" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>, <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> </dd></dl>
+</div><h2>Documentation des champs</h2>
+<a class="anchor" id="a6bda384c6fca4e83ae15ac69f2228a41"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structDico.html">Dico</a> <a class="el" href="structJeu.html#a6bda384c6fca4e83ae15ac69f2228a41">Jeu::dico</a></td>
+          <td class="memname"><a class="el" href="structDico.html">Dico</a> Jeu::dico</td>
         </tr>
       </table>
-</div>
-<div class="memdoc">
+</div><div class="memdoc">
 <p>Le dictionnaire </p>
 
 </div>
 </div>
-<a class="anchor" id="af2931c71f6de940ec7ed3fcd2f9d7158"></a><!-- doxytag: member="Jeu::plateau" ref="af2931c71f6de940ec7ed3fcd2f9d7158" args="" -->
+<a class="anchor" id="af2931c71f6de940ec7ed3fcd2f9d7158"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structPlateau.html">Plateau</a> <a class="el" href="structJeu.html#af2931c71f6de940ec7ed3fcd2f9d7158">Jeu::plateau</a></td>
+          <td class="memname"><a class="el" href="structPlateau.html">Plateau</a> Jeu::plateau</td>
         </tr>
       </table>
-</div>
-<div class="memdoc">
+</div><div class="memdoc">
 <p>Le plateau de <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> </p>
 
 </div>
 </div>
-<a class="anchor" id="ae8e1dca71285915404d1de4ff609a1d6"></a><!-- doxytag: member="Jeu::solutionUtilisateur" ref="ae8e1dca71285915404d1de4ff609a1d6" args="" -->
+<a class="anchor" id="ae8e1dca71285915404d1de4ff609a1d6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structSolution.html">Solution</a> <a class="el" href="structJeu.html#ae8e1dca71285915404d1de4ff609a1d6">Jeu::solutionUtilisateur</a></td>
+          <td class="memname"><a class="el" href="structSolution.html">Solution</a> Jeu::solutionUtilisateur</td>
         </tr>
       </table>
-</div>
-<div class="memdoc">
+</div><div class="memdoc">
 <p>La solution que propose l'utilisateur, celle-ci peut ne pas être complète, mais tous les mots présents dans cette solution sont présent dans la grille </p>
 
 </div>
 </div>
-<a class="anchor" id="af48a5fddf1dc40b7c4a85918d73f201d"></a><!-- doxytag: member="Jeu::timestampDepart" ref="af48a5fddf1dc40b7c4a85918d73f201d" args="" -->
+<a class="anchor" id="af48a5fddf1dc40b7c4a85918d73f201d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">time_t <a class="el" href="structJeu.html#af48a5fddf1dc40b7c4a85918d73f201d">Jeu::timestampDepart</a></td>
+          <td class="memname">time_t Jeu::timestampDepart</td>
         </tr>
       </table>
-</div>
-<div class="memdoc">
+</div><div class="memdoc">
 <p>Le timestamp auquel on a commencé à jouer </p>
 
 </div>
@@ -144,9 +180,16 @@ Champs de données</h2></td></tr>
 <hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
 <li><a class="el" href="jeu_8h_source.html">jeu.h</a></li>
 </ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structJeu.html">Jeu</a></li>
+    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Généré le Tue Apr 30 2013 10:35:55 pour Jeu de Boggle par&nbsp;
-<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
 </html>

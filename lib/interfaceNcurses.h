@@ -17,6 +17,7 @@
 #define COULEUR_CASE_CHOISI 2
 #define NB_LIGNES 25
 
+void interfaceNcurses_afficherTitre(const char* pTitle);
 void interfaceNcurses_afficherSolution(const Solution pSolution);
 void jeu_lancerModeNcurses(Jeu pJeu);
 WINDOW* interfaceNcurses_initialiser(void);
@@ -25,6 +26,6 @@ void interfaceNcurses_terminer(WINDOW* fenetre, Jeu pJeu);
 void interfaceNcurses_afficherFenetreJeu(const Jeu pJeu, char* pMot, const Case pSelectedCase, Case* pUsedCase);
 void interfaceNcurses_afficherBoiteDialogue(const Jeu pJeu);
 void interfaceNcurses_afficherFenetreSolution(const Jeu pJeu);
-int interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu);
+void interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu);
 #endif	/* INTERFACENCURSES_H */
 

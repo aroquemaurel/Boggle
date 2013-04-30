@@ -1,3 +1,9 @@
+/** 
+ * \file interfaceTexte
+ * \brief Tous les affichages en mode texte seulement
+ * Permet l'affichage du jeu en mode texte uniquement, les saisies se font au clavier.
+ */
+
 #include <stdio.h>
 
 #include "solution.h"
