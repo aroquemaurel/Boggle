@@ -44,6 +44,24 @@ _Bool solution_motEstPresent(const Solution pSolution, const char* pMot) {
 }
 
 /**
+ * Retourne le nombre de mots présents dans la solution commençant pas la chaine de caractère pDebut
+ * @param pSolution La solution
+ * @param pDebut Le début de la chaine
+ * @return Le nombre de mots commençant par pDebut
+ */
+int solution_getNbMotsDebut(Solution pSolution, char* pDebut) {
+    char buff[32];
+    int retour = 0;
+    for(int i=0 ; i < pSolution.nbMots ; ++i) {
+        util_substr(pSolution.mots[i],0,strlen(pDebut)-1,buff);
+        if(strcmp(buff, pDebut) == 0) {
+            ++retour;
+        }
+    }
+    
+    return retour;
+}
+/**
  * Ajoute un mot dans la solution pSolution
  * @param pSolution La solution dans laquelle ajouter le mot
  * @param mot Le mot à ajouter
@@ -67,6 +85,8 @@ void solution_detruire(Solution* pSolution) {
         free(pSolution->mots[i]);
     }
     free(pSolution->mots);
+    pSolution->mots = NULL;
+    pSolution->nbMots = 0;
 }
 
 /**

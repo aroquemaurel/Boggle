@@ -99,7 +99,7 @@ void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
 char plateau_choisirLettre(void) {
     char lettre;
     lettre = util_nbAleatoire('A', 'Z');
-    if(rand() % 100 > plateau_probaLettre(lettre) *100) {
+    if(rand() % 100 > plateau_probaLettre(lettre)) {
         return plateau_choisirLettre();
     }
     

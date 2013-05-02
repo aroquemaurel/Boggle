@@ -13,8 +13,6 @@
 #include "util.h"
 #include <locale.h>
 
-// TODO ddl .h,, mettre dans dossier
-// Ajouter /usr/lib/libcunit.so makefile
 /*
 /*
  * CUnit Test Suite
@@ -42,8 +40,8 @@ void testUtil_echanger() {
     int a = 2;
     int b = 4;
     util_echanger(tableau, a, b);
-    CU_ASSERT(strcmp(tableau[a], "chouette") == 0);
-    CU_ASSERT(strcmp(tableau[b], "mahin") == 0);
+    CU_ASSERT_STRING_EQUAL(tableau[a], "chouette");
+    CU_ASSERT_STRING_EQUAL(tableau[b], "mahin");
 }
 
 
@@ -52,40 +50,30 @@ void testUtil_quickSort() {
     int debut = 1;
     int fin = 5;
     util_quickSort(tableau, debut, fin);
-    CU_ASSERT(strcmp(tableau[0], "machin") == 0);
-    CU_ASSERT(strcmp(tableau[1], "bidul") == 0);
-    CU_ASSERT(strcmp(tableau[2], "chose") == 0);
-    CU_ASSERT(strcmp(tableau[3], "chouette") == 0);
-    CU_ASSERT(strcmp(tableau[4], "test") == 0);
-    CU_ASSERT(strcmp(tableau[5], "truc") == 0);
-    CU_ASSERT(strcmp(tableau[6], "hihi") == 0);
+    CU_ASSERT_STRING_EQUAL(tableau[0], "machin");
+    CU_ASSERT_STRING_EQUAL(tableau[1], "bidul");
+    CU_ASSERT_STRING_EQUAL(tableau[2], "chose");
+    CU_ASSERT_STRING_EQUAL(tableau[3], "chouette");
+    CU_ASSERT_STRING_EQUAL(tableau[4], "test");
+    CU_ASSERT_STRING_EQUAL(tableau[5], "truc");
+    CU_ASSERT_STRING_EQUAL(tableau[6], "hihi");
 }
-/*
+
 void testUtil_substr() {
-    const char* chaine;
-    int debut;
-    int fin;
-    char* result;
-    int result = util_substr(chaine, debut, fin, result);
-    if (1 /*check result*) {
-        CU_ASSERT(0);
-    }
+    const char chaine[64] = "coucou je suis une chaine";
+    char resultat[32];
+    int result = util_substr(chaine, 5, 15, resultat);
+    CU_ASSERT_STRING_EQUAL(resultat, "u je suis u");
+    CU_ASSERT_DOUBLE_EQUAL(result, 11, 1);
+    
+    CU_ASSERT_STRING_EQUAL(chaine, "coucou je suis une chaine");
 }
- */
+ 
 void testUtil_supprimerAccents() {
     const char* pChaine = "testéééàààèèèÀÀÀÉÉÉ";
     char* result = util_supprimerAccents(pChaine);
     fprintf(stderr, "%s", result);
     CU_ASSERT (strcmp(result, "testeeeaaaeeeAAAEEE") == 0);
-}
-
-void util_afficherTableAscii();
-
-void testUtil_afficherTableAscii() {
-    util_afficherTableAscii();
-    if (1 /*check result*/) {
-        CU_ASSERT(0);
-    }
 }
 
 _Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase);
@@ -114,9 +102,9 @@ void testUtil_uppercase() {
     util_uppercase(pChaine1);
     util_uppercase(pChaine2);
     util_uppercase(pChaine3);
-    CU_ASSERT(strcmp(pChaine1, "HÉHÉHÉHÉECRITUREENCAPSLOCK") == 0);
-    CU_ASSERT(strcmp(pChaine2, "ECRITURECAPSLOCKETPASCAPSLOCK") == 0);
-    CU_ASSERT(strcmp(pChaine3, "ECRITURETOUTENLOWERCASE") == 0);
+    CU_ASSERT_STRING_EQUAL(pChaine1, "HÉHÉHÉHÉECRITUREENCAPSLOCK");
+    CU_ASSERT_STRING_EQUAL(pChaine2, "ECRITURECAPSLOCKETPASCAPSLOCK");
+    CU_ASSERT_STRING_EQUAL(pChaine3, "ECRITURETOUTENLOWERCASE");
 }
 
 int main() {
@@ -136,12 +124,11 @@ int main() {
 
     /* Add the tests to the suite */
     if (
-            (NULL == CU_add_test(pSuite, "testUtil_deplacerCurseurDunMot", testUtil_deplacerCurseurDunMot)) ||
+//    TODO        (NULL == CU_add_test(pSuite, "testUtil_deplacerCurseurDunMot", testUtil_deplacerCurseurDunMot)) ||
             (NULL == CU_add_test(pSuite, "testUtil_echanger", testUtil_echanger)) ||
             (NULL == CU_add_test(pSuite, "testUtil_quickSort", testUtil_quickSort)) ||
-//            (NULL == CU_add_test(pSuite, "testUtil_substr", testUtil_substr)) ||
+            (NULL == CU_add_test(pSuite, "testUtil_substr", testUtil_substr)) ||
             (NULL == CU_add_test(pSuite, "testUtil_supprimerAccents", testUtil_supprimerAccents)) ||
-//            (NULL == CU_add_test(pSuite, "testUtil_afficherTableAscii", testUtil_afficherTableAscii)) ||
             (NULL == CU_add_test(pSuite, "testUtil_isInArray", testUtil_isInArray)) ||
             (NULL == CU_add_test(pSuite, "testUtil_uppercase", testUtil_uppercase))) {
         CU_cleanup_registry();

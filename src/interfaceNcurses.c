@@ -158,6 +158,9 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
                         ? selectedCase.i+1 : selectedCase.i;
                 }
                 break;
+            case 'h':
+                mvprintw(2,55, "%d mots possibles", solution_getNbMotsDebut(pJeu.plateau.solution, mot), mot);
+                break;
             case ' ':  //touche espace
                if(((selectedCase.i != lastChoseCase.i) || (selectedCase.j != lastChoseCase.j)) 
                         && (!util_isInArray(usedCase, strlen(mot)+1, selectedCase))) {
