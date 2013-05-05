@@ -49,7 +49,7 @@ void testUtil_quickSort(void) {
     char* tableau[8] = {"machin", "chouette", "truc", "chose", "bidule", "test", "hihi"};
     int debut = 1;
     int fin = 5;
-    util_quickSort(tableau, debut, fin);
+    util_quickSort(tableau, debut, fin, util_strcmp);
     CU_ASSERT_STRING_EQUAL(tableau[0], "machin");
     CU_ASSERT_STRING_EQUAL(tableau[1], "test");
     CU_ASSERT_STRING_EQUAL(tableau[2], "truc");
@@ -59,7 +59,7 @@ void testUtil_quickSort(void) {
     CU_ASSERT_STRING_EQUAL(tableau[6], "hihi");
 }
 
-void testUtil_substr() {
+void testUtil_substr(void) {
     const char chaine[64] = "coucou je suis une chaine";
     char resultat[32];
     int result = util_substr(chaine, 5, 15, resultat);

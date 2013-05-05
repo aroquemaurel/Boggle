@@ -69,11 +69,10 @@ void recurse(Plateau* pPlateau, int x, int y, int depth, char* choices, Dico pDi
  */
 void resolveur(Plateau* pPlateau, Dico pDico) {
     char choices[256];
-    
     for(int j = 0 ; j < pPlateau->tailleGrille ; ++j) {
         for(int i = 0 ; i < pPlateau->tailleGrille ; ++i) {
             recurse(pPlateau, i, j, 0, choices, pDico);
         }
     }
-    util_quickSort(pPlateau->solution.mots, 0, pPlateau->solution.nbMots-1);
+    util_quickSort(pPlateau->solution.mots, 0, pPlateau->solution.nbMots-1, util_strcmp);
 }

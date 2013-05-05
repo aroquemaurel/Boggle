@@ -139,13 +139,17 @@ void util_echanger(void** tableau, int a, int b) {
 }
  
 /**
- * Effectue un tri sur une porition d'un tableau de chaine de caractère s.
+ * Effectue un tri sur une portion d'un tableau de chaine de caractère s.
+ * Ce tri s'effectue en fonction du critère de la fonction de comparaison fctCmp
  * Ce tri utilise l'algorithme du tri rapide.
  * @param tableau Le tableau à trier. Les éléments sont de n'importes quels type.
  * @param debut Le début du tableau à trier
  * @param fin La fin du tableau à trier
+ * @param fctCmp Pointeurs de fonction pour la comparaison de deux éléments du tableau.
+ * retourne un nombre inférieur à 0 si param 1 doit être avant 2, supérieur à 0 si après 
+ * ou égal à 0 si les deux paramètre sont égaux dans le classement
  */
-void util_quickSort(void** tableau, int debut, int fin) { // TODO ajouter foncteur de comparaison
+void util_quickSort(void** tableau, int debut, int fin, int (*fctCmp)(void*,void*)) { // TODO ajouter foncteur de comparaison
     int gauche = debut-1;
     int droite = fin+1;
     const void* pivot = tableau[debut];
@@ -154,22 +158,22 @@ void util_quickSort(void** tableau, int debut, int fin) { // TODO ajouter foncte
         do { 
             do {
                 droite--; 
-            } while(util_strcmp(tableau[droite], pivot) > 0);
+            } while((*fctCmp)(tableau[droite], pivot) > 0);
             do {
                 gauche++; 
-            } while(util_strcmp(tableau[gauche], pivot) < 0);
+            } while((*fctCmp)(tableau[gauche], pivot) < 0);
 
             if(gauche < droite) {
                 util_echanger(tableau, gauche, droite);
             } 
         } while(gauche < droite);
 
-        util_quickSort(tableau, debut, droite);
-        util_quickSort(tableau, droite+1, fin);
+        util_quickSort(tableau, debut, droite, util_strcmp);
+        util_quickSort(tableau, droite+1, fin, util_strcmp);
     }
 }
 
-int util_strcmp(char* str1, char* str2) {
+int util_strcmp(void* str1, void* str2) {
     if(strlen(str1) < strlen(str2)) {
         return -1;
     } else if(strlen(str1) > strlen(str2)) {
