@@ -21,7 +21,7 @@
 */
 int main(void) {
     setlocale(LC_CTYPE, "");
-    Jeu jeu = jeu_nouveau("Complet.txt", 8, 180);
+    Jeu jeu = jeu_nouveau("Complet.txt", 8, 5);
 //   jeu_lancerModeTexte(jeu);
    jeu_lancerModeNcurses(jeu);
     return (EXIT_SUCCESS);

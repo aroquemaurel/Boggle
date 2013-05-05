@@ -128,12 +128,12 @@ int util_substr(const char* chaine, int debut, int fin, char* result) {
 
 /**
  * Echange deux variables dans un tableau de chaine de caractères
- * @param tableau Le tableau sur laquelle on effectue l'échange
+ * @param tableau Le tableau sur laquelle on effectue l'échange, tableau de n'importe quel type d'éléments.
  * @param a La première valeure à échanger
  * @param b La seconde valeure
  */
-void util_echanger(char** tableau, int a, int b) {
-    char* temp = tableau[a];
+void util_echanger(void** tableau, int a, int b) {
+    void* temp = tableau[a];
     tableau[a] = tableau[b];
     tableau[b] = temp;
 }
@@ -141,36 +141,43 @@ void util_echanger(char** tableau, int a, int b) {
 /**
  * Effectue un tri sur une porition d'un tableau de chaine de caractère s.
  * Ce tri utilise l'algorithme du tri rapide.
- * @param tableau Le tableau à trier
+ * @param tableau Le tableau à trier. Les éléments sont de n'importes quels type.
  * @param debut Le début du tableau à trier
  * @param fin La fin du tableau à trier
  */
-void util_quickSort(char** tableau, int debut, int fin) {
+void util_quickSort(void** tableau, int debut, int fin) { // TODO ajouter foncteur de comparaison
     int gauche = debut-1;
     int droite = fin+1;
-    const char* pivot = tableau[debut];
+    const void* pivot = tableau[debut];
  
     if(debut < fin)  {
-        while(1) { // FIXME supprimer ce break complètement dégueulasse.
+        do { 
             do {
                 droite--; 
-            } while(strcmp(tableau[droite],pivot) > 0);
+            } while(util_strcmp(tableau[droite], pivot) > 0);
             do {
                 gauche++; 
-            } while(strcmp(tableau[gauche], pivot) < 0);
+            } while(util_strcmp(tableau[gauche], pivot) < 0);
 
             if(gauche < droite) {
                 util_echanger(tableau, gauche, droite);
-            } else {
-                break;
-            }
-        }
+            } 
+        } while(gauche < droite);
 
         util_quickSort(tableau, debut, droite);
         util_quickSort(tableau, droite+1, fin);
     }
 }
 
+int util_strcmp(char* str1, char* str2) {
+    if(strlen(str1) < strlen(str2)) {
+        return -1;
+    } else if(strlen(str1) > strlen(str2)) {
+        return 1;
+    } else {
+        return strcmp(str1, str2);
+    }
+}
 /**
  * Déplace le curseurdans le fichier au début du mot précédent ou suivant en fonction de pSens
  * @param pFichier Le fichier surlequelle s'apppliqeu le curseur. Celui-ci doit être ouvert en lecture

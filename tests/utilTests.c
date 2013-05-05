@@ -35,7 +35,7 @@ void testUtil_deplacerCurseurDunMot() {
     }
 }
 
-void testUtil_echanger() {
+void testUtil_echanger(void) {
     char* tableau[32] = {"test", "truc", "mahin", "chose", "chouette"};
     int a = 2;
     int b = 4;
@@ -45,17 +45,17 @@ void testUtil_echanger() {
 }
 
 
-void testUtil_quickSort() {
-    char* tableau[8] = {"machin", "chouette", "truc", "chose", "bidul", "test", "hihi"};
+void testUtil_quickSort(void) {
+    char* tableau[8] = {"machin", "chouette", "truc", "chose", "bidule", "test", "hihi"};
     int debut = 1;
     int fin = 5;
     util_quickSort(tableau, debut, fin);
     CU_ASSERT_STRING_EQUAL(tableau[0], "machin");
-    CU_ASSERT_STRING_EQUAL(tableau[1], "bidul");
-    CU_ASSERT_STRING_EQUAL(tableau[2], "chose");
-    CU_ASSERT_STRING_EQUAL(tableau[3], "chouette");
-    CU_ASSERT_STRING_EQUAL(tableau[4], "test");
-    CU_ASSERT_STRING_EQUAL(tableau[5], "truc");
+    CU_ASSERT_STRING_EQUAL(tableau[1], "test");
+    CU_ASSERT_STRING_EQUAL(tableau[2], "truc");
+    CU_ASSERT_STRING_EQUAL(tableau[3], "chose");
+    CU_ASSERT_STRING_EQUAL(tableau[4], "bidule");
+    CU_ASSERT_STRING_EQUAL(tableau[5], "chouette");
     CU_ASSERT_STRING_EQUAL(tableau[6], "hihi");
 }
 
