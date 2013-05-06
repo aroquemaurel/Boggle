@@ -1,0 +1,206 @@
+\hypertarget{util_8h}{\section{Référence du fichier util.\-h}
+\label{util_8h}\index{util.\-h@{util.\-h}}
+}
+
+
+Fonctions utiles à l'ensemble du projet Toutes les fonctions de bases utiles au projet, ces fonctions travaillent sur des types de bae et ne sont pas spécfiques au projet, ce module permet de meux organiser le code.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}case.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{util_8h_a990c003dcdeeb43a7d4d8fb71721613c}{\#define {\bfseries M\-O\-D\-E\-\_\-\-D\-E\-B\-U\-G}~1}\label{util_8h_a990c003dcdeeb43a7d4d8fb71721613c}
+
+\item 
+\hypertarget{util_8h_a9466e10a7f85f35dbab81c1be501b0f4}{\#define {\bfseries M\-O\-T\-\_\-\-P\-R\-E\-C\-E\-D\-E\-N\-T}~1}\label{util_8h_a9466e10a7f85f35dbab81c1be501b0f4}
+
+\item 
+\hypertarget{util_8h_af32207960ed0a0777706d1f35fef77c4}{\#define {\bfseries M\-O\-T\-\_\-\-S\-U\-I\-V\-A\-N\-T}~1}\label{util_8h_af32207960ed0a0777706d1f35fef77c4}
+
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{util_8h_a3c1c39d9849edbfc6030dad294f803c2}{util\-\_\-affichage\-Debug} (const char $\ast$p\-Nom\-Fonction, const char $\ast$p\-Chaine)
+\begin{DoxyCompactList}\small\item\em Affiche une chaine de caractère sur la console uniquement si le define M\-O\-D\-E\-\_\-\-D\-E\-B\-U\-G est vrai. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{util_8h_a0e84020f177fa04e8894bf7f1d159442}{util\-\_\-supprimer\-Accents} (const char $\ast$p\-Chaine)
+\begin{DoxyCompactList}\small\item\em Supprime les accents d'une chaine de caratère. \end{DoxyCompactList}\item 
+char \hyperlink{util_8h_a731fef986576fd9259a24619ca099bb2}{util\-\_\-nb\-Aleatoire} (const char p\-Debut, const char p\-Fin)
+\begin{DoxyCompactList}\small\item\em Retourne un nombre aléatoire entre p\-Debut et p\-Fin. \end{DoxyCompactList}\item 
+int \hyperlink{util_8h_a08242f964f0e2453993b26df48953c65}{util\-\_\-substr} (const char $\ast$chaine, int debut, int fin, char $\ast$result)
+\begin{DoxyCompactList}\small\item\em Créer une sous-\/chaine de caractère de chaine depuis début jusqu'à fin. \end{DoxyCompactList}\item 
+\hypertarget{util_8h_a19d9ecb431460acfecc9a06d77562b12}{void {\bfseries util\-\_\-echanger} (char $\ast$tableau\mbox{[}$\,$\mbox{]}, int a, int b)}\label{util_8h_a19d9ecb431460acfecc9a06d77562b12}
+
+\item 
+\hypertarget{util_8h_aa06b0ea16c7c3c836904835f252b95e8}{void {\bfseries util\-\_\-quick\-Sort} (char $\ast$tableau\mbox{[}$\,$\mbox{]}, int debut, int fin)}\label{util_8h_aa06b0ea16c7c3c836904835f252b95e8}
+
+\item 
+void \hyperlink{util_8h_a61ce43583b52fd8f8b69b34dcb411ef9}{util\-\_\-deplacer\-Curseur\-Dun\-Mot} (F\-I\-L\-E $\ast$p\-Fichier, const int p\-Sens)
+\begin{DoxyCompactList}\small\item\em Déplace le curseurdans le fichier au début du mot précédent ou suivant en fonction de p\-Sens. \end{DoxyCompactList}\item 
+\-\_\-\-Bool \hyperlink{util_8h_a0311f1c6b9a4bc8506c8490c63c6bf6b}{util\-\_\-is\-In\-Array} (const \hyperlink{structCase}{Case} $\ast$p\-Tableau, const int p\-Taille, const \hyperlink{structCase}{Case} p\-Case)
+\begin{DoxyCompactList}\small\item\em Retourne vrai si la case p\-Case est présente dans le tableau. \end{DoxyCompactList}\item 
+void \hyperlink{util_8h_ae959a017ee969585d79f68fffabf710d}{util\-\_\-conversion\-Temps} (const time\-\_\-t p\-Timestamp, int $\ast$p\-Minutes, int $\ast$p\-Secondes)
+\begin{DoxyCompactList}\small\item\em Convertis un nombre de secondes en minutes et secondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fonctions utiles à l'ensemble du projet Toutes les fonctions de bases utiles au projet, ces fonctions travaillent sur des types de bae et ne sont pas spécfiques au projet, ce module permet de meux organiser le code. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{util_8h_a3c1c39d9849edbfc6030dad294f803c2}{\index{util.\-h@{util.\-h}!util\-\_\-affichage\-Debug@{util\-\_\-affichage\-Debug}}
+\index{util\-\_\-affichage\-Debug@{util\-\_\-affichage\-Debug}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-affichage\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void util\-\_\-affichage\-Debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\-Nom\-Fonction, }
+\item[{const char $\ast$}]{p\-Chaine}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a3c1c39d9849edbfc6030dad294f803c2}
+
+
+Affiche une chaine de caractère sur la console uniquement si le define M\-O\-D\-E\-\_\-\-D\-E\-B\-U\-G est vrai. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Nom\-Fonction} & Le nom de la fonction de laquelle est appellée cette fonction \\
+\hline
+{\em p\-Chaine} & La chaine de caractère à afficher \\
+\hline
+\end{DoxyParams}
+\hypertarget{util_8h_ae959a017ee969585d79f68fffabf710d}{\index{util.\-h@{util.\-h}!util\-\_\-conversion\-Temps@{util\-\_\-conversion\-Temps}}
+\index{util\-\_\-conversion\-Temps@{util\-\_\-conversion\-Temps}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-conversion\-Temps}]{\setlength{\rightskip}{0pt plus 5cm}void util\-\_\-conversion\-Temps (
+\begin{DoxyParamCaption}
+\item[{const time\-\_\-t}]{p\-Timestamp, }
+\item[{int $\ast$}]{p\-Minutes, }
+\item[{int $\ast$}]{p\-Secondes}
+\end{DoxyParamCaption}
+)}}\label{util_8h_ae959a017ee969585d79f68fffabf710d}
+
+
+Convertis un nombre de secondes en minutes et secondes. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Timestamp} & Le nombre de secondes à converti \\
+\hline
+{\em p\-Minutes} & Le nombre de minutes résultat \\
+\hline
+{\em p\-Secondes} & Le nombre de secondes résultat \\
+\hline
+\end{DoxyParams}
+\hypertarget{util_8h_a61ce43583b52fd8f8b69b34dcb411ef9}{\index{util.\-h@{util.\-h}!util\-\_\-deplacer\-Curseur\-Dun\-Mot@{util\-\_\-deplacer\-Curseur\-Dun\-Mot}}
+\index{util\-\_\-deplacer\-Curseur\-Dun\-Mot@{util\-\_\-deplacer\-Curseur\-Dun\-Mot}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-deplacer\-Curseur\-Dun\-Mot}]{\setlength{\rightskip}{0pt plus 5cm}void util\-\_\-deplacer\-Curseur\-Dun\-Mot (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{p\-Fichier, }
+\item[{const int}]{p\-Sens}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a61ce43583b52fd8f8b69b34dcb411ef9}
+
+
+Déplace le curseurdans le fichier au début du mot précédent ou suivant en fonction de p\-Sens. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Fichier} & Le fichier surlequelle s'apppliqeu le curseur. Celui-\/ci doit être ouvert en lecture \\
+\hline
+{\em p\-Sens} & le sens du déplacement M\-O\-T\-\_\-\-P\-R\-E\-C\-E\-D\-E\-N\-T ou M\-O\-T\-\_\-\-S\-U\-I\-V\-A\-N\-T \\
+\hline
+\end{DoxyParams}
+\hypertarget{util_8h_a0311f1c6b9a4bc8506c8490c63c6bf6b}{\index{util.\-h@{util.\-h}!util\-\_\-is\-In\-Array@{util\-\_\-is\-In\-Array}}
+\index{util\-\_\-is\-In\-Array@{util\-\_\-is\-In\-Array}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-is\-In\-Array}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-Bool util\-\_\-is\-In\-Array (
+\begin{DoxyParamCaption}
+\item[{const {\bf Case} $\ast$}]{p\-Tableau, }
+\item[{const int}]{p\-Taille, }
+\item[{const {\bf Case}}]{p\-Case}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a0311f1c6b9a4bc8506c8490c63c6bf6b}
+
+
+Retourne vrai si la case p\-Case est présente dans le tableau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Tableau} & Le tableau sur lequele s'effectue le test \\
+\hline
+{\em p\-Taille} & La taille du tableau \\
+\hline
+{\em p\-Case} & La case à chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Vrai si la case existe dans le tableau. 
+\end{DoxyReturn}
+\hypertarget{util_8h_a731fef986576fd9259a24619ca099bb2}{\index{util.\-h@{util.\-h}!util\-\_\-nb\-Aleatoire@{util\-\_\-nb\-Aleatoire}}
+\index{util\-\_\-nb\-Aleatoire@{util\-\_\-nb\-Aleatoire}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-nb\-Aleatoire}]{\setlength{\rightskip}{0pt plus 5cm}char util\-\_\-nb\-Aleatoire (
+\begin{DoxyParamCaption}
+\item[{const char}]{p\-Debut, }
+\item[{const char}]{p\-Fin}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a731fef986576fd9259a24619ca099bb2}
+
+
+Retourne un nombre aléatoire entre p\-Debut et p\-Fin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Debut} & la borne inférieur \\
+\hline
+{\em p\-Fin} & la borne supérieur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre généré 
+\end{DoxyReturn}
+\hypertarget{util_8h_a08242f964f0e2453993b26df48953c65}{\index{util.\-h@{util.\-h}!util\-\_\-substr@{util\-\_\-substr}}
+\index{util\-\_\-substr@{util\-\_\-substr}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-substr}]{\setlength{\rightskip}{0pt plus 5cm}int util\-\_\-substr (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{chaine, }
+\item[{int}]{debut, }
+\item[{int}]{fin, }
+\item[{char $\ast$}]{result}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a08242f964f0e2453993b26df48953c65}
+
+
+Créer une sous-\/chaine de caractère de chaine depuis début jusqu'à fin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chaine} & La chaine sur laquelle s'applique la fonction \\
+\hline
+{\em debut} & Le début du découpage \\
+\hline
+{\em fin} & La fin du découpage \\
+\hline
+{\em result} & La chaine résultat \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La taille de la chaine résultat 
+\end{DoxyReturn}
+\hypertarget{util_8h_a0e84020f177fa04e8894bf7f1d159442}{\index{util.\-h@{util.\-h}!util\-\_\-supprimer\-Accents@{util\-\_\-supprimer\-Accents}}
+\index{util\-\_\-supprimer\-Accents@{util\-\_\-supprimer\-Accents}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-supprimer\-Accents}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ util\-\_\-supprimer\-Accents (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\-Chaine}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a0e84020f177fa04e8894bf7f1d159442}
+
+
+Supprime les accents d'une chaine de caratère. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Chaine} & La chaine de caractère avec les accents \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La nouvelle chaine de caractère sans accents 
+\end{DoxyReturn}

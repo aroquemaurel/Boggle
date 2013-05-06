@@ -1,0 +1,239 @@
+\hypertarget{interfaceNcurses_8h}{\section{Référence du fichier interface\-Ncurses.\-h}
+\label{interfaceNcurses_8h}\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}}
+}
+
+
+Affichage avec la bibliothèque Ncurses Affiche et permet de jouer au jeu de Boggle avec un affichage utilisant la bibliothèque Ncurses.  
+
+
+{\ttfamily \#include $<$ncurses.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}solution.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}case.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}plateau.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jeu.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interfaceNcurses_8h_a09cc41e6975a66b2c8ccdf844263ee33}{\#define {\bfseries C\-O\-U\-L\-E\-U\-R\-\_\-\-S\-E\-L\-E\-C\-T\-I\-O\-N\-\_\-\-C\-A\-S\-E}~1}\label{interfaceNcurses_8h_a09cc41e6975a66b2c8ccdf844263ee33}
+
+\item 
+\hypertarget{interfaceNcurses_8h_aa925df5c77b84aeb9cba736ab371b16e}{\#define {\bfseries C\-O\-U\-L\-E\-U\-R\-\_\-\-C\-A\-S\-E\-\_\-\-C\-H\-O\-I\-S\-I}~2}\label{interfaceNcurses_8h_aa925df5c77b84aeb9cba736ab371b16e}
+
+\item 
+\hypertarget{interfaceNcurses_8h_ad8edf09d2d914fdd5eae545ee2bd6ce9}{\#define {\bfseries N\-B\-\_\-\-L\-I\-G\-N\-E\-S}~25}\label{interfaceNcurses_8h_ad8edf09d2d914fdd5eae545ee2bd6ce9}
+
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceNcurses_8h_a8e2f090f4d8640151c9a0957911d99e5}{interface\-Ncurses\-\_\-afficher\-Titre} (const char $\ast$p\-Title)
+\begin{DoxyCompactList}\small\item\em Afficher un titre à la fenêtre. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_a27c4bdc3571ec76bc5f31b11847c0680}{interface\-Ncurses\-\_\-afficher\-Solution} (const \hyperlink{structSolution}{Solution} p\-Solution)
+\begin{DoxyCompactList}\small\item\em Affiche la solution passée en paramètre. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_ad8d628ccec45bfb57ace978b88a6dd0e}{jeu\-\_\-lancer\-Mode\-Ncurses} (\hyperlink{structJeu}{Jeu} p\-Jeu)
+\begin{DoxyCompactList}\small\item\em Lance le mode Ncurses. \end{DoxyCompactList}\item 
+W\-I\-N\-D\-O\-W $\ast$ \hyperlink{interfaceNcurses_8h_a11139ea3bdd922798149d2fa93e93457}{interface\-Ncurses\-\_\-initialiser} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l'interface Ncurses. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_a7f08cba800239f2e0bdfa3ed50303595}{interface\-Ncurses\-\_\-afficher\-Grille} (const \hyperlink{structPlateau}{Plateau} p\-Plateau, const \hyperlink{structCase}{Case} p\-Selected\-Case, const \hyperlink{structCase}{Case} $\ast$p\-Used\-Case, const int p\-Lg\-Used\-Case)
+\begin{DoxyCompactList}\small\item\em Affiche la grille, composée de couleurs en fonctions des différentes cases. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_a8107452f526ae2b4bb7db9daadd39fa9}{interface\-Ncurses\-\_\-terminer} (W\-I\-N\-D\-O\-W $\ast$fenetre, \hyperlink{structJeu}{Jeu} p\-Jeu)
+\begin{DoxyCompactList}\small\item\em Termine le jeu. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_aff38ebc6fd2d7cf8263278889833b289}{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu} (const \hyperlink{structJeu}{Jeu} p\-Jeu, char $\ast$p\-Mot, const \hyperlink{structCase}{Case} p\-Selected\-Case, \hyperlink{structCase}{Case} $\ast$p\-Used\-Case)
+\begin{DoxyCompactList}\small\item\em Affiche la fenêtre permettant de jouer. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_ad154999bd280bf4911c014bcaf00670f}{interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue} (const \hyperlink{structJeu}{Jeu} p\-Jeu)
+\begin{DoxyCompactList}\small\item\em Affiche une boite de dialogue de fin de \hyperlink{structJeu}{Jeu}. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_aafd8deb32c222d5c6fa5f976118332bc}{interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution} (const \hyperlink{structJeu}{Jeu} p\-Jeu)
+\begin{DoxyCompactList}\small\item\em Affiche la fenêtre avec la solution complète du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceNcurses_8h_a013c16f098ebd2e99f3ef5604235f78c}{interface\-Ncurses\-\_\-menu} (W\-I\-N\-D\-O\-W $\ast$p\-Dialog\-Box\-Win, const \hyperlink{structJeu}{Jeu} p\-Jeu)
+\begin{DoxyCompactList}\small\item\em Affiche un menu permettant de choisir entre quitter et afficher la solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Affichage avec la bibliothèque Ncurses Affiche et permet de jouer au jeu de Boggle avec un affichage utilisant la bibliothèque Ncurses. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{interfaceNcurses_8h_ad154999bd280bf4911c014bcaf00670f}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue@{interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue}}
+\index{interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue@{interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jeu}}]{p\-Jeu}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_ad154999bd280bf4911c014bcaf00670f}
+
+
+Affiche une boite de dialogue de fin de \hyperlink{structJeu}{Jeu}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Jeu} & Le jeu \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_aff38ebc6fd2d7cf8263278889833b289}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}}
+\index{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jeu}}]{p\-Jeu, }
+\item[{char $\ast$}]{p\-Mot, }
+\item[{const {\bf Case}}]{p\-Selected\-Case, }
+\item[{{\bf Case} $\ast$}]{p\-Used\-Case}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_aff38ebc6fd2d7cf8263278889833b289}
+
+
+Affiche la fenêtre permettant de jouer. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Jeu} & Le jeu \\
+\hline
+{\em p\-Mot} & Le mot courant \\
+\hline
+{\em p\-Selected\-Case} & La case séléctionnée \\
+\hline
+{\em p\-Used\-Case} & Les cases utilisés pour créer le mot p\-Mot \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_aafd8deb32c222d5c6fa5f976118332bc}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution}}
+\index{interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Fenetre\-Solution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jeu}}]{p\-Jeu}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_aafd8deb32c222d5c6fa5f976118332bc}
+
+
+Affiche la fenêtre avec la solution complète du jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Jeu} & Le jeu \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_a7f08cba800239f2e0bdfa3ed50303595}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Grille@{interface\-Ncurses\-\_\-afficher\-Grille}}
+\index{interface\-Ncurses\-\_\-afficher\-Grille@{interface\-Ncurses\-\_\-afficher\-Grille}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-afficher\-Grille}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Grille (
+\begin{DoxyParamCaption}
+\item[{const {\bf Plateau}}]{p\-Plateau, }
+\item[{const {\bf Case}}]{p\-Selected\-Case, }
+\item[{const {\bf Case} $\ast$}]{p\-Used\-Case, }
+\item[{const int}]{p\-Lg\-Used\-Case}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_a7f08cba800239f2e0bdfa3ed50303595}
+
+
+Affiche la grille, composée de couleurs en fonctions des différentes cases. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Plateau} & La grille à afficher \\
+\hline
+{\em p\-Selected\-Case} & La case séléctionnée \\
+\hline
+{\em p\-Used\-Case} & Les cases utilisés pour le mot courant \\
+\hline
+{\em p\-Lg\-Used\-Case} & La longueur du mot courant \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_a27c4bdc3571ec76bc5f31b11847c0680}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Solution@{interface\-Ncurses\-\_\-afficher\-Solution}}
+\index{interface\-Ncurses\-\_\-afficher\-Solution@{interface\-Ncurses\-\_\-afficher\-Solution}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-afficher\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Solution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Solution}}]{p\-Solution}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_a27c4bdc3571ec76bc5f31b11847c0680}
+
+
+Affiche la solution passée en paramètre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Solution} & La solution à afficher \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_a8e2f090f4d8640151c9a0957911d99e5}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Titre@{interface\-Ncurses\-\_\-afficher\-Titre}}
+\index{interface\-Ncurses\-\_\-afficher\-Titre@{interface\-Ncurses\-\_\-afficher\-Titre}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-afficher\-Titre}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Titre (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\-Title}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_a8e2f090f4d8640151c9a0957911d99e5}
+
+
+Afficher un titre à la fenêtre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Title} & Le titre à afficher \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_a11139ea3bdd922798149d2fa93e93457}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-initialiser@{interface\-Ncurses\-\_\-initialiser}}
+\index{interface\-Ncurses\-\_\-initialiser@{interface\-Ncurses\-\_\-initialiser}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-initialiser}]{\setlength{\rightskip}{0pt plus 5cm}W\-I\-N\-D\-O\-W$\ast$ interface\-Ncurses\-\_\-initialiser (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_a11139ea3bdd922798149d2fa93e93457}
+
+
+Initialise l'interface Ncurses. 
+
+\begin{DoxyReturn}{Renvoie}
+La fenêtre créée 
+\end{DoxyReturn}
+\hypertarget{interfaceNcurses_8h_a013c16f098ebd2e99f3ef5604235f78c}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-menu@{interface\-Ncurses\-\_\-menu}}
+\index{interface\-Ncurses\-\_\-menu@{interface\-Ncurses\-\_\-menu}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-menu (
+\begin{DoxyParamCaption}
+\item[{W\-I\-N\-D\-O\-W $\ast$}]{p\-Dialog\-Box\-Win, }
+\item[{const {\bf Jeu}}]{p\-Jeu}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_a013c16f098ebd2e99f3ef5604235f78c}
+
+
+Affiche un menu permettant de choisir entre quitter et afficher la solution. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Dialog\-Box\-Win} & La fenêtre danslequel s'affiche le menu \\
+\hline
+{\em p\-Jeu} & Le jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+\hypertarget{interfaceNcurses_8h_a8107452f526ae2b4bb7db9daadd39fa9}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-terminer@{interface\-Ncurses\-\_\-terminer}}
+\index{interface\-Ncurses\-\_\-terminer@{interface\-Ncurses\-\_\-terminer}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{interface\-Ncurses\-\_\-terminer}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-terminer (
+\begin{DoxyParamCaption}
+\item[{W\-I\-N\-D\-O\-W $\ast$}]{fenetre, }
+\item[{{\bf Jeu}}]{p\-Jeu}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_a8107452f526ae2b4bb7db9daadd39fa9}
+
+
+Termine le jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fenetre} & La fenêtre à détruire \\
+\hline
+{\em p\-Jeu} & le jeu à terminer \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceNcurses_8h_ad8d628ccec45bfb57ace978b88a6dd0e}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!jeu\-\_\-lancer\-Mode\-Ncurses@{jeu\-\_\-lancer\-Mode\-Ncurses}}
+\index{jeu\-\_\-lancer\-Mode\-Ncurses@{jeu\-\_\-lancer\-Mode\-Ncurses}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
+\subsubsection[{jeu\-\_\-lancer\-Mode\-Ncurses}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-\_\-lancer\-Mode\-Ncurses (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu}}]{p\-Jeu}
+\end{DoxyParamCaption}
+)}}\label{interfaceNcurses_8h_ad8d628ccec45bfb57ace978b88a6dd0e}
+
+
+Lance le mode Ncurses. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Jeu} & Le jeu à lancer \\
+\hline
+\end{DoxyParams}

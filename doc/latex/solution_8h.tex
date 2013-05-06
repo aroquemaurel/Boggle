@@ -1,0 +1,128 @@
+\hypertarget{solution_8h}{\section{Référence du fichier solution.\-h}
+\label{solution_8h}\index{solution.\-h@{solution.\-h}}
+}
+
+
+Gère la solution d'une grille de boggle Toutes les fonctions se rapportant à la solution d'une grille.  
+
+
+\subsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSolution}{Solution}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structSolution}{Solution} du jeu Contient une solution pour une grille de Boggle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structSolution}{Solution} \hyperlink{solution_8h_ac761303cf734943eb7f5f7fe2de99379}{solution\-\_\-creer} (void)
+\begin{DoxyCompactList}\small\item\em Créer la structure de données la solution. \end{DoxyCompactList}\item 
+void \hyperlink{solution_8h_a4bc4f716206878893bbea8f5d89a6aba}{solution\-\_\-ajouter\-Mot} (\hyperlink{structSolution}{Solution} $\ast$p\-Solution, const char $\ast$mot)
+\begin{DoxyCompactList}\small\item\em Ajoute un mot dans la solution p\-Solution. \end{DoxyCompactList}\item 
+\hypertarget{solution_8h_a6a3e01575341ef21588149ffb67772e0}{void {\bfseries solution\-\_\-afficher} (const \hyperlink{structSolution}{Solution} p\-Solution)}\label{solution_8h_a6a3e01575341ef21588149ffb67772e0}
+
+\item 
+void \hyperlink{solution_8h_a50ddf52d1a62a48a46989783cb65d462}{solution\-\_\-detruire} (\hyperlink{structSolution}{Solution} $\ast$p\-Solution)
+\begin{DoxyCompactList}\small\item\em Détruit la solution. \end{DoxyCompactList}\item 
+\-\_\-\-Bool \hyperlink{solution_8h_a3fd246b62de5f36abb8567ccb70a0706}{solution\-\_\-mot\-Est\-Present} (const \hyperlink{structSolution}{Solution} p\-Solution, const char $\ast$p\-Mot)
+\begin{DoxyCompactList}\small\item\em Retourne vrai si le mot p\-Mot est présent dans la solution. \end{DoxyCompactList}\item 
+int \hyperlink{solution_8h_aa1bb041fa6e461a6a8c46b43857a94d4}{solution\-\_\-nb\-Points} (\hyperlink{structSolution}{Solution} p\-Solution)
+\begin{DoxyCompactList}\small\item\em Retourn le nombre de points pouvant être obtenus avec la solution p\-Solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Gère la solution d'une grille de boggle Toutes les fonctions se rapportant à la solution d'une grille. \begin{DoxySeeAlso}{Voir également}
+plateau 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{solution_8h_a4bc4f716206878893bbea8f5d89a6aba}{\index{solution.\-h@{solution.\-h}!solution\-\_\-ajouter\-Mot@{solution\-\_\-ajouter\-Mot}}
+\index{solution\-\_\-ajouter\-Mot@{solution\-\_\-ajouter\-Mot}!solution.h@{solution.\-h}}
+\subsubsection[{solution\-\_\-ajouter\-Mot}]{\setlength{\rightskip}{0pt plus 5cm}void solution\-\_\-ajouter\-Mot (
+\begin{DoxyParamCaption}
+\item[{{\bf Solution} $\ast$}]{p\-Solution, }
+\item[{const char $\ast$}]{mot}
+\end{DoxyParamCaption}
+)}}\label{solution_8h_a4bc4f716206878893bbea8f5d89a6aba}
+
+
+Ajoute un mot dans la solution p\-Solution. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Solution} & La solution dans laquelle ajouter le mot \\
+\hline
+{\em mot} & Le mot à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{solution_8h_ac761303cf734943eb7f5f7fe2de99379}{\index{solution.\-h@{solution.\-h}!solution\-\_\-creer@{solution\-\_\-creer}}
+\index{solution\-\_\-creer@{solution\-\_\-creer}!solution.h@{solution.\-h}}
+\subsubsection[{solution\-\_\-creer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Solution} solution\-\_\-creer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{solution_8h_ac761303cf734943eb7f5f7fe2de99379}
+
+
+Créer la structure de données la solution. 
+
+\begin{DoxyReturn}{Renvoie}
+La nouvelle solution 
+\end{DoxyReturn}
+\hypertarget{solution_8h_a50ddf52d1a62a48a46989783cb65d462}{\index{solution.\-h@{solution.\-h}!solution\-\_\-detruire@{solution\-\_\-detruire}}
+\index{solution\-\_\-detruire@{solution\-\_\-detruire}!solution.h@{solution.\-h}}
+\subsubsection[{solution\-\_\-detruire}]{\setlength{\rightskip}{0pt plus 5cm}void solution\-\_\-detruire (
+\begin{DoxyParamCaption}
+\item[{{\bf Solution} $\ast$}]{p\-Solution}
+\end{DoxyParamCaption}
+)}}\label{solution_8h_a50ddf52d1a62a48a46989783cb65d462}
+
+
+Détruit la solution. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Solution} & La solution à détruire \\
+\hline
+\end{DoxyParams}
+\hypertarget{solution_8h_a3fd246b62de5f36abb8567ccb70a0706}{\index{solution.\-h@{solution.\-h}!solution\-\_\-mot\-Est\-Present@{solution\-\_\-mot\-Est\-Present}}
+\index{solution\-\_\-mot\-Est\-Present@{solution\-\_\-mot\-Est\-Present}!solution.h@{solution.\-h}}
+\subsubsection[{solution\-\_\-mot\-Est\-Present}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-Bool solution\-\_\-mot\-Est\-Present (
+\begin{DoxyParamCaption}
+\item[{const {\bf Solution}}]{p\-Solution, }
+\item[{const char $\ast$}]{p\-Mot}
+\end{DoxyParamCaption}
+)}}\label{solution_8h_a3fd246b62de5f36abb8567ccb70a0706}
+
+
+Retourne vrai si le mot p\-Mot est présent dans la solution. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Solution} & La solution dans laquelle chercher \\
+\hline
+{\em p\-Mot} & Le mot à chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Vrai si p\-Mot est présent dans p\-Solution 
+\end{DoxyReturn}
+\hypertarget{solution_8h_aa1bb041fa6e461a6a8c46b43857a94d4}{\index{solution.\-h@{solution.\-h}!solution\-\_\-nb\-Points@{solution\-\_\-nb\-Points}}
+\index{solution\-\_\-nb\-Points@{solution\-\_\-nb\-Points}!solution.h@{solution.\-h}}
+\subsubsection[{solution\-\_\-nb\-Points}]{\setlength{\rightskip}{0pt plus 5cm}int solution\-\_\-nb\-Points (
+\begin{DoxyParamCaption}
+\item[{{\bf Solution}}]{p\-Solution}
+\end{DoxyParamCaption}
+)}}\label{solution_8h_aa1bb041fa6e461a6a8c46b43857a94d4}
+
+
+Retourn le nombre de points pouvant être obtenus avec la solution p\-Solution. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Solution} & la solutino pour laquelle compter le nombre de points \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombres de points à compter 
+\end{DoxyReturn}

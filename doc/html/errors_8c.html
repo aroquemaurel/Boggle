@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Le voyageur de commerce: Référence du fichier src/errors.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Généré par Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<h1>Référence du fichier src/errors.c</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Fonctions sur les erreurs.  
+<a href="#_details">Plus de détails...</a></p>
+<code>#include &quot;<a class="el" href="errors_8h_source.html">errors.h</a>&quot;</code><br/>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structErrors.html">Errors</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a6f76c1bae168e5138cef3e47ff1508a2">errors_new</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialisation de l'objet.  <a href="#a6f76c1bae168e5138cef3e47ff1508a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a9432e8a46dc6939f08895669f3678ccf">errors_displayErrorsMessage</a> (const <a class="el" href="structErrors.html">Errors</a> pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Affiches toutes les erreurs de pErrors.  <a href="#a9432e8a46dc6939f08895669f3678ccf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a87df0338b6a2197054a47514070433c3">errors_setTagFNotFound</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale que la balise -f n'a pas été trouvée.  <a href="#a87df0338b6a2197054a47514070433c3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a7393147938b78a391b74930ceb07fc88">errors_setFileNotFound</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors, char *fileName)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale que le fichier fileName n'existe pas.  <a href="#a7393147938b78a391b74930ceb07fc88"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a4b02c122b53eeefe092ae99b42eb7111">errors_setNoAlgoSpecified</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale qu'aucun algorithme n'a été spécifié.  <a href="#a4b02c122b53eeefe092ae99b42eb7111"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#adde0644139455cc5a515d4acb1816dae">errors_setMissingParameterLsr</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale qu'aucun paramètre n'a été spécifié derrière -lsr.  <a href="#adde0644139455cc5a515d4acb1816dae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a5b0a7201a86827526fd6d0108c9618c8">errors_setMissingParameterLsnr</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale qu'aucun paramètre n'a été spécifié derrière -lsnr.  <a href="#a5b0a7201a86827526fd6d0108c9618c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a4d831f2a1e1faee9f6e83217cbd02099">errors_setMissingParameterGa</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale qu'aucun paramètre n'a été spécifié derrière -ga.  <a href="#a4d831f2a1e1faee9f6e83217cbd02099"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a91bbcd02a371d8ab3563526f6dd187b5">errors_setNoValidParameterLsr</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale que le paramètre derrière -lsr n'est pas valide (n'est pas un entier).  <a href="#a91bbcd02a371d8ab3563526f6dd187b5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a08a06ef5607dd42f53ec130243f14286">errors_setNoValidParameterLsnr</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale que les paramètres derrière -lsnr ne sont pas valides (non entier).  <a href="#a08a06ef5607dd42f53ec130243f14286"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8c.html#a90b826872db1a6e1114581d13cec1a84">errors_setNoValidParameterGa</a> (<a class="el" href="structErrors.html">Errors</a> *pErrors)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signale que le ou les paramètre après -ga ne sont pas valides (non entier ou décimal).  <a href="#a90b826872db1a6e1114581d13cec1a84"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<p>Fonctions sur les erreurs. </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Antoine de Roquemaurel </dd></dl>
+<dl class="date"><dt><b>Date:</b></dt><dd>21/11/2012 17:42:31</dd></dl>
+<p>Implémentation des fonctions concernant les erreurs du programme. </p>
+<hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a9432e8a46dc6939f08895669f3678ccf"></a><!-- doxytag: member="errors.c::errors_displayErrorsMessage" ref="a9432e8a46dc6939f08895669f3678ccf" args="(const Errors pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_displayErrorsMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structErrors.html">Errors</a>&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Affiches toutes les erreurs de pErrors. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet pour lequelle on doit afficher les erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f76c1bae168e5138cef3e47ff1508a2"></a><!-- doxytag: member="errors.c::errors_new" ref="a6f76c1bae168e5138cef3e47ff1508a2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structErrors.html">Errors</a> errors_new </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initialisation de l'objet. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Une instance de Erreur initialisée </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7393147938b78a391b74930ceb07fc88"></a><!-- doxytag: member="errors.c::errors_setFileNotFound" ref="a7393147938b78a391b74930ceb07fc88" args="(Errors *pErrors, char *fileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setFileNotFound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>fileName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale que le fichier fileName n'existe pas. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td>Le nom de fichier non trouvé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4d831f2a1e1faee9f6e83217cbd02099"></a><!-- doxytag: member="errors.c::errors_setMissingParameterGa" ref="a4d831f2a1e1faee9f6e83217cbd02099" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setMissingParameterGa </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale qu'aucun paramètre n'a été spécifié derrière -ga. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b0a7201a86827526fd6d0108c9618c8"></a><!-- doxytag: member="errors.c::errors_setMissingParameterLsnr" ref="a5b0a7201a86827526fd6d0108c9618c8" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setMissingParameterLsnr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale qu'aucun paramètre n'a été spécifié derrière -lsnr. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adde0644139455cc5a515d4acb1816dae"></a><!-- doxytag: member="errors.c::errors_setMissingParameterLsr" ref="adde0644139455cc5a515d4acb1816dae" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setMissingParameterLsr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale qu'aucun paramètre n'a été spécifié derrière -lsr. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b02c122b53eeefe092ae99b42eb7111"></a><!-- doxytag: member="errors.c::errors_setNoAlgoSpecified" ref="a4b02c122b53eeefe092ae99b42eb7111" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setNoAlgoSpecified </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale qu'aucun algorithme n'a été spécifié. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a90b826872db1a6e1114581d13cec1a84"></a><!-- doxytag: member="errors.c::errors_setNoValidParameterGa" ref="a90b826872db1a6e1114581d13cec1a84" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setNoValidParameterGa </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale que le ou les paramètre après -ga ne sont pas valides (non entier ou décimal). </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a08a06ef5607dd42f53ec130243f14286"></a><!-- doxytag: member="errors.c::errors_setNoValidParameterLsnr" ref="a08a06ef5607dd42f53ec130243f14286" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setNoValidParameterLsnr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale que les paramètres derrière -lsnr ne sont pas valides (non entier). </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a91bbcd02a371d8ab3563526f6dd187b5"></a><!-- doxytag: member="errors.c::errors_setNoValidParameterLsr" ref="a91bbcd02a371d8ab3563526f6dd187b5" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setNoValidParameterLsr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale que le paramètre derrière -lsr n'est pas valide (n'est pas un entier). </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a87df0338b6a2197054a47514070433c3"></a><!-- doxytag: member="errors.c::errors_setTagFNotFound" ref="a87df0338b6a2197054a47514070433c3" args="(Errors *pErrors)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void errors_setTagFNotFound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structErrors.html">Errors</a> *&nbsp;</td>
+          <td class="paramname"> <em>pErrors</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Signale que la balise -f n'a pas été trouvée. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pErrors</em>&nbsp;</td><td>L'objet des erreurs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Généré le Sun Jan 13 2013 16:47:43 pour Le voyageur de commerce par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Le voyageur de commerce: Référence du fichier src/distance.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Généré par Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<h1>Référence du fichier src/distance.c</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Fonctions des distances.  
+<a href="#_details">Plus de détails...</a></p>
+<code>#include &quot;<a class="el" href="distance_8h_source.html">distance.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDistance.html">Distance</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="distance_8c.html#ac714e60819a349c03b5960585136b856">distance_new</a> (<a class="el" href="structTown.html">Town</a> pFirstTown, <a class="el" href="structTown.html">Town</a> pSecondTown)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Créer une nouvelle distance.  <a href="#ac714e60819a349c03b5960585136b856"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="distance_8c.html#a3c0a5cae2a774b648d20447b23d81d84">distance_calculDistance</a> (const <a class="el" href="structTown.html">Town</a> pTown1, const <a class="el" href="structTown.html">Town</a> pTown2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcul la distance entre deux villes.  <a href="#a3c0a5cae2a774b648d20447b23d81d84"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDistance.html">Distance</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="distance_8c.html#a75f9d06738c4cde184c3ad7e5845ae20">distance_betweenTowns</a> (<a class="el" href="structDistance.html">Distance</a> *pDistances, <a class="el" href="structTown.html">Town</a> i, <a class="el" href="structTown.html">Town</a> j)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcul la distance entre deux villes.  <a href="#a75f9d06738c4cde184c3ad7e5845ae20"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<p>Fonctions des distances. </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Antoine de Roquemaurel </dd></dl>
+<dl class="date"><dt><b>Date:</b></dt><dd>01/12/2012 20:33:39</dd></dl>
+<p>Entêtes des fonctions se rapportant aux distances </p>
+<hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a75f9d06738c4cde184c3ad7e5845ae20"></a><!-- doxytag: member="distance.c::distance_betweenTowns" ref="a75f9d06738c4cde184c3ad7e5845ae20" args="(Distance *pDistances, Town i, Town j)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDistance.html">Distance</a> distance_betweenTowns </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDistance.html">Distance</a> *&nbsp;</td>
+          <td class="paramname"> <em>pDistances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTown.html">Town</a>&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTown.html">Town</a>&nbsp;</td>
+          <td class="paramname"> <em>j</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calcul la distance entre deux villes. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pDistances</em>&nbsp;</td><td>La matrice de distances </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>La première ville </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>j</em>&nbsp;</td><td>La seconde ville </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>La distance</dd></dl>
+<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structTown.html" title="Objet des ville.">Town</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c0a5cae2a774b648d20447b23d81d84"></a><!-- doxytag: member="distance.c::distance_calculDistance" ref="a3c0a5cae2a774b648d20447b23d81d84" args="(const Town pTown1, const Town pTown2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance_calculDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structTown.html">Town</a>&nbsp;</td>
+          <td class="paramname"> <em>pTown1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structTown.html">Town</a>&nbsp;</td>
+          <td class="paramname"> <em>pTown2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calcul la distance entre deux villes. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pTown1</em>&nbsp;</td><td>Première ville </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pTown2</em>&nbsp;</td><td>Seconde ville </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>La distance</dd></dl>
+<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structTown.html" title="Objet des ville.">Town</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac714e60819a349c03b5960585136b856"></a><!-- doxytag: member="distance.c::distance_new" ref="ac714e60819a349c03b5960585136b856" args="(Town pFirstTown, Town pSecondTown)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDistance.html">Distance</a> distance_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTown.html">Town</a>&nbsp;</td>
+          <td class="paramname"> <em>pFirstTown</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTown.html">Town</a>&nbsp;</td>
+          <td class="paramname"> <em>pSecondTown</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Créer une nouvelle distance. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pFirstTown</em>&nbsp;</td><td>Première ville </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pSecondTown</em>&nbsp;</td><td>Seconde ville </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structDistance.html" title="Objet des distances.">Distance</a> entre les deux villes</dd></dl>
+<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structTown.html" title="Objet des ville.">Town</a> </dd></dl>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Généré le Sun Jan 13 2013 16:47:43 pour Le voyageur de commerce par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

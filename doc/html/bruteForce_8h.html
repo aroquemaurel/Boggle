@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Le voyageur de commerce: Référence du fichier lib/bruteForce.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Généré par Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<h1>Référence du fichier lib/bruteForce.h</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Fonctions de brute force.  
+<a href="#_details">Plus de détails...</a></p>
+<code>#include &quot;<a class="el" href="instance_8h_source.html">instance.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="tour_8h_source.html">tour.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+
+<p><a href="bruteForce_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTour.html">Tour</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruteForce_8h.html#aa893fd74b7ec74e51d7be37ea24a940f">bruteForce_bestPath</a> (<a class="el" href="structInstance.html">Instance</a> pInstance)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Permet d'obtenir le meilleur chemin d'une instance via la force brute.  <a href="#aa893fd74b7ec74e51d7be37ea24a940f"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<p>Fonctions de brute force. </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Antoine de Roquemaurel </dd></dl>
+<dl class="date"><dt><b>Date:</b></dt><dd>27/12/2012 17:58:36</dd></dl>
+<p>Entêtes des fonctions servant à la force brute. Ces fonctions ne sont appelés que depuis le main </p>
+<hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="aa893fd74b7ec74e51d7be37ea24a940f"></a><!-- doxytag: member="bruteForce.h::bruteForce_bestPath" ref="aa893fd74b7ec74e51d7be37ea24a940f" args="(Instance pInstance)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTour.html">Tour</a> bruteForce_bestPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structInstance.html">Instance</a>&nbsp;</td>
+          <td class="paramname"> <em>pInstance</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Permet d'obtenir le meilleur chemin d'une instance via la force brute. </p>
+<p>Il est conseillé de ne pas essayer avec des instances de plus de 8 villes.</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pInstance</em>&nbsp;</td><td>L'instance pour laquelle on doit calculer le plus court chemin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>La meilleur tournée.</dd></dl>
+<dl class="see"><dt><b>Voir également:</b></dt><dd><a class="el" href="structInstance.html" title="Objet des instances.">Instance</a> </dd></dl>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Généré le Sun Jan 13 2013 16:47:43 pour Le voyageur de commerce par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Le voyageur de commerce:  Fichier source de lib/errors.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Généré par Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>lib/errors.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="errors_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef __ERRORS</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define __ERRORS</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00016"></a>00016 
+<a name="l00025"></a><a class="code" href="structErrors.html">00025</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
+<a name="l00027"></a><a class="code" href="structErrors.html#add18d77e05e1b61b88feeb2d5bdf5525">00027</a>     <span class="keywordtype">char</span>* errorNbArguments; 
+<a name="l00029"></a><a class="code" href="structErrors.html#ae16317e85c4bbd2d2f8aa0412e87790f">00029</a>     <span class="keywordtype">char</span>* errorTagFNotFound; 
+<a name="l00031"></a><a class="code" href="structErrors.html#a7133eba5ff36c1f6d71a6cd2bcc0e8b1">00031</a>     <span class="keywordtype">char</span>* errorFileNotFound; 
+<a name="l00033"></a><a class="code" href="structErrors.html#a23cf6180d45a3075891ab189d0eb9023">00033</a>     <span class="keywordtype">char</span>* errorNoAlgoSpecified; 
+<a name="l00035"></a><a class="code" href="structErrors.html#a05183e1b32b7845f7234c5e7c0565727">00035</a>     <span class="keywordtype">char</span>* errorMissingParameterLsr; 
+<a name="l00037"></a><a class="code" href="structErrors.html#ad4a0fa4e6c5510a25606e1385415490f">00037</a>     <span class="keywordtype">char</span>* errorMissingParameterLsnr; 
+<a name="l00039"></a><a class="code" href="structErrors.html#a3709f24fb0e0a975e7d2e870a9d04af4">00039</a>     <span class="keywordtype">char</span>* errorMissingParameterGa; 
+<a name="l00041"></a><a class="code" href="structErrors.html#a0fe0b5ce5f5b8bc80d1fe84525ebfa88">00041</a>     <span class="keywordtype">char</span>* errorNoValidParameterLsr; 
+<a name="l00043"></a><a class="code" href="structErrors.html#ade2a8eb0b3d94e5fa156df6d6e12f609">00043</a>     <span class="keywordtype">char</span>* errorNoValidParameterLsnr; 
+<a name="l00045"></a><a class="code" href="structErrors.html#aa8fc65c54b7397a4eff642f0416bf533">00045</a>     <span class="keywordtype">char</span>* errorNoValidParameterGa;
+<a name="l00047"></a><a class="code" href="structErrors.html#aab575112743341bf554002622a903483">00047</a>     <span class="keywordtype">int</span> nbErrors; 
+<a name="l00048"></a>00048 } <a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>;
+<a name="l00049"></a>00049 
+<a name="l00055"></a>00055 <a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a> <a class="code" href="errors_8h.html#a6f76c1bae168e5138cef3e47ff1508a2" title="Initialisation de l&amp;#39;objet.">errors_new</a>();
+<a name="l00056"></a>00056 
+<a name="l00062"></a>00062 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a9432e8a46dc6939f08895669f3678ccf" title="Affiches toutes les erreurs de pErrors.">errors_displayErrorsMessage</a>(<span class="keyword">const</span> <a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a> pErrors);
+<a name="l00063"></a>00063 
+<a name="l00069"></a>00069 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a0578fb7fcec18f8016a960fe51ddc7bc" title="Signale que le nombre d&amp;#39;argument est incorrect.">errors_setNbArguments</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00070"></a>00070 
+<a name="l00076"></a>00076 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a87df0338b6a2197054a47514070433c3" title="Signale que la balise -f n&amp;#39;a pas été trouvée.">errors_setTagFNotFound</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00077"></a>00077 
+<a name="l00084"></a>00084 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a7393147938b78a391b74930ceb07fc88" title="Signale que le fichier fileName n&amp;#39;existe pas.">errors_setFileNotFound</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors, <span class="keywordtype">char</span>* fileName);
+<a name="l00085"></a>00085 
+<a name="l00091"></a>00091 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a4b02c122b53eeefe092ae99b42eb7111" title="Signale qu&amp;#39;aucun algorithme n&amp;#39;a été spécifié.">errors_setNoAlgoSpecified</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00092"></a>00092 
+<a name="l00098"></a>00098 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a08a06ef5607dd42f53ec130243f14286" title="Signale que les paramètres derrière -lsnr ne sont pas valides (non entier).">errors_setNoValidParameterLsnr</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00099"></a>00099 
+<a name="l00105"></a>00105 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a91bbcd02a371d8ab3563526f6dd187b5" title="Signale que le paramètre derrière -lsr n&amp;#39;est pas valide (n&amp;#39;est pas un entier).">errors_setNoValidParameterLsr</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00106"></a>00106 
+<a name="l00111"></a>00111 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a90b826872db1a6e1114581d13cec1a84" title="Signale que le ou les paramètre après -ga ne sont pas valides (non entier ou décimal).">errors_setNoValidParameterGa</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00112"></a>00112 
+<a name="l00118"></a>00118 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a4d831f2a1e1faee9f6e83217cbd02099" title="Signale qu&amp;#39;aucun paramètre n&amp;#39;a été spécifié derrière -ga.">errors_setMissingParameterGa</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00119"></a>00119 
+<a name="l00125"></a>00125 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#a5b0a7201a86827526fd6d0108c9618c8" title="Signale qu&amp;#39;aucun paramètre n&amp;#39;a été spécifié derrière -lsnr.">errors_setMissingParameterLsnr</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00126"></a>00126 
+<a name="l00132"></a>00132 <span class="keywordtype">void</span> <a class="code" href="errors_8h.html#adde0644139455cc5a515d4acb1816dae" title="Signale qu&amp;#39;aucun paramètre n&amp;#39;a été spécifié derrière -lsr.">errors_setMissingParameterLsr</a>(<a class="code" href="structErrors.html" title="Objet des erreurs.">Errors</a>* pErrors);
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="preprocessor">#endif</span>
+<a name="l00135"></a>00135 <span class="preprocessor"></span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Généré le Sun Jan 13 2013 16:47:43 pour Le voyageur de commerce par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

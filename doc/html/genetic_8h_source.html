@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Le voyageur de commerce:  Fichier source de lib/genetic.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Généré par Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&nbsp;de&nbsp;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>lib/genetic.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="genetic_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00013"></a>00013 <span class="preprocessor">#ifndef __GENETIC</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define __GENETIC</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="tour_8h.html" title="Fonctions des tournées.">tour.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="path_8h.html" title="Fonctions des trajets.">path.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="util_8h.html" title="Fonctions utiles.">util.h</a>&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00027"></a>00027 <a class="code" href="structTour.html" title="Objet d&amp;#39;une tournée.">Tour</a> <a class="code" href="genetic_8h.html#a2bc0dee26bdfd369fe80b74dd4a72156" title="Retourne la tournée après un croisemenet DPX entre pParent1 et pParent2.">genetic_DPX</a>(<a class="code" href="structTour.html" title="Objet d&amp;#39;une tournée.">Tour</a> pParent1, <a class="code" href="structTour.html" title="Objet d&amp;#39;une tournée.">Tour</a> pParent2);
+<a name="l00028"></a>00028 
+<a name="l00035"></a>00035 <span class="keywordtype">bool</span> <a class="code" href="genetic_8h.html#aef22a19a26cf774a545af04a7b6b6149" title="Fais muter la tournée pTour.">genetic_mutation</a>(<a class="code" href="structTour.html" title="Objet d&amp;#39;une tournée.">Tour</a>* pTour, <span class="keywordtype">float</span> pProba);
+<a name="l00046"></a>00046 <a class="code" href="structTour.html" title="Objet d&amp;#39;une tournée.">Tour</a> <a class="code" href="genetic_8h.html#a02712f7da85e515da6c47f777e08eff0" title="Retourne la meilleure tournée à l&amp;#39;aide d&amp;#39;un algorithme génétique.">genetic_getBestPath</a>(<a class="code" href="structInstance.html" title="Objet des instances.">Instance</a> pInstance, <span class="keyword">const</span> <span class="keywordtype">int</span> pNbTour, <span class="keyword">const</span> <span class="keywordtype">int</span> pNbGeneration, <span class="keyword">const</span> <span class="keywordtype">float</span> pProba);
+<a name="l00047"></a>00047 <span class="preprocessor">#endif  </span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Généré le Sun Jan 13 2013 16:47:43 pour Le voyageur de commerce par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
