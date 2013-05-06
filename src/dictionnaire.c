@@ -100,5 +100,5 @@ void dictionnaire_rechercheDichotomique(Dico pDictionnaire, char* pMotAChercher,
             fin = ftell(pDictionnaire.dico); 
         }
     } 
-
+    printf("\n\n");
 }

@@ -11,9 +11,9 @@
  * \brief Une case de la grille
  */
 typedef struct {
-    unsigned char i; /*!< Abscisse */
-    unsigned char j; /*!< ordonnée */
-} Case;
+    unsigned char x; /*!< Premier nombre du couple */
+    unsigned char y; /*!< Second nombre du couple */
+} Couple;
 
 #endif	/* CASE_H */
 

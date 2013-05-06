@@ -40,7 +40,7 @@ bool jeu_compteurClaque(const Jeu pJeu) {
  * @param pLgTimer La longeur du timer en secondes
  * @return Le nouveau Jeu
  */
-Jeu jeu_nouveau(const char* pNomDico, const unsigned char pTaillePlateau, const unsigned int pLgTimer) {
+Jeu jeu_nouveau(const char* pNomDico, const Couple pTaillePlateau, const unsigned int pLgTimer) {
     Jeu nouveauJeu;
     nouveauJeu.plateau = plateau_nouveau(pTaillePlateau);
     nouveauJeu.dico = dictionnaire_nouveau(pNomDico);
@@ -56,8 +56,9 @@ Jeu jeu_nouveau(const char* pNomDico, const unsigned char pTaillePlateau, const 
  */
 void jeu_lancer(Jeu* pJeu) {  
     plateau_remplirGrilleAleatoire(&(pJeu->plateau));
+    interfaceTexte_afficherPlateau(pJeu->plateau);
 //    plateau_remplirGrillePredefinie(&(pJeu->plateau));
-    resolveur(&(pJeu->plateau), pJeu->dico);
+    resolveTouteLaGrille(&(pJeu->plateau), pJeu->dico);
 }
 
 /**
@@ -69,11 +70,11 @@ void jeu_lancer(Jeu* pJeu) {
 _Bool jeu_proposerMot(Jeu* pJeu, const char* pMot) {
 	char* mot = util_supprimerAccents(pMot);
 	_Bool retour;
-	//util_uppercase(pMot); // TODO
+	util_uppercase(mot);
 
-	retour = solution_motEstPresent(pJeu->plateau.solution, pMot);
-	if(retour) {
-            solution_ajouterMot(&(pJeu->solutionUtilisateur), pMot);
+	retour = solution_motEstPresent(pJeu->plateau.solution, mot);
+	if(retour) { 
+        solution_ajouterMot(&(pJeu->solutionUtilisateur), mot);
 	}
 	free(mot);
         

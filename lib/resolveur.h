@@ -9,8 +9,10 @@
 #define	RESOLVEUR_H
 #include "plateau.h"
 #include "dictionnaire.h"
+#include "jeu.h"
 
-void resolveur(Plateau* pPlateau, Dico pDico);
-
+void resolveTouteLaGrille(Plateau* pPlateau, Dico pDico);
+Solution resolveur_resolveUneCase(Plateau pPlateau, Dico pDico, Couple pCase);
+void jeu_lancerModeSolveur(Jeu pJeu);
 #endif	/* RESOLVEUR_H */
 

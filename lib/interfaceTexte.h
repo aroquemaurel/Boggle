@@ -9,6 +9,6 @@
 
 #include "plateau.h"
 void interfaceTexte_afficherPlateau(const Plateau pPlateau);
-
+void jeu_lancerModeTexte(Jeu pJeu);
 #endif	/* INTERFACETEXT_H */
 

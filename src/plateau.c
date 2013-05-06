@@ -15,16 +15,16 @@
  * @param pTailleGrille La taille de la grille à créer
  * @return Le nouveau plateau
  */
-Plateau plateau_nouveau(const unsigned char pTailleGrille) {
+Plateau plateau_nouveau(const Couple pTailleGrille) {
     Plateau nouveauPlateau;
     nouveauPlateau.tailleGrille = pTailleGrille;
     
-    nouveauPlateau.grille = malloc(sizeof(char*)*pTailleGrille);
-    nouveauPlateau.grid = malloc(sizeof(char*)*pTailleGrille);
+    nouveauPlateau.grille = malloc(sizeof(char*)*pTailleGrille.x);
+    nouveauPlateau.grid = malloc(sizeof(char*)*pTailleGrille.x);
     nouveauPlateau.solution = solution_creer();
-    for(int i=0; i < pTailleGrille ; ++i) {
-        nouveauPlateau.grille[i] = malloc(sizeof(char)*pTailleGrille);
-        nouveauPlateau.grid[i] = malloc(sizeof(char*)*pTailleGrille);
+    for(int i=0; i < pTailleGrille.x ; ++i) {
+        nouveauPlateau.grille[i] = malloc(sizeof(char)*pTailleGrille.y);
+        nouveauPlateau.grid[i] = malloc(sizeof(char*)*pTailleGrille.y);
     }
     
     return nouveauPlateau;
@@ -34,7 +34,7 @@ Plateau plateau_nouveau(const unsigned char pTailleGrille) {
  * @param pPlateau Le plateau à détruire
  */
 void plateau_detruire(Plateau* pPlateau) {
-    for(int i=0; i < pPlateau->tailleGrille ; ++i) {
+    for(int i=0; i < pPlateau->tailleGrille.x ; ++i) {
         free((pPlateau->grille[i]));
         free((pPlateau->grid[i]));
     }
@@ -42,7 +42,7 @@ void plateau_detruire(Plateau* pPlateau) {
     free(pPlateau->grid);
     pPlateau->grille = NULL;
     pPlateau->grid = NULL;
-    pPlateau->tailleGrille = 0;
+    pPlateau->tailleGrille.x = pPlateau->tailleGrille.y = 0;
     solution_detruire(&(pPlateau->solution));
 }
 
@@ -51,10 +51,10 @@ void plateau_detruire(Plateau* pPlateau) {
  * @param pPlateau Le plateau à remplire
  */
 void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
-    for(int i=0 ; i < pPlateau->tailleGrille ; ++i) {
-        for(int j=0 ; j < pPlateau->tailleGrille ; ++j) {
-            pPlateau->grille[i][j] = plateau_choisirLettre();
-            pPlateau->grid[i][j] = 0;
+    for(int i=0 ; i < pPlateau->tailleGrille.x ; ++i) {
+        for(int j=0 ; j < pPlateau->tailleGrille.y ; ++j) {
+            pPlateau->grille[j][i] = plateau_choisirLettre();
+            pPlateau->grid[j][i] = 0;
         }
     }
 }
@@ -71,8 +71,8 @@ void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
 void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
     char* grille = "EDRCANVCIRQAEBRU";
     int k;
-    for(int i=0 ; i < pPlateau->tailleGrille ; ++i) {
-        for(int j=0 ; j < pPlateau->tailleGrille ; ++j) {
+    for(int i=0 ; i < pPlateau->tailleGrille.x; ++i) {
+        for(int j=0 ; j < pPlateau->tailleGrille.y; ++j) {
             pPlateau->grille[j][i] = grille[k];
             ++k;
             pPlateau->grid[j][i] = 0;

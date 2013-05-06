@@ -8,6 +8,7 @@
 #define PLATEAU_H
 
 #include "solution.h"
+#include "couple.h"
 #define TAILLE_MOT_MIN 3
 #define TAILLE_MOT_MAX 32
 
@@ -18,12 +19,12 @@
  */ 
 typedef struct {
     char** grille; /*!< La grille de boggle */
-    unsigned int tailleGrille; /*!< La taille de la grille */
+    Couple tailleGrille; /*!< La taille de la grille */
     int** grid;
     Solution solution; /*!< La solution complète de cette grille de Boggle */
 } Plateau ;
 
-Plateau plateau_nouveau(const unsigned char pTailleGrille);
+Plateau plateau_nouveau(const Couple pTailleGrille);
 void plateau_remplirGrilleAleatoire(Plateau* pPlateau);
 void plateau_remplirGrillePredefinie(Plateau* pPlateau);
 double plateau_probaLettre(const char pLettre);

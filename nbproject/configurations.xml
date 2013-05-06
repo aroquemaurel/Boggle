@@ -4,7 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>lib/case.h</itemPath>
+      <itemPath>case.h</itemPath>
       <itemPath>lib/dictionnaire.h</itemPath>
       <itemPath>lib/interfaceNcurses.h</itemPath>
       <itemPath>lib/interfaceTexte.h</itemPath>
@@ -83,7 +83,7 @@
           <incDir>
             <pElem>lib</pElem>
           </incDir>
-          <commandLine>-lncurses -lpanel -lmenu -LCunit/lib -lcunit</commandLine>
+          <commandLine>-lncurses -lpanel -lmenu</commandLine>
         </cTool>
         <linkerTool>
           <linkerAddLib>
@@ -93,12 +93,31 @@
       </compileType>
       <item path="Complet.txt" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="case.h" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles">
-        <ccTool>
+        <cTool>
+          <incDir>
+            <pElem>Cunit/CUnit/Headers</pElem>
+          </incDir>
+          <commandLine>-LCunit/lib -lcunit</commandLine>
           <preprocessorList>
-            <Elem>"export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/aroquemaurel/boggle/Cunit/lib"</Elem>
+            <Elem>LD_LIBRARY_PATH=$HOME/cours/L2/projet4/boggle/Cunit/lib/</Elem>
           </preprocessorList>
-        </ccTool>
+        </cTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>Cunit/lib</pElem>
+          </linkerAddLib>
+          <linkerDynSerch>
+            <pElem>Cunit/lib</pElem>
+          </linkerDynSerch>
+          <additionalDep>Cunit/lib/libcunit.so</additionalDep>
+          <linkerLibItems>
+            <linkerLibFileItem>Cunit/lib/libcunit.so</linkerLibFileItem>
+          </linkerLibItems>
+          <commandLine>-LCunit/lib -lcunit</commandLine>
+        </linkerTool>
       </folder>
       <folder path="TestFiles/f1">
         <cTool>
@@ -156,8 +175,6 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="lib/case.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/interfaceNcurses.h" ex="false" tool="3" flavor2="0">
@@ -224,6 +241,8 @@
       </compileType>
       <item path="Complet.txt" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="case.h" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles/f1">
         <cTool>
           <commandLine>`cppunit-config --cflags`</commandLine>
@@ -280,8 +299,6 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="lib/case.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/interfaceNcurses.h" ex="false" tool="3" flavor2="0">

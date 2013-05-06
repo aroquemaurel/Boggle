@@ -7,12 +7,13 @@
 
 #include <string.h>
 #include <wchar.h>
+#include <time.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
 #include "util.h"
 #include "jeu.h"
-#include "case.h"
+#include "couple.h"
 
 /**
  * Affiche une chaine de caractère sur la console uniquement si le define MODE_DEBUG est vrai
@@ -94,6 +95,7 @@ void util_uppercase(char* pChaine) { // FIXME vérifier que le mot n'est pas en 
 		pChaine[i] -= 32;
             }
 	}
+    printf("%s", pChaine);
 }
 
 /**
@@ -204,10 +206,10 @@ void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {
  * @param pCase La case à chercher
  * @return Vrai si la case existe dans le tableau.
  */
-_Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase) {
+_Bool util_isInArray(const Couple* pTableau, const int pTaille, const Couple pCase) {
     _Bool continuer = true;
     for(int i = 0 ; (i < pTaille && continuer) ; ++i) {
-        if((pTableau[i].i == pCase.i) && (pTableau[i].j == pCase.j)) {
+        if((pTableau[i].x == pCase.x) && (pTableau[i].y == pCase.y)) {
             continuer = false;
         }
     }
@@ -224,4 +226,45 @@ _Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase) 
 void util_conversionTemps(const time_t pTimestamp, int* pMinutes, int* pSecondes) {
     *pMinutes = (pTimestamp / 60 % 60);
     *pSecondes  = pTimestamp % 60;
+}
+
+int util_cherchePremiereOccurenceDansTableau(char** pTableau, const int pTaille, char* pRecherche) {
+    int position = 0;
+
+    while (position < pTaille - 1 && strcmp( pTableau[position], pRecherche) != 0) {
+        ++position;
+    }
+
+    return (position == pTaille - 1 && strcmp( pTableau[position], pRecherche) != 0) ? -1 : position;
+}
+
+/**
+ * Nettoie toute la console
+ */
+void util_nettoyerConsole(void) {
+    printf("%c[2J", 0x1B); 
+}
+
+
+void util_viderBuffer(void) {
+    int c = 0;
+    while (c != '\n' && c != EOF) {
+        c = getchar();
+    }
+}
+  
+int util_lireChaine(char *chaine, int longueur) {
+    char *positionEntree = NULL;
+    if (fgets(chaine, longueur, stdin) != NULL) {
+        positionEntree = strchr(chaine, '\n');
+        if (positionEntree != NULL) {
+            *positionEntree = '\0';
+        } else {
+            util_viderBuffer();
+        }
+        return 1;
+    } else {        
+        util_viderBuffer();
+        return 0;
+    }
 }

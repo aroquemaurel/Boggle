@@ -25,7 +25,7 @@ typedef struct {
     unsigned int lgTimer; /*< Longueur du timer en secondes */
 } Jeu;
 
-Jeu jeu_nouveau(const char* pNomDico, const unsigned char pTaillePlateau, const unsigned int pLgTimer);
+Jeu jeu_nouveau(const char* pNomDico, const Couple pTaillePlateau, const unsigned int pLgTimer);
 void jeu_lancer(Jeu* pJeu);
 _Bool jeu_proposerMot(Jeu* pJeu, const char* pMot);
 bool jeu_compteurClaque(const Jeu pJeu);

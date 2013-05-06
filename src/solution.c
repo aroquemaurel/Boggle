@@ -67,11 +67,10 @@ int solution_getNbMotsDebut(Solution pSolution, char* pDebut) {
  * @param mot Le mot à ajouter
  */
 void solution_ajouterMot(Solution* pSolution, const char* mot) {
-    int i;
     if(!solution_motEstPresent(*pSolution, mot)) {
         pSolution->mots = realloc(pSolution->mots, (pSolution->nbMots+1) * sizeof(char*));
         pSolution->mots[pSolution->nbMots] = malloc((strlen(mot)+1) * sizeof(char));
-        strncpy(pSolution->mots[pSolution->nbMots], mot, sizeof(mot));
+        strncpy(pSolution->mots[pSolution->nbMots], mot, strlen(mot)+1);
         ++(pSolution->nbMots);
     }
 }

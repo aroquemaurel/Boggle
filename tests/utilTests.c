@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "CUnit/CUnit.h"
 #include "CUnit/Basic.h"
-#include "case.h"
+#include "couple.h"
 #include "util.h"
 #include <locale.h>
 
@@ -76,14 +76,14 @@ void testUtil_supprimerAccents() {
     CU_ASSERT (strcmp(result, "testeeeaaaeeeAAAEEE") == 0);
 }
 
-_Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase);
+_Bool util_isInArray(const Couple* pTableau, const int pTaille, const Couple pCase);
 
 void testUtil_isInArray() {
-    Case a, b, c, d, e, f;
-    a.i = 1; a.j = 2; b.i = 3; b.j = 4; c.i=5; c.j=6; d.i=7; 
-    d.j=8; e.i=9; e.j=10; f.i=11; f.j=12;
+    Couple a, b, c, d, e, f;
+    a.x = 1; a.y = 2; b.x = 3; b.y = 4; c.x=5; c.y=6; d.x=7; 
+    d.y=8; e.x=9; e.y=10; f.x=11; f.y=12;
     
-    Case tableau[8] = {a,b,c,d};
+    Couple tableau[8] = {a,b,c,d};
     CU_ASSERT(util_isInArray(tableau, 4, a));
     CU_ASSERT(util_isInArray(tableau, 4, b));
    CU_ASSERT(util_isInArray(tableau, 4, c)); 

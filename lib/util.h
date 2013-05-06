@@ -10,7 +10,8 @@
 
 #include <stdio.h>
 #include <time.h>
-#include "case.h"
+#include "couple.h"
+
 #define MODE_DEBUG 1 
 #define MOT_PRECEDENT 1
 #define MOT_SUIVANT 1
@@ -22,8 +23,11 @@ int util_substr(const char *chaine, int debut, int fin, char *result);
 void util_echanger(void** tableau, int a, int b);
 void util_quickSort(void** tableau, int debut, int fin, int (*fctCmp)(void*,void*));
 void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens);
-_Bool util_isInArray(const Case* pTableau, const int pTaille, const Case pCase);
+_Bool util_isInArray(const Couple* pTableau, const int pTaille, const Couple pCase);
 void util_conversionTemps(const time_t pTimestamp, int* pMinutes, int* pSecondes);
 int util_strcmp(void* str1, void* str2);
+int util_cherchePremiereOccurenceDansTableau(char** pTableau, const int pTaille, char* pRecherche) ;
+void util_nettoyerConsole(void);
+int util_lireChaine(char *chaine, int longueur);
 #endif	/* UTIL_H */
 
