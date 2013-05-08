@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Jeu de Boggle: Page principale</title>
+<title>Jeu de Boggle: Jeu de Boggle -- UE Projet</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,7 +83,7 @@ $(document).ready(function(){initNavTree('index.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,15 +94,45 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Jeu de Boggle Documentation</div>  </div>
+<div class="title"><a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> de Boggle -- UE Projet </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Antoine de Roquemaurel (G2.2) </dd>
+<dd>
+Fabrice Valleix (G2.2) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>07/05/13 à 18:20:03</dd></dl>
+<h1><a class="anchor" id="execution"></a>
+Éxecution du programme</h1>
+<p>Afin d'executer le programme, un fichier de test fonctionnel à été créer, celui-ci génère un executable du nom de "./boggle", celui-ci est placé à la racine du projet.</p>
+<p>Il doit être executé avec des arguments : </p>
+<ul>
+<li><div class="fragment"><div class="line">./boggle --solveur </div>
+</div><!-- fragment --> Lance un solveur, c'est-à-dire la version 1, </li>
+<li><div class="fragment"><div class="line">./boggle --text </div>
+</div><!-- fragment --> Lance le jeu en mode text, soit la version 2 </li>
+<li><div class="fragment"><div class="line">./boggle --ncurses </div>
+</div><!-- fragment --> Lance le jeu avec le mode ncurses, la version 3</li>
+</ul>
+<h1><a class="anchor" id="version1"></a>
+Version 1 : Le résolveur</h1>
+<p>Afin d'appeller la version 1 de l'application, l'executable doit être appellé à l'aide de l'argument --solveur</p>
+<p>Dans cette version, une grille carrée de la taille demandée par l'utilisateur est génére, en tenant compte de la fréquence des lettres dans la langue Française. Une fois la grille générée, la position d'une case est demandée à l'utilisateur, l'utilisateur entre donc les deux coordonnées, et tous les mots commençant par cette case seront affichés à l'écran.</p>
+<p>Attention, les coordonnées de la grille commences à zéro.</p>
+<h1><a class="anchor" id="version2"></a>
+Version 2 : Le mode texte</h1>
+<p>Afin d'appeller la version 2, l'executable doit être appellé à l'aide de l'argument --text</p>
+<p>Cette version fait appel à la version 1, en effet, au lancement de l'application, il est de nouveau demandé la taille de la grille, ensuite l'intégralité de la grille générer est résolue. Une fois cette étape franchie, l'utilisateur à 3 minutes pour entrer le plus de mots possibles, l'application lui signalant si le mot est accepté ou non, une fois ce temps impartis, la solution est affichée, puis le nombre de points obtenu par le joueur.</p>
+<h1><a class="anchor" id="version3"></a>
+Version 3 : L'interface Ncurses</h1>
+<p>Afin d'appeller la version 3, l'executable doit être appellé à l'aide de l'argument --ncurses</p>
+<p>Cette version suit le même principe que la version précédente, à la différence près qu'elle utilise la bibliothèque Ncurses. Ainsi, la saisie des mots se fait dorénavant avec les touches fléchées du clavier, et espace pour ajouter une lettre au mot. Pour proposer le mot surligné, la touche entrée doit être appuyée. Il est également possible de demander le nombre de mots commençant par la case séléctionnée à l'aide de la touche h.</p>
+<p>Une fois les 3 minutes écoulées, les mots proposés par l'utilisateur et le nombre de points obtenus sont affichés, il est proposé à l'utilisateur d'afficher la solution complète. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:02 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

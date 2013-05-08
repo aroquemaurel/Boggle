@@ -8,7 +8,7 @@ Affichage avec la bibliothèque Ncurses Affiche et permet de jouer au jeu de Bog
 
 {\ttfamily \#include $<$ncurses.\-h$>$}\\*
 {\ttfamily \#include \char`\"{}solution.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}case.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}couple.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}plateau.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}jeu.\-h\char`\"{}}\\*
 \subsection*{Macros}
@@ -34,11 +34,11 @@ void \hyperlink{interfaceNcurses_8h_ad8d628ccec45bfb57ace978b88a6dd0e}{jeu\-\_\-
 \begin{DoxyCompactList}\small\item\em Lance le mode Ncurses. \end{DoxyCompactList}\item 
 W\-I\-N\-D\-O\-W $\ast$ \hyperlink{interfaceNcurses_8h_a11139ea3bdd922798149d2fa93e93457}{interface\-Ncurses\-\_\-initialiser} (void)
 \begin{DoxyCompactList}\small\item\em Initialise l'interface Ncurses. \end{DoxyCompactList}\item 
-void \hyperlink{interfaceNcurses_8h_a7f08cba800239f2e0bdfa3ed50303595}{interface\-Ncurses\-\_\-afficher\-Grille} (const \hyperlink{structPlateau}{Plateau} p\-Plateau, const \hyperlink{structCase}{Case} p\-Selected\-Case, const \hyperlink{structCase}{Case} $\ast$p\-Used\-Case, const int p\-Lg\-Used\-Case)
+void \hyperlink{interfaceNcurses_8h_a49a59b92585fda5d3e024b9adca97c82}{interface\-Ncurses\-\_\-afficher\-Grille} (const \hyperlink{structPlateau}{Plateau} p\-Plateau, const \hyperlink{structCouple}{Couple} p\-Selected\-Case, const \hyperlink{structCouple}{Couple} $\ast$p\-Used\-Case, const int p\-Lg\-Used\-Case)
 \begin{DoxyCompactList}\small\item\em Affiche la grille, composée de couleurs en fonctions des différentes cases. \end{DoxyCompactList}\item 
 void \hyperlink{interfaceNcurses_8h_a8107452f526ae2b4bb7db9daadd39fa9}{interface\-Ncurses\-\_\-terminer} (W\-I\-N\-D\-O\-W $\ast$fenetre, \hyperlink{structJeu}{Jeu} p\-Jeu)
 \begin{DoxyCompactList}\small\item\em Termine le jeu. \end{DoxyCompactList}\item 
-void \hyperlink{interfaceNcurses_8h_aff38ebc6fd2d7cf8263278889833b289}{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu} (const \hyperlink{structJeu}{Jeu} p\-Jeu, char $\ast$p\-Mot, const \hyperlink{structCase}{Case} p\-Selected\-Case, \hyperlink{structCase}{Case} $\ast$p\-Used\-Case)
+void \hyperlink{interfaceNcurses_8h_a0cab3f7fca42b611b7408b180e875e65}{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu} (const \hyperlink{structJeu}{Jeu} p\-Jeu, char $\ast$p\-Mot, const \hyperlink{structCouple}{Couple} p\-Selected\-Case, \hyperlink{structCouple}{Couple} $\ast$p\-Used\-Case)
 \begin{DoxyCompactList}\small\item\em Affiche la fenêtre permettant de jouer. \end{DoxyCompactList}\item 
 void \hyperlink{interfaceNcurses_8h_ad154999bd280bf4911c014bcaf00670f}{interface\-Ncurses\-\_\-afficher\-Boite\-Dialogue} (const \hyperlink{structJeu}{Jeu} p\-Jeu)
 \begin{DoxyCompactList}\small\item\em Affiche une boite de dialogue de fin de \hyperlink{structJeu}{Jeu}. \end{DoxyCompactList}\item 
@@ -68,16 +68,16 @@ Affiche une boite de dialogue de fin de \hyperlink{structJeu}{Jeu}.
 {\em p\-Jeu} & Le jeu \\
 \hline
 \end{DoxyParams}
-\hypertarget{interfaceNcurses_8h_aff38ebc6fd2d7cf8263278889833b289}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}}
+\hypertarget{interfaceNcurses_8h_a0cab3f7fca42b611b7408b180e875e65}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}}
 \index{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu@{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
 \subsubsection[{interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Fenetre\-Jeu (
 \begin{DoxyParamCaption}
 \item[{const {\bf Jeu}}]{p\-Jeu, }
 \item[{char $\ast$}]{p\-Mot, }
-\item[{const {\bf Case}}]{p\-Selected\-Case, }
-\item[{{\bf Case} $\ast$}]{p\-Used\-Case}
+\item[{const {\bf Couple}}]{p\-Selected\-Case, }
+\item[{{\bf Couple} $\ast$}]{p\-Used\-Case}
 \end{DoxyParamCaption}
-)}}\label{interfaceNcurses_8h_aff38ebc6fd2d7cf8263278889833b289}
+)}}\label{interfaceNcurses_8h_a0cab3f7fca42b611b7408b180e875e65}
 
 
 Affiche la fenêtre permettant de jouer. 
@@ -109,16 +109,16 @@ Affiche la fenêtre avec la solution complète du jeu.
 {\em p\-Jeu} & Le jeu \\
 \hline
 \end{DoxyParams}
-\hypertarget{interfaceNcurses_8h_a7f08cba800239f2e0bdfa3ed50303595}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Grille@{interface\-Ncurses\-\_\-afficher\-Grille}}
+\hypertarget{interfaceNcurses_8h_a49a59b92585fda5d3e024b9adca97c82}{\index{interface\-Ncurses.\-h@{interface\-Ncurses.\-h}!interface\-Ncurses\-\_\-afficher\-Grille@{interface\-Ncurses\-\_\-afficher\-Grille}}
 \index{interface\-Ncurses\-\_\-afficher\-Grille@{interface\-Ncurses\-\_\-afficher\-Grille}!interfaceNcurses.h@{interface\-Ncurses.\-h}}
 \subsubsection[{interface\-Ncurses\-\_\-afficher\-Grille}]{\setlength{\rightskip}{0pt plus 5cm}void interface\-Ncurses\-\_\-afficher\-Grille (
 \begin{DoxyParamCaption}
 \item[{const {\bf Plateau}}]{p\-Plateau, }
-\item[{const {\bf Case}}]{p\-Selected\-Case, }
-\item[{const {\bf Case} $\ast$}]{p\-Used\-Case, }
+\item[{const {\bf Couple}}]{p\-Selected\-Case, }
+\item[{const {\bf Couple} $\ast$}]{p\-Used\-Case, }
 \item[{const int}]{p\-Lg\-Used\-Case}
 \end{DoxyParamCaption}
-)}}\label{interfaceNcurses_8h_a7f08cba800239f2e0bdfa3ed50303595}
+)}}\label{interfaceNcurses_8h_a49a59b92585fda5d3e024b9adca97c82}
 
 
 Affiche la grille, composée de couleurs en fonctions des différentes cases. 

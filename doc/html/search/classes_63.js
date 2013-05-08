@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['case',['Case',['../structCase.html',1,'']]]
+  ['couple',['Couple',['../structCouple.html',1,'']]]
 ];

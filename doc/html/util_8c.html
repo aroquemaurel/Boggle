@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('util_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,11 +110,13 @@ $(document).ready(function(){initNavTree('util_8c.html','');});
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br/>
 <code>#include &lt;wchar.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;stdbool.h&gt;</code><br/>
-<code>#include &quot;util.h&quot;</code><br/>
-<code>#include &quot;jeu.h&quot;</code><br/>
-<code>#include &quot;case.h&quot;</code><br/>
+<code>#include &lt;locale.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="jeu_8h_source.html">jeu.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="couple_8h_source.html">couple.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
@@ -131,16 +133,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
 <tr class="memdesc:a731fef986576fd9259a24619ca099bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne un nombre aléatoire entre pDebut et pFin.  <a href="#a731fef986576fd9259a24619ca099bb2"></a><br/></td></tr>
 <tr class="memitem:a08242f964f0e2453993b26df48953c65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a08242f964f0e2453993b26df48953c65">util_substr</a> (const char *chaine, int debut, int fin, char *result)</td></tr>
 <tr class="memdesc:a08242f964f0e2453993b26df48953c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer une sous-chaine de caractère de chaine depuis début jusqu'à fin.  <a href="#a08242f964f0e2453993b26df48953c65"></a><br/></td></tr>
-<tr class="memitem:a76c1cbcd1bd43ad75cb93a6ee17bd65e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a76c1cbcd1bd43ad75cb93a6ee17bd65e">util_echanger</a> (char **tableau, int a, int b)</td></tr>
-<tr class="memdesc:a76c1cbcd1bd43ad75cb93a6ee17bd65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echange deux variables dans un tableau de chaine de caractères.  <a href="#a76c1cbcd1bd43ad75cb93a6ee17bd65e"></a><br/></td></tr>
-<tr class="memitem:a2bffc43ebb03a4eb18361ac919369aba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a2bffc43ebb03a4eb18361ac919369aba">util_quickSort</a> (char **tableau, int debut, int fin)</td></tr>
-<tr class="memdesc:a2bffc43ebb03a4eb18361ac919369aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue un tri sur une porition d'un tableau de chaine de caractère s.  <a href="#a2bffc43ebb03a4eb18361ac919369aba"></a><br/></td></tr>
+<tr class="memitem:aa4fd96e539887eacae8c1aec9fc27231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#aa4fd96e539887eacae8c1aec9fc27231">util_echanger</a> (void **tableau, int a, int b)</td></tr>
+<tr class="memdesc:aa4fd96e539887eacae8c1aec9fc27231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echange deux variables dans un tableau de chaine de caractères.  <a href="#aa4fd96e539887eacae8c1aec9fc27231"></a><br/></td></tr>
+<tr class="memitem:a5b37b90ea6bfd0c77645dac7a6cd6c44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a5b37b90ea6bfd0c77645dac7a6cd6c44">util_quickSort</a> (void **tableau, int debut, int fin, int(*fctCmp)(void *, void *))</td></tr>
+<tr class="memdesc:a5b37b90ea6bfd0c77645dac7a6cd6c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue un tri sur une portion d'un tableau de chaine de caractère s.  <a href="#a5b37b90ea6bfd0c77645dac7a6cd6c44"></a><br/></td></tr>
+<tr class="memitem:acac73a98603cb7f87bef8d4fef4faa3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acac73a98603cb7f87bef8d4fef4faa3f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>util_strcmp</b> (void *str1, void *str2)</td></tr>
 <tr class="memitem:a61ce43583b52fd8f8b69b34dcb411ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a61ce43583b52fd8f8b69b34dcb411ef9">util_deplacerCurseurDunMot</a> (FILE *pFichier, const int pSens)</td></tr>
 <tr class="memdesc:a61ce43583b52fd8f8b69b34dcb411ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace le curseurdans le fichier au début du mot précédent ou suivant en fonction de pSens.  <a href="#a61ce43583b52fd8f8b69b34dcb411ef9"></a><br/></td></tr>
-<tr class="memitem:a0311f1c6b9a4bc8506c8490c63c6bf6b"><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a0311f1c6b9a4bc8506c8490c63c6bf6b">util_isInArray</a> (const <a class="el" href="structCase.html">Case</a> *pTableau, const int pTaille, const <a class="el" href="structCase.html">Case</a> pCase)</td></tr>
-<tr class="memdesc:a0311f1c6b9a4bc8506c8490c63c6bf6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne vrai si la case pCase est présente dans le tableau.  <a href="#a0311f1c6b9a4bc8506c8490c63c6bf6b"></a><br/></td></tr>
+<tr class="memitem:abfde6a409b173233c0c9cbceccfbe38e"><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#abfde6a409b173233c0c9cbceccfbe38e">util_isInArray</a> (const <a class="el" href="structCouple.html">Couple</a> *pTableau, const int pTaille, const <a class="el" href="structCouple.html">Couple</a> pCase)</td></tr>
+<tr class="memdesc:abfde6a409b173233c0c9cbceccfbe38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne vrai si la case pCase est présente dans le tableau.  <a href="#abfde6a409b173233c0c9cbceccfbe38e"></a><br/></td></tr>
 <tr class="memitem:ae959a017ee969585d79f68fffabf710d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ae959a017ee969585d79f68fffabf710d">util_conversionTemps</a> (const time_t pTimestamp, int *pMinutes, int *pSecondes)</td></tr>
 <tr class="memdesc:ae959a017ee969585d79f68fffabf710d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertis un nombre de secondes en minutes et secondes.  <a href="#ae959a017ee969585d79f68fffabf710d"></a><br/></td></tr>
+<tr class="memitem:a3342d27579ac6a81389f737e4c02de96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3342d27579ac6a81389f737e4c02de96"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>util_cherchePremiereOccurenceDansTableau</b> (char **pTableau, const int pTaille, char *pRecherche)</td></tr>
+<tr class="memitem:ab1239cb83fc1a85d92c396a0996415ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1239cb83fc1a85d92c396a0996415ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ab1239cb83fc1a85d92c396a0996415ab">util_nettoyerConsole</a> (void)</td></tr>
+<tr class="memdesc:ab1239cb83fc1a85d92c396a0996415ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nettoie toute la console. <br/></td></tr>
+<tr class="memitem:a322e084287166c68a5f565da8ea552d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a322e084287166c68a5f565da8ea552d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>util_viderBuffer</b> (void)</td></tr>
+<tr class="memitem:aa3f4aebca18812fdde0e373bd9c8d859"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3f4aebca18812fdde0e373bd9c8d859"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>util_lireChaine</b> (char *chaine, int longueur)</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Fonctions utiles à l'ensemble du projet Toutes les fonctions de bases utiles au projet, ces fonctions travaillent sur des types de bae et ne sont pas spécfiques au projet, ce module permet de meux organiser le code. </p>
@@ -257,14 +270,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
 
 </div>
 </div>
-<a class="anchor" id="a76c1cbcd1bd43ad75cb93a6ee17bd65e"></a>
+<a class="anchor" id="aa4fd96e539887eacae8c1aec9fc27231"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void util_echanger </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">void **&#160;</td>
           <td class="paramname"><em>tableau</em>, </td>
         </tr>
         <tr>
@@ -290,7 +303,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
 <p>Echange deux variables dans un tableau de chaine de caractères. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tableau</td><td>Le tableau sur laquelle on effectue l'échange </td></tr>
+    <tr><td class="paramname">tableau</td><td>Le tableau sur laquelle on effectue l'échange, tableau de n'importe quel type d'éléments. </td></tr>
     <tr><td class="paramname">a</td><td>La première valeure à échanger </td></tr>
     <tr><td class="paramname">b</td><td>La seconde valeure </td></tr>
   </table>
@@ -299,14 +312,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
 
 </div>
 </div>
-<a class="anchor" id="a0311f1c6b9a4bc8506c8490c63c6bf6b"></a>
+<a class="anchor" id="abfde6a409b173233c0c9cbceccfbe38e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">_Bool util_isInArray </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structCase.html">Case</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCouple.html">Couple</a> *&#160;</td>
           <td class="paramname"><em>pTableau</em>, </td>
         </tr>
         <tr>
@@ -318,7 +331,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structCase.html">Case</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCouple.html">Couple</a>&#160;</td>
           <td class="paramname"><em>pCase</em>&#160;</td>
         </tr>
         <tr>
@@ -378,14 +391,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
 
 </div>
 </div>
-<a class="anchor" id="a2bffc43ebb03a4eb18361ac919369aba"></a>
+<a class="anchor" id="a5b37b90ea6bfd0c77645dac7a6cd6c44"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void util_quickSort </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">void **&#160;</td>
           <td class="paramname"><em>tableau</em>, </td>
         </tr>
         <tr>
@@ -398,7 +411,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fin</em>&#160;</td>
+          <td class="paramname"><em>fin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(void *, void *)&#160;</td>
+          <td class="paramname"><em>fctCmp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -408,13 +427,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
       </table>
 </div><div class="memdoc">
 
-<p>Effectue un tri sur une porition d'un tableau de chaine de caractère s. </p>
-<p>Ce tri utilise l'algorithme du tri rapide. </p>
+<p>Effectue un tri sur une portion d'un tableau de chaine de caractère s. </p>
+<p>Ce tri s'effectue en fonction du critère de la fonction de comparaison fctCmp Ce tri utilise l'algorithme du tri rapide. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tableau</td><td>Le tableau à trier </td></tr>
+    <tr><td class="paramname">tableau</td><td>Le tableau à trier. Les éléments sont de n'importes quels type. </td></tr>
     <tr><td class="paramname">debut</td><td>Le début du tableau à trier </td></tr>
     <tr><td class="paramname">fin</td><td>La fin du tableau à trier </td></tr>
+    <tr><td class="paramname">fctCmp</td><td>Pointeurs de fonction pour la comparaison de deux éléments du tableau. retourne un nombre inférieur à 0 si param 1 doit être avant 2, supérieur à 0 si après ou égal à 0 si les deux paramètre sont égaux dans le classement </td></tr>
   </table>
   </dd>
 </dl>
@@ -526,7 +546,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="util_8c.html">util.c</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:01 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

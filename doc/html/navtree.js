@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "Jeu de Boggle", "index.html", [
+    [ "Jeu de Boggle -- UE Projet", "index.html", null ],
     [ "Structures de données", null, [
       [ "Structures de données", "annotated.html", "annotated" ],
       [ "Index des structures de données", "classes.html", null ],
@@ -13,7 +14,8 @@ var NAVTREE =
       [ "Liste des fichiers", "files.html", "files" ],
       [ "Variables globale", "globals.html", [
         [ "Tout", "globals.html", null ],
-        [ "Fonctions", "globals_func.html", null ]
+        [ "Fonctions", "globals_func.html", null ],
+        [ "Énumérations", "globals_enum.html", null ]
       ] ]
     ] ]
   ] ]

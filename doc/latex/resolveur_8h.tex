@@ -8,25 +8,47 @@ Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolu
 
 {\ttfamily \#include \char`\"{}plateau.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}dictionnaire.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jeu.\-h\char`\"{}}\\*
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{resolveur_8h_a8696ca50e0d0e6d4c05399c26372709d}{resolveur} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau, \hyperlink{structDico}{Dico} p\-Dico)
-\begin{DoxyCompactList}\small\item\em Résoud une grille de boggle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{resolveur_8h_a878e12ec014ce4e43b95897b5c06a358}{resolve\-Toute\-La\-Grille} (\hyperlink{structPlateau}{Plateau} $\ast$p\-Plateau, \hyperlink{structDico}{Dico} p\-Dico)
+\begin{DoxyCompactList}\small\item\em Résoud une grille de boggle. \end{DoxyCompactList}\item 
+\hypertarget{resolveur_8h_a58315ebce592e1e6d88328da6505b98f}{\hyperlink{structSolution}{Solution} {\bfseries resolveur\-\_\-resolve\-Une\-Case} (\hyperlink{structPlateau}{Plateau} p\-Plateau, \hyperlink{structDico}{Dico} p\-Dico, \hyperlink{structCouple}{Couple} p\-Case)}\label{resolveur_8h_a58315ebce592e1e6d88328da6505b98f}
+
+\item 
+void \hyperlink{resolveur_8h_ae520f009aac7af89e1bff478de802a95}{jeu\-\_\-lancer\-Mode\-Solveur} (\hyperlink{structJeu}{Jeu} p\-Jeu)
+\begin{DoxyCompactList}\small\item\em Lance le jeu en mode solveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
 Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans le module \hyperlink{structSolution}{Solution}. 
 
 \subsection{Documentation des fonctions}
-\hypertarget{resolveur_8h_a8696ca50e0d0e6d4c05399c26372709d}{\index{resolveur.\-h@{resolveur.\-h}!resolveur@{resolveur}}
-\index{resolveur@{resolveur}!resolveur.h@{resolveur.\-h}}
-\subsubsection[{resolveur}]{\setlength{\rightskip}{0pt plus 5cm}void resolveur (
+\hypertarget{resolveur_8h_ae520f009aac7af89e1bff478de802a95}{\index{resolveur.\-h@{resolveur.\-h}!jeu\-\_\-lancer\-Mode\-Solveur@{jeu\-\_\-lancer\-Mode\-Solveur}}
+\index{jeu\-\_\-lancer\-Mode\-Solveur@{jeu\-\_\-lancer\-Mode\-Solveur}!resolveur.h@{resolveur.\-h}}
+\subsubsection[{jeu\-\_\-lancer\-Mode\-Solveur}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\-\_\-lancer\-Mode\-Solveur (
+\begin{DoxyParamCaption}
+\item[{{\bf Jeu}}]{p\-Jeu}
+\end{DoxyParamCaption}
+)}}\label{resolveur_8h_ae520f009aac7af89e1bff478de802a95}
+
+
+Lance le jeu en mode solveur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Jeu} & le jeu à lancer \\
+\hline
+\end{DoxyParams}
+\hypertarget{resolveur_8h_a878e12ec014ce4e43b95897b5c06a358}{\index{resolveur.\-h@{resolveur.\-h}!resolve\-Toute\-La\-Grille@{resolve\-Toute\-La\-Grille}}
+\index{resolve\-Toute\-La\-Grille@{resolve\-Toute\-La\-Grille}!resolveur.h@{resolveur.\-h}}
+\subsubsection[{resolve\-Toute\-La\-Grille}]{\setlength{\rightskip}{0pt plus 5cm}void resolve\-Toute\-La\-Grille (
 \begin{DoxyParamCaption}
 \item[{{\bf Plateau} $\ast$}]{p\-Plateau, }
 \item[{{\bf Dico}}]{p\-Dico}
 \end{DoxyParamCaption}
-)}}\label{resolveur_8h_a8696ca50e0d0e6d4c05399c26372709d}
+)}}\label{resolveur_8h_a878e12ec014ce4e43b95897b5c06a358}
 
 
 Résoud une grille de boggle. 

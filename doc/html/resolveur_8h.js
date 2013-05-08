@@ -1,4 +1,6 @@
 var resolveur_8h =
 [
-    [ "resolveur", "resolveur_8h.html#a8696ca50e0d0e6d4c05399c26372709d", null ]
+    [ "jeu_lancerModeSolveur", "resolveur_8h.html#ae520f009aac7af89e1bff478de802a95", null ],
+    [ "resolveTouteLaGrille", "resolveur_8h.html#a878e12ec014ce4e43b95897b5c06a358", null ],
+    [ "resolveur_resolveUneCase", "resolveur_8h.html#a58315ebce592e1e6d88328da6505b98f", null ]
 ];

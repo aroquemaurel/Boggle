@@ -1,5 +1,7 @@
 var resolveur_8c =
 [
-    [ "recurse", "resolveur_8c.html#a1eacf34755bde03a6bc60c79383bd657", null ],
-    [ "resolveur", "resolveur_8c.html#a8696ca50e0d0e6d4c05399c26372709d", null ]
+    [ "jeu_lancerModeSolveur", "resolveur_8c.html#ae520f009aac7af89e1bff478de802a95", null ],
+    [ "recurse", "resolveur_8c.html#af0316a5a4d0c2659b4218bdfdb321d29", null ],
+    [ "resolveTouteLaGrille", "resolveur_8c.html#a878e12ec014ce4e43b95897b5c06a358", null ],
+    [ "resolveur_resolveUneCase", "resolveur_8c.html#a0e712294dd0869c9bc1e97492358b2ef", null ]
 ];

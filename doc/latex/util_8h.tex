@@ -8,7 +8,7 @@ Fonctions utiles à l'ensemble du projet Toutes les fonctions de bases utiles au
 
 {\ttfamily \#include $<$stdio.\-h$>$}\\*
 {\ttfamily \#include $<$time.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}case.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}couple.\-h\char`\"{}}\\*
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,18 +32,28 @@ char \hyperlink{util_8h_a731fef986576fd9259a24619ca099bb2}{util\-\_\-nb\-Aleatoi
 \begin{DoxyCompactList}\small\item\em Retourne un nombre aléatoire entre p\-Debut et p\-Fin. \end{DoxyCompactList}\item 
 int \hyperlink{util_8h_a08242f964f0e2453993b26df48953c65}{util\-\_\-substr} (const char $\ast$chaine, int debut, int fin, char $\ast$result)
 \begin{DoxyCompactList}\small\item\em Créer une sous-\/chaine de caractère de chaine depuis début jusqu'à fin. \end{DoxyCompactList}\item 
-\hypertarget{util_8h_a19d9ecb431460acfecc9a06d77562b12}{void {\bfseries util\-\_\-echanger} (char $\ast$tableau\mbox{[}$\,$\mbox{]}, int a, int b)}\label{util_8h_a19d9ecb431460acfecc9a06d77562b12}
-
-\item 
-\hypertarget{util_8h_aa06b0ea16c7c3c836904835f252b95e8}{void {\bfseries util\-\_\-quick\-Sort} (char $\ast$tableau\mbox{[}$\,$\mbox{]}, int debut, int fin)}\label{util_8h_aa06b0ea16c7c3c836904835f252b95e8}
-
-\item 
+void \hyperlink{util_8h_aa4fd96e539887eacae8c1aec9fc27231}{util\-\_\-echanger} (void $\ast$$\ast$tableau, int a, int b)
+\begin{DoxyCompactList}\small\item\em Echange deux variables dans un tableau de chaine de caractères. \end{DoxyCompactList}\item 
+void \hyperlink{util_8h_a5b37b90ea6bfd0c77645dac7a6cd6c44}{util\-\_\-quick\-Sort} (void $\ast$$\ast$tableau, int debut, int fin, int($\ast$fct\-Cmp)(void $\ast$, void $\ast$))
+\begin{DoxyCompactList}\small\item\em Effectue un tri sur une portion d'un tableau de chaine de caractère s. \end{DoxyCompactList}\item 
 void \hyperlink{util_8h_a61ce43583b52fd8f8b69b34dcb411ef9}{util\-\_\-deplacer\-Curseur\-Dun\-Mot} (F\-I\-L\-E $\ast$p\-Fichier, const int p\-Sens)
 \begin{DoxyCompactList}\small\item\em Déplace le curseurdans le fichier au début du mot précédent ou suivant en fonction de p\-Sens. \end{DoxyCompactList}\item 
-\-\_\-\-Bool \hyperlink{util_8h_a0311f1c6b9a4bc8506c8490c63c6bf6b}{util\-\_\-is\-In\-Array} (const \hyperlink{structCase}{Case} $\ast$p\-Tableau, const int p\-Taille, const \hyperlink{structCase}{Case} p\-Case)
+\-\_\-\-Bool \hyperlink{util_8h_abfde6a409b173233c0c9cbceccfbe38e}{util\-\_\-is\-In\-Array} (const \hyperlink{structCouple}{Couple} $\ast$p\-Tableau, const int p\-Taille, const \hyperlink{structCouple}{Couple} p\-Case)
 \begin{DoxyCompactList}\small\item\em Retourne vrai si la case p\-Case est présente dans le tableau. \end{DoxyCompactList}\item 
 void \hyperlink{util_8h_ae959a017ee969585d79f68fffabf710d}{util\-\_\-conversion\-Temps} (const time\-\_\-t p\-Timestamp, int $\ast$p\-Minutes, int $\ast$p\-Secondes)
-\begin{DoxyCompactList}\small\item\em Convertis un nombre de secondes en minutes et secondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convertis un nombre de secondes en minutes et secondes. \end{DoxyCompactList}\item 
+\hypertarget{util_8h_acac73a98603cb7f87bef8d4fef4faa3f}{int {\bfseries util\-\_\-strcmp} (void $\ast$str1, void $\ast$str2)}\label{util_8h_acac73a98603cb7f87bef8d4fef4faa3f}
+
+\item 
+\hypertarget{util_8h_a3342d27579ac6a81389f737e4c02de96}{int {\bfseries util\-\_\-cherche\-Premiere\-Occurence\-Dans\-Tableau} (char $\ast$$\ast$p\-Tableau, const int p\-Taille, char $\ast$p\-Recherche)}\label{util_8h_a3342d27579ac6a81389f737e4c02de96}
+
+\item 
+\hypertarget{util_8h_ab1239cb83fc1a85d92c396a0996415ab}{void \hyperlink{util_8h_ab1239cb83fc1a85d92c396a0996415ab}{util\-\_\-nettoyer\-Console} (void)}\label{util_8h_ab1239cb83fc1a85d92c396a0996415ab}
+
+\begin{DoxyCompactList}\small\item\em Nettoie toute la console. \end{DoxyCompactList}\item 
+\hypertarget{util_8h_aa3f4aebca18812fdde0e373bd9c8d859}{int {\bfseries util\-\_\-lire\-Chaine} (char $\ast$chaine, int longueur)}\label{util_8h_aa3f4aebca18812fdde0e373bd9c8d859}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
@@ -110,15 +120,37 @@ Déplace le curseurdans le fichier au début du mot précédent ou suivant en fo
 {\em p\-Sens} & le sens du déplacement M\-O\-T\-\_\-\-P\-R\-E\-C\-E\-D\-E\-N\-T ou M\-O\-T\-\_\-\-S\-U\-I\-V\-A\-N\-T \\
 \hline
 \end{DoxyParams}
-\hypertarget{util_8h_a0311f1c6b9a4bc8506c8490c63c6bf6b}{\index{util.\-h@{util.\-h}!util\-\_\-is\-In\-Array@{util\-\_\-is\-In\-Array}}
+\hypertarget{util_8h_aa4fd96e539887eacae8c1aec9fc27231}{\index{util.\-h@{util.\-h}!util\-\_\-echanger@{util\-\_\-echanger}}
+\index{util\-\_\-echanger@{util\-\_\-echanger}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-echanger}]{\setlength{\rightskip}{0pt plus 5cm}void util\-\_\-echanger (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{tableau, }
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}}\label{util_8h_aa4fd96e539887eacae8c1aec9fc27231}
+
+
+Echange deux variables dans un tableau de chaine de caractères. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tableau} & Le tableau sur laquelle on effectue l'échange, tableau de n'importe quel type d'éléments. \\
+\hline
+{\em a} & La première valeure à échanger \\
+\hline
+{\em b} & La seconde valeure \\
+\hline
+\end{DoxyParams}
+\hypertarget{util_8h_abfde6a409b173233c0c9cbceccfbe38e}{\index{util.\-h@{util.\-h}!util\-\_\-is\-In\-Array@{util\-\_\-is\-In\-Array}}
 \index{util\-\_\-is\-In\-Array@{util\-\_\-is\-In\-Array}!util.h@{util.\-h}}
 \subsubsection[{util\-\_\-is\-In\-Array}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-Bool util\-\_\-is\-In\-Array (
 \begin{DoxyParamCaption}
-\item[{const {\bf Case} $\ast$}]{p\-Tableau, }
+\item[{const {\bf Couple} $\ast$}]{p\-Tableau, }
 \item[{const int}]{p\-Taille, }
-\item[{const {\bf Case}}]{p\-Case}
+\item[{const {\bf Couple}}]{p\-Case}
 \end{DoxyParamCaption}
-)}}\label{util_8h_a0311f1c6b9a4bc8506c8490c63c6bf6b}
+)}}\label{util_8h_abfde6a409b173233c0c9cbceccfbe38e}
 
 
 Retourne vrai si la case p\-Case est présente dans le tableau. 
@@ -157,6 +189,31 @@ Retourne un nombre aléatoire entre p\-Debut et p\-Fin.
 \begin{DoxyReturn}{Renvoie}
 Le nombre généré 
 \end{DoxyReturn}
+\hypertarget{util_8h_a5b37b90ea6bfd0c77645dac7a6cd6c44}{\index{util.\-h@{util.\-h}!util\-\_\-quick\-Sort@{util\-\_\-quick\-Sort}}
+\index{util\-\_\-quick\-Sort@{util\-\_\-quick\-Sort}!util.h@{util.\-h}}
+\subsubsection[{util\-\_\-quick\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void util\-\_\-quick\-Sort (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{tableau, }
+\item[{int}]{debut, }
+\item[{int}]{fin, }
+\item[{int($\ast$)(void $\ast$, void $\ast$)}]{fct\-Cmp}
+\end{DoxyParamCaption}
+)}}\label{util_8h_a5b37b90ea6bfd0c77645dac7a6cd6c44}
+
+
+Effectue un tri sur une portion d'un tableau de chaine de caractère s. 
+
+Ce tri s'effectue en fonction du critère de la fonction de comparaison fct\-Cmp Ce tri utilise l'algorithme du tri rapide. 
+\begin{DoxyParams}{Paramètres}
+{\em tableau} & Le tableau à trier. Les éléments sont de n'importes quels type. \\
+\hline
+{\em debut} & Le début du tableau à trier \\
+\hline
+{\em fin} & La fin du tableau à trier \\
+\hline
+{\em fct\-Cmp} & Pointeurs de fonction pour la comparaison de deux éléments du tableau. retourne un nombre inférieur à 0 si param 1 doit être avant 2, supérieur à 0 si après ou égal à 0 si les deux paramètre sont égaux dans le classement \\
+\hline
+\end{DoxyParams}
 \hypertarget{util_8h_a08242f964f0e2453993b26df48953c65}{\index{util.\-h@{util.\-h}!util\-\_\-substr@{util\-\_\-substr}}
 \index{util\-\_\-substr@{util\-\_\-substr}!util.h@{util.\-h}}
 \subsubsection[{util\-\_\-substr}]{\setlength{\rightskip}{0pt plus 5cm}int util\-\_\-substr (

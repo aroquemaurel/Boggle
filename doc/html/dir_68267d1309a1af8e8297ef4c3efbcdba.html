@@ -83,7 +83,7 @@ $(document).ready(function(){initNavTree('dir_68267d1309a1af8e8297ef4c3efbcdba.h
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,14 +104,16 @@ Fichiers</h2></td></tr>
 <tr class="memdesc:dictionnaire_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du dictionnaire Fonctions de gestion du dictionnaire, le dictionnaire doit être dans un fichier texte avec un mot différent par ligne. <br/></td></tr>
 <tr class="memitem:interfaceNcurses_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html">interfaceNcurses.c</a></td></tr>
 <tr class="memdesc:interfaceNcurses_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage avec la bibliothèque Ncurses Affiche et permet de jouer au jeu de Boggle avec un affichage utilisant la bibliothèque Ncurses. <br/></td></tr>
-<tr class="memitem:interfaceTexte_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><b>interfaceTexte.c</b></td></tr>
+<tr class="memitem:interfaceTexte_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceTexte_8c.html">interfaceTexte.c</a></td></tr>
+<tr class="memdesc:interfaceTexte_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tous les affichages en mode texte seulement Permet l'affichage du jeu en mode texte uniquement, les saisies se font au clavier. <br/></td></tr>
 <tr class="memitem:jeu_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8c.html">jeu.c</a></td></tr>
 <tr class="memdesc:jeu_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du jeu de Boggle Les fonctions permettant de gérer le <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> de Boggle. <br/></td></tr>
 <tr class="memitem:plateau_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html">plateau.c</a></td></tr>
 <tr class="memdesc:plateau_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du plateau de <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a> Fonctions se rapportant à un plateau de jeu, sera sert à gérer la grille de Boggle. <br/></td></tr>
 <tr class="memitem:resolveur_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resolveur_8c.html">resolveur.c</a></td></tr>
 <tr class="memdesc:resolveur_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans le module <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a>. <br/></td></tr>
-<tr class="memitem:solution_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><b>solution.c</b></td></tr>
+<tr class="memitem:solution_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html">solution.c</a></td></tr>
+<tr class="memdesc:solution_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère la solution d'une grille de boggle Toutes les fonctions se rapportant à la solution d'une grille. <br/></td></tr>
 <tr class="memitem:util_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html">util.c</a></td></tr>
 <tr class="memdesc:util_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonctions utiles à l'ensemble du projet Toutes les fonctions de bases utiles au projet, ces fonctions travaillent sur des types de bae et ne sont pas spécfiques au projet, ce module permet de meux organiser le code. <br/></td></tr>
 </table>
@@ -121,7 +123,7 @@ Fichiers</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:02 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

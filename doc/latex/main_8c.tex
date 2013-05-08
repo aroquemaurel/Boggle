@@ -1,0 +1,77 @@
+\hypertarget{main_8c}{\section{Référence du fichier main.\-c}
+\label{main_8c}\index{main.\-c@{main.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}dictionnaire.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}plateau.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}resolveur.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}jeu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interface\-Ncurses.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interface\-Texte.\-h\char`\"{}}\\*
+\subsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{main_8c_a8cbd74cde785577e2dbfaa81eb0ca698}{Type\-Jeu} \{ {\bfseries T\-E\-X\-T\-E}, 
+{\bfseries S\-O\-L\-V\-E\-U\-R}, 
+{\bfseries N\-C\-U\-R\-S\-E\-S}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration contenant le type de \hyperlink{structJeu}{Jeu} possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_ae534631e036d83664f10ed7c3bdf8eec}{mauvais\-Parametre} (char $\ast$p\-Nom\-Exe)
+\begin{DoxyCompactList}\small\item\em Affiche une erreur de paramètres. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Lance le jeu de Boggle en fonction des paramètres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxySeeAlso}{Voir également}
+Dictionnaire, Util, \hyperlink{structPlateau}{Plateau}, Resolveur, \hyperlink{structJeu}{Jeu}, Interface\-Ncurses, interface\-Texte 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{\index{main.\-c@{main.\-c}!main@{main}}
+\index{main@{main}!main.c@{main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Lance le jeu de Boggle en fonction des paramètres. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em argc} & Nombre de paramètres \\
+\hline
+{\em argv} & Tableau de paramètres \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le code de retour du programme. 
+\end{DoxyReturn}
+\hypertarget{main_8c_ae534631e036d83664f10ed7c3bdf8eec}{\index{main.\-c@{main.\-c}!mauvais\-Parametre@{mauvais\-Parametre}}
+\index{mauvais\-Parametre@{mauvais\-Parametre}!main.c@{main.\-c}}
+\subsubsection[{mauvais\-Parametre}]{\setlength{\rightskip}{0pt plus 5cm}int mauvais\-Parametre (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p\-Nom\-Exe}
+\end{DoxyParamCaption}
+)}}\label{main_8c_ae534631e036d83664f10ed7c3bdf8eec}
+
+
+Affiche une erreur de paramètres. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Nom\-Exe} & Le nom de l'executable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Code de retour du programme 
+\end{DoxyReturn}

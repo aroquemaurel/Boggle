@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('jeu_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -122,8 +122,8 @@ Structures de données</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a33826e55d07a74ce375cdeacb1240ade"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJeu.html">Jeu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8h.html#a33826e55d07a74ce375cdeacb1240ade">jeu_nouveau</a> (const char *pNomDico, const unsigned char pTaillePlateau, const unsigned int pLgTimer)</td></tr>
-<tr class="memdesc:a33826e55d07a74ce375cdeacb1240ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un nouveau jeu.  <a href="#a33826e55d07a74ce375cdeacb1240ade"></a><br/></td></tr>
+<tr class="memitem:a5fcc7a42a3e56660da1479ac8c859d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJeu.html">Jeu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8h.html#a5fcc7a42a3e56660da1479ac8c859d16">jeu_nouveau</a> (const char *pNomDico, const <a class="el" href="structCouple.html">Couple</a> pTaillePlateau, const unsigned int pLgTimer)</td></tr>
+<tr class="memdesc:a5fcc7a42a3e56660da1479ac8c859d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un nouveau jeu.  <a href="#a5fcc7a42a3e56660da1479ac8c859d16"></a><br/></td></tr>
 <tr class="memitem:ac9f225a777f911ea04166e4d8b8323b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8h.html#ac9f225a777f911ea04166e4d8b8323b2">jeu_lancer</a> (<a class="el" href="structJeu.html">Jeu</a> *pJeu)</td></tr>
 <tr class="memdesc:ac9f225a777f911ea04166e4d8b8323b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance le jeu.  <a href="#ac9f225a777f911ea04166e4d8b8323b2"></a><br/></td></tr>
 <tr class="memitem:aee397c079a99210e5594e36b08db11c4"><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jeu_8h.html#aee397c079a99210e5594e36b08db11c4">jeu_proposerMot</a> (<a class="el" href="structJeu.html">Jeu</a> *pJeu, const char *pMot)</td></tr>
@@ -188,7 +188,7 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a33826e55d07a74ce375cdeacb1240ade"></a>
+<a class="anchor" id="a5fcc7a42a3e56660da1479ac8c859d16"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -201,7 +201,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned char&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCouple.html">Couple</a>&#160;</td>
           <td class="paramname"><em>pTaillePlateau</em>, </td>
         </tr>
         <tr>
@@ -322,7 +322,7 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="jeu_8h.html">jeu.h</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 18:32:42 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:00 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

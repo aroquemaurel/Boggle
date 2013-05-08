@@ -1,0 +1,39 @@
+\begin{DoxyAuthor}{Auteur}
+Antoine de Roquemaurel (G2.\-2) 
+
+Fabrice Valleix (G2.\-2) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/05/13 à 18\-:20\-:03
+\end{DoxyDate}
+\hypertarget{index_execution}{}\section{Éxecution du programme}\label{index_execution}
+Afin d'executer le programme, un fichier de test fonctionnel à été créer, celui-\/ci génère un executable du nom de \char`\"{}./boggle\char`\"{}, celui-\/ci est placé à la racine du projet.
+
+Il doit être executé avec des arguments \-: \begin{DoxyItemize}
+\item 
+\begin{DoxyCode}
+./boggle --solveur 
+\end{DoxyCode}
+ Lance un solveur, c'est-\/à-\/dire la version 1, \item 
+\begin{DoxyCode}
+./boggle --text 
+\end{DoxyCode}
+ Lance le jeu en mode text, soit la version 2 \item 
+\begin{DoxyCode}
+./boggle --ncurses 
+\end{DoxyCode}
+ Lance le jeu avec le mode ncurses, la version 3\end{DoxyItemize}
+\hypertarget{index_version1}{}\section{Version 1 \-: Le résolveur}\label{index_version1}
+Afin d'appeller la version 1 de l'application, l'executable doit être appellé à l'aide de l'argument -\/-\/solveur
+
+Dans cette version, une grille carrée de la taille demandée par l'utilisateur est génére, en tenant compte de la fréquence des lettres dans la langue Française. Une fois la grille générée, la position d'une case est demandée à l'utilisateur, l'utilisateur entre donc les deux coordonnées, et tous les mots commençant par cette case seront affichés à l'écran.
+
+Attention, les coordonnées de la grille commences à zéro.\hypertarget{index_version2}{}\section{Version 2 \-: Le mode texte}\label{index_version2}
+Afin d'appeller la version 2, l'executable doit être appellé à l'aide de l'argument -\/-\/text
+
+Cette version fait appel à la version 1, en effet, au lancement de l'application, il est de nouveau demandé la taille de la grille, ensuite l'intégralité de la grille générer est résolue. Une fois cette étape franchie, l'utilisateur à 3 minutes pour entrer le plus de mots possibles, l'application lui signalant si le mot est accepté ou non, une fois ce temps impartis, la solution est affichée, puis le nombre de points obtenu par le joueur.\hypertarget{index_version3}{}\section{Version 3 \-: L'interface Ncurses}\label{index_version3}
+Afin d'appeller la version 3, l'executable doit être appellé à l'aide de l'argument -\/-\/ncurses
+
+Cette version suit le même principe que la version précédente, à la différence près qu'elle utilise la bibliothèque Ncurses. Ainsi, la saisie des mots se fait dorénavant avec les touches fléchées du clavier, et espace pour ajouter une lettre au mot. Pour proposer le mot surligné, la touche entrée doit être appuyée. Il est également possible de demander le nombre de mots commençant par la case séléctionnée à l'aide de la touche h.
+
+Une fois les 3 minutes écoulées, les mots proposés par l'utilisateur et le nombre de points obtenus sont affichés, il est proposé à l'utilisateur d'afficher la solution complète. 

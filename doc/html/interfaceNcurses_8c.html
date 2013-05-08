@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('interfaceNcurses_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,10 +113,11 @@ $(document).ready(function(){initNavTree('interfaceNcurses_8c.html','');});
 <code>#include &lt;menu.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
-<code>#include &quot;interfaceNcurses.h&quot;</code><br/>
-<code>#include &quot;plateau.h&quot;</code><br/>
-<code>#include &quot;jeu.h&quot;</code><br/>
-<code>#include &quot;util.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="interfaceNcurses_8h_source.html">interfaceNcurses.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="plateau_8h_source.html">plateau.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="jeu_8h_source.html">jeu.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="resolveur_8h_source.html">resolveur.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
@@ -128,16 +129,16 @@ Fonctions</h2></td></tr>
 <tr class="memdesc:a27c4bdc3571ec76bc5f31b11847c0680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la solution passée en paramètre.  <a href="#a27c4bdc3571ec76bc5f31b11847c0680"></a><br/></td></tr>
 <tr class="memitem:a11139ea3bdd922798149d2fa93e93457"><td class="memItemLeft" align="right" valign="top">WINDOW *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#a11139ea3bdd922798149d2fa93e93457">interfaceNcurses_initialiser</a> (void)</td></tr>
 <tr class="memdesc:a11139ea3bdd922798149d2fa93e93457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise l'interface Ncurses.  <a href="#a11139ea3bdd922798149d2fa93e93457"></a><br/></td></tr>
-<tr class="memitem:a7f08cba800239f2e0bdfa3ed50303595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#a7f08cba800239f2e0bdfa3ed50303595">interfaceNcurses_afficherGrille</a> (const <a class="el" href="structPlateau.html">Plateau</a> pPlateau, const <a class="el" href="structCase.html">Case</a> pSelectedCase, const <a class="el" href="structCase.html">Case</a> *pUsedCase, const int pLgUsedCase)</td></tr>
-<tr class="memdesc:a7f08cba800239f2e0bdfa3ed50303595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la grille, composée de couleurs en fonctions des différentes cases.  <a href="#a7f08cba800239f2e0bdfa3ed50303595"></a><br/></td></tr>
+<tr class="memitem:a49a59b92585fda5d3e024b9adca97c82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#a49a59b92585fda5d3e024b9adca97c82">interfaceNcurses_afficherGrille</a> (const <a class="el" href="structPlateau.html">Plateau</a> pPlateau, const <a class="el" href="structCouple.html">Couple</a> pSelectedCase, const <a class="el" href="structCouple.html">Couple</a> *pUsedCase, const int pLgUsedCase)</td></tr>
+<tr class="memdesc:a49a59b92585fda5d3e024b9adca97c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la grille, composée de couleurs en fonctions des différentes cases.  <a href="#a49a59b92585fda5d3e024b9adca97c82"></a><br/></td></tr>
 <tr class="memitem:a8107452f526ae2b4bb7db9daadd39fa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#a8107452f526ae2b4bb7db9daadd39fa9">interfaceNcurses_terminer</a> (WINDOW *fenetre, <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
 <tr class="memdesc:a8107452f526ae2b4bb7db9daadd39fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Termine le jeu.  <a href="#a8107452f526ae2b4bb7db9daadd39fa9"></a><br/></td></tr>
 <tr class="memitem:ad8d628ccec45bfb57ace978b88a6dd0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#ad8d628ccec45bfb57ace978b88a6dd0e">jeu_lancerModeNcurses</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
 <tr class="memdesc:ad8d628ccec45bfb57ace978b88a6dd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance le mode Ncurses.  <a href="#ad8d628ccec45bfb57ace978b88a6dd0e"></a><br/></td></tr>
 <tr class="memitem:ad154999bd280bf4911c014bcaf00670f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#ad154999bd280bf4911c014bcaf00670f">interfaceNcurses_afficherBoiteDialogue</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
 <tr class="memdesc:ad154999bd280bf4911c014bcaf00670f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche une boite de dialogue de fin de <a class="el" href="structJeu.html" title="Structure permettant de jouer au Boggle Structure contenant toutes les informations nécessaire au bon...">Jeu</a>.  <a href="#ad154999bd280bf4911c014bcaf00670f"></a><br/></td></tr>
-<tr class="memitem:aff38ebc6fd2d7cf8263278889833b289"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#aff38ebc6fd2d7cf8263278889833b289">interfaceNcurses_afficherFenetreJeu</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu, char *pMot, const <a class="el" href="structCase.html">Case</a> pSelectedCase, <a class="el" href="structCase.html">Case</a> *pUsedCase)</td></tr>
-<tr class="memdesc:aff38ebc6fd2d7cf8263278889833b289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la fenêtre permettant de jouer.  <a href="#aff38ebc6fd2d7cf8263278889833b289"></a><br/></td></tr>
+<tr class="memitem:a0cab3f7fca42b611b7408b180e875e65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#a0cab3f7fca42b611b7408b180e875e65">interfaceNcurses_afficherFenetreJeu</a> (const <a class="el" href="structJeu.html">Jeu</a> pJeu, char *pMot, const <a class="el" href="structCouple.html">Couple</a> pSelectedCase, <a class="el" href="structCouple.html">Couple</a> *pUsedCase)</td></tr>
+<tr class="memdesc:a0cab3f7fca42b611b7408b180e875e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la fenêtre permettant de jouer.  <a href="#a0cab3f7fca42b611b7408b180e875e65"></a><br/></td></tr>
 <tr class="memitem:ab009b3ac48e7a5753bb4473b2c2c7283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab009b3ac48e7a5753bb4473b2c2c7283"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>win_show</b> (WINDOW *win, char *label, <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
 <tr class="memitem:a013c16f098ebd2e99f3ef5604235f78c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceNcurses_8c.html#a013c16f098ebd2e99f3ef5604235f78c">interfaceNcurses_menu</a> (WINDOW *pDialogBoxWin, const <a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
@@ -199,7 +200,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_in_middle</b> (
 
 </div>
 </div>
-<a class="anchor" id="aff38ebc6fd2d7cf8263278889833b289"></a>
+<a class="anchor" id="a0cab3f7fca42b611b7408b180e875e65"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -218,13 +219,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_in_middle</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structCase.html">Case</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCouple.html">Couple</a>&#160;</td>
           <td class="paramname"><em>pSelectedCase</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structCase.html">Case</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structCouple.html">Couple</a> *&#160;</td>
           <td class="paramname"><em>pUsedCase</em>&#160;</td>
         </tr>
         <tr>
@@ -272,7 +273,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_in_middle</b> (
 
 </div>
 </div>
-<a class="anchor" id="a7f08cba800239f2e0bdfa3ed50303595"></a>
+<a class="anchor" id="a49a59b92585fda5d3e024b9adca97c82"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -285,13 +286,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_in_middle</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structCase.html">Case</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCouple.html">Couple</a>&#160;</td>
           <td class="paramname"><em>pSelectedCase</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structCase.html">Case</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCouple.html">Couple</a> *&#160;</td>
           <td class="paramname"><em>pUsedCase</em>, </td>
         </tr>
         <tr>
@@ -489,7 +490,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_in_middle</b> (
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="interfaceNcurses_8c.html">interfaceNcurses.c</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:00 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

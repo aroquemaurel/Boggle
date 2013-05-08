@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('resolveur_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,22 +109,52 @@ $(document).ready(function(){initNavTree('resolveur_8c.html','');});
 <p>Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans le module <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a>.  
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br/>
-<code>#include &quot;util.h&quot;</code><br/>
-<code>#include &quot;dictionnaire.h&quot;</code><br/>
-<code>#include &quot;resolveur.h&quot;</code><br/>
-<code>#include &quot;solution.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="dictionnaire_8h_source.html">dictionnaire.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="resolveur_8h_source.html">resolveur.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="solution_8h_source.html">solution.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="interfaceTexte_8h_source.html">interfaceTexte.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="jeu_8h_source.html">jeu.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a1eacf34755bde03a6bc60c79383bd657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resolveur_8c.html#a1eacf34755bde03a6bc60c79383bd657">recurse</a> (<a class="el" href="structPlateau.html">Plateau</a> *pPlateau, int x, int y, int depth, char *choices, <a class="el" href="structDico.html">Dico</a> pDico)</td></tr>
-<tr class="memdesc:a1eacf34755bde03a6bc60c79383bd657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction privée récursive permettant de résoudre une grille de Boggle.  <a href="#a1eacf34755bde03a6bc60c79383bd657"></a><br/></td></tr>
-<tr class="memitem:a8696ca50e0d0e6d4c05399c26372709d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resolveur_8c.html#a8696ca50e0d0e6d4c05399c26372709d">resolveur</a> (<a class="el" href="structPlateau.html">Plateau</a> *pPlateau, <a class="el" href="structDico.html">Dico</a> pDico)</td></tr>
-<tr class="memdesc:a8696ca50e0d0e6d4c05399c26372709d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résoud une grille de boggle.  <a href="#a8696ca50e0d0e6d4c05399c26372709d"></a><br/></td></tr>
+<tr class="memitem:af0316a5a4d0c2659b4218bdfdb321d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resolveur_8c.html#af0316a5a4d0c2659b4218bdfdb321d29">recurse</a> (<a class="el" href="structPlateau.html">Plateau</a> *pPlateau, <a class="el" href="structSolution.html">Solution</a> *pSolution, int x, int y, int depth, char *choices, <a class="el" href="structDico.html">Dico</a> pDico)</td></tr>
+<tr class="memdesc:af0316a5a4d0c2659b4218bdfdb321d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction privée récursive permettant de résoudre une grille de Boggle.  <a href="#af0316a5a4d0c2659b4218bdfdb321d29"></a><br/></td></tr>
+<tr class="memitem:a0e712294dd0869c9bc1e97492358b2ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e712294dd0869c9bc1e97492358b2ef"></a>
+<a class="el" href="structSolution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resolveur_resolveUneCase</b> (<a class="el" href="structPlateau.html">Plateau</a> pPlateau, <a class="el" href="structDico.html">Dico</a> pDico, const <a class="el" href="structCouple.html">Couple</a> pCase)</td></tr>
+<tr class="memitem:a878e12ec014ce4e43b95897b5c06a358"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resolveur_8c.html#a878e12ec014ce4e43b95897b5c06a358">resolveTouteLaGrille</a> (<a class="el" href="structPlateau.html">Plateau</a> *pPlateau, <a class="el" href="structDico.html">Dico</a> pDico)</td></tr>
+<tr class="memdesc:a878e12ec014ce4e43b95897b5c06a358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résoud une grille de boggle.  <a href="#a878e12ec014ce4e43b95897b5c06a358"></a><br/></td></tr>
+<tr class="memitem:ae520f009aac7af89e1bff478de802a95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="resolveur_8c.html#ae520f009aac7af89e1bff478de802a95">jeu_lancerModeSolveur</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
+<tr class="memdesc:ae520f009aac7af89e1bff478de802a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance le jeu en mode solveur.  <a href="#ae520f009aac7af89e1bff478de802a95"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Gestion du résolveur Permet de résoudre une grille de Boggle, une fois résolue, la solution se trouve dans le module <a class="el" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a>. </p>
 </div><h2>Documentation des fonctions</h2>
-<a class="anchor" id="a1eacf34755bde03a6bc60c79383bd657"></a>
+<a class="anchor" id="ae520f009aac7af89e1bff478de802a95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu_lancerModeSolveur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJeu.html">Jeu</a>&#160;</td>
+          <td class="paramname"><em>pJeu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lance le jeu en mode solveur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pJeu</td><td>le jeu à lancer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af0316a5a4d0c2659b4218bdfdb321d29"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -133,6 +163,12 @@ Fonctions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>pPlateau</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSolution.html">Solution</a> *&#160;</td>
+          <td class="paramname"><em>pSolution</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -187,12 +223,12 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8696ca50e0d0e6d4c05399c26372709d"></a>
+<a class="anchor" id="a878e12ec014ce4e43b95897b5c06a358"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void resolveur </td>
+          <td class="memname">void resolveTouteLaGrille </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>pPlateau</em>, </td>
@@ -229,7 +265,7 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="resolveur_8c.html">resolveur.c</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:01 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

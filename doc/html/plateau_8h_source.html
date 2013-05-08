@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('plateau_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,28 +103,23 @@ $(document).ready(function(){initNavTree('plateau_8h_source.html','');});
 <div class="title">plateau.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* </span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * File:   plateau.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Author: aroquemaurel</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Created on 8 mars 2013, 11:05</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef PLATEAU_H</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PLATEAU_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;solution.h&quot;</span></div>
+<a href="plateau_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef PLATEAU_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PLATEAU_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="solution_8h.html" title="Gère la solution d&#39;une grille de boggle Toutes les fonctions se rapportant à la solution d&#39;une grille...">solution.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="couple_8h.html" title="Structure de données d&#39;un couple Structure de données d&#39;un couple de valeurs entières.">couple.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define TAILLE_MOT_MIN 3</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TAILLE_MOT_MAX 32</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="structPlateau.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="structPlateau.html#a42411aa44b78d298681030ce3461f686">   21</a></span>&#160;    <span class="keywordtype">char</span>** <a class="code" href="structPlateau.html#a42411aa44b78d298681030ce3461f686">grille</a>; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="structPlateau.html#aa71d603afaf91ff7c81427af61919a34">   22</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structPlateau.html#aa71d603afaf91ff7c81427af61919a34">tailleGrille</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="structPlateau.html#af86602008c1cfce98187fd9b9b4e50ce">   22</a></span>&#160;    <a class="code" href="structCouple.html" title="Un couple de valeurs entières.">Couple</a> <a class="code" href="structPlateau.html#af86602008c1cfce98187fd9b9b4e50ce">tailleGrille</a>; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span>** grid;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="structPlateau.html#aed88af50891b17edcd3ba97d7098dfde">   24</a></span>&#160;    <a class="code" href="structSolution.html" title="Solution du jeu Contient une solution pour une grille de Boggle.">Solution</a> <a class="code" href="structPlateau.html#aed88af50891b17edcd3ba97d7098dfde">solution</a>; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;} <a class="code" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a> ;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a> <a class="code" href="plateau_8c.html#a227b9ee882d6ee30797b4dd978a26633" title="Créer un nouveau plateau.">plateau_nouveau</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> pTailleGrille);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a> <a class="code" href="plateau_8c.html#a29e56b58f5905022117373beecfd1708" title="Créer un nouveau plateau.">plateau_nouveau</a>(<span class="keyword">const</span> <a class="code" href="structCouple.html" title="Un couple de valeurs entières.">Couple</a> pTailleGrille);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="plateau_8c.html#a23a1db5b648d7483da8619e880506725" title="Rempli une grille aléatoirement dans le plateau.">plateau_remplirGrilleAleatoire</a>(<a class="code" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>* pPlateau);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="plateau_8c.html#aa2bb750ea8570ed32eb894c7249d2e35" title="Rempli le plateau avec une grille prédéfinie de taille 4*4 E D R C A N V C I R Q A E B R U...">plateau_remplirGrillePredefinie</a>(<a class="code" href="structPlateau.html" title="Grille du jeu Contient une grille permettant de jouer au Boggle.">Plateau</a>* pPlateau);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">double</span> <a class="code" href="plateau_8c.html#ac564837afaa7e07ed257caf8639a5879" title="Retourne la probabilité d&#39;apparition de la lettre passée en paramètre.">plateau_probaLettre</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> pLettre);</div>
@@ -137,8 +132,8 @@ $(document).ready(function(){initNavTree('plateau_8h_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><b>plateau.h</b></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="plateau_8h.html">plateau.h</a></li>
+    <li class="footer">Généré le Mardi Mai 7 2013 18:44:59 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

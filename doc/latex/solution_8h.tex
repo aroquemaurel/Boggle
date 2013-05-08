@@ -26,7 +26,9 @@ void \hyperlink{solution_8h_a50ddf52d1a62a48a46989783cb65d462}{solution\-\_\-det
 \-\_\-\-Bool \hyperlink{solution_8h_a3fd246b62de5f36abb8567ccb70a0706}{solution\-\_\-mot\-Est\-Present} (const \hyperlink{structSolution}{Solution} p\-Solution, const char $\ast$p\-Mot)
 \begin{DoxyCompactList}\small\item\em Retourne vrai si le mot p\-Mot est présent dans la solution. \end{DoxyCompactList}\item 
 int \hyperlink{solution_8h_aa1bb041fa6e461a6a8c46b43857a94d4}{solution\-\_\-nb\-Points} (\hyperlink{structSolution}{Solution} p\-Solution)
-\begin{DoxyCompactList}\small\item\em Retourn le nombre de points pouvant être obtenus avec la solution p\-Solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retourn le nombre de points pouvant être obtenus avec la solution p\-Solution. \end{DoxyCompactList}\item 
+int \hyperlink{solution_8h_a857d432d6ca95c7413456fce4996a133}{solution\-\_\-get\-Nb\-Mots\-Debut} (\hyperlink{structSolution}{Solution} p\-Solution, char $\ast$p\-Debut)
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de mots présents dans la solution commençant pas la chaine de caractère p\-Debut. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
@@ -85,6 +87,28 @@ Détruit la solution.
 {\em p\-Solution} & La solution à détruire \\
 \hline
 \end{DoxyParams}
+\hypertarget{solution_8h_a857d432d6ca95c7413456fce4996a133}{\index{solution.\-h@{solution.\-h}!solution\-\_\-get\-Nb\-Mots\-Debut@{solution\-\_\-get\-Nb\-Mots\-Debut}}
+\index{solution\-\_\-get\-Nb\-Mots\-Debut@{solution\-\_\-get\-Nb\-Mots\-Debut}!solution.h@{solution.\-h}}
+\subsubsection[{solution\-\_\-get\-Nb\-Mots\-Debut}]{\setlength{\rightskip}{0pt plus 5cm}int solution\-\_\-get\-Nb\-Mots\-Debut (
+\begin{DoxyParamCaption}
+\item[{{\bf Solution}}]{p\-Solution, }
+\item[{char $\ast$}]{p\-Debut}
+\end{DoxyParamCaption}
+)}}\label{solution_8h_a857d432d6ca95c7413456fce4996a133}
+
+
+Retourne le nombre de mots présents dans la solution commençant pas la chaine de caractère p\-Debut. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\-Solution} & La solution \\
+\hline
+{\em p\-Debut} & Le début de la chaine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de mots commençant par p\-Debut 
+\end{DoxyReturn}
 \hypertarget{solution_8h_a3fd246b62de5f36abb8567ccb70a0706}{\index{solution.\-h@{solution.\-h}!solution\-\_\-mot\-Est\-Present@{solution\-\_\-mot\-Est\-Present}}
 \index{solution\-\_\-mot\-Est\-Present@{solution\-\_\-mot\-Est\-Present}!solution.h@{solution.\-h}}
 \subsubsection[{solution\-\_\-mot\-Est\-Present}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-Bool solution\-\_\-mot\-Est\-Present (

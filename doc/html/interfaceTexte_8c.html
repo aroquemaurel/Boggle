@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('interfaceTexte_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,10 +109,12 @@ $(document).ready(function(){initNavTree('interfaceTexte_8c.html','');});
 <p>Tous les affichages en mode texte seulement Permet l'affichage du jeu en mode texte uniquement, les saisies se font au clavier.  
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="solution_8h_source.html">solution.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="jeu_8h_source.html">jeu.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="plateau_8h_source.html">plateau.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="interfaceTexte_8h_source.html">interfaceTexte.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
@@ -120,6 +122,8 @@ Fonctions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>interfaceTexte_afficherPlateau</b> (const <a class="el" href="structPlateau.html">Plateau</a> pPlateau)</td></tr>
 <tr class="memitem:a571263823557657d24e12f97176bd4f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceTexte_8c.html#a571263823557657d24e12f97176bd4f1">interfaceTexte_afficherSolution</a> (const <a class="el" href="structSolution.html">Solution</a> pSolution)</td></tr>
 <tr class="memdesc:a571263823557657d24e12f97176bd4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la solution en mode texte.  <a href="#a571263823557657d24e12f97176bd4f1"></a><br/></td></tr>
+<tr class="memitem:a80bccd63353ef20f899626965474827b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80bccd63353ef20f899626965474827b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>interfaceTexte_afficherPlateauEtSolution</b> (const <a class="el" href="structPlateau.html">Plateau</a> pPlateau, const <a class="el" href="structSolution.html">Solution</a> pSolution)</td></tr>
 <tr class="memitem:a4c8b971a83c16ff0b7a62457c4ef050e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceTexte_8c.html#a4c8b971a83c16ff0b7a62457c4ef050e">jeu_lancerModeTexte</a> (<a class="el" href="structJeu.html">Jeu</a> pJeu)</td></tr>
 <tr class="memdesc:a4c8b971a83c16ff0b7a62457c4ef050e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance le jeu en mode texte.  <a href="#a4c8b971a83c16ff0b7a62457c4ef050e"></a><br/></td></tr>
 </table>
@@ -180,7 +184,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>interfaceTexte_affich
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="interfaceTexte_8c.html">interfaceTexte.c</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 18:32:42 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:00 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

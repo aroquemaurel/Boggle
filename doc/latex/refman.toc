@@ -1,91 +1,185 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}Index des structures de donn\IeC {\'e}es}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Structures de donn\IeC {\'e}es}{1}{section.1.1}
-\contentsline {chapter}{\numberline {2}Index des fichiers}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Liste des fichiers}{3}{section.2.1}
-\contentsline {chapter}{\numberline {3}Documentation des structures de donn\IeC {\'e}es}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}R\IeC {\'e}f\IeC {\'e}rence de la structure Case}{5}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{5}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Documentation des champs}{5}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}i}{5}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}j}{5}{subsubsection.3.1.2.2}
-\contentsline {section}{\numberline {3.2}R\IeC {\'e}f\IeC {\'e}rence de la structure Dico}{5}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Description d\IeC {\'e}taill\IeC {\'e}e}{6}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Documentation des champs}{6}{subsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.1}dico}{6}{subsubsection.3.2.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2.2}marqueurs}{6}{subsubsection.3.2.2.2}
-\contentsline {section}{\numberline {3.3}R\IeC {\'e}f\IeC {\'e}rence de la structure Jeu}{6}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Description d\IeC {\'e}taill\IeC {\'e}e}{6}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Documentation des champs}{6}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}dico}{6}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}plateau}{6}{subsubsection.3.3.2.2}
-\contentsline {subsubsection}{\numberline {3.3.2.3}solution\discretionary {-}{}{}Utilisateur}{7}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}timestamp\discretionary {-}{}{}Depart}{7}{subsubsection.3.3.2.4}
-\contentsline {section}{\numberline {3.4}R\IeC {\'e}f\IeC {\'e}rence de la structure Plateau}{7}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Description d\IeC {\'e}taill\IeC {\'e}e}{7}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Documentation des champs}{7}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}grille}{7}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}solution}{7}{subsubsection.3.4.2.2}
-\contentsline {subsubsection}{\numberline {3.4.2.3}taille\discretionary {-}{}{}Grille}{7}{subsubsection.3.4.2.3}
-\contentsline {section}{\numberline {3.5}R\IeC {\'e}f\IeC {\'e}rence de la structure Solution}{7}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Description d\IeC {\'e}taill\IeC {\'e}e}{8}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Documentation des champs}{8}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}mots}{8}{subsubsection.3.5.2.1}
-\contentsline {subsubsection}{\numberline {3.5.2.2}nb\discretionary {-}{}{}Mots}{8}{subsubsection.3.5.2.2}
-\contentsline {chapter}{\numberline {4}Documentation des fichiers}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}R\IeC {\'e}f\IeC {\'e}rence du fichier dictionnaire.\discretionary {-}{}{}c}{9}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{9}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Documentation des fonctions}{9}{subsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.2.1}dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{9}{subsubsection.4.1.2.1}
-\contentsline {subsubsection}{\numberline {4.1.2.2}dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}recherche\discretionary {-}{}{}Dichotomique}{10}{subsubsection.4.1.2.2}
-\contentsline {subsubsection}{\numberline {4.1.2.3}dictonnaire\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Dans\discretionary {-}{}{}Dico}{10}{subsubsection.4.1.2.3}
-\contentsline {section}{\numberline {4.2}R\IeC {\'e}f\IeC {\'e}rence du fichier interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}{10}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Description d\IeC {\'e}taill\IeC {\'e}e}{11}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Documentation des fonctions}{11}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}fct\discretionary {-}{}{}Menu}{11}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Boite\discretionary {-}{}{}Dialogue}{11}{subsubsection.4.2.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.3}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Jeu}{11}{subsubsection.4.2.2.3}
-\contentsline {subsubsection}{\numberline {4.2.2.4}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Solution}{11}{subsubsection.4.2.2.4}
-\contentsline {subsubsection}{\numberline {4.2.2.5}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Grille}{12}{subsubsection.4.2.2.5}
-\contentsline {subsubsection}{\numberline {4.2.2.6}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Solution}{12}{subsubsection.4.2.2.6}
-\contentsline {subsubsection}{\numberline {4.2.2.7}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Titre}{12}{subsubsection.4.2.2.7}
-\contentsline {subsubsection}{\numberline {4.2.2.8}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}initialiser}{12}{subsubsection.4.2.2.8}
-\contentsline {subsubsection}{\numberline {4.2.2.9}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}menu}{12}{subsubsection.4.2.2.9}
-\contentsline {subsubsection}{\numberline {4.2.2.10}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}terminer}{12}{subsubsection.4.2.2.10}
-\contentsline {subsubsection}{\numberline {4.2.2.11}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Ncurses}{13}{subsubsection.4.2.2.11}
-\contentsline {section}{\numberline {4.3}R\IeC {\'e}f\IeC {\'e}rence du fichier jeu.\discretionary {-}{}{}c}{13}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Description d\IeC {\'e}taill\IeC {\'e}e}{13}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Documentation des fonctions}{13}{subsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.2.1}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}compteur\discretionary {-}{}{}Claque}{13}{subsubsection.4.3.2.1}
-\contentsline {subsubsection}{\numberline {4.3.2.2}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer}{14}{subsubsection.4.3.2.2}
-\contentsline {subsubsection}{\numberline {4.3.2.3}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{14}{subsubsection.4.3.2.3}
-\contentsline {subsubsection}{\numberline {4.3.2.4}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}proposer\discretionary {-}{}{}Mot}{14}{subsubsection.4.3.2.4}
-\contentsline {subsubsection}{\numberline {4.3.2.5}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}stopper}{14}{subsubsection.4.3.2.5}
-\contentsline {subsubsection}{\numberline {4.3.2.6}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}temps\discretionary {-}{}{}Restant}{14}{subsubsection.4.3.2.6}
-\contentsline {section}{\numberline {4.4}R\IeC {\'e}f\IeC {\'e}rence du fichier plateau.\discretionary {-}{}{}c}{15}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Description d\IeC {\'e}taill\IeC {\'e}e}{15}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Documentation des fonctions}{15}{subsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.2.1}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}choisir\discretionary {-}{}{}Lettre}{15}{subsubsection.4.4.2.1}
-\contentsline {subsubsection}{\numberline {4.4.2.2}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}{15}{subsubsection.4.4.2.2}
-\contentsline {subsubsection}{\numberline {4.4.2.3}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{15}{subsubsection.4.4.2.3}
-\contentsline {subsubsection}{\numberline {4.4.2.4}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}proba\discretionary {-}{}{}Lettre}{16}{subsubsection.4.4.2.4}
-\contentsline {subsubsection}{\numberline {4.4.2.5}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Aleatoire}{16}{subsubsection.4.4.2.5}
-\contentsline {subsubsection}{\numberline {4.4.2.6}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Predefinie}{16}{subsubsection.4.4.2.6}
-\contentsline {section}{\numberline {4.5}R\IeC {\'e}f\IeC {\'e}rence du fichier resolveur.\discretionary {-}{}{}c}{16}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Description d\IeC {\'e}taill\IeC {\'e}e}{17}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Documentation des fonctions}{17}{subsection.4.5.2}
-\contentsline {subsubsection}{\numberline {4.5.2.1}recurse}{17}{subsubsection.4.5.2.1}
-\contentsline {subsubsection}{\numberline {4.5.2.2}resolveur}{17}{subsubsection.4.5.2.2}
-\contentsline {section}{\numberline {4.6}R\IeC {\'e}f\IeC {\'e}rence du fichier util.\discretionary {-}{}{}c}{17}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Description d\IeC {\'e}taill\IeC {\'e}e}{18}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Documentation des fonctions}{18}{subsection.4.6.2}
-\contentsline {subsubsection}{\numberline {4.6.2.1}util\discretionary {-}{}{}\_\discretionary {-}{}{}affichage\discretionary {-}{}{}Debug}{18}{subsubsection.4.6.2.1}
-\contentsline {subsubsection}{\numberline {4.6.2.2}util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}{18}{subsubsection.4.6.2.2}
-\contentsline {subsubsection}{\numberline {4.6.2.3}util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}{18}{subsubsection.4.6.2.3}
-\contentsline {subsubsection}{\numberline {4.6.2.4}util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}{18}{subsubsection.4.6.2.4}
-\contentsline {subsubsection}{\numberline {4.6.2.5}util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}{19}{subsubsection.4.6.2.5}
-\contentsline {subsubsection}{\numberline {4.6.2.6}util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}{19}{subsubsection.4.6.2.6}
-\contentsline {subsubsection}{\numberline {4.6.2.7}util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}{19}{subsubsection.4.6.2.7}
-\contentsline {subsubsection}{\numberline {4.6.2.8}util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}{19}{subsubsection.4.6.2.8}
-\contentsline {subsubsection}{\numberline {4.6.2.9}util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}{19}{subsubsection.4.6.2.9}
-\contentsline {subsubsection}{\numberline {4.6.2.10}util\discretionary {-}{}{}\_\discretionary {-}{}{}uppercase}{20}{subsubsection.4.6.2.10}
+\contentsline {chapter}{\numberline {1}Jeu de Boggle -\/-\/ U\discretionary {-}{}{}E Projet}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\IeC {\'E}xecution du programme}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Version 1 \discretionary {-}{}{}: Le r\IeC {\'e}solveur}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Version 2 \discretionary {-}{}{}: Le mode texte}{1}{section.1.3}
+\contentsline {section}{\numberline {1.4}Version 3 \discretionary {-}{}{}: L'interface Ncurses}{2}{section.1.4}
+\contentsline {chapter}{\numberline {2}Index des structures de donn\IeC {\'e}es}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Structures de donn\IeC {\'e}es}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Index des fichiers}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Liste des fichiers}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Documentation des structures de donn\IeC {\'e}es}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}R\IeC {\'e}f\IeC {\'e}rence de la structure Couple}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Documentation des champs}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}x}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}y}{7}{subsubsection.4.1.2.2}
+\contentsline {section}{\numberline {4.2}R\IeC {\'e}f\IeC {\'e}rence de la structure Dico}{7}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Description d\IeC {\'e}taill\IeC {\'e}e}{8}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Documentation des champs}{8}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}dico}{8}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}marqueurs}{8}{subsubsection.4.2.2.2}
+\contentsline {section}{\numberline {4.3}R\IeC {\'e}f\IeC {\'e}rence de la structure Jeu}{8}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Description d\IeC {\'e}taill\IeC {\'e}e}{8}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Documentation des champs}{8}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}dico}{8}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}plateau}{8}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}solution\discretionary {-}{}{}Utilisateur}{9}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}timestamp\discretionary {-}{}{}Depart}{9}{subsubsection.4.3.2.4}
+\contentsline {section}{\numberline {4.4}R\IeC {\'e}f\IeC {\'e}rence de la structure Plateau}{9}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Description d\IeC {\'e}taill\IeC {\'e}e}{9}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Documentation des champs}{9}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}grille}{9}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}solution}{9}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}taille\discretionary {-}{}{}Grille}{9}{subsubsection.4.4.2.3}
+\contentsline {section}{\numberline {4.5}R\IeC {\'e}f\IeC {\'e}rence de la structure Solution}{9}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Description d\IeC {\'e}taill\IeC {\'e}e}{10}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Documentation des champs}{10}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}mots}{10}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}nb\discretionary {-}{}{}Mots}{10}{subsubsection.4.5.2.2}
+\contentsline {chapter}{\numberline {5}Documentation des fichiers}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}R\IeC {\'e}f\IeC {\'e}rence du fichier couple.\discretionary {-}{}{}h}{11}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Description d\IeC {\'e}taill\IeC {\'e}e}{11}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}R\IeC {\'e}f\IeC {\'e}rence du fichier dictionnaire.\discretionary {-}{}{}c}{11}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Description d\IeC {\'e}taill\IeC {\'e}e}{11}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Documentation des fonctions}{12}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{12}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}recherche\discretionary {-}{}{}Dichotomique}{12}{subsubsection.5.2.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.3}dictonnaire\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Dans\discretionary {-}{}{}Dico}{12}{subsubsection.5.2.2.3}
+\contentsline {section}{\numberline {5.3}R\IeC {\'e}f\IeC {\'e}rence du fichier dictionnaire.\discretionary {-}{}{}h}{12}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Description d\IeC {\'e}taill\IeC {\'e}e}{13}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Documentation des fonctions}{13}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{13}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}dictionnaire\discretionary {-}{}{}\_\discretionary {-}{}{}recherche\discretionary {-}{}{}Dichotomique}{13}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}dictonnaire\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Dans\discretionary {-}{}{}Dico}{13}{subsubsection.5.3.2.3}
+\contentsline {section}{\numberline {5.4}R\IeC {\'e}f\IeC {\'e}rence du fichier interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}c}{13}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Description d\IeC {\'e}taill\IeC {\'e}e}{14}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Documentation des fonctions}{14}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}fct\discretionary {-}{}{}Menu}{14}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Boite\discretionary {-}{}{}Dialogue}{15}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Jeu}{15}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Solution}{15}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.5}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Grille}{15}{subsubsection.5.4.2.5}
+\contentsline {subsubsection}{\numberline {5.4.2.6}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Solution}{15}{subsubsection.5.4.2.6}
+\contentsline {subsubsection}{\numberline {5.4.2.7}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Titre}{15}{subsubsection.5.4.2.7}
+\contentsline {subsubsection}{\numberline {5.4.2.8}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}initialiser}{16}{subsubsection.5.4.2.8}
+\contentsline {subsubsection}{\numberline {5.4.2.9}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}menu}{16}{subsubsection.5.4.2.9}
+\contentsline {subsubsection}{\numberline {5.4.2.10}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}terminer}{16}{subsubsection.5.4.2.10}
+\contentsline {subsubsection}{\numberline {5.4.2.11}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Ncurses}{16}{subsubsection.5.4.2.11}
+\contentsline {section}{\numberline {5.5}R\IeC {\'e}f\IeC {\'e}rence du fichier interface\discretionary {-}{}{}Ncurses.\discretionary {-}{}{}h}{16}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Description d\IeC {\'e}taill\IeC {\'e}e}{17}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Documentation des fonctions}{17}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Boite\discretionary {-}{}{}Dialogue}{17}{subsubsection.5.5.2.1}
+\contentsline {subsubsection}{\numberline {5.5.2.2}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Jeu}{17}{subsubsection.5.5.2.2}
+\contentsline {subsubsection}{\numberline {5.5.2.3}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Fenetre\discretionary {-}{}{}Solution}{17}{subsubsection.5.5.2.3}
+\contentsline {subsubsection}{\numberline {5.5.2.4}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Grille}{18}{subsubsection.5.5.2.4}
+\contentsline {subsubsection}{\numberline {5.5.2.5}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Solution}{18}{subsubsection.5.5.2.5}
+\contentsline {subsubsection}{\numberline {5.5.2.6}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Titre}{18}{subsubsection.5.5.2.6}
+\contentsline {subsubsection}{\numberline {5.5.2.7}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}initialiser}{18}{subsubsection.5.5.2.7}
+\contentsline {subsubsection}{\numberline {5.5.2.8}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}menu}{18}{subsubsection.5.5.2.8}
+\contentsline {subsubsection}{\numberline {5.5.2.9}interface\discretionary {-}{}{}Ncurses\discretionary {-}{}{}\_\discretionary {-}{}{}terminer}{18}{subsubsection.5.5.2.9}
+\contentsline {subsubsection}{\numberline {5.5.2.10}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Ncurses}{19}{subsubsection.5.5.2.10}
+\contentsline {section}{\numberline {5.6}R\IeC {\'e}f\IeC {\'e}rence du fichier interface\discretionary {-}{}{}Texte.\discretionary {-}{}{}c}{19}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Description d\IeC {\'e}taill\IeC {\'e}e}{19}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Documentation des fonctions}{19}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}interface\discretionary {-}{}{}Texte\discretionary {-}{}{}\_\discretionary {-}{}{}afficher\discretionary {-}{}{}Solution}{19}{subsubsection.5.6.2.1}
+\contentsline {subsubsection}{\numberline {5.6.2.2}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Texte}{19}{subsubsection.5.6.2.2}
+\contentsline {section}{\numberline {5.7}R\IeC {\'e}f\IeC {\'e}rence du fichier interface\discretionary {-}{}{}Texte.\discretionary {-}{}{}h}{20}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Description d\IeC {\'e}taill\IeC {\'e}e}{20}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Documentation des fonctions}{20}{subsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.2.1}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Texte}{20}{subsubsection.5.7.2.1}
+\contentsline {section}{\numberline {5.8}R\IeC {\'e}f\IeC {\'e}rence du fichier jeu.\discretionary {-}{}{}c}{20}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Description d\IeC {\'e}taill\IeC {\'e}e}{21}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Documentation des fonctions}{21}{subsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.2.1}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}compteur\discretionary {-}{}{}Claque}{21}{subsubsection.5.8.2.1}
+\contentsline {subsubsection}{\numberline {5.8.2.2}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer}{21}{subsubsection.5.8.2.2}
+\contentsline {subsubsection}{\numberline {5.8.2.3}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{21}{subsubsection.5.8.2.3}
+\contentsline {subsubsection}{\numberline {5.8.2.4}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}proposer\discretionary {-}{}{}Mot}{21}{subsubsection.5.8.2.4}
+\contentsline {subsubsection}{\numberline {5.8.2.5}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}stopper}{22}{subsubsection.5.8.2.5}
+\contentsline {subsubsection}{\numberline {5.8.2.6}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}temps\discretionary {-}{}{}Restant}{22}{subsubsection.5.8.2.6}
+\contentsline {section}{\numberline {5.9}R\IeC {\'e}f\IeC {\'e}rence du fichier jeu.\discretionary {-}{}{}h}{22}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Description d\IeC {\'e}taill\IeC {\'e}e}{22}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Documentation des fonctions}{23}{subsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.2.1}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}compteur\discretionary {-}{}{}Claque}{23}{subsubsection.5.9.2.1}
+\contentsline {subsubsection}{\numberline {5.9.2.2}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer}{23}{subsubsection.5.9.2.2}
+\contentsline {subsubsection}{\numberline {5.9.2.3}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{23}{subsubsection.5.9.2.3}
+\contentsline {subsubsection}{\numberline {5.9.2.4}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}proposer\discretionary {-}{}{}Mot}{23}{subsubsection.5.9.2.4}
+\contentsline {subsubsection}{\numberline {5.9.2.5}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}stopper}{23}{subsubsection.5.9.2.5}
+\contentsline {subsubsection}{\numberline {5.9.2.6}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}temps\discretionary {-}{}{}Restant}{24}{subsubsection.5.9.2.6}
+\contentsline {section}{\numberline {5.10}R\IeC {\'e}f\IeC {\'e}rence du fichier main.\discretionary {-}{}{}c}{24}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Description d\IeC {\'e}taill\IeC {\'e}e}{24}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.10.2}Documentation des fonctions}{24}{subsection.5.10.2}
+\contentsline {subsubsection}{\numberline {5.10.2.1}main}{24}{subsubsection.5.10.2.1}
+\contentsline {subsubsection}{\numberline {5.10.2.2}mauvais\discretionary {-}{}{}Parametre}{25}{subsubsection.5.10.2.2}
+\contentsline {section}{\numberline {5.11}R\IeC {\'e}f\IeC {\'e}rence du fichier plateau.\discretionary {-}{}{}c}{25}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Description d\IeC {\'e}taill\IeC {\'e}e}{25}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.2}Documentation des fonctions}{25}{subsection.5.11.2}
+\contentsline {subsubsection}{\numberline {5.11.2.1}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}choisir\discretionary {-}{}{}Lettre}{25}{subsubsection.5.11.2.1}
+\contentsline {subsubsection}{\numberline {5.11.2.2}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}{26}{subsubsection.5.11.2.2}
+\contentsline {subsubsection}{\numberline {5.11.2.3}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{26}{subsubsection.5.11.2.3}
+\contentsline {subsubsection}{\numberline {5.11.2.4}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}proba\discretionary {-}{}{}Lettre}{26}{subsubsection.5.11.2.4}
+\contentsline {subsubsection}{\numberline {5.11.2.5}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Aleatoire}{26}{subsubsection.5.11.2.5}
+\contentsline {subsubsection}{\numberline {5.11.2.6}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Predefinie}{26}{subsubsection.5.11.2.6}
+\contentsline {section}{\numberline {5.12}R\IeC {\'e}f\IeC {\'e}rence du fichier plateau.\discretionary {-}{}{}h}{26}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Description d\IeC {\'e}taill\IeC {\'e}e}{27}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {5.12.2}Documentation des fonctions}{27}{subsection.5.12.2}
+\contentsline {subsubsection}{\numberline {5.12.2.1}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}choisir\discretionary {-}{}{}Lettre}{27}{subsubsection.5.12.2.1}
+\contentsline {subsubsection}{\numberline {5.12.2.2}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}{27}{subsubsection.5.12.2.2}
+\contentsline {subsubsection}{\numberline {5.12.2.3}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}nouveau}{27}{subsubsection.5.12.2.3}
+\contentsline {subsubsection}{\numberline {5.12.2.4}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}proba\discretionary {-}{}{}Lettre}{28}{subsubsection.5.12.2.4}
+\contentsline {subsubsection}{\numberline {5.12.2.5}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Aleatoire}{28}{subsubsection.5.12.2.5}
+\contentsline {subsubsection}{\numberline {5.12.2.6}plateau\discretionary {-}{}{}\_\discretionary {-}{}{}remplir\discretionary {-}{}{}Grille\discretionary {-}{}{}Predefinie}{28}{subsubsection.5.12.2.6}
+\contentsline {section}{\numberline {5.13}R\IeC {\'e}f\IeC {\'e}rence du fichier resolveur.\discretionary {-}{}{}c}{28}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Description d\IeC {\'e}taill\IeC {\'e}e}{29}{subsection.5.13.1}
+\contentsline {subsection}{\numberline {5.13.2}Documentation des fonctions}{29}{subsection.5.13.2}
+\contentsline {subsubsection}{\numberline {5.13.2.1}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Solveur}{29}{subsubsection.5.13.2.1}
+\contentsline {subsubsection}{\numberline {5.13.2.2}recurse}{29}{subsubsection.5.13.2.2}
+\contentsline {subsubsection}{\numberline {5.13.2.3}resolve\discretionary {-}{}{}Toute\discretionary {-}{}{}La\discretionary {-}{}{}Grille}{29}{subsubsection.5.13.2.3}
+\contentsline {section}{\numberline {5.14}R\IeC {\'e}f\IeC {\'e}rence du fichier resolveur.\discretionary {-}{}{}h}{29}{section.5.14}
+\contentsline {subsection}{\numberline {5.14.1}Description d\IeC {\'e}taill\IeC {\'e}e}{30}{subsection.5.14.1}
+\contentsline {subsection}{\numberline {5.14.2}Documentation des fonctions}{30}{subsection.5.14.2}
+\contentsline {subsubsection}{\numberline {5.14.2.1}jeu\discretionary {-}{}{}\_\discretionary {-}{}{}lancer\discretionary {-}{}{}Mode\discretionary {-}{}{}Solveur}{30}{subsubsection.5.14.2.1}
+\contentsline {subsubsection}{\numberline {5.14.2.2}resolve\discretionary {-}{}{}Toute\discretionary {-}{}{}La\discretionary {-}{}{}Grille}{30}{subsubsection.5.14.2.2}
+\contentsline {section}{\numberline {5.15}R\IeC {\'e}f\IeC {\'e}rence du fichier solution.\discretionary {-}{}{}c}{30}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Description d\IeC {\'e}taill\IeC {\'e}e}{30}{subsection.5.15.1}
+\contentsline {subsection}{\numberline {5.15.2}Documentation des fonctions}{31}{subsection.5.15.2}
+\contentsline {subsubsection}{\numberline {5.15.2.1}solution\discretionary {-}{}{}\_\discretionary {-}{}{}ajouter\discretionary {-}{}{}Mot}{31}{subsubsection.5.15.2.1}
+\contentsline {subsubsection}{\numberline {5.15.2.2}solution\discretionary {-}{}{}\_\discretionary {-}{}{}creer}{31}{subsubsection.5.15.2.2}
+\contentsline {subsubsection}{\numberline {5.15.2.3}solution\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}{31}{subsubsection.5.15.2.3}
+\contentsline {subsubsection}{\numberline {5.15.2.4}solution\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}Nb\discretionary {-}{}{}Mots\discretionary {-}{}{}Debut}{31}{subsubsection.5.15.2.4}
+\contentsline {subsubsection}{\numberline {5.15.2.5}solution\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Est\discretionary {-}{}{}Present}{31}{subsubsection.5.15.2.5}
+\contentsline {subsubsection}{\numberline {5.15.2.6}solution\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Points}{32}{subsubsection.5.15.2.6}
+\contentsline {section}{\numberline {5.16}R\IeC {\'e}f\IeC {\'e}rence du fichier solution.\discretionary {-}{}{}h}{32}{section.5.16}
+\contentsline {subsection}{\numberline {5.16.1}Description d\IeC {\'e}taill\IeC {\'e}e}{32}{subsection.5.16.1}
+\contentsline {subsection}{\numberline {5.16.2}Documentation des fonctions}{32}{subsection.5.16.2}
+\contentsline {subsubsection}{\numberline {5.16.2.1}solution\discretionary {-}{}{}\_\discretionary {-}{}{}ajouter\discretionary {-}{}{}Mot}{32}{subsubsection.5.16.2.1}
+\contentsline {subsubsection}{\numberline {5.16.2.2}solution\discretionary {-}{}{}\_\discretionary {-}{}{}creer}{33}{subsubsection.5.16.2.2}
+\contentsline {subsubsection}{\numberline {5.16.2.3}solution\discretionary {-}{}{}\_\discretionary {-}{}{}detruire}{33}{subsubsection.5.16.2.3}
+\contentsline {subsubsection}{\numberline {5.16.2.4}solution\discretionary {-}{}{}\_\discretionary {-}{}{}get\discretionary {-}{}{}Nb\discretionary {-}{}{}Mots\discretionary {-}{}{}Debut}{33}{subsubsection.5.16.2.4}
+\contentsline {subsubsection}{\numberline {5.16.2.5}solution\discretionary {-}{}{}\_\discretionary {-}{}{}mot\discretionary {-}{}{}Est\discretionary {-}{}{}Present}{33}{subsubsection.5.16.2.5}
+\contentsline {subsubsection}{\numberline {5.16.2.6}solution\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Points}{33}{subsubsection.5.16.2.6}
+\contentsline {section}{\numberline {5.17}R\IeC {\'e}f\IeC {\'e}rence du fichier util.\discretionary {-}{}{}c}{34}{section.5.17}
+\contentsline {subsection}{\numberline {5.17.1}Description d\IeC {\'e}taill\IeC {\'e}e}{34}{subsection.5.17.1}
+\contentsline {subsection}{\numberline {5.17.2}Documentation des fonctions}{34}{subsection.5.17.2}
+\contentsline {subsubsection}{\numberline {5.17.2.1}util\discretionary {-}{}{}\_\discretionary {-}{}{}affichage\discretionary {-}{}{}Debug}{35}{subsubsection.5.17.2.1}
+\contentsline {subsubsection}{\numberline {5.17.2.2}util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}{35}{subsubsection.5.17.2.2}
+\contentsline {subsubsection}{\numberline {5.17.2.3}util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}{35}{subsubsection.5.17.2.3}
+\contentsline {subsubsection}{\numberline {5.17.2.4}util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}{35}{subsubsection.5.17.2.4}
+\contentsline {subsubsection}{\numberline {5.17.2.5}util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}{35}{subsubsection.5.17.2.5}
+\contentsline {subsubsection}{\numberline {5.17.2.6}util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}{35}{subsubsection.5.17.2.6}
+\contentsline {subsubsection}{\numberline {5.17.2.7}util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}{36}{subsubsection.5.17.2.7}
+\contentsline {subsubsection}{\numberline {5.17.2.8}util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}{36}{subsubsection.5.17.2.8}
+\contentsline {subsubsection}{\numberline {5.17.2.9}util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}{36}{subsubsection.5.17.2.9}
+\contentsline {subsubsection}{\numberline {5.17.2.10}util\discretionary {-}{}{}\_\discretionary {-}{}{}uppercase}{36}{subsubsection.5.17.2.10}
+\contentsline {section}{\numberline {5.18}R\IeC {\'e}f\IeC {\'e}rence du fichier util.\discretionary {-}{}{}h}{37}{section.5.18}
+\contentsline {subsection}{\numberline {5.18.1}Description d\IeC {\'e}taill\IeC {\'e}e}{37}{subsection.5.18.1}
+\contentsline {subsection}{\numberline {5.18.2}Documentation des fonctions}{37}{subsection.5.18.2}
+\contentsline {subsubsection}{\numberline {5.18.2.1}util\discretionary {-}{}{}\_\discretionary {-}{}{}affichage\discretionary {-}{}{}Debug}{37}{subsubsection.5.18.2.1}
+\contentsline {subsubsection}{\numberline {5.18.2.2}util\discretionary {-}{}{}\_\discretionary {-}{}{}conversion\discretionary {-}{}{}Temps}{38}{subsubsection.5.18.2.2}
+\contentsline {subsubsection}{\numberline {5.18.2.3}util\discretionary {-}{}{}\_\discretionary {-}{}{}deplacer\discretionary {-}{}{}Curseur\discretionary {-}{}{}Dun\discretionary {-}{}{}Mot}{38}{subsubsection.5.18.2.3}
+\contentsline {subsubsection}{\numberline {5.18.2.4}util\discretionary {-}{}{}\_\discretionary {-}{}{}echanger}{38}{subsubsection.5.18.2.4}
+\contentsline {subsubsection}{\numberline {5.18.2.5}util\discretionary {-}{}{}\_\discretionary {-}{}{}is\discretionary {-}{}{}In\discretionary {-}{}{}Array}{38}{subsubsection.5.18.2.5}
+\contentsline {subsubsection}{\numberline {5.18.2.6}util\discretionary {-}{}{}\_\discretionary {-}{}{}nb\discretionary {-}{}{}Aleatoire}{38}{subsubsection.5.18.2.6}
+\contentsline {subsubsection}{\numberline {5.18.2.7}util\discretionary {-}{}{}\_\discretionary {-}{}{}quick\discretionary {-}{}{}Sort}{39}{subsubsection.5.18.2.7}
+\contentsline {subsubsection}{\numberline {5.18.2.8}util\discretionary {-}{}{}\_\discretionary {-}{}{}substr}{39}{subsubsection.5.18.2.8}
+\contentsline {subsubsection}{\numberline {5.18.2.9}util\discretionary {-}{}{}\_\discretionary {-}{}{}supprimer\discretionary {-}{}{}Accents}{39}{subsubsection.5.18.2.9}

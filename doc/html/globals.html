@@ -73,6 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li class="current"><a href="globals.html"><span>Tout</span></a></li>
       <li><a href="globals_func.html"><span>Fonctions</span></a></li>
+      <li><a href="globals_enum.html"><span>Énumérations</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -81,8 +82,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_j"><span>j</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
     </ul>
   </div>
@@ -106,7 +110,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -121,12 +125,15 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>dictionnaire_nouveau()
 : <a class="el" href="dictionnaire_8c.html#aaff8a3a953fc8b9b360ab39040ff3e5f">dictionnaire.c</a>
+, <a class="el" href="dictionnaire_8h.html#aaff8a3a953fc8b9b360ab39040ff3e5f">dictionnaire.h</a>
 </li>
 <li>dictionnaire_rechercheDichotomique()
-: <a class="el" href="dictionnaire_8c.html#a61286b4c5730255db1df056e375d406e">dictionnaire.c</a>
+: <a class="el" href="dictionnaire_8h.html#a61286b4c5730255db1df056e375d406e">dictionnaire.h</a>
+, <a class="el" href="dictionnaire_8c.html#a61286b4c5730255db1df056e375d406e">dictionnaire.c</a>
 </li>
 <li>dictonnaire_motDansDico()
-: <a class="el" href="dictionnaire_8c.html#a168479ad26583f7fe844a1341a57df1d">dictionnaire.c</a>
+: <a class="el" href="dictionnaire_8h.html#a168479ad26583f7fe844a1341a57df1d">dictionnaire.h</a>
+, <a class="el" href="dictionnaire_8c.html#a168479ad26583f7fe844a1341a57df1d">dictionnaire.c</a>
 </li>
 </ul>
 
@@ -141,30 +148,42 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>interfaceNcurses_afficherBoiteDialogue()
 : <a class="el" href="interfaceNcurses_8c.html#ad154999bd280bf4911c014bcaf00670f">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#ad154999bd280bf4911c014bcaf00670f">interfaceNcurses.h</a>
 </li>
 <li>interfaceNcurses_afficherFenetreJeu()
-: <a class="el" href="interfaceNcurses_8c.html#aff38ebc6fd2d7cf8263278889833b289">interfaceNcurses.c</a>
+: <a class="el" href="interfaceNcurses_8h.html#a0cab3f7fca42b611b7408b180e875e65">interfaceNcurses.h</a>
+, <a class="el" href="interfaceNcurses_8c.html#a0cab3f7fca42b611b7408b180e875e65">interfaceNcurses.c</a>
 </li>
 <li>interfaceNcurses_afficherFenetreSolution()
 : <a class="el" href="interfaceNcurses_8c.html#aafd8deb32c222d5c6fa5f976118332bc">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#aafd8deb32c222d5c6fa5f976118332bc">interfaceNcurses.h</a>
 </li>
 <li>interfaceNcurses_afficherGrille()
-: <a class="el" href="interfaceNcurses_8c.html#a7f08cba800239f2e0bdfa3ed50303595">interfaceNcurses.c</a>
+: <a class="el" href="interfaceNcurses_8h.html#a49a59b92585fda5d3e024b9adca97c82">interfaceNcurses.h</a>
+, <a class="el" href="interfaceNcurses_8c.html#a49a59b92585fda5d3e024b9adca97c82">interfaceNcurses.c</a>
 </li>
 <li>interfaceNcurses_afficherSolution()
 : <a class="el" href="interfaceNcurses_8c.html#a27c4bdc3571ec76bc5f31b11847c0680">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#a27c4bdc3571ec76bc5f31b11847c0680">interfaceNcurses.h</a>
 </li>
 <li>interfaceNcurses_afficherTitre()
 : <a class="el" href="interfaceNcurses_8c.html#a8e2f090f4d8640151c9a0957911d99e5">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#a8e2f090f4d8640151c9a0957911d99e5">interfaceNcurses.h</a>
 </li>
 <li>interfaceNcurses_initialiser()
 : <a class="el" href="interfaceNcurses_8c.html#a11139ea3bdd922798149d2fa93e93457">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#a11139ea3bdd922798149d2fa93e93457">interfaceNcurses.h</a>
 </li>
 <li>interfaceNcurses_menu()
 : <a class="el" href="interfaceNcurses_8c.html#a013c16f098ebd2e99f3ef5604235f78c">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#a013c16f098ebd2e99f3ef5604235f78c">interfaceNcurses.h</a>
 </li>
 <li>interfaceNcurses_terminer()
 : <a class="el" href="interfaceNcurses_8c.html#a8107452f526ae2b4bb7db9daadd39fa9">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#a8107452f526ae2b4bb7db9daadd39fa9">interfaceNcurses.h</a>
+</li>
+<li>interfaceTexte_afficherSolution()
+: <a class="el" href="interfaceTexte_8c.html#a571263823557657d24e12f97176bd4f1">interfaceTexte.c</a>
 </li>
 </ul>
 
@@ -172,24 +191,49 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_j"></a>- j -</h3><ul>
 <li>jeu_compteurClaque()
 : <a class="el" href="jeu_8c.html#a856c5fb8ebf30b42d3b0dccc0b3ad2e4">jeu.c</a>
+, <a class="el" href="jeu_8h.html#a856c5fb8ebf30b42d3b0dccc0b3ad2e4">jeu.h</a>
 </li>
 <li>jeu_lancer()
-: <a class="el" href="jeu_8c.html#ac9f225a777f911ea04166e4d8b8323b2">jeu.c</a>
+: <a class="el" href="jeu_8h.html#ac9f225a777f911ea04166e4d8b8323b2">jeu.h</a>
+, <a class="el" href="jeu_8c.html#ac9f225a777f911ea04166e4d8b8323b2">jeu.c</a>
 </li>
 <li>jeu_lancerModeNcurses()
 : <a class="el" href="interfaceNcurses_8c.html#ad8d628ccec45bfb57ace978b88a6dd0e">interfaceNcurses.c</a>
+, <a class="el" href="interfaceNcurses_8h.html#ad8d628ccec45bfb57ace978b88a6dd0e">interfaceNcurses.h</a>
+</li>
+<li>jeu_lancerModeSolveur()
+: <a class="el" href="resolveur_8h.html#ae520f009aac7af89e1bff478de802a95">resolveur.h</a>
+, <a class="el" href="resolveur_8c.html#ae520f009aac7af89e1bff478de802a95">resolveur.c</a>
+</li>
+<li>jeu_lancerModeTexte()
+: <a class="el" href="interfaceTexte_8c.html#a4c8b971a83c16ff0b7a62457c4ef050e">interfaceTexte.c</a>
+, <a class="el" href="interfaceTexte_8h.html#a4c8b971a83c16ff0b7a62457c4ef050e">interfaceTexte.h</a>
 </li>
 <li>jeu_nouveau()
-: <a class="el" href="jeu_8c.html#a33826e55d07a74ce375cdeacb1240ade">jeu.c</a>
+: <a class="el" href="jeu_8c.html#a5fcc7a42a3e56660da1479ac8c859d16">jeu.c</a>
+, <a class="el" href="jeu_8h.html#a5fcc7a42a3e56660da1479ac8c859d16">jeu.h</a>
 </li>
 <li>jeu_proposerMot()
 : <a class="el" href="jeu_8c.html#aee397c079a99210e5594e36b08db11c4">jeu.c</a>
+, <a class="el" href="jeu_8h.html#aee397c079a99210e5594e36b08db11c4">jeu.h</a>
 </li>
 <li>jeu_stopper()
-: <a class="el" href="jeu_8c.html#a112bcfc7f5159ea64a21cacb92c944ea">jeu.c</a>
+: <a class="el" href="jeu_8h.html#a112bcfc7f5159ea64a21cacb92c944ea">jeu.h</a>
+, <a class="el" href="jeu_8c.html#a112bcfc7f5159ea64a21cacb92c944ea">jeu.c</a>
 </li>
 <li>jeu_tempsRestant()
-: <a class="el" href="jeu_8c.html#a59f32d1375181989b1aa94b838631929">jeu.c</a>
+: <a class="el" href="jeu_8h.html#a59f32d1375181989b1aa94b838631929">jeu.h</a>
+, <a class="el" href="jeu_8c.html#a59f32d1375181989b1aa94b838631929">jeu.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main.c</a>
+</li>
+<li>mauvaisParametre()
+: <a class="el" href="main_8c.html#ae534631e036d83664f10ed7c3bdf8eec">main.c</a>
 </li>
 </ul>
 
@@ -197,31 +241,73 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>plateau_choisirLettre()
 : <a class="el" href="plateau_8c.html#a859a80b6e007a4f7e9fff96414f24384">plateau.c</a>
+, <a class="el" href="plateau_8h.html#a859a80b6e007a4f7e9fff96414f24384">plateau.h</a>
 </li>
 <li>plateau_detruire()
-: <a class="el" href="plateau_8c.html#afeb9fd22a43c9a29c9815be5ffbc254d">plateau.c</a>
+: <a class="el" href="plateau_8h.html#afeb9fd22a43c9a29c9815be5ffbc254d">plateau.h</a>
+, <a class="el" href="plateau_8c.html#afeb9fd22a43c9a29c9815be5ffbc254d">plateau.c</a>
 </li>
 <li>plateau_nouveau()
-: <a class="el" href="plateau_8c.html#a227b9ee882d6ee30797b4dd978a26633">plateau.c</a>
+: <a class="el" href="plateau_8c.html#a29e56b58f5905022117373beecfd1708">plateau.c</a>
+, <a class="el" href="plateau_8h.html#a29e56b58f5905022117373beecfd1708">plateau.h</a>
 </li>
 <li>plateau_probaLettre()
-: <a class="el" href="plateau_8c.html#ac564837afaa7e07ed257caf8639a5879">plateau.c</a>
+: <a class="el" href="plateau_8h.html#ac564837afaa7e07ed257caf8639a5879">plateau.h</a>
+, <a class="el" href="plateau_8c.html#ac564837afaa7e07ed257caf8639a5879">plateau.c</a>
 </li>
 <li>plateau_remplirGrilleAleatoire()
-: <a class="el" href="plateau_8c.html#a23a1db5b648d7483da8619e880506725">plateau.c</a>
+: <a class="el" href="plateau_8h.html#a23a1db5b648d7483da8619e880506725">plateau.h</a>
+, <a class="el" href="plateau_8c.html#a23a1db5b648d7483da8619e880506725">plateau.c</a>
 </li>
 <li>plateau_remplirGrillePredefinie()
 : <a class="el" href="plateau_8c.html#aa2bb750ea8570ed32eb894c7249d2e35">plateau.c</a>
+, <a class="el" href="plateau_8h.html#aa2bb750ea8570ed32eb894c7249d2e35">plateau.h</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>recurse()
-: <a class="el" href="resolveur_8c.html#a1eacf34755bde03a6bc60c79383bd657">resolveur.c</a>
+: <a class="el" href="resolveur_8c.html#af0316a5a4d0c2659b4218bdfdb321d29">resolveur.c</a>
 </li>
-<li>resolveur()
-: <a class="el" href="resolveur_8c.html#a8696ca50e0d0e6d4c05399c26372709d">resolveur.c</a>
+<li>resolveTouteLaGrille()
+: <a class="el" href="resolveur_8h.html#a878e12ec014ce4e43b95897b5c06a358">resolveur.h</a>
+, <a class="el" href="resolveur_8c.html#a878e12ec014ce4e43b95897b5c06a358">resolveur.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>solution_ajouterMot()
+: <a class="el" href="solution_8c.html#a4bc4f716206878893bbea8f5d89a6aba">solution.c</a>
+, <a class="el" href="solution_8h.html#a4bc4f716206878893bbea8f5d89a6aba">solution.h</a>
+</li>
+<li>solution_creer()
+: <a class="el" href="solution_8h.html#ac761303cf734943eb7f5f7fe2de99379">solution.h</a>
+, <a class="el" href="solution_8c.html#ac761303cf734943eb7f5f7fe2de99379">solution.c</a>
+</li>
+<li>solution_detruire()
+: <a class="el" href="solution_8c.html#a50ddf52d1a62a48a46989783cb65d462">solution.c</a>
+, <a class="el" href="solution_8h.html#a50ddf52d1a62a48a46989783cb65d462">solution.h</a>
+</li>
+<li>solution_getNbMotsDebut()
+: <a class="el" href="solution_8h.html#a857d432d6ca95c7413456fce4996a133">solution.h</a>
+, <a class="el" href="solution_8c.html#a857d432d6ca95c7413456fce4996a133">solution.c</a>
+</li>
+<li>solution_motEstPresent()
+: <a class="el" href="solution_8h.html#a3fd246b62de5f36abb8567ccb70a0706">solution.h</a>
+, <a class="el" href="solution_8c.html#a3fd246b62de5f36abb8567ccb70a0706">solution.c</a>
+</li>
+<li>solution_nbPoints()
+: <a class="el" href="solution_8c.html#aa1bb041fa6e461a6a8c46b43857a94d4">solution.c</a>
+, <a class="el" href="solution_8h.html#aa1bb041fa6e461a6a8c46b43857a94d4">solution.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>TypeJeu
+: <a class="el" href="main_8c.html#a8cbd74cde785577e2dbfaa81eb0ca698">main.c</a>
 </li>
 </ul>
 
@@ -229,33 +315,46 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>util_affichageDebug()
 : <a class="el" href="util_8c.html#a3c1c39d9849edbfc6030dad294f803c2">util.c</a>
+, <a class="el" href="util_8h.html#a3c1c39d9849edbfc6030dad294f803c2">util.h</a>
 </li>
 <li>util_afficherTableAscii()
 : <a class="el" href="util_8c.html#ac2c251fd00334d5987228dd6f5431f02">util.c</a>
 </li>
 <li>util_conversionTemps()
 : <a class="el" href="util_8c.html#ae959a017ee969585d79f68fffabf710d">util.c</a>
+, <a class="el" href="util_8h.html#ae959a017ee969585d79f68fffabf710d">util.h</a>
 </li>
 <li>util_deplacerCurseurDunMot()
 : <a class="el" href="util_8c.html#a61ce43583b52fd8f8b69b34dcb411ef9">util.c</a>
+, <a class="el" href="util_8h.html#a61ce43583b52fd8f8b69b34dcb411ef9">util.h</a>
 </li>
 <li>util_echanger()
-: <a class="el" href="util_8c.html#a76c1cbcd1bd43ad75cb93a6ee17bd65e">util.c</a>
+: <a class="el" href="util_8c.html#aa4fd96e539887eacae8c1aec9fc27231">util.c</a>
+, <a class="el" href="util_8h.html#aa4fd96e539887eacae8c1aec9fc27231">util.h</a>
 </li>
 <li>util_isInArray()
-: <a class="el" href="util_8c.html#a0311f1c6b9a4bc8506c8490c63c6bf6b">util.c</a>
+: <a class="el" href="util_8c.html#abfde6a409b173233c0c9cbceccfbe38e">util.c</a>
+, <a class="el" href="util_8h.html#abfde6a409b173233c0c9cbceccfbe38e">util.h</a>
 </li>
 <li>util_nbAleatoire()
 : <a class="el" href="util_8c.html#a731fef986576fd9259a24619ca099bb2">util.c</a>
+, <a class="el" href="util_8h.html#a731fef986576fd9259a24619ca099bb2">util.h</a>
+</li>
+<li>util_nettoyerConsole()
+: <a class="el" href="util_8h.html#ab1239cb83fc1a85d92c396a0996415ab">util.h</a>
+, <a class="el" href="util_8c.html#ab1239cb83fc1a85d92c396a0996415ab">util.c</a>
 </li>
 <li>util_quickSort()
-: <a class="el" href="util_8c.html#a2bffc43ebb03a4eb18361ac919369aba">util.c</a>
+: <a class="el" href="util_8c.html#a5b37b90ea6bfd0c77645dac7a6cd6c44">util.c</a>
+, <a class="el" href="util_8h.html#a5b37b90ea6bfd0c77645dac7a6cd6c44">util.h</a>
 </li>
 <li>util_substr()
-: <a class="el" href="util_8c.html#a08242f964f0e2453993b26df48953c65">util.c</a>
+: <a class="el" href="util_8h.html#a08242f964f0e2453993b26df48953c65">util.h</a>
+, <a class="el" href="util_8c.html#a08242f964f0e2453993b26df48953c65">util.c</a>
 </li>
 <li>util_supprimerAccents()
 : <a class="el" href="util_8c.html#a0e84020f177fa04e8894bf7f1d159442">util.c</a>
+, <a class="el" href="util_8h.html#a0e84020f177fa04e8894bf7f1d159442">util.h</a>
 </li>
 <li>util_uppercase()
 : <a class="el" href="util_8c.html#a62c93d0b64c8cb04e51e6a116976f741">util.c</a>
@@ -266,7 +365,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Mardi Avril 30 2013 16:50:26 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:03 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

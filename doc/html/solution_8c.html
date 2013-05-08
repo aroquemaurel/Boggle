@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('solution_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,6 +119,8 @@ Fonctions</h2></td></tr>
 <tr class="memdesc:ac761303cf734943eb7f5f7fe2de99379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer la structure de données la solution.  <a href="#ac761303cf734943eb7f5f7fe2de99379"></a><br/></td></tr>
 <tr class="memitem:a3fd246b62de5f36abb8567ccb70a0706"><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a3fd246b62de5f36abb8567ccb70a0706">solution_motEstPresent</a> (const <a class="el" href="structSolution.html">Solution</a> pSolution, const char *pMot)</td></tr>
 <tr class="memdesc:a3fd246b62de5f36abb8567ccb70a0706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne vrai si le mot pMot est présent dans la solution.  <a href="#a3fd246b62de5f36abb8567ccb70a0706"></a><br/></td></tr>
+<tr class="memitem:a857d432d6ca95c7413456fce4996a133"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a857d432d6ca95c7413456fce4996a133">solution_getNbMotsDebut</a> (<a class="el" href="structSolution.html">Solution</a> pSolution, char *pDebut)</td></tr>
+<tr class="memdesc:a857d432d6ca95c7413456fce4996a133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre de mots présents dans la solution commençant pas la chaine de caractère pDebut.  <a href="#a857d432d6ca95c7413456fce4996a133"></a><br/></td></tr>
 <tr class="memitem:a4bc4f716206878893bbea8f5d89a6aba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a4bc4f716206878893bbea8f5d89a6aba">solution_ajouterMot</a> (<a class="el" href="structSolution.html">Solution</a> *pSolution, const char *mot)</td></tr>
 <tr class="memdesc:a4bc4f716206878893bbea8f5d89a6aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un mot dans la solution pSolution.  <a href="#a4bc4f716206878893bbea8f5d89a6aba"></a><br/></td></tr>
 <tr class="memitem:a50ddf52d1a62a48a46989783cb65d462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a50ddf52d1a62a48a46989783cb65d462">solution_detruire</a> (<a class="el" href="structSolution.html">Solution</a> *pSolution)</td></tr>
@@ -208,6 +210,42 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a857d432d6ca95c7413456fce4996a133"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int solution_getNbMotsDebut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSolution.html">Solution</a>&#160;</td>
+          <td class="paramname"><em>pSolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pDebut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne le nombre de mots présents dans la solution commençant pas la chaine de caractère pDebut. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSolution</td><td>La solution </td></tr>
+    <tr><td class="paramname">pDebut</td><td>Le début de la chaine </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de mots commençant par pDebut </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3fd246b62de5f36abb8567ccb70a0706"></a>
 <div class="memitem">
 <div class="memproto">
@@ -275,7 +313,7 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="solution_8c.html">solution.c</a></li>
-    <li class="footer">Généré le Mardi Avril 30 2013 18:32:43 pour Jeu de Boggle par
+    <li class="footer">Généré le Mardi Mai 7 2013 18:45:01 pour Jeu de Boggle par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
