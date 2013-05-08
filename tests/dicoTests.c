@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "CUnit/Basic.h"
+#include "CUnit/Headers/Basic.h"
 #include "dictionnaire.h"
 Dico gdico;
 /*

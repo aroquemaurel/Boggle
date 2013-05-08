@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "CUnit/CUnit.h"
-#include "CUnit/Basic.h"
+#include "CUnit/Headers/CUnit.h"
+#include "CUnit/Headers/Basic.h"
 #include "couple.h"
 #include "util.h"
 #include <locale.h>
