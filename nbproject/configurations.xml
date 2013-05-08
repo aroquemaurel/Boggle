@@ -85,6 +85,7 @@
           <standard>3</standard>
           <incDir>
             <pElem>lib</pElem>
+            <pElem>Cunit</pElem>
           </incDir>
           <commandLine>-lncurses -lpanel -lmenu</commandLine>
         </cTool>

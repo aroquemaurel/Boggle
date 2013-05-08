@@ -6,7 +6,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <name>Boggle</name>
 <version>1.0</version>
 <build>
-	<sourceDirectory>src, lib/*h</sourceDirectory>
+	<sourceDirectory>src, lib/</sourceDirectory>
 </build>
 <properties>
 <sonar.language>c</sonar.language>
