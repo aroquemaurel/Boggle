@@ -21,6 +21,7 @@ typedef struct {
     long int marqueurs[32]; /*!< Contient les positions de chacunes des lettres de l'alphabets dans le fichier */
 } Dico;
 
+
 Dico dictionnaire_nouveau(const char* pNomFichier);
 Dico dictionnaire_positionnerMarqueurs(Dico* pDico);
 int dictonnaire_motDansDico(Dico pDictionnaire, char* pMot);

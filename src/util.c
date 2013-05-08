@@ -7,9 +7,9 @@
 
 #include <string.h>
 #include <wchar.h>
-#include <time.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <locale.h>
 
 #include "util.h"
 #include "jeu.h"
@@ -41,10 +41,16 @@
   * @return La nouvelle chaine de caractère sans accents
   */
 char* util_supprimerAccents(const char* pChaine) {
+    static _Bool premierAppel = true;
     char* retour = malloc(100*sizeof(char));
     wchar_t* buffer = malloc(100*sizeof(wchar_t));
     mbstowcs(buffer,pChaine,100);
 
+    if(premierAppel) {
+        setlocale(LC_CTYPE, "");
+        premierAppel = false;
+    }
+    
     for(int i=0 ;  i < wcslen(buffer) ; ++i) {
         switch(buffer[i]) {
             case L'é':
@@ -89,7 +95,7 @@ char* util_supprimerAccents(const char* pChaine) {
  * Modifie la chaine de caractère afin qu'elle soit en majuscule
  * @param pChaine La chaine de caractère à modifier
  */
-void util_uppercase(char* pChaine) { // FIXME vérifier que le mot n'est pas en majuscule
+void util_uppercase(char* pChaine) { 
 	for(int i = 0 ; i  < strlen(pChaine) ; ++i) {
             if((pChaine[i] >= 'a') && (pChaine[i] <= 'z')) {
 		pChaine[i] -= 32;
@@ -160,10 +166,10 @@ void util_quickSort(void** tableau, int debut, int fin, int (*fctCmp)(void*,void
         do { 
             do {
                 droite--; 
-            } while((*fctCmp)(tableau[droite], pivot) > 0);
+            } while(((*fctCmp)(tableau[droite], pivot)) > 0);
             do {
                 gauche++; 
-            } while((*fctCmp)(tableau[gauche], pivot) < 0);
+            } while(((*fctCmp)(tableau[gauche], pivot)) < 0);
 
             if(gauche < droite) {
                 util_echanger(tableau, gauche, droite);
@@ -208,7 +214,7 @@ void util_deplacerCurseurDunMot(FILE* pFichier, const int pSens) {
  */
 _Bool util_isInArray(const Couple* pTableau, const int pTaille, const Couple pCase) {
     _Bool continuer = true;
-    for(int i = 0 ; (i < pTaille && continuer) ; ++i) {
+    for(int i = 0 ; ((i < pTaille) && (continuer)) ; ++i) {
         if((pTableau[i].x == pCase.x) && (pTableau[i].y == pCase.y)) {
             continuer = false;
         }
@@ -231,11 +237,11 @@ void util_conversionTemps(const time_t pTimestamp, int* pMinutes, int* pSecondes
 int util_cherchePremiereOccurenceDansTableau(char** pTableau, const int pTaille, char* pRecherche) {
     int position = 0;
 
-    while (position < pTaille - 1 && strcmp( pTableau[position], pRecherche) != 0) {
+    while ((position < pTaille - 1) && (strcmp( pTableau[position], pRecherche) != 0)) {
         ++position;
     }
 
-    return (position == pTaille - 1 && strcmp( pTableau[position], pRecherche) != 0) ? -1 : position;
+    return ((position == pTaille - 1) && (strcmp( pTableau[position], pRecherche) != 0)) ? -1 : position;
 }
 
 /**
@@ -248,7 +254,7 @@ void util_nettoyerConsole(void) {
 
 void util_viderBuffer(void) {
     int c = 0;
-    while (c != '\n' && c != EOF) {
+    while ((c != '\n') && (c != EOF)) {
         c = getchar();
     }
 }

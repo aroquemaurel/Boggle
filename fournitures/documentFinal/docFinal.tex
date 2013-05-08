@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper,openany]{article}
+\usepackage{lmodern}
+\usepackage[table]{xcolor}
+\input{../includesLaTeX/couleurs.tex}
+
+\usepackage[utf8]{inputenc} \usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[top=1.7cm, bottom=1.7cm, left=1.7cm, right=1.7cm]{geometry}
+\usepackage{verbatim}
+\usepackage[urlbordercolor={1 1 1}, linkbordercolor={1 1 1}, linkcolor=vert1, urlcolor=bleu, colorlinks=true]{hyperref}
+\usepackage{tikz} %Vectoriel
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{multido}
+\usepackage{float}
+\usepackage{amssymb}
+
+\newcommand{\titre}{Dossier }% TODO
+
+\newcommand{\pole}{}
+\newcommand{\sigle}{}
+
+\newcommand{\semestre}{4}
+
+\input{../includesLaTeX/listings.tex}
+\input{../includesLaTeX/l2/docsProjet2.tex}
+\input{../includesLaTeX/remarquesExempleAttention.tex}
+\input{../includesLaTeX/polices.tex}
+\input{../includesLaTeX/affichageChapitre2.tex}
+\newcommand{\pfp}{\texttt{pfp}}
+
+\newcommand{\ifp}{\texttt{if}}
+\newcommand{\elsep}{\texttt{else}}
+
+\makeatother
+\includeonly {
+}
+\begin{document}
+	\setcounter{tocdepth}{2}
+	\setcounter{secnumdepth}{3}
+	\maketitle
+	\tableofcontents
+	\newpage
+	\section{But du document}
+	C'est une description de haut niveau du produit, c'est-à-dire l'architecture générale du système, en termes de << modules >>, de sous modules et de leurs
+	interactions. De plus, chaque module doit être décrit (définition des interfaces et des fonctionnalités générales). Ce document doit en premier lieu asseoir
+	la confiance en la finalité et la faisabilité du produit, et, en second lieu, servir de base pour l'estimation des tâches à effectuer et du calendrier de
+	leur réalisation.
+
+	Le << Dossier de Conception Préliminaire >> doit également mettre en évidence le plan de tests, en termes de besoins de l'utilisateur, et montrer que l'on peut
+	y satisfaire grâce à l'architecture proposée.
+	\section{Compilation}
+	La compilation du projet se fait à l'aide de l'utilitaire \texttt{Make}, ainsi la simple
+	commande \texttt{make} à la racine du projet suffit à compiler le projet.
+
+	Cependant, afin de pouvoir compiler le projet, il est indispensable de posséder la
+	bibliothèque \textit{Ncurses} sur sa machine, sinon la compilation ne fonctionnerai pas.\\ 
+	Il est possible de l'installer avec la commande \texttt{apt-get install libncurses5-dev}
+	sur les Linux utilisant le gestionnaire de paquet de Debian.
+
+	Les tests quant à eux se compile à l'aide de la commande \texttt{make test}, cette
+	commande va compiler puis exécuter tous les tests, cependant si vous ne possédez pas
+	\textit{CUnit} sur votre machine, il est également indispensable de taper la commande
+	suivante afin de signaler au système l'emplacement de la bibliothèque.
+
+	\begin{lstlisting}[language=sh,numbers=none]
+LD_LIBRARY_PATH=$\$$LD_LIBRARY_PATH:`pwd` /Cunit/lib && export LD_LIBRARY_PATH		
+	\end{lstlisting}
+
+	\section{Exécution}
+	Afin de tester l'application, deux types de tests sont présent dans le projet.
+
+		\subsection{Les tests fonctionnels} Ces tests sont tous présents dans l'executable
+			\texttt{./boggle}. Afin d'appeler les différentes fonctionnalités du programme, il
+			est nécessaire de faire passer un paramètre, celui-ci peut prendre la forme d'une
+			de ces trois chaines de caractères : 
+			\begin{description}
+				\item[\texttt{--solveur}] Correspond à la version 1 du projet.
+Afin d'appeler la version 1 de l'application, l'exécutable doit être appelé à l'aide de
+l'argument \texttt{--solveur}
+
+Dans cette version, une grille carrée de la taille demandée par l'utilisateur est génére, en
+tenant compte de la fréquence des lettres dans la langue Française. Une fois la grille
+générée, la position d'une case est demandée à l'utilisateur, l'utilisateur entre donc les
+deux coordonnées, et tous les mots commençant par cette case seront affichés à l'écran.
+
+Attention, les coordonnées de la grille commences à zéro.
+				\item[\texttt{--texte}]
+					Afin d'appeler la version 2, l'exécutable doit être appelé à l'aide de
+					l'argument \texttt{--text}
+
+					Cette version fait appel à la version 1, en effet, au lancement de
+					l'application, il est de nouveau demandé la taille de la grille, ensuite
+					l'intégralité de la grille générer est résolue. Une fois cette étape
+					franchie, l'utilisateur à 3 minutes pour entrer le plus de mots possibles,
+					l'application lui signalant si le mot est accepté ou non, une fois ce
+					temps impartis, la solution est affichée, puis le nombre de points obtenu
+					par le joueur.
+				\item[\texttt{--ncurses}]
+					Afin d'appeler la version 3, l'exécutable doit être appelé à l'aide de
+					l'argument \texttt{--ncurses}
+
+					Cette version suit le même principe que la version précédente, à la
+					différence près qu'elle utilise la bibliothèque \textit{Ncurses}. Ainsi, la saisie
+					des mots se fait dorénavant avec les touches fléchées du clavier, et
+					espace pour ajouter une lettre au mot. Pour proposer le mot surligné, la
+					touche entrée doit être appuyée. Il est également possible de demander le
+					nombre de mots commençant par la case sélectionnée à l'aide de la touche
+					h.
+
+					Une fois les 3 minutes écoulées, les mots proposés par l'utilisateur et le
+					nombre de points obtenus sont affichés, il est proposé à l'utilisateur
+					d'afficher la solution complète. 
+			\end{description}
+		\subsection{Les tests unitaires}
+	\section{Documentation}
+	\section{Gestion de projet}
+	\subsection{Conventions de codage}
+	\subsection{Logiciel d'analyse de code: Sonar}
+	\subsection{Logiciel de gestion de projet: Redmine}
+	\subsection{Logiciel de versionnement: Git}
+
+\end{document}
+

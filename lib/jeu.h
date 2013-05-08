@@ -8,6 +8,7 @@
 #ifndef JEU_H
 #define	JEU_H
 #include <time.h>
+
 #include "plateau.h"
 #include "dictionnaire.h"
 
@@ -26,7 +27,7 @@ typedef struct {
 } Jeu;
 
 Jeu jeu_nouveau(const char* pNomDico, const Couple pTaillePlateau, const unsigned int pLgTimer);
-void jeu_lancer(Jeu* pJeu);
+void jeu_lancer(Jeu* pJeu, _Bool pGrillePredefinie);
 _Bool jeu_proposerMot(Jeu* pJeu, const char* pMot);
 bool jeu_compteurClaque(const Jeu pJeu);
 time_t jeu_tempsRestant(const Jeu pJeu);

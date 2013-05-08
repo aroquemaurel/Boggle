@@ -111,6 +111,56 @@ void interfaceNcurses_terminer(WINDOW* fenetre, Jeu pJeu) {
     jeu_stopper(pJeu);
 }
 
+void interfaceNcurses_deplacerCurseur(Couple* pSelectedCase, const Couple pLastChoseCase, const char* pMot, const Couple pTailleGrille, const Direction pDirection) {
+    switch(pDirection) {
+        case GAUCHE:
+            if((strlen(pMot) == 0) || (pSelectedCase->y == pLastChoseCase.y) || (pSelectedCase->y == pLastChoseCase.y+1)) {
+                pSelectedCase->y = (pSelectedCase->y-1 >= 0) ? pSelectedCase->y-1 : pSelectedCase->y;
+            }
+            break;
+        case DROITE:
+            if((strlen(pMot) == 0) || (pSelectedCase->y == pLastChoseCase.y) || (pSelectedCase->y == pLastChoseCase.y-1)) {
+                pSelectedCase->y = (pSelectedCase->y+1 < pTailleGrille.x) 
+                                        ? pSelectedCase->y+1 : pSelectedCase->y;
+            }
+            break;
+        case HAUT:
+            if((strlen(pMot) == 0) || (pSelectedCase->x == pLastChoseCase.x) || (pSelectedCase->x == pLastChoseCase.x+1)) {
+            pSelectedCase->x = (pSelectedCase->x-1 >= 0) 
+                        ? pSelectedCase->x-1 : pSelectedCase->x;                
+            }
+            break;
+        case BAS:
+            if((strlen(pMot) == 0) || (pSelectedCase->x == pLastChoseCase.x) || (pSelectedCase->x == pLastChoseCase.x-1)) {
+                pSelectedCase->x = (pSelectedCase->x+1 < pTailleGrille.y) 
+                        ? pSelectedCase->x+1 : pSelectedCase->x;
+            }
+            break;
+    }
+}
+
+void interfaceNcurses_proposerMot(char* pMot, Jeu* pJeu, Couple* pLastChoseCase) {
+    mvprintw(1, 60, "%s", pMot);
+    mvprintw(2, 60, "%s", (jeu_proposerMot(pJeu, pMot) ? "Mot correct" : "Mot Incorrect"));
+
+    for(int i = 0 ; i < 31 ; ++i) {
+        pMot[i] = '\0';
+    }
+    pLastChoseCase->x = -1;
+    pLastChoseCase->y = -1;
+}
+
+void interfaceNcurses_selectionnerLettre(char* pMot, const Couple pSelectedCase, 
+                                        Couple* pLastChoseCase, Plateau pPlateau,
+                                        Couple* pUsedCase) {
+    if(((pSelectedCase.x != pLastChoseCase->x) || (pSelectedCase.y != pLastChoseCase->y))
+            && (!util_isInArray(pUsedCase, strlen(pMot)+1, pSelectedCase))) {
+        pMot[strlen(pMot)] = pPlateau.grille[pSelectedCase.y][pSelectedCase.x];
+        pUsedCase[strlen(pMot)] = pSelectedCase;
+        mvprintw(0, 50, "%s", pMot);
+        *pLastChoseCase = pSelectedCase;
+    }
+}
 /**
  * Lance le mode Ncurses
  * @param pJeu Le jeu à lancer
@@ -119,6 +169,7 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
     Couple selectedCase;
     Couple lastChoseCase;
     Couple usedCase[32];
+    Direction direction = NEANT;
     WINDOW* fenetre;
     char mot[32] = "";
     char buff[32];
@@ -129,61 +180,39 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
     lastChoseCase.x = -1;
     lastChoseCase.y = -1;; 
 
-    jeu_lancer(&pJeu);
+    jeu_lancer(&pJeu, false);
     fenetre = interfaceNcurses_initialiser();
 
     do {
         clear();
-
         switch(ch) {
             case KEY_LEFT:
-                // FIXME déplacement lettres
-                if((strlen(mot) == 0) || (selectedCase.y == lastChoseCase.y) || (selectedCase.y == lastChoseCase.y+1)) {
-                    selectedCase.y = (selectedCase.y-1 >= 0) ? selectedCase.y-1 : selectedCase.y;
-               }
+                direction = GAUCHE;
             break;
             case KEY_RIGHT:
-                if((strlen(mot) == 0) || (selectedCase.y == lastChoseCase.y) || (selectedCase.y == lastChoseCase.y-1)) {
-                selectedCase.y = (selectedCase.y+1 < pJeu.plateau.tailleGrille.x) 
-                                        ? selectedCase.y+1 : selectedCase.y;
-                }
+                direction = DROITE;
                 break;
             case KEY_UP:
-                if((strlen(mot) == 0) || (selectedCase.x == lastChoseCase.x) || (selectedCase.x == lastChoseCase.x+1)) {
-                selectedCase.x = (selectedCase.x-1 >= 0) 
-                                        ? selectedCase.x-1 : selectedCase.x;                
-                }
+                direction = HAUT;
                 break;
             case KEY_DOWN:
-                if((strlen(mot) == 0) || (selectedCase.x == lastChoseCase.x) || (selectedCase.x == lastChoseCase.x-1)) {
-                selectedCase.x = (selectedCase.x+1 < pJeu.plateau.tailleGrille.y) 
-                        ? selectedCase.x+1 : selectedCase.x;
-                }
+                direction = BAS;
                 break;
             case 'h':
                 mvprintw(2,55, "%d mots possibles", (resolveur_resolveUneCase(pJeu.plateau, pJeu.dico, selectedCase)).nbMots);
                 break;
             case ' ':  //touche espace
-               if(((selectedCase.x != lastChoseCase.x) || (selectedCase.y != lastChoseCase.y)) 
-                        && (!util_isInArray(usedCase, strlen(mot)+1, selectedCase))) {
-                    mot[strlen(mot)] = pJeu.plateau.grille[selectedCase.y][selectedCase.x];
-                    usedCase[strlen(mot)] = selectedCase;
-                    mvprintw(0, 50, "%s", mot);
-                    lastChoseCase = selectedCase;
-                }
+                interfaceNcurses_selectionnerLettre(mot,selectedCase,&lastChoseCase,pJeu.plateau, usedCase);
                 break;
             case '\n': // Touche entrée 
-                mvprintw(1, 60, "%s", mot);
-                mvprintw(2, 60, "%s", (jeu_proposerMot(&pJeu, mot) ? "Mot correct" : "Mot Incorrect"));
-
-                for(int i = 0 ; i < 31 ; ++i) {
-                    mot[i] = '\0';
-                }
-                lastChoseCase.x = -1;
-                lastChoseCase.y = -1;
+                interfaceNcurses_proposerMot(mot, &pJeu, &lastChoseCase);
                 break;
             default:
                 break;
+        }
+        if(ch != ' ' && ch != '\n') {
+            interfaceNcurses_deplacerCurseur(&selectedCase, lastChoseCase, mot,
+                                                 pJeu.plateau.tailleGrille, direction);                                                
         }
 
         interfaceNcurses_afficherFenetreJeu(pJeu, mot, selectedCase, usedCase);
@@ -292,6 +321,8 @@ void interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu) {
                 }
                 pos_menu_cursor(menu);
                 break;
+            default:
+                break;
         }
     } while(continuer);
 }
@@ -319,15 +350,19 @@ void print_in_middle(WINDOW *win, int starty, int startx, int width, char *strin
     char affichageSolution[128] = "";
     int j = 0;
     
-	if(win == NULL)
+	if(win == NULL) {
 		win = stdscr;
+    }
 	getyx(win, y, x);
-	if(startx != 0)
+	if(startx != 0) {
 		x = startx;
-	if(starty != 0)
+    }
+	if(starty != 0) {
 		y = starty;
-	if(width == 0)
+    }
+	if(width == 0) {
 		width = 80;
+    }
     
 	length = strlen(string);
 	temp = (width - length)/ 2;
@@ -335,8 +370,8 @@ void print_in_middle(WINDOW *win, int starty, int startx, int width, char *strin
 	mvwprintw(win, y, x, "%s", string);
 
     for(int i = 0 ; i < pJeu.solutionUtilisateur.nbMots ; ++i) {
-        strcat(affichageSolution, pJeu.solutionUtilisateur.mots[i]);
-        strcat(affichageSolution, ", ");
+        strncat(affichageSolution, pJeu.solutionUtilisateur.mots[i], strlen(pJeu.solutionUtilisateur.mots[i]));
+        strncat(affichageSolution, ", ", 4);
     }
     
 	mvwprintw(win, y+4, 1, "%s", affichageSolution);

@@ -96,7 +96,7 @@ void jeu_lancerModeSolveur(Jeu pJeu) {
     caseAResolver.x = 1;
     caseAResolver.y = 1;
     util_nettoyerConsole();
-    jeu_lancer(&pJeu);
+    jeu_lancer(&pJeu, false);
     interfaceTexte_afficherPlateau(pJeu.plateau);
     printf("Entrer les coordonnées de la case à partir de laquelle one commence la résolution\n");
     printf("i: ");

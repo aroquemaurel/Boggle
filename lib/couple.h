@@ -1,19 +1,19 @@
-/** *
- * \file case.h
- * \brief Structure de données d'une case
- * Structure de données d'une case du plateau.
+/** 
+ * \file couple.h
+ * \brief Structure de données d'un couple
+ * Structure de données d'un couple de valeurs entières
  */
 
-#ifndef CASE_H
-#define	CASE_H
+#ifndef COUPLE_H
+#define	COUPLE_H
 /**
- * \struct Case
- * \brief Une case de la grille
+ * \struct Couple
+ * \brief Un couple de valeurs entières
  */
 typedef struct {
     unsigned char x; /*!< Premier nombre du couple */
     unsigned char y; /*!< Second nombre du couple */
 } Couple;
 
-#endif	/* CASE_H */
+#endif	/* COUPLE_H */
 

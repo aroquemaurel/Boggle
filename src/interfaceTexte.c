@@ -5,6 +5,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 
 #include "solution.h"
 #include "jeu.h"
@@ -61,17 +62,22 @@ void interfaceTexte_afficherPlateauEtSolution(const Plateau pPlateau, const Solu
 void jeu_lancerModeTexte(Jeu pJeu) {
     char proposition[32];
     int minutes, secondes;
-    jeu_lancer(&pJeu);
-//    interfaceTexte_afficherPlateau(pJeu.plateau);
-  
+    jeu_lancer(&pJeu, false);
+    
+    interfaceTexte_afficherPlateau(pJeu.plateau);
   do {
-      util_nettoyerConsole();
-      interfaceTexte_afficherPlateauEtSolution(pJeu.plateau, pJeu.solutionUtilisateur);
         util_conversionTemps(jeu_tempsRestant(pJeu), &minutes, &secondes);
-        printf("encore %d min et %d secondes", minutes, secondes);
+        printf("\nencore %d min et %d secondes\n", minutes, secondes);
+        
         util_lireChaine(proposition, 32);
-		printf("\n%s", jeu_proposerMot(&pJeu, proposition) ? " Mot Incorrect " : " Mot Correct ");
+        util_nettoyerConsole();
+		printf("\n%s", jeu_proposerMot(&pJeu, proposition) ? " Mot Correct " : " Mot Inorrect ");
+        interfaceTexte_afficherPlateauEtSolution(pJeu.plateau, pJeu.solutionUtilisateur);
     }while((strcmp(proposition, "-1") != 0) && (!jeu_compteurClaque(pJeu)));
-    interfaceTexte_afficherSolution(pJeu.plateau.solution);
+    
+    printf("\n\n=== Voici la solution complète: \n");
+    interfaceTexte_afficherPlateauEtSolution(pJeu.plateau, pJeu.plateau.solution);
+    printf("\n\n=== Vous avez trouvés les mots ci-dessous: ");
+    interfaceTexte_afficherSolution(pJeu.solutionUtilisateur);
     jeu_stopper(pJeu);
 }

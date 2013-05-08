@@ -29,5 +29,6 @@ int util_strcmp(void* str1, void* str2);
 int util_cherchePremiereOccurenceDansTableau(char** pTableau, const int pTaille, char* pRecherche) ;
 void util_nettoyerConsole(void);
 int util_lireChaine(char *chaine, int longueur);
+void util_uppercase(char* pChaine);
 #endif	/* UTIL_H */
 

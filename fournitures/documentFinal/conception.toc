@@ -1,0 +1,23 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}But du document}{3}{section.1}
+\contentsline {section}{\numberline {2}Diagramme de d\IeC {\'e}composition en modules}{3}{section.2}
+\contentsline {section}{\numberline {3}Description des diff\IeC {\'e}rents modules}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Module \texttt {Utile}}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Module \texttt {Plateau}}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Module \texttt {Dictionnaire}}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Module \texttt {Resolveur}}{4}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Module \texttt {Jeu}}{5}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Module \texttt {InterfaceTexte}}{5}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Module \texttt {InterfaceGraphique}}{5}{subsection.3.7}
+\contentsline {section}{\numberline {4}R\IeC {\'e}partition des t\IeC {\^a}ches entre chaque membre}{5}{section.4}
+\contentsline {section}{\numberline {5}Calendrier de r\IeC {\'e}alisation des t\IeC {\^a}ches}{7}{section.5}
+\contentsline {section}{\numberline {6}Plan de tests}{8}{section.6}
+\contentsline {subsection}{\numberline {6.1}Plateau}{8}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Dictionnaire}{8}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}R\IeC {\'e}solveur}{8}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Jeu}{9}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}\texttt {InterfaceGraphique} et \texttt {InterfaceTexte}}{9}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Globalit\IeC {\'e}}{9}{subsection.6.6}
+\contentsline {section}{\numberline {A}Annexes}{10}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Table des figures}{10}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Liste des tableaux}{10}{subsection.A.2}

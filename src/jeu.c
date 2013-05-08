@@ -54,10 +54,12 @@ Jeu jeu_nouveau(const char* pNomDico, const Couple pTaillePlateau, const unsigne
  * Lance le jeu
  * @param pJeu Le jeu à lancer
  */
-void jeu_lancer(Jeu* pJeu) {  
-    plateau_remplirGrilleAleatoire(&(pJeu->plateau));
-    interfaceTexte_afficherPlateau(pJeu->plateau);
-//    plateau_remplirGrillePredefinie(&(pJeu->plateau));
+void jeu_lancer(Jeu* pJeu, _Bool pGrillePredefinie) {  
+    if(!pGrillePredefinie) {
+        plateau_remplirGrilleAleatoire(&(pJeu->plateau));
+    } else {
+        plateau_remplirGrillePredefinie(&(pJeu->plateau));
+    }
     resolveTouteLaGrille(&(pJeu->plateau), pJeu->dico);
 }
 

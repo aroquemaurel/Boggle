@@ -16,6 +16,11 @@
 #define COULEUR_CASE_CHOISI 2
 #define NB_LIGNES 25
 
+/** 
+ * Direction d'un déplacement
+ */
+typedef enum {GAUCHE, DROITE, HAUT, BAS, NEANT} Direction;
+
 void interfaceNcurses_afficherTitre(const char* pTitle);
 void interfaceNcurses_afficherSolution(const Solution pSolution);
 void jeu_lancerModeNcurses(Jeu pJeu);
@@ -26,5 +31,9 @@ void interfaceNcurses_afficherFenetreJeu(const Jeu pJeu, char* pMot, const Coupl
 void interfaceNcurses_afficherBoiteDialogue(const Jeu pJeu);
 void interfaceNcurses_afficherFenetreSolution(const Jeu pJeu);
 void interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu);
+void interfaceNcurses_selectionnerLettre(char* pMot, const Couple pSelectedCase, Couple* pLastChoseCase, Plateau pPlateau, Couple* pUsedCase);
+void interfaceNcurses_proposerMot(char* pMot, Jeu* pJeu, Couple* pLastChoseCase);
+void interfaceNcurses_deplacerCurseur(Couple* pSelectedCase, const Couple pLastChoseCase, const char* pMot, const Couple pTailleGrille, const Direction pDirection);
+
 #endif	/* INTERFACENCURSES_H */
 

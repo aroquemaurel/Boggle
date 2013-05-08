@@ -91,7 +91,7 @@ void dictionnaire_rechercheDichotomique(Dico pDictionnaire, char* pMotAChercher,
         
         cmp = strcmp(pMotLePlusProche, pMotAChercher);
         if(cmp == 0) {
-            break; // FIXME break complètement dégueulasse. Attendre tests unitaires
+            break;
         } else if (cmp < 0) {// T[m] < X
             debut = ftell(pDictionnaire.dico);
         } else { 
