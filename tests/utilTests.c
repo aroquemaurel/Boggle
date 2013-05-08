@@ -72,7 +72,6 @@ void testUtil_substr(void) {
 void testUtil_supprimerAccents() {
     const char* pChaine = "testéééàààèèèÀÀÀÉÉÉ";
     char* result = util_supprimerAccents(pChaine);
-    fprintf(stderr, "%s", result);
     CU_ASSERT (strcmp(result, "testeeeaaaeeeAAAEEE") == 0);
 }
 
