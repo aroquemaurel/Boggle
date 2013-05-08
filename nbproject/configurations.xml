@@ -42,6 +42,9 @@
                      kind="TEST">
         <itemPath>tests/dicoTests.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="f5" displayName="jeuTest" projectFiles="true" kind="TEST">
+        <itemPath>tests/jeuTest.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="f3"
                      displayName="plateauTests"
                      projectFiles="true"
@@ -75,7 +78,7 @@
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
-        <rebuildPropChanged>false</rebuildPropChanged>
+        <rebuildPropChanged>true</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
@@ -86,6 +89,7 @@
           <commandLine>-lncurses -lpanel -lmenu</commandLine>
         </cTool>
         <linkerTool>
+          <output>boggle</output>
           <linkerAddLib>
             <pElem>Cunit/lib</pElem>
           </linkerAddLib>
@@ -101,18 +105,8 @@
             <pElem>Cunit/CUnit/Headers</pElem>
           </incDir>
           <commandLine>-LCunit/lib -lcunit</commandLine>
-          <preprocessorList>
-            <Elem>LD_LIBRARY_PATH=$HOME/cours/L2/projet4/boggle/Cunit/lib/</Elem>
-          </preprocessorList>
         </cTool>
         <linkerTool>
-          <linkerAddLib>
-            <pElem>Cunit/lib</pElem>
-          </linkerAddLib>
-          <linkerDynSerch>
-            <pElem>Cunit/lib</pElem>
-          </linkerDynSerch>
-          <additionalDep>Cunit/lib/libcunit.so</additionalDep>
           <linkerLibItems>
             <linkerLibFileItem>Cunit/lib/libcunit.so</linkerLibFileItem>
           </linkerLibItems>
@@ -127,7 +121,7 @@
           <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f1</output>
+          <output>tests/utilTests</output>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -141,7 +135,7 @@
           <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
+          <output>tests/dicoTests</output>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -155,7 +149,7 @@
           <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f3</output>
+          <output>tests/plateauTests</output>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -169,7 +163,21 @@
           <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f4</output>
+          <output>tests/solutionTests</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f5">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>tests/jeuTest</output>
           <linkerLibItems>
             <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
           </linkerLibItems>
@@ -210,6 +218,8 @@
       <item path="src/util.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tests/dicoTests.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/jeuTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tests/plateauTests.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -299,6 +309,20 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
+      <folder path="TestFiles/f5">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
       <item path="lib/dictionnaire.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/interfaceNcurses.h" ex="false" tool="3" flavor2="0">
@@ -334,6 +358,8 @@
       <item path="src/util.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tests/dicoTests.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/jeuTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tests/plateauTests.c" ex="false" tool="0" flavor2="0">
       </item>

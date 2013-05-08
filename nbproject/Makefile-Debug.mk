@@ -50,10 +50,11 @@ TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 
 # Test Files
 TESTFILES= \
-	${TESTDIR}/TestFiles/f2 \
-	${TESTDIR}/TestFiles/f3 \
-	${TESTDIR}/TestFiles/f4 \
-	${TESTDIR}/TestFiles/f1
+	tests/dicoTests \
+	tests/jeuTest \
+	tests/plateauTests \
+	tests/solutionTests \
+	tests/utilTests
 
 # C Compiler Flags
 CFLAGS=-lncurses -lpanel -lmenu
@@ -73,53 +74,52 @@ LDLIBSOPTIONS=-LCunit/lib
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk boggle
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle ${OBJECTFILES} ${LDLIBSOPTIONS}
+boggle: ${OBJECTFILES}
+	${LINK.c} -o boggle ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/main.o: main.c 
+${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
 
-${OBJECTDIR}/src/dictionnaire.o: src/dictionnaire.c 
+${OBJECTDIR}/src/dictionnaire.o: nbproject/Makefile-${CND_CONF}.mk src/dictionnaire.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/dictionnaire.o src/dictionnaire.c
 
-${OBJECTDIR}/src/interfaceNcurses.o: src/interfaceNcurses.c 
+${OBJECTDIR}/src/interfaceNcurses.o: nbproject/Makefile-${CND_CONF}.mk src/interfaceNcurses.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/interfaceNcurses.o src/interfaceNcurses.c
 
-${OBJECTDIR}/src/interfaceTexte.o: src/interfaceTexte.c 
+${OBJECTDIR}/src/interfaceTexte.o: nbproject/Makefile-${CND_CONF}.mk src/interfaceTexte.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/interfaceTexte.o src/interfaceTexte.c
 
-${OBJECTDIR}/src/jeu.o: src/jeu.c 
+${OBJECTDIR}/src/jeu.o: nbproject/Makefile-${CND_CONF}.mk src/jeu.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/jeu.o src/jeu.c
 
-${OBJECTDIR}/src/plateau.o: src/plateau.c 
+${OBJECTDIR}/src/plateau.o: nbproject/Makefile-${CND_CONF}.mk src/plateau.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/plateau.o src/plateau.c
 
-${OBJECTDIR}/src/resolveur.o: src/resolveur.c 
+${OBJECTDIR}/src/resolveur.o: nbproject/Makefile-${CND_CONF}.mk src/resolveur.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/resolveur.o src/resolveur.c
 
-${OBJECTDIR}/src/solution.o: src/solution.c 
+${OBJECTDIR}/src/solution.o: nbproject/Makefile-${CND_CONF}.mk src/solution.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/solution.o src/solution.c
 
-${OBJECTDIR}/src/util.o: src/util.c 
+${OBJECTDIR}/src/util.o: nbproject/Makefile-${CND_CONF}.mk src/util.c 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.c) -g -Ilib -std=c99 -lncurses -lpanel -lmenu -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/util.o src/util.c
@@ -129,53 +129,55 @@ ${OBJECTDIR}/src/util.o: src/util.c
 
 # Build Test Targets
 .build-tests-conf: .build-conf ${TESTFILES}
-${TESTDIR}/TestFiles/f2: Cunit/lib/libcunit.so
+tests/dicoTests: ${TESTDIR}/tests/dicoTests.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p tests
+	${LINK.c} -LCunit/lib -lcunit  -o tests/dicoTests $^ ${LDLIBSOPTIONS} Cunit/lib/libcunit.so `cppunit-config --libs`   
 
-${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/dicoTests.o ${OBJECTFILES:%.o=%_nomain.o}
-	${MKDIR} -p ${TESTDIR}/TestFiles
-	${LINK.c} -LCunit/lib -lcunit  -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS} -LCunit/lib -Wl,-rpath,Cunit/lib Cunit/lib/libcunit.so `cppunit-config --libs`   
+tests/jeuTest: ${TESTDIR}/tests/jeuTest.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p tests
+	${LINK.c} -LCunit/lib -lcunit  -o tests/jeuTest $^ ${LDLIBSOPTIONS} Cunit/lib/libcunit.so `cppunit-config --libs`   
 
-${TESTDIR}/TestFiles/f3: Cunit/lib/libcunit.so
+tests/plateauTests: ${TESTDIR}/tests/plateauTests.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p tests
+	${LINK.c} -LCunit/lib -lcunit  -o tests/plateauTests $^ ${LDLIBSOPTIONS} Cunit/lib/libcunit.so `cppunit-config --libs`   
 
-${TESTDIR}/TestFiles/f3: ${TESTDIR}/tests/plateauTests.o ${OBJECTFILES:%.o=%_nomain.o}
-	${MKDIR} -p ${TESTDIR}/TestFiles
-	${LINK.c} -LCunit/lib -lcunit  -o ${TESTDIR}/TestFiles/f3 $^ ${LDLIBSOPTIONS} -LCunit/lib -Wl,-rpath,Cunit/lib Cunit/lib/libcunit.so `cppunit-config --libs`   
+tests/solutionTests: ${TESTDIR}/tests/solutionTests.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p tests
+	${LINK.c} -LCunit/lib -lcunit  -o tests/solutionTests $^ ${LDLIBSOPTIONS} Cunit/lib/libcunit.so `cppunit-config --libs`   
 
-${TESTDIR}/TestFiles/f4: Cunit/lib/libcunit.so
-
-${TESTDIR}/TestFiles/f4: ${TESTDIR}/tests/solutionTests.o ${OBJECTFILES:%.o=%_nomain.o}
-	${MKDIR} -p ${TESTDIR}/TestFiles
-	${LINK.c} -LCunit/lib -lcunit  -o ${TESTDIR}/TestFiles/f4 $^ ${LDLIBSOPTIONS} -LCunit/lib -Wl,-rpath,Cunit/lib Cunit/lib/libcunit.so `cppunit-config --libs`   
-
-${TESTDIR}/TestFiles/f1: Cunit/lib/libcunit.so
-
-${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/utilTests.o ${OBJECTFILES:%.o=%_nomain.o}
-	${MKDIR} -p ${TESTDIR}/TestFiles
-	${LINK.c} -LCunit/lib -lcunit  -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS} -LCunit/lib -Wl,-rpath,Cunit/lib Cunit/lib/libcunit.so `cppunit-config --libs`   
+tests/utilTests: ${TESTDIR}/tests/utilTests.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p tests
+	${LINK.c} -LCunit/lib -lcunit  -o tests/utilTests $^ ${LDLIBSOPTIONS} Cunit/lib/libcunit.so `cppunit-config --libs`   
 
 
 ${TESTDIR}/tests/dicoTests.o: tests/dicoTests.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.c) -g -DLD_LIBRARY_PATH=$HOME/cours/L2/projet4/boggle/Cunit/lib/ -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/dicoTests.o tests/dicoTests.c
+	$(COMPILE.c) -g -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/dicoTests.o tests/dicoTests.c
+
+
+${TESTDIR}/tests/jeuTest.o: tests/jeuTest.c 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} $@.d
+	$(COMPILE.c) -g -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/jeuTest.o tests/jeuTest.c
 
 
 ${TESTDIR}/tests/plateauTests.o: tests/plateauTests.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.c) -g -DLD_LIBRARY_PATH=$HOME/cours/L2/projet4/boggle/Cunit/lib/ -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/plateauTests.o tests/plateauTests.c
+	$(COMPILE.c) -g -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/plateauTests.o tests/plateauTests.c
 
 
 ${TESTDIR}/tests/solutionTests.o: tests/solutionTests.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.c) -g -DLD_LIBRARY_PATH=$HOME/cours/L2/projet4/boggle/Cunit/lib/ -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/solutionTests.o tests/solutionTests.c
+	$(COMPILE.c) -g -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/solutionTests.o tests/solutionTests.c
 
 
 ${TESTDIR}/tests/utilTests.o: tests/utilTests.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.c) -g -DLD_LIBRARY_PATH=$HOME/cours/L2/projet4/boggle/Cunit/lib/ -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/utilTests.o tests/utilTests.c
+	$(COMPILE.c) -g -Ilib -ICunit/CUnit/Headers -std=c99 -lncurses -lpanel -lmenu -LCunit/lib -lcunit `cppunit-config --cflags` -MMD -MP -MF $@.d -o ${TESTDIR}/tests/utilTests.o tests/utilTests.c
 
 
 ${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.c 
@@ -299,10 +301,11 @@ ${OBJECTDIR}/src/util_nomain.o: ${OBJECTDIR}/src/util.o src/util.c
 .test-conf:
 	@if [ "${TEST}" = "" ]; \
 	then  \
-	    ${TESTDIR}/TestFiles/f2 || true; \
-	    ${TESTDIR}/TestFiles/f3 || true; \
-	    ${TESTDIR}/TestFiles/f4 || true; \
-	    ${TESTDIR}/TestFiles/f1 || true; \
+	    tests/dicoTests || true; \
+	    tests/jeuTest || true; \
+	    tests/plateauTests || true; \
+	    tests/solutionTests || true; \
+	    tests/utilTests || true; \
 	else  \
 	    ./${TEST} || true; \
 	fi
@@ -310,7 +313,7 @@ ${OBJECTDIR}/src/util_nomain.o: ${OBJECTDIR}/src/util.o src/util.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boggle
+	${RM} boggle
 
 # Subprojects
 .clean-subprojects:
