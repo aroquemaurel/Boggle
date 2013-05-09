@@ -23,7 +23,6 @@ int clean_suite(void) {
     return 0;
 }
 
-
 void testPlateau_nouveau() {
     Couple pTailleGrille;
     pTailleGrille.x = 5;

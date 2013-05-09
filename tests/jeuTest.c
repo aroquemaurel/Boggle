@@ -27,7 +27,7 @@ int clean_suite(void) {
 
 void testJeu_compteurClaque() {
     const Jeu pJeu;
-    CU_ASSERT(!jeu_compteurClaque(pJeu));
+    CU_ASSERT(jeu_compteurClaque(pJeu));
 }
 
 void testJeu_nouveau() {
@@ -39,7 +39,7 @@ void testJeu_nouveau() {
     CU_ASSERT(jeu.lgTimer == 5);
     CU_ASSERT(jeu.plateau.tailleGrille.x == 4 && jeu.plateau.tailleGrille.y == 4);
     CU_ASSERT(jeu.plateau.grille != NULL);
-//    jeu_lancer(&jeu, true);
+    jeu_lancer(&jeu, true);
 }
 
 void testJeu_proposerMot() {
@@ -67,8 +67,8 @@ int main() {
 
     /* Add the tests to the suite */
     if (    (NULL == CU_add_test(pSuite, "testJeu_nouveau", testJeu_nouveau)) ||
-            (NULL == CU_add_test(pSuite, "testJeu_compteurClaque", testJeu_compteurClaque)) ||
-            (NULL == CU_add_test(pSuite, "testJeu_proposerMot", testJeu_proposerMot)) 
+            (NULL == CU_add_test(pSuite, "testJeu_compteurClaque", testJeu_compteurClaque))
+//            (NULL == CU_add_test(pSuite, "testJeu_proposerMot", testJeu_proposerMot)) 
             ) {
         
         CU_cleanup_registry();

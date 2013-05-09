@@ -273,7 +273,6 @@ void win_show(WINDOW *win, char *label, Jeu pJeu) {
  * Affiche un menu permettant de choisir entre quitter et afficher la solution
  * @param pDialogBoxWin La fenêtre danslequel s'affiche le menu
  * @param pJeu Le jeu
- * @return 
  */
 void interfaceNcurses_menu(WINDOW* pDialogBoxWin, const Jeu pJeu) {
     ITEM** items = calloc(3, sizeof(ITEM));

@@ -61,11 +61,11 @@ void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
 
 /**
  * Rempli le plateau avec une grille prédéfinie de taille 4*4
- * E D R C
- * A N V C
- * I R Q A
- * E B R U
- * 
+ * E D R C 
+ * A N V C 
+ * I R Q A 
+ * E B R U 
+ *         
  * @param pPlateau Le plateau à remplire
  */
 void plateau_remplirGrillePredefinie(Plateau* pPlateau) {

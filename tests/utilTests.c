@@ -123,7 +123,6 @@ int main() {
 
     /* Add the tests to the suite */
     if (
-//    TODO        (NULL == CU_add_test(pSuite, "testUtil_deplacerCurseurDunMot", testUtil_deplacerCurseurDunMot)) ||
             (NULL == CU_add_test(pSuite, "testUtil_echanger", testUtil_echanger)) ||
             (NULL == CU_add_test(pSuite, "testUtil_quickSort", testUtil_quickSort)) ||
             (NULL == CU_add_test(pSuite, "testUtil_substr", testUtil_substr)) ||
