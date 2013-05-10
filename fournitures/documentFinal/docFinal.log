@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.3)  10 MAY 2013 17:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.3)  10 MAY 2013 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1076,8 +1076,10 @@ LaTeX Font Warning: Font shape `T1/pag/bc/n' undefined
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 80.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 96.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 97.
  [5
 
 ]
@@ -1090,21 +1092,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [6]
 Chapitre 2.
 
-Overfull \hbox (35.9038pt too wide) in paragraph at lines 137--137
+Overfull \hbox (35.9038pt too wide) in paragraph at lines 138--138
 [][] 
  []
 
 
 LaTeX Font Warning: Font shape `T1/pag/bc/it' undefined
-(Font)              using `T1/pag/bc/n' instead on input line 159.
+(Font)              using `T1/pag/bc/n' instead on input line 160.
 
-<screens/sonar.png, id=142, 1371.1225pt x 770.88pt>
+<screens/sonar.png, id=147, 1371.1225pt x 770.88pt>
 File: screens/sonar.png Graphic file (type png)
  <use screens/sonar.png>
-Package pdftex.def Info: screens/sonar.png used on input line 168.
+Package pdftex.def Info: screens/sonar.png used on input line 169.
 (pdftex.def)             Requested size: 512.1496pt x 287.95007pt.
 
-Overfull \hbox (11.38089pt too wide) in paragraph at lines 168--169
+Overfull \hbox (11.38089pt too wide) in paragraph at lines 169--170
  [][] 
  []
 
@@ -1125,43 +1127,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.175 	\chapter
+l.176 	\chapter
                {Tests} <./screens/sonar.png>]
 Chapitre 3.
-
-Overfull \hbox (35.9038pt too wide) in paragraph at lines 175--175
-[][] 
- []
-
-[9
-
-]
-Chapitre 4.
 
 Overfull \hbox (35.9038pt too wide) in paragraph at lines 176--176
 [][] 
  []
 
-<screens/redmine.png, id=162, 1371.1225pt x 770.88pt>
-File: screens/redmine.png Graphic file (type png)
-
-<use screens/redmine.png>
-Package pdftex.def Info: screens/redmine.png used on input line 186.
-(pdftex.def)             Requested size: 512.1496pt x 287.95007pt.
+<screens/tests.png, id=164, 1061.9675pt x 564.1075pt>
+File: screens/tests.png Graphic file (type png)
+ <use screens/tests.png>
+Package pdftex.def Info: screens/tests.png used on input line 186.
+(pdftex.def)             Requested size: 512.1496pt x 272.05104pt.
 
 Overfull \hbox (11.38089pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-[10
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+) [9
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.201 
-       <./screens/redmine.png>]
+l.204 CU_ASSERT_STRING_EQUAL(
+                             actual, expected); // Chaine égales <./screens/te
+sts.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1169,6 +1174,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+Chapitre 4.
+
+Overfull \hbox (35.9038pt too wide) in paragraph at lines 275--275
+[][] 
+ []
+
+<screens/redmine.png, id=256, 1371.1225pt x 770.88pt>
+File: screens/redmine.png Graphic file (type png)
+
+<use screens/redmine.png>
+Package pdftex.def Info: screens/redmine.png used on input line 284.
+(pdftex.def)             Requested size: 512.1496pt x 287.95007pt.
+
+Overfull \hbox (11.38089pt too wide) in paragraph at lines 284--285
+ [][] 
+ []
+
+[12
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.299 
+       <./screens/redmine.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
 \openout2 = `conventionsEcritures.aux'.
 
  (./conventionsEcritures.tex
@@ -1178,15 +1216,7 @@ Overfull \hbox (23.60016pt too wide) in paragraph at lines 1--1
 [][] 
  []
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 8.
- [12
+[14
 
 
 ]
@@ -1196,247 +1226,263 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13])
+[15])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14] <boggle-gantt.pdf, id=262, page=1, 845.0471pt x 597.51233pt>
+[16] <boggle-gantt.pdf, id=354, page=1, 845.0471pt x 597.51233pt>
 File: boggle-gantt.pdf Graphic file (type pdf)
 
 <use boggle-gantt.pdf, page 1>
-Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 312.
 (pdftex.def)             Requested size: 845.04504pt x 597.51086pt.
 File: boggle-gantt.pdf Graphic file (type pdf)
  <use boggle-gantt.pdf, page 1>
-Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
 File: boggle-gantt.pdf Graphic file (type pdf)
 
 <use boggle-gantt.pdf, page 1>
-Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
 File: boggle-gantt.pdf Graphic file (type pdf)
  <use boggle-gantt.pdf, page 1>
-Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
 File: boggle-gantt.pdf Graphic file (type pdf)
 
 <use boggle-gantt.pdf, page 1>
-Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page1 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
- [15
+ [17
 
  <./boggle-gantt.pdf>]
-<boggle-gantt.pdf, id=289, page=2, 845.0471pt x 597.51233pt>
+<boggle-gantt.pdf, id=382, page=2, 845.0471pt x 597.51233pt>
 File: boggle-gantt.pdf Graphic file (type pdf)
 
 <use boggle-gantt.pdf, page 2>
-Package pdftex.def Info: boggle-gantt.pdf, page2 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page2 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
 File: boggle-gantt.pdf Graphic file (type pdf)
  <use boggle-gantt.pdf, page 2>
-Package pdftex.def Info: boggle-gantt.pdf, page2 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page2 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
 File: boggle-gantt.pdf Graphic file (type pdf)
 
 <use boggle-gantt.pdf, page 2>
-Package pdftex.def Info: boggle-gantt.pdf, page2 used on input line 214.
+Package pdftex.def Info: boggle-gantt.pdf, page2 used on input line 312.
 (pdftex.def)             Requested size: 845.08372pt x 597.53821pt.
- [16 <./boggle-gantt.pdf>]
-<conception.pdf, id=296, page=1, 597.50829pt x 845.0471pt>
+ [18 <./boggle-gantt.pdf>]
+<conception.pdf, id=389, page=1, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 1>
-Package pdftex.def Info: conception.pdf, page1 used on input line 217.
+Package pdftex.def Info: conception.pdf, page1 used on input line 315.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 1>
-Package pdftex.def Info: conception.pdf, page1 used on input line 217.
+Package pdftex.def Info: conception.pdf, page1 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 1>
-Package pdftex.def Info: conception.pdf, page1 used on input line 217.
+Package pdftex.def Info: conception.pdf, page1 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 1>
-Package pdftex.def Info: conception.pdf, page1 used on input line 217.
+Package pdftex.def Info: conception.pdf, page1 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 1>
-Package pdftex.def Info: conception.pdf, page1 used on input line 217.
+Package pdftex.def Info: conception.pdf, page1 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [17 <./conception.pdf>]
-<conception.pdf, id=322, page=2, 597.50829pt x 845.0471pt>
+ [19 <./conception.pdf>]
+<conception.pdf, id=416, page=2, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 2>
-Package pdftex.def Info: conception.pdf, page2 used on input line 217.
+Package pdftex.def Info: conception.pdf, page2 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 2>
-Package pdftex.def Info: conception.pdf, page2 used on input line 217.
+Package pdftex.def Info: conception.pdf, page2 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 2>
-Package pdftex.def Info: conception.pdf, page2 used on input line 217.
+Package pdftex.def Info: conception.pdf, page2 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [18 <./conception.pdf>]
-<conception.pdf, id=342, page=3, 597.50829pt x 845.0471pt>
+ [20 <./conception.pdf>]
+<conception.pdf, id=436, page=3, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 3>
-Package pdftex.def Info: conception.pdf, page3 used on input line 217.
+Package pdftex.def Info: conception.pdf, page3 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 3>
-Package pdftex.def Info: conception.pdf, page3 used on input line 217.
+Package pdftex.def Info: conception.pdf, page3 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 3>
-Package pdftex.def Info: conception.pdf, page3 used on input line 217.
+Package pdftex.def Info: conception.pdf, page3 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [19 <./conception.pdf>]
-<conception.pdf, id=354, page=4, 597.50829pt x 845.0471pt>
+ [21 <./conception.pdf>]
+<conception.pdf, id=449, page=4, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 4>
-Package pdftex.def Info: conception.pdf, page4 used on input line 217.
+Package pdftex.def Info: conception.pdf, page4 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 4>
-Package pdftex.def Info: conception.pdf, page4 used on input line 217.
+Package pdftex.def Info: conception.pdf, page4 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 4>
-Package pdftex.def Info: conception.pdf, page4 used on input line 217.
+Package pdftex.def Info: conception.pdf, page4 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [20 <./conception.pdf>]
-<conception.pdf, id=359, page=5, 597.50829pt x 845.0471pt>
+ [22 <./conception.pdf>]
+<conception.pdf, id=454, page=5, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 5>
-Package pdftex.def Info: conception.pdf, page5 used on input line 217.
+Package pdftex.def Info: conception.pdf, page5 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 5>
-Package pdftex.def Info: conception.pdf, page5 used on input line 217.
+Package pdftex.def Info: conception.pdf, page5 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 5>
-Package pdftex.def Info: conception.pdf, page5 used on input line 217.
+Package pdftex.def Info: conception.pdf, page5 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [21 <./conception.pdf>]
-<conception.pdf, id=364, page=6, 597.50829pt x 845.0471pt>
+ [23 <./conception.pdf>]
+<conception.pdf, id=459, page=6, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 6>
-Package pdftex.def Info: conception.pdf, page6 used on input line 217.
+Package pdftex.def Info: conception.pdf, page6 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 6>
-Package pdftex.def Info: conception.pdf, page6 used on input line 217.
+Package pdftex.def Info: conception.pdf, page6 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 6>
-Package pdftex.def Info: conception.pdf, page6 used on input line 217.
+Package pdftex.def Info: conception.pdf, page6 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [22 <./conception.pdf>]
-<conception.pdf, id=378, page=7, 597.50829pt x 845.0471pt>
+ [24 <./conception.pdf>]
+<conception.pdf, id=464, page=7, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 7>
-Package pdftex.def Info: conception.pdf, page7 used on input line 217.
+Package pdftex.def Info: conception.pdf, page7 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 7>
-Package pdftex.def Info: conception.pdf, page7 used on input line 217.
+Package pdftex.def Info: conception.pdf, page7 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 7>
-Package pdftex.def Info: conception.pdf, page7 used on input line 217.
+Package pdftex.def Info: conception.pdf, page7 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [23 <./conception.pdf>]
-<conception.pdf, id=386, page=8, 597.50829pt x 845.0471pt>
+ [25 <./conception.pdf>]
+<conception.pdf, id=479, page=8, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 8>
-Package pdftex.def Info: conception.pdf, page8 used on input line 217.
+Package pdftex.def Info: conception.pdf, page8 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 8>
-Package pdftex.def Info: conception.pdf, page8 used on input line 217.
+Package pdftex.def Info: conception.pdf, page8 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 8>
-Package pdftex.def Info: conception.pdf, page8 used on input line 217.
+Package pdftex.def Info: conception.pdf, page8 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [24 <./conception.pdf>]
-<conception.pdf, id=391, page=9, 597.50829pt x 845.0471pt>
+ [26 <./conception.pdf>]
+<conception.pdf, id=487, page=9, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 9>
-Package pdftex.def Info: conception.pdf, page9 used on input line 217.
+Package pdftex.def Info: conception.pdf, page9 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 9>
-Package pdftex.def Info: conception.pdf, page9 used on input line 217.
+Package pdftex.def Info: conception.pdf, page9 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 9>
-Package pdftex.def Info: conception.pdf, page9 used on input line 217.
+Package pdftex.def Info: conception.pdf, page9 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [25 <./conception.pdf>]
-<conception.pdf, id=405, page=10, 597.50829pt x 845.0471pt>
+ [27 <./conception.pdf>]
+<conception.pdf, id=492, page=10, 597.50829pt x 845.0471pt>
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 10>
-Package pdftex.def Info: conception.pdf, page10 used on input line 217.
+Package pdftex.def Info: conception.pdf, page10 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
  <use conception.pdf, page 10>
-Package pdftex.def Info: conception.pdf, page10 used on input line 217.
+Package pdftex.def Info: conception.pdf, page10 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: conception.pdf Graphic file (type pdf)
 
 <use conception.pdf, page 10>
-Package pdftex.def Info: conception.pdf, page10 used on input line 217.
+Package pdftex.def Info: conception.pdf, page10 used on input line 315.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [26 <./conception.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+ [28 <./conception.pdf>]
+<conception.pdf, id=505, page=11, 597.50829pt x 845.0471pt>
+File: conception.pdf Graphic file (type pdf)
+
+<use conception.pdf, page 11>
+Package pdftex.def Info: conception.pdf, page11 used on input line 315.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: conception.pdf Graphic file (type pdf)
+ <use conception.pdf, page 11>
+Package pdftex.def Info: conception.pdf, page11 used on input line 315.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: conception.pdf Graphic file (type pdf)
+
+<use conception.pdf, page 11>
+Package pdftex.def Info: conception.pdf, page11 used on input line 315.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [29 <./conception.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
  (./docFinal.aux
 (./conventionsEcritures.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 316.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 316.
 Package rerunfilecheck Info: File `docFinal.out' has not changed.
-(rerunfilecheck)             Checksum: 814181DDCB26A98839B0AF8FE80C9D64;1081.
+(rerunfilecheck)             Checksum: 7C701DBAFDE4D4E9C632BFD3235159A8;1154.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 316.
  ) 
 Here is how much of TeX's memory you used:
- 18614 strings out of 493485
- 310720 string characters out of 3143527
- 489012 words of memory out of 3000000
- 21360 multiletter control sequences out of 15000+200000
+ 18878 strings out of 493485
+ 315111 string characters out of 3143527
+ 678486 words of memory out of 3000000
+ 21548 multiletter control sequences out of 15000+200000
  88414 words of font info for 78 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,18n,55p,419b,1242s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,18n,55p,419b,1983s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
 sr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/p
@@ -1450,10 +1496,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb>
-Output written on docFinal.pdf (26 pages, 926104 bytes).
+Output written on docFinal.pdf (29 pages, 1007023 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 398 compressed objects within 4 object streams
- 119 named destinations out of 1000 (max. 500000)
- 239 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 597 PDF objects out of 1000 (max. 8388607)
+ 504 compressed objects within 6 object streams
+ 194 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
