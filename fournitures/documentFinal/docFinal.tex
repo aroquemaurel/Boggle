@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,openany]{article}
+\documentclass[12pt,a4paper,openany]{book}
 \usepackage{lmodern}
 \usepackage[table]{xcolor}
 \input{../includesLaTeX/couleurs.tex}
@@ -23,7 +23,8 @@
 \newcommand{\semestre}{4}
 
 \input{../includesLaTeX/listings.tex}
-\input{../includesLaTeX/l2/docsProjet2.tex}
+%\input{../includesLaTeX/l2/docsProjet2.tex}
+\input{./docsProjet.tex}
 \input{../includesLaTeX/remarquesExempleAttention.tex}
 \input{../includesLaTeX/polices.tex}
 \input{../includesLaTeX/affichageChapitre2.tex}
@@ -41,7 +42,7 @@
 	\maketitle
 	\tableofcontents
 	\newpage
-	\section{But du document}
+	\section{But du document} % TODO
 	C'est une description de haut niveau du produit, c'est-à-dire l'architecture générale du système, en termes de << modules >>, de sous modules et de leurs
 	interactions. De plus, chaque module doit être décrit (définition des interfaces et des fonctionnalités générales). Ce document doit en premier lieu asseoir
 	la confiance en la finalité et la faisabilité du produit, et, en second lieu, servir de base pour l'estimation des tâches à effectuer et du calendrier de
@@ -115,9 +116,35 @@ Attention, les coordonnées de la grille commences à zéro.
 					d'afficher la solution complète. 
 			\end{description}
 		\subsection{Les tests unitaires}
-	\section{Documentation}
-	\section{Gestion de projet}
+	\chapter{Documentation}
+	\chapter{Gestion de projet}
+	Pour ce projet, nous étions deux à travailler dessus, ainsi nous avons utilisé plusieurs techniques afin de se coordonner et de limiter les problèmes. Ceci
+	n'est pas notre premier projet ensemble, notre travail en fut simplifié.
 	\subsection{Conventions de codage}
+	\section{Un outil de gestion de projet : Redmine}
+	\begin{figure}[H]
+		\centering
+%		\includegraphics[width=18cm]{screens/redmine.png}
+		\caption{Affichage des demandes dans Redmine}
+		\label{fig:redmine}
+	\end{figure}
+	Pour le projet, nous avons utiliser \textit{Redmine}, une plateforme web de gestion de projet (Cf figure \ref{fig:redmine}). Elle nous a permis de simplifier le travail, et
+	de ne rien oublier.
+
+	En effet, nous pouvons créer des tâches, signaler qu'elles sont en cours/terminés/en tests, leur donner des dates limites, les affecter à une personne etc\ldots
+	Ainsi lorsque l'un de nous commençait une tâche, il le signalait sur le \textit{redmine}, ce qui permettait de tenir au courant son binôme de ses actions et
+	de l'avancée du projet.
+
+	\section{Un logiciel de versionnement : Git}
+	Afin de limiter les problèmes du travail collaboratif, nous avons utilisé un logiciel de versionnement Git. Il a deux intérêt, tout d'abord, nous pouvons
+	travailler à deux en parallèle sur le projet sans se soucier de fusionner notre travail\footnote{À condition de ne pas travailler sur deux lignes de code
+	identiques}.
+
+	D'autre part, tous les logs étant enregistrés, nous pouvons savoir qui à fait quoi et quel jour, cela permet de voir également l'avancée du projet. 
+
+	Enfin, toutes les modification sont stockées sur le serveur, ainsi en cas de problème, il est très facile de revenir à la version précédente ou même de
+	comparer deux versions afin de voir les changements et de comprendre rapidement pourquoi une fonctionnalité à régressé. 
+
 	\subsection{Logiciel d'analyse de code: Sonar}
 	\subsection{Logiciel de gestion de projet: Redmine}
 	\subsection{Logiciel de versionnement: Git}

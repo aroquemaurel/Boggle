@@ -1,10 +1,13 @@
-\BOOKMARK [1][-]{section.1}{But du document}{}% 1
-\BOOKMARK [1][-]{section.2}{Compilation}{}% 2
-\BOOKMARK [1][-]{section.3}{Ex\351cution}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Les tests fonctionnels}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Les tests unitaires}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Documentation}{}% 6
-\BOOKMARK [1][-]{section.5}{Gestion de projet}{}% 7
-\BOOKMARK [2][-]{subsection.5.1}{Convention de codage}{section.5}% 8
-\BOOKMARK [2][-]{subsection.5.2}{Logiciel de gestion de projet}{section.5}% 9
-\BOOKMARK [2][-]{subsection.5.3}{Logiciel de versionnement}{section.5}% 10
+\BOOKMARK [1][-]{section.0.1}{But du document}{}
+\BOOKMARK [1][-]{section.0.2}{Compilation}{}
+\BOOKMARK [1][-]{section.0.3}{Ex\351cution}{}
+\BOOKMARK [2][-]{subsection.0.3.1}{Les tests fonctionnels}{section.0.3}
+\BOOKMARK [2][-]{subsection.0.3.2}{Les tests unitaires}{section.0.3}
+\BOOKMARK [0][-]{chapter.1}{Documentation}{}
+\BOOKMARK [0][-]{chapter.2}{Gestion de projet}{}
+\BOOKMARK [1][-]{subsection.2.0.3}{Conventions de codage}{chapter.2}
+\BOOKMARK [1][-]{section.2.1}{Un outil de gestion de projet : Redmine}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Un logiciel de versionnement : Git}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Logiciel d'analyse de code: Sonar}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Logiciel de gestion de projet: Redmine}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{Logiciel de versionnement: Git}{section.2.2}
