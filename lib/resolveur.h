@@ -13,6 +13,6 @@
 
 void resolveTouteLaGrille(Plateau* pPlateau, Dico pDico);
 Solution resolveur_resolveUneCase(Plateau pPlateau, Dico pDico, Couple pCase);
-void jeu_lancerModeSolveur(Jeu pJeu);
+void jeu_lancerModeSolveur(Jeu pJeu, _Bool pGrillePredefinie);
 #endif	/* RESOLVEUR_H */
 

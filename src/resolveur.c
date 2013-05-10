@@ -88,15 +88,13 @@ void resolveTouteLaGrille(Plateau* pPlateau, Dico pDico) {
  * Lance le jeu en mode solveur
  * @param pJeu le jeu à lancer
  */
-void jeu_lancerModeSolveur(Jeu pJeu) {
+void jeu_lancerModeSolveur(Jeu pJeu, _Bool pGrillePredefinie) {
     char buff[4];
     Couple caseAResolver;
     Solution solution;
     
-    caseAResolver.x = 1;
-    caseAResolver.y = 1;
     util_nettoyerConsole();
-    jeu_lancer(&pJeu, false);
+    jeu_lancer(&pJeu, pGrillePredefinie);
     interfaceTexte_afficherPlateau(pJeu.plateau);
     printf("Entrer les coordonnées de la case à partir de laquelle one commence la résolution\n");
     printf("i: ");
