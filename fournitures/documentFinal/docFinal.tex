@@ -4,6 +4,7 @@
 \input{../includesLaTeX/couleurs.tex}
 
 \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc}
+\usepackage{pdfpages}
 \usepackage[francais]{babel}
 \usepackage[top=1.7cm, bottom=1.7cm, left=1.7cm, right=1.7cm]{geometry}
 \usepackage{verbatim}
@@ -15,7 +16,7 @@
 \usepackage{float}
 \usepackage{amssymb}
 
-\newcommand{\titre}{Dossier }% TODO
+\newcommand{\titre}{Dossier final}
 
 \newcommand{\pole}{}
 \newcommand{\sigle}{}
@@ -27,29 +28,40 @@
 \input{./docsProjet.tex}
 \input{../includesLaTeX/remarquesExempleAttention.tex}
 \input{../includesLaTeX/polices.tex}
-\input{../includesLaTeX/affichageChapitre2.tex}
-\newcommand{\pfp}{\texttt{pfp}}
+\input{../includesLaTeX/affichageChapitre.tex}
+\let\pagebreakORIG\pagebreak
+\let\clearpageORIG\clearpage
+\let\cleardoublepageORIG\cleardoublepage
 
-\newcommand{\ifp}{\texttt{if}}
-\newcommand{\elsep}{\texttt{else}}
+\ifx \removepagebreak \undefined
+\newcommand{\removepagebreak}{\renewcommand{\pagebreak}{}\renewcommand{\clearpage}{}\renewcommand{\cleardoublepage}{}}
+\fi
+
+\ifx \restorepagebreak \undefined
+\newcommand{\restorepagebreak}{\renewcommand{\pagebreak}{\pagebreakORIG}\renewcommand{\clearpage}{\clearpageORIG}\renewcommand{\cleardoublepage}{\cleardoublepageORIG}}
+\fi
 
 \makeatother
-\includeonly {
-}
 \begin{document}
-	\setcounter{tocdepth}{2}
+	\setcounter{tocdepth}{1}
 	\setcounter{secnumdepth}{3}
 	\maketitle
-	\tableofcontents
-	\newpage
-	\section{But du document} % TODO
-	C'est une description de haut niveau du produit, c'est-à-dire l'architecture générale du système, en termes de << modules >>, de sous modules et de leurs
-	interactions. De plus, chaque module doit être décrit (définition des interfaces et des fonctionnalités générales). Ce document doit en premier lieu asseoir
-	la confiance en la finalité et la faisabilité du produit, et, en second lieu, servir de base pour l'estimation des tâches à effectuer et du calendrier de
-	leur réalisation.
+	\chapter*{Avant-propos}
+	Ce dossier concerne un projet logiciel développé en langage C : Un jeu de Boggle.
 
-	Le << Dossier de Conception Préliminaire >> doit également mettre en évidence le plan de tests, en termes de besoins de l'utilisateur, et montrer que l'on peut
-	y satisfaire grâce à l'architecture proposée.
+	Il à été conçut par Antoine de \bsc{Roquemaurel} et Fabrice \bsc{Valleix} dans le cadre du module \textit{projet logiciel} de la L2 Informatique de l'université Toulouse III -- Paul Sabatier.
+
+	Ce dossier concerne la conclusion du projet, la manière de compiler et exécuter le programme, nos méthodes de gestions de projet
+	et les différents outils que nous avons utilisés afin de développer ce logiciel.
+
+
+	Le dossier de conception mis à jour par rapport à ce que nous avons effectué est disponible en annexe page \pageref{conception}.
+
+	\tableofcontents
+	\vfill
+	\footnotesize Rédigé le \today{} par Antoine de \bsc{Roquemaurel} et Fabrice \bsc{Valleix}
+	\restorepagebreak
+	\chapter{Compilation et exécution}
 	\section{Compilation}
 	La compilation du projet se fait à l'aide de l'utilitaire \texttt{Make}, ainsi la simple
 	commande \texttt{make} à la racine du projet suffit à compiler le projet.
@@ -71,16 +83,19 @@ LD_LIBRARY_PATH=$\$$LD_LIBRARY_PATH:`pwd`/Cunit/lib && export LD_LIBRARY_PATH
 	Cette commande doit être employée à chaque ouverture d'une nouvelle console, la variable étant attachée à une seule console.  
 
 	\section{Exécution}
-	Afin de tester l'application, deux types de tests sont présent dans le projet.
+	Afin d'exécuter notre application, vous devez utiliser l'exécutable \texttt{./boggle}, son utilisation est la suivante:
 
-		\subsection{Les tests fonctionnels} Ces tests sont tous présents dans l'executable
-			\texttt{./boggle}. Afin d'appeler les différentes fonctionnalités du programme, il
+	\begin{lstlisting}[language=sh,numbers=none]
+./boggle --solveur|--texte|--ncurses [--grilleFixe]		
+	\end{lstlisting}
+
+			Afin d'appeler les différentes fonctionnalités du programme, il
 			est nécessaire de faire passer un paramètre, celui-ci peut prendre la forme d'une
-			de ces trois chaines de caractères : 
+			des trois chaines de caractères ci-dessous. Le dernier paramètre est facultatif.
 			\begin{description}
-				\item[\texttt{--solveur}] Correspond à la version 1 du projet.
+				\item[\texttt{-$ $-solveur}] Correspond à la version 1 du projet.
 Afin d'appeler la version 1 de l'application, l'exécutable doit être appelé à l'aide de
-l'argument \texttt{--solveur}
+l'argument \texttt{-$ $-solveur}
 
 Dans cette version, une grille carrée de la taille demandée par l'utilisateur est génére, en
 tenant compte de la fréquence des lettres dans la langue Française. Une fois la grille
@@ -88,7 +103,7 @@ générée, la position d'une case est demandée à l'utilisateur, l'utilisateur
 deux coordonnées, et tous les mots commençant par cette case seront affichés à l'écran.
 
 Attention, les coordonnées de la grille commences à zéro.
-				\item[\texttt{--texte}]
+				\item[\texttt{-$ $-texte}]
 					Afin d'appeler la version 2, l'exécutable doit être appelé à l'aide de
 					l'argument \texttt{--text}
 
@@ -99,9 +114,9 @@ Attention, les coordonnées de la grille commences à zéro.
 					l'application lui signalant si le mot est accepté ou non, une fois ce
 					temps impartis, la solution est affichée, puis le nombre de points obtenu
 					par le joueur.
-				\item[\texttt{--ncurses}]
+				\item[\texttt{-$ $-ncurses}]
 					Afin d'appeler la version 3, l'exécutable doit être appelé à l'aide de
-					l'argument \texttt{--ncurses}
+					l'argument \texttt{-$ $-ncurses}
 
 					Cette version suit le même principe que la version précédente, à la
 					différence près qu'elle utilise la bibliothèque \textit{Ncurses}. Ainsi, la saisie
@@ -114,40 +129,90 @@ Attention, les coordonnées de la grille commences à zéro.
 					Une fois les 3 minutes écoulées, les mots proposés par l'utilisateur et le
 					nombre de points obtenus sont affichés, il est proposé à l'utilisateur
 					d'afficher la solution complète. 
+				\item[\texttt{-$ $-grilleFixe}] Celui-ci  est optionnel et permet de signaler au programme que vous souhaitez utiliser
+			une grille prédéfinie, ainsi l'utilisation de ce dernier paramètre lancera systématiquement le programme avec la même
+			grille, et donc la même solution.
 			\end{description}
-		\subsection{Les tests unitaires}
-	\chapter{Documentation}
-	\chapter{Gestion de projet}
-	Pour ce projet, nous étions deux à travailler dessus, ainsi nous avons utilisé plusieurs techniques afin de se coordonner et de limiter les problèmes. Ceci
-	n'est pas notre premier projet ensemble, notre travail en fut simplifié.
-	\subsection{Conventions de codage}
-	\section{Un outil de gestion de projet : Redmine}
+
+	\chapter{Qualité du code}
+		Durant ce projet, nous avons essayés d'avoir le code le plus lisible et réutilisable possible. Ainsi, nous avons utilisés
+		plusieurs techniques.
+		\section{Convention de codage}
+		La première chose afin d'avoir un code propre et uniforme était de nous fixé des conventions de code. En effet, nos styles
+		de programmations étant différents, il était important de nous mettre d'accord. Ces conventions ont été écrite sur un wiki
+		afin que nous puissions tout deux les consulter, celles-ci sont disponibles annexe \ref{conventions}. 
+
+		Ces conventions fixent la mise en forme du code, elles contiennent principalement l'écriture des noms de variables ou paramètres, 
+		les noms de fonctions, la forme de l'indentation.
+		\section{Documentation}
+		Afin d'avoir un code clair pour nous, tout en pouvant document notre code pour une personne exterieur, nous avons utilisé un
+		outil appelé \textit{Doxygen}. De la même manière que Javadoc, nous devons documenter les entêtes de fonctions, structures
+		ou variable avec une syntaxe précise, ces commentaires nous permettent de relire facilement le code en le comprenant bien.
+		De plus, l'analyse de ceux-ci avec \textit{doxygen} permet de générer une documentation HTML ou PDF \footnote{Celle-ci est générée à l'aide de \LaTeX}).
+
+		La documentation du projet est ainsi disponible :
+		\begin{itemize}
+			\item Sur le Web à l'adresse \url{http://documentation.joohoo.fr/L2/jeuDeBoggle/index.html}.
+			\item En PDF, dans l'archive donnée avec ce projet dans \texttt{doc/documentation.pdf}.
+			\item Tous les fichiers HTML sont disponibles dans \texttt{doc/html/}. 
+		\end{itemize}
+		\section{Utilisation de \textit{Sonar}}
+		Afin d'avoir le code le plus propre possible, nous avons utilisé un outil appelé Sonar (Cf figure \ref{fig:sonar}), celui-ci
+		nous signale lorsque nous ne respectons pas ses conventions, nous donne les complexités du code, analyse la duplication de
+		code, ... 
+		Au niveau de ses conventions de programmation, il existe une multitude de règles à ne pas violer comme l'utilisation de
+		break en dehors de \texttt{switch}, une complexité trop importante pour une fonction, une boucle \texttt{while} pouvant être transformée en \texttt{for} etc\ldots 
+
 	\begin{figure}[H]
 		\centering
-%		\includegraphics[width=18cm]{screens/redmine.png}
-		\caption{Affichage des demandes dans Redmine}
-		\label{fig:redmine}
+		\includegraphics[width=18cm]{screens/sonar.png}
+		\caption{Affichage du tableau de bord de \textit{Sonar}}
+		\label{fig:sonar}
 	\end{figure}
-	Pour le projet, nous avons utiliser \textit{Redmine}, une plateforme web de gestion de projet (Cf figure \ref{fig:redmine}). Elle nous a permis de simplifier le travail, et
-	de ne rien oublier.
+	Sur la figure \ref{fig:sonar}, nous pouvons observer le nombre de ligne effective du programme (nombres de lignes sans compter
+	les commentaires), le nombre de fichiers, la complexité par fonction/fichier, la duplication de code, les violations par rapport aux règles de Sonar. 
 
+	\chapter{Tests}
+	\chapter{Gestion de projet}
+	% TODO blabla bla intro
+	Pour ce projet, nous étions deux à travailler dessus, ainsi nous avons utilisé plusieurs techniques afin de se coordonner et de limiter les problèmes. Ceci n'est pas notre premier projet ensemble, notre travail en fut simplifié.
+	\section{Un outil de gestion de projet : \textit{Redmine}}
+	Pour le projet, nous avons utiliser \textit{Redmine}, une plateforme web de gestion de projet (Cf figure \ref{fig:redmine}). Elle nous a permis de simplifier le travail, et de ne rien oublier.
 	En effet, nous pouvons créer des tâches, signaler qu'elles sont en cours/terminés/en tests, leur donner des dates limites, les affecter à une personne etc\ldots
 	Ainsi lorsque l'un de nous commençait une tâche, il le signalait sur le \textit{redmine}, ce qui permettait de tenir au courant son binôme de ses actions et
 	de l'avancée du projet.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=18cm]{screens/redmine.png}
+		\caption{Affichage des demandes dans \textit{Redmine}}
+		\label{fig:redmine}
+	\end{figure}
+	Comme le montre la figure \ref{fig:redmine}, nous avons la possibilité de lister toutes les tâches, nous pouvons voir à qui
+	elles sont assignées, leurs dates limites, leur hiérarchie etc\ldots
+
+	\textit{Redmine} génère également un diagramme de Gantt,
+	nous avons donc utilisé cet utilitaire pour nos
+	diagrammes de Gantt\footnote{Disponible en annexe page
+	\pageref{gantt}} et
+	la liste de nos tâches.
+
+	C'est également sur le wiki de \textit{Redmine} qu'était disponible les conventions d'écritures, mais également des notes sur le
+	contrôle de la qualité d'un code, et enfin le fonctionnement de \textit{Git} et \textit{Doxygen}.
 
 	\section{Un logiciel de versionnement : Git}
 	Afin de limiter les problèmes du travail collaboratif, nous avons utilisé un logiciel de versionnement Git. Il a deux intérêt, tout d'abord, nous pouvons
-	travailler à deux en parallèle sur le projet sans se soucier de fusionner notre travail\footnote{À condition de ne pas travailler sur deux lignes de code
-	identiques}.
+	travailler à deux en parallèle sur le projet sans se soucier de fusionner notre travail\footnote{À condition de ne pas travailler sur deux lignes de code identiques}.
 
 	D'autre part, tous les logs étant enregistrés, nous pouvons savoir qui à fait quoi et quel jour, cela permet de voir également l'avancée du projet. 
 
 	Enfin, toutes les modification sont stockées sur le serveur, ainsi en cas de problème, il est très facile de revenir à la version précédente ou même de
-	comparer deux versions afin de voir les changements et de comprendre rapidement pourquoi une fonctionnalité à régressé. 
-
-	\subsection{Logiciel d'analyse de code: Sonar}
-	\subsection{Logiciel de gestion de projet: Redmine}
-	\subsection{Logiciel de versionnement: Git}
-
+	comparer deux versions afin de voir les changements et de comprendre rapidement pourquoi une fonctionnalité a régressé. 
+	\appendix
+	\include{conventionsEcritures}
+	\label{gantt}
+	\addcontentsline{toc}{chapter}{B~~Diagramme de Gantt}
+	\includepdf[landscape, pages=1-2]{boggle-gantt.pdf}
+	\label{conception}
+	\addcontentsline{toc}{chapter}{C~~Dossier de conception (Mis à jour)}
+	\includepdf[pages=1-]{conception.pdf} %TODO
 \end{document}
-

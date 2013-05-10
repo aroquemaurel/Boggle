@@ -90,7 +90,7 @@ int main(int argc, char** argv) {
     if(argc > 2) {
         return mauvaisParametre(argv[0]);
     }
-    grillePredefinie = (util_cherchePremiereOccurenceDansTableau(argv, argc, "--grillePredefinie") != -1);
+    grillePredefinie = (util_cherchePremiereOccurenceDansTableau(argv, argc, "--grilleFixe") != -1);
     if(util_cherchePremiereOccurenceDansTableau(argv, argc, "--text") != -1) {
         typeJeu = TEXTE;
     } else if(util_cherchePremiereOccurenceDansTableau(argv, argc, "--solveur") != -1) {
