@@ -64,8 +64,10 @@
 	suivante afin de signaler au système l'emplacement de la bibliothèque.
 
 	\begin{lstlisting}[language=sh,numbers=none]
-LD_LIBRARY_PATH=$\$$LD_LIBRARY_PATH:`pwd` /Cunit/lib && export LD_LIBRARY_PATH		
+LD_LIBRARY_PATH=$\$$LD_LIBRARY_PATH:`pwd`/Cunit/lib && export LD_LIBRARY_PATH		
 	\end{lstlisting}
+
+	Cette commande doit être employée à chaque ouverture d'une nouvelle console, la variable étant attachée à une seule console.  
 
 	\section{Exécution}
 	Afin de tester l'application, deux types de tests sont présent dans le projet.
