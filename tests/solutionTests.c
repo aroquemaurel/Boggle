@@ -66,12 +66,12 @@ void testSolution_detruire() {
 }
 
 void testSolution_motEstPresent() {
-    const Solution pSolution;
-    const char* pMot;
-    _Bool result = solution_motEstPresent(pSolution, pMot);
-    if (1 /*check result*/) {
-        CU_ASSERT(0);
-    }
+    CU_ASSERT(solution_motEstPresent(gSolution, "CHOUETTE"));
+    CU_ASSERT(solution_motEstPresent(gSolution, "BIDULE"));
+    CU_ASSERT(solution_motEstPresent(gSolution, "CHOSE"));
+    CU_ASSERT(!solution_motEstPresent(gSolution, "mlkjsdfmlkdf"));
+    CU_ASSERT(!solution_motEstPresent(gSolution, "MLKQFMLKDF"));
+    CU_ASSERT(!solution_motEstPresent(gSolution, "LEJF"));
 }
 
 void testSolution_nbPoints() {
@@ -107,7 +107,7 @@ int main() {
     /* Add the tests to the suite */
     if ((NULL == CU_add_test(pSuite, "testSolution_creer", testSolution_creer)) ||
             (NULL == CU_add_test(pSuite, "testSolution_ajouterMot", testSolution_ajouterMot)) ||
-//            (NULL == CU_add_test(pSuite, "testSolution_motEstPresent", testSolution_motEstPresent)) ||
+            (NULL == CU_add_test(pSuite, "testSolution_motEstPresent", testSolution_motEstPresent)) ||
 //            (NULL == CU_add_test(pSuite, "testSolution_nbPoints", testSolution_nbPoints)) ||
             (NULL == CU_add_test(pSuite, "testSolution_getNbMotsDebut", testSolution_getNbMotsDebut)) ||
             (NULL == CU_add_test(pSuite, "testSolution_detruire", testSolution_detruire))

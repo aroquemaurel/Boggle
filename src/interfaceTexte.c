@@ -59,10 +59,10 @@ void interfaceTexte_afficherPlateauEtSolution(const Plateau pPlateau, const Solu
  * Lance le jeu en mode texte
  * @param pJeu le jeu à lancer
  */
-void jeu_lancerModeTexte(Jeu pJeu) {
+void jeu_lancerModeTexte(Jeu pJeu, _Bool pGrillePredefinie) {
     char proposition[32];
     int minutes, secondes;
-    jeu_lancer(&pJeu, false);
+    jeu_lancer(&pJeu, pGrillePredefinie);
     
     interfaceTexte_afficherPlateau(pJeu.plateau);
   do {

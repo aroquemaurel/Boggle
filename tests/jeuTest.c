@@ -27,7 +27,7 @@ int clean_suite(void) {
 
 void testJeu_compteurClaque() {
     const Jeu pJeu;
-    CU_ASSERT(jeu_compteurClaque(pJeu));
+    CU_ASSERT(!jeu_compteurClaque(pJeu));
 }
 
 void testJeu_nouveau() {
@@ -43,10 +43,11 @@ void testJeu_nouveau() {
 }
 
 void testJeu_proposerMot() {
-    Jeu* pJeu;
-    CU_ASSERT(!jeu_proposerMot(pJeu, "321"));
-    CU_ASSERT(!jeu_proposerMot(pJeu, " "));
-    CU_ASSERT(!jeu_proposerMot(pJeu, "KLJDF"));
+    CU_ASSERT(!jeu_proposerMot(&jeu, "321"));
+    CU_ASSERT(!jeu_proposerMot(&jeu, "KLJDF"));
+    CU_ASSERT(jeu_proposerMot(&jeu, "AIRE"));
+    CU_ASSERT(jeu_proposerMot(&jeu, "ERRA"));
+    CU_ASSERT(jeu_proposerMot(&jeu, "denier"));
 }
 
 
@@ -67,8 +68,8 @@ int main() {
 
     /* Add the tests to the suite */
     if (    (NULL == CU_add_test(pSuite, "testJeu_nouveau", testJeu_nouveau)) ||
-            (NULL == CU_add_test(pSuite, "testJeu_compteurClaque", testJeu_compteurClaque))
-//            (NULL == CU_add_test(pSuite, "testJeu_proposerMot", testJeu_proposerMot)) 
+            (NULL == CU_add_test(pSuite, "testJeu_compteurClaque", testJeu_compteurClaque)) ||
+            (NULL == CU_add_test(pSuite, "testJeu_proposerMot", testJeu_proposerMot)) 
             ) {
         
         CU_cleanup_registry();

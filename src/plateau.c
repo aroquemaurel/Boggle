@@ -70,9 +70,9 @@ void plateau_remplirGrilleAleatoire(Plateau* pPlateau) {
  */
 void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
     char* grille = "EDRCANVCIRQAEBRU";
-    int k;
-    for(int i=0 ; i < pPlateau->tailleGrille.x; ++i) {
-        for(int j=0 ; j < pPlateau->tailleGrille.y; ++j) {
+    int k = 0;
+    for(int i=0 ; i < 4; ++i) {
+        for(int j=0 ; j < 4; ++j) {
             pPlateau->grille[j][i] = grille[k];
             ++k;
             pPlateau->grid[j][i] = 0;
@@ -81,7 +81,7 @@ void plateau_remplirGrillePredefinie(Plateau* pPlateau) {
     
 // ** Solution de cette grille**
 // DENIERA
-// QUARRE ENRAIE DENIER CARRAI BRINDE BRANDE BERNAI
+// DENIER CARRAI BRINDE BRANDE BERNAI
 // VRAIE REINE RAINE NIERA NARRA ERINE DENIE DENIA DENAR DARNE DAINE CARRE CARRA BRAND BRAIE
 // BRADE BERNE BERNA ARQUA ARBRE ANIER
 // VRAI RIAD REIN RANI RAND RAIE RADE NIER INDE ERRA DENI DARI BRIN BRIE BRAN BRAI BINE BINA

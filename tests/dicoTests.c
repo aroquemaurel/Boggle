@@ -35,6 +35,7 @@ void testDictonnaire_motDansDico() {
     CU_ASSERT_DOUBLE_EQUAL(dictonnaire_motDansDico(gdico, pMot), 1, 0);
     strcpy(pMot, "KAMOULOX");
     CU_ASSERT_DOUBLE_EQUAL(dictonnaire_motDansDico(gdico, pMot), 0, 0);
+
 }
 
 int main() {

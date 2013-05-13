@@ -165,7 +165,7 @@ void interfaceNcurses_selectionnerLettre(char* pMot, const Couple pSelectedCase,
  * Lance le mode Ncurses
  * @param pJeu Le jeu à lancer
  */
-void jeu_lancerModeNcurses(Jeu pJeu) {
+void jeu_lancerModeNcurses(Jeu pJeu, _Bool pGrillePredefinie) {
     Couple selectedCase;
     Couple lastChoseCase;
     Couple usedCase[32];
@@ -180,7 +180,7 @@ void jeu_lancerModeNcurses(Jeu pJeu) {
     lastChoseCase.x = -1;
     lastChoseCase.y = -1;; 
 
-    jeu_lancer(&pJeu, false);
+    jeu_lancer(&pJeu, pGrillePredefinie);
     fenetre = interfaceNcurses_initialiser();
 
     do {

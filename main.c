@@ -68,7 +68,7 @@ typedef enum {TEXTE, SOLVEUR, NCURSES}TypeJeu;
  * @return Code de retour du programme
  */
 int mauvaisParametre(char* pNomExe) {
-    printf("Usage %s --text|--solveur|--ncurses\n", pNomExe);
+    printf("Usage %s --text|--solveur|--ncurses [--grilleFixe]\n", pNomExe);
     fprintf(stderr, "Mauvais paramètres\n");
     return 1;
 }
@@ -87,10 +87,11 @@ int main(int argc, char** argv) {
     char buff1[256];
     taille.x = taille.y = 0;
     
-    if(argc > 2) {
+    if(argc > 3) {
         return mauvaisParametre(argv[0]);
     }
-    grillePredefinie = (util_cherchePremiereOccurenceDansTableau(argv, argc, "--grillePredefinie") != -1);
+    
+    grillePredefinie = (util_cherchePremiereOccurenceDansTableau(argv, argc, "--grilleFixe") != -1);
     if(util_cherchePremiereOccurenceDansTableau(argv, argc, "--text") != -1) {
         typeJeu = TEXTE;
     } else if(util_cherchePremiereOccurenceDansTableau(argv, argc, "--solveur") != -1) {
@@ -100,26 +101,30 @@ int main(int argc, char** argv) {
     } else {
         return mauvaisParametre(argv[0]);
     }
-    
-    do {
-        printf("Veuillez entre la taille de la grille de boggle. "
-                "Les valeurs doivent être comprise entre 3 et 15");
-        printf("\nTaille de la grille: ");
-        util_lireChaine(buff1, 3);
+   
+    if(!grillePredefinie) {
+        
+        do {
+            printf("Veuillez entre la taille de la grille de boggle. "
+                    "Les valeurs doivent être comprise entre 3 et 15");
+            printf("\nTaille de la grille: ");
+            util_lireChaine(buff1, 3);
 
-        taille.x =  taille.y = atoi( buff1);
-    } while(taille.x < 3 || taille.x > 15 || taille.y < 3 || taille.y > 15);
-    
+            taille.x =  taille.y = atoi( buff1);
+        } while(taille.x < 3 || taille.x > 15 || taille.y < 3 || taille.y > 15);
+    } else {
+        taille.x = taille.y = 4;
+    }
     Jeu jeu = jeu_nouveau("Complet.txt", taille, 50);
     switch(typeJeu) {
         case TEXTE:
-            jeu_lancerModeTexte(jeu);
+            jeu_lancerModeTexte(jeu, grillePredefinie);
             break;
         case SOLVEUR:
-            jeu_lancerModeSolveur(jeu);
+            jeu_lancerModeSolveur(jeu, grillePredefinie);
             break;
         case NCURSES:
-            jeu_lancerModeNcurses(jeu);
+            jeu_lancerModeNcurses(jeu, grillePredefinie);
             break;
     }
 

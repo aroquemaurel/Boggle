@@ -23,7 +23,7 @@ typedef enum {GAUCHE, DROITE, HAUT, BAS, NEANT} Direction;
 
 void interfaceNcurses_afficherTitre(const char* pTitle);
 void interfaceNcurses_afficherSolution(const Solution pSolution);
-void jeu_lancerModeNcurses(Jeu pJeu);
+void jeu_lancerModeNcurses(Jeu pJeu, _Bool pGrillePredefinie);
 WINDOW* interfaceNcurses_initialiser(void);
 void interfaceNcurses_afficherGrille(const Plateau pPlateau, const Couple pSelectedCase, const Couple* pUsedCase, const int pLgUsedCase);
 void interfaceNcurses_terminer(WINDOW* fenetre, Jeu pJeu);

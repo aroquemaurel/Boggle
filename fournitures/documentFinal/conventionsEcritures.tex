@@ -1,0 +1,114 @@
+\chapter{Convention d'écriture en C} \label{conventions}
+Voici les conventions écritures que nous avons fixé, il faudra les respecter pour que nous ayons un code propre et homogène, de plus elles ont été fixés pour que ce soit le plus simple pour nous (lecture rapide, propreté etc...)
+
+\section{Le nommage}
+\subsection{Les variables globales}
+Les variables globales doivent être évitée. Utiliser une variable globale est une abomination, mais si cette utilisation est indisensable, celle-ci doivent être préfixés par g comme ceci.
+
+\begin{lstlisting}[language=C, caption=Exemples de noms de variable globale]
+int gMaVariable;
+\end{lstlisting}
+
+\subsection{Les variables en paramètre de méthodes}
+Les variables paramètre sont les variables qui ne sont que dans une méthode (et donc, elles sont détruites à la fin de la méthode). 
+Ces variables doivent respecter la règle précédente à la différences qu'elle doivent toute commencer par un p\_ (pour paramètre)
+
+Ci un paramètre n'est jamais modifié durant la fonction, celui-ci doit être précédé du mot clef const.
+
+\begin{lstlisting}[language=C, caption=Exemples de noms de paramètres]
+int pMonSuperParametre;
+bool pVousAvezPerdu;
+char* pCacamou;
+const pMachinChose;
+\end{lstlisting}
+
+\subsection{Les noms de constantes ou define}
+Les constantes ou \#define doivent être tout en majuscule, les différents mots de la constante sont séparés par des underscore (\_). Même remarque que pour les attributs,
+choisissez des noms de constante clair, compréhensible par tous, pas seulement par ceux qui sont dans votre tête! 
+
+Il est préférable d'utiliser des constantes plutôt que des define, celles-ci ayant un typage fort contrairement à ces derniers.
+
+\begin{lstlisting}[language=C, caption=Exemples de noms de constantes]
+#define MA_SUPER_CONSTANTE;
+#define VOUS_AVEZ_PERDU;
+const int CONSTANTE;
+\end{lstlisting}
+
+\subsection{Les noms de fonctions}
+Les fonctions doivent commencer par une minuscule, et séparer les différents mots par une majuscule. Les fonctions ne retournant rien (procédures) doivent toujours être à l'infinitif. 
+À l'opposé les fonctions retournant quelques choses doivent être au participe passé. 
+Les fonctions retournant un bouleen doivent être préfixé par le verbe afin d'avoir une lisibilité maximale. estInferieur par exemple
+Il faut décomposer au maximum, n'hésitez pas à faire une méthode private si besoin est, c'est toujours plus clair d'avoir une fonction, dictant explicitement ce qu'elle fait par son nom que 10 lignes de code bizarroïdes avec 2-3 lignes de commentaire! Et donc, les noms de fonctions sont essentiels!! 
+
+Chaque noms de fonction doit être préfixé par le nom du module suivis d'un underscore(\_).
+
+Ci une fonction ne contient aucun paramètre, celle-ci doit posséder le paramètre void.
+\begin{lstlisting}[language=C, caption=Exemple de fonctions]
+void afficher(char* pTexteAAffiche){
+    printf("%s", pTexteAAffiche);
+}
+bool estInferieur(int entier1, int entier2){
+   return (entier1 < entier2);
+}
+void afficherTexte(void){
+   printf("coucou");
+}
+\end{lstlisting}
+
+\subsection{Les noms de type}
+Les noms de type doivent tous commencer par une majuscule, les différents mots sont séparés par une majuscule, choisissez des noms de types claires! 
+(oui, je me répète, mais c'est ce qui fait toute la compréhension facile, ou non, d'un programme les noms de variables, classe, types, paramètre, méthodes etc... )
+
+\begin{lstlisting}[language=C]
+typedef struct {
+   int uneVariable;
+   char* uneAutreVariable;
+} MonSuperType;
+\end{lstlisting}
+
+\section{L'indentation}
+La règle est simple, on ouvre une accolade, la ligne suivante sera décalé vers la droite(une tab = 4 caractères), on ferme une accolade, on décale l'accolade vers la gauche et tout ce qui suis. 
+Egalement, si une ligne est trop longue, on va a la ligne, et décalons d'une ligne vers la droite, une fois l'instruction finie, on redécale vers la gauche.
+Dans le cas d'un switch, le break doit s'aligner avec le case 42: tout ce qui est entre case et break sera indenté. 
+
+\begin{lstlisting}[language=C, caption=Exemple d'indentation]
+void afficherHelloWorld(){
+    printf("Hello World");
+    switch(yatta){
+        case 42:
+            // ^^
+        break;
+        case 1337:
+            // ...
+        break;
+        default: 
+            //
+    }
+}
+}\end{lstlisting}
+
+\section{Les accolades}
+Les accolades ouvrante sont positionnés à la fin de la ligne demandant une accolade (switch, if, class, else, elseif, ...)
+Les accolades fermantes sont positionnés une ligne après la dernière instruction. (avec une désindentation)
+Les else et elseif se mettent sur la même ligne que l'accolades fermante. 
+
+\begin{lstlisting}[language=C, caption=Exemple d'indentation]
+    if(true){
+        // bla bla
+    } else if(false){
+        // bla bla 
+    } else {
+        //instruction
+    } 
+
+    switch(var}{
+        case 0:
+            // ^^
+        break;
+        case 1:
+           // yatta
+        break;
+        default:
+            // :-)
+    }
+} \end{lstlisting}

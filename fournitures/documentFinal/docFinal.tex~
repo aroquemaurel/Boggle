@@ -212,66 +212,8 @@ section \ref{ldcunit} dans le listing \ref{lst:ldcunit}.
 Il est donc possible soit d'effectuer tous les tests à la suite à l'aide de la commande \texttt{make test}, qui va compiler les
 tests puis les exécuter, comme le montre le listing \ref{lst:alltests}.
 \begin{lstlisting}[language=SH, caption=Execution des tests, label=lst:alltests]
-passed
-  Test: testJeu_compteurClaque ... passed
-  Test: testJeu_proposerMot ... 321KLJDFAIREERRADENIERpassed
 
---Run Summary: Type      Total     Ran  Passed  Failed
-               suites        1       1     n/a       0
-               tests         3       3       3       0
-               asserts      11      11      11       0
-
-
-     CUnit - A Unit testing framework for C - Version 2.1-0
-     http://cunit.sourceforge.net/
-
-
-Suite: plateauTests
-  Test: testPlateau_nouveau ... passed
-
---Run Summary: Type      Total     Ran  Passed  Failed
-               suites        1       1     n/a       0
-               tests         1       1       1       0
-               asserts       4       4       4       0
-
-
-     CUnit - A Unit testing framework for C - Version 2.1-0
-     http://cunit.sourceforge.net/
-
-
-Suite: solutionTests
-  Test: testSolution_creer ... passed
-  Test: testSolution_ajouterMot ... passed
-  Test: testSolution_motEstPresent ... passed
-  Test: testSolution_getNbMotsDebut ... passed
-  Test: testSolution_detruire ... passed
-
---Run Summary: Type      Total     Ran  Passed  Failed
-               suites        1       1     n/a       0
-               tests         5       5       5       0
-               asserts      18      18      18       0
-
-
-     CUnit - A Unit testing framework for C - Version 2.1-0
-     http://cunit.sourceforge.net/
-
-
-Suite: utilTests
-  Test: testUtil_echanger ... passed
-  Test: testUtil_quickSort ... passed
-  Test: testUtil_substr ... passed
-  Test: testUtil_supprimerAccents ... passed
-  Test: testUtil_isInArray ... passed
-  Test: testUtil_uppercase ... HÉHÉHÉHÉECRITUREENCAPSLOCKECRITURECAPSLOCKETPASCAPSLOCKECRITURETOUTENLOWERCASEpassed
-
---Run Summary: Type      Total     Ran  Passed  Failed
-               suites        1       1     n/a       0
-               tests         6       6       6       0
-               asserts      22      22      22       0
 \end{lstlisting}
- 
-Il est également possible d'exécuter les tests modules par module. Les exécutables des tests sont présents avec leur source dans le
-dossier \texttt{tests/}.
 	\chapter{Gestion de projet}
 	Pour ce projet, nous étions deux à travailler dessus, ainsi nous avons utilisé plusieurs techniques afin de se coordonner et de limiter les problèmes. Ceci n'est pas notre premier projet ensemble, notre travail en fut simplifié.
 	\section{Un outil de gestion de projet : \textit{Redmine}}

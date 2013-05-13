@@ -15,7 +15,7 @@
 \usepackage{float}
 \usepackage{amssymb}
 
-\newcommand{\titre}{Dossier de conception préliminaire}
+\newcommand{\titre}{Dossier de conception préliminaire (Mis à jour)}
 
 \newcommand{\pole}{}
 \newcommand{\sigle}{}
@@ -42,6 +42,10 @@
 	\tableofcontents
 	\newpage
 	\section{But du document}
+	\attention{Ce document à été mis à jour par rapport au document initial, nous avons insérés dedans les modifications effectués a
+	l'application par rapport à e qui a été prévu. La seul modification à été l'ajout d'un module \texttt{Solution} afin d'avoir une
+	gestion facilitée.}
+
 	C'est une description de haut niveau du produit, c'est-à-dire l'architecture générale du système, en termes de << modules >>, de sous modules et de leurs
 	interactions. De plus, chaque module doit être décrit (définition des interfaces et des fonctionnalités générales). Ce document doit en premier lieu asseoir
 	la confiance en la finalité et la faisabilité du produit, et, en second lieu, servir de base pour l'estimation des tâches à effectuer et du calendrier de
@@ -50,7 +54,9 @@
 	Le << Dossier de Conception Préliminaire >> doit également mettre en évidence le plan de tests, en termes de besoins de l'utilisateur, et montrer que l'on peut
 	y satisfaire grâce à l'architecture proposée.
 	\section{Diagramme de décomposition en modules}\label{diagModules}
-	La description détaillée des différents modules est disponible section \ref{listeModules}. 
+	La description détaillée des différents modules est disponible section \ref{listeModules}, la partie en rouge correspond au
+	module que nous avons choisis d'ajouter.
+
 	\remarque{Afin de ne pas surcharger le schéma, le module \texttt{Utile} n'a
 	pas été représenté ici, en effet tous les modules du projet sont susceptibles d'en avoir besoin, de plus ce module ne contient pas de fonctions spécifiques
 	au projet mais des fonctions utiles travaillant sur des types de bases.}
@@ -84,7 +90,7 @@
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Gérer la grille de Boggle\\
 			\textbf{Type de données} & Tableau à deux dimensions de \texttt{char} \\
-			\textbf{Dépendances} & \texttt{Utile}(\ref{utile})\\
+			\textbf{Dépendances} & \texttt{Utile}(\ref{utile}), \texttt{Solution}(\ref{solution})\\
 			\textbf{Fonctionnalités fournies} & Générer la grille, Retourner la lettre concernant une case donnée\\
 		\end{tabular}
 		\caption{Module \texttt{Plateau}}
@@ -121,7 +127,8 @@
 		\begin{tabular}{p{5cm} p{12cm}}
 			\textbf{Rôle} & Jouer au Boggle \\ 
 			\textbf{Type de données} & Structure contenant le Plateau et le Résolveur\\ 
-			\textbf{Dépendances} & \texttt{Plateau}(\ref{plateau}), \texttt{Resolveur}(\ref{resolveur}), \texttt{Utile}(\ref{utile})\\
+			\textbf{Dépendances} & \texttt{Plateau}(\ref{plateau}), \texttt{Resolveur}(\ref{resolveur}),
+			\texttt{Utile}(\ref{utile}), \texttt{Solution}(\ref{solution})\\
 			\textbf{Fonctionnalités fournies} & Proposer une lettre, Lancer le compte à rebours, Signaler si un mot proposé est correct, retourner le nombre de
 			point obtenus, signaler si le joueur à gagner le jeu ou non
 		\end{tabular}
@@ -150,6 +157,20 @@
 			\textbf{Fonctionnalités fournies} & Toutes les fonctions d'affichage et de saisie
 		\end{tabular}
 		\caption{Module \texttt{InterfaceGraphique}}
+	\end{table}
+		\subsection{Module \texttt{Solution}}
+		\label{solution}
+		\begin{table}[H]
+		\rowcolors{1}{grisgris}{}
+			\centering
+		\begin{tabular}{p{5cm} p{12cm}}
+			\textbf{Rôle} & Gère le stockage d'une solution\\ 
+			\textbf{Type de données} & structure contenant un \texttt{char**} et un \texttt{int})\\ 
+			\textbf{Dépendances} & \texttt{Utile}\\
+			\textbf{Fonctionnalités fournies} & Ajout d'un mot dans la solution, Obtenir le nombre de mots, dire si un mot est
+			présent ou non.\\ 
+		\end{tabular}
+		\caption{Module \texttt{Solution}}
 	\end{table}
 	\section{Répartition des tâches entre chaque membre}
 	Un module sera toujours affecté à un membre du groupe, celui-ci sera en charge de vérifier que le module avance dans le temps impartis, et de s'occuper de
