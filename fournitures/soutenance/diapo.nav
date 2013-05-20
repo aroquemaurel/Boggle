@@ -1,0 +1,58 @@
+\beamer@endinputifotherversion {3.10pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/4}{}{0}}
+\headcommand {\beamer@framepages {2}{4}}
+\headcommand {\slideentry {0}{0}{3}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\sectionentry {1}{Objectifs}{6}{Objectifs}{0}}
+\headcommand {\beamer@sectionpages {1}{5}}
+\headcommand {\beamer@subsectionpages {1}{5}}
+\headcommand {\slideentry {1}{0}{4}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{7}{Le jeu de Boggle}}\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {1}{1}{1}{7/9}{Le jeu de Boggle}{0}}
+\headcommand {\beamer@framepages {7}{9}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{10}{Les diff\'erentes versions}}\headcommand {\beamer@subsectionpages {7}{9}}
+\headcommand {\slideentry {1}{2}{1}{10/12}{Les diff\'erentes versions}{0}}
+\headcommand {\beamer@framepages {10}{12}}
+\headcommand {\sectionentry {2}{M\'ethodes}{13}{M\'ethodes}{0}}
+\headcommand {\beamer@sectionpages {6}{12}}
+\headcommand {\beamer@subsectionpages {10}{12}}
+\headcommand {\slideentry {2}{0}{2}{13/13}{}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{14}{Gestion de projet}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {2}{1}{1}{14/14}{Gestion de projet}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {2}{1}{2}{15/16}{Gestion de projet}{0}}
+\headcommand {\beamer@framepages {15}{16}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{17}{Qualit\'e logiciel}}\headcommand {\beamer@subsectionpages {14}{16}}
+\headcommand {\slideentry {2}{2}{1}{17/18}{Qualit\'e logiciel}{0}}
+\headcommand {\beamer@framepages {17}{18}}
+\headcommand {\slideentry {2}{2}{2}{19/20}{Qualit\'e logiciel}{0}}
+\headcommand {\beamer@framepages {19}{20}}
+\headcommand {\slideentry {2}{2}{3}{21/28}{Qualit\'e logiciel}{0}}
+\headcommand {\beamer@framepages {21}{28}}
+\headcommand {\sectionentry {3}{R\'esultat}{29}{R\'esultat}{0}}
+\headcommand {\beamer@sectionpages {13}{28}}
+\headcommand {\beamer@subsectionpages {17}{28}}
+\headcommand {\slideentry {3}{0}{4}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{30}{R\'esolveur}}\headcommand {\beamer@subsectionpages {29}{29}}
+\headcommand {\slideentry {3}{1}{1}{30/30}{R\'esolveur}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{31}{Mode texte}}\headcommand {\beamer@subsectionpages {30}{30}}
+\headcommand {\slideentry {3}{2}{1}{31/31}{Mode texte}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{32}{Mode NCurses}}\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\slideentry {3}{3}{1}{32/32}{Mode NCurses}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {4}{0}{2}{33/35}{}{0}}
+\headcommand {\beamer@framepages {33}{35}}
+\headcommand {\slideentry {4}{0}{3}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\beamer@partpages {1}{36}}
+\headcommand {\beamer@subsectionpages {33}{36}}
+\headcommand {\beamer@sectionpages {33}{36}}
+\headcommand {\beamer@documentpages {36}}
+\headcommand {\def \inserttotalframenumber {18}}

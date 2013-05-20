@@ -1,0 +1,317 @@
+% /solutions/conference-talks/conference-ornate-20min.fr.tex, 22/02/2006 De Sousa
+\documentclass{beamer}
+\usepackage{listings}
+\input{../includesLaTeX/listings.tex}
+% Ce fichier est un exemple d'exposé
+
+% - pour des conférences,
+% - d'une durée approximative de 20 minutes,
+% - avec un style ornemental.
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% Traduction de Philippe De Sousa <philippejjg@free.fr>
+%
+% En principe, ce fichier peut être redistribué et/ou modifié conformément
+% aux termes de la GNU Public License, version 2.
+%
+% Cependant, ce fichier est supposé comme étant un "exemple-type" qui peut être modifié
+% selon vos propres besoins. Pour cette raison, si vous utilisez ce fichier en tant qu'
+% "exemple-type" et non spécifiquement pour le distribuer en tant que partie d'un
+% package ou programme, je vous donne la permission exceptionnelle de copier librement et
+% de modifier ce fichier et même d'effacer ce message de copyright.
+\usepackage{pdfpages}
+
+
+\mode<presentation> {
+  \usetheme{UNLTheme}
+  % ou autre ...
+	
+  \setbeamercovered{none}
+  % ou autre chose (il est également possible de supprimer cette ligne)
+}
+
+
+\usepackage[francais]{babel}
+% or autre comme par exemple \usepackage[english]{babel}
+
+\usepackage[latin1]{inputenc}
+% or autre
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or autre. Notez que le codage et la fonte doivent être assortis. Si T1
+% ne paraît pas très esthétique, essayer d'effacer la ligne contenant fontenc.
+
+
+\title[] % (facultatif, à utiliser uniquement si le titre de l'article est trop long)
+{Projet logiciel --- Jeu de Boggle}
+\subtitle {}
+
+\author[\bsc{Roquemaurel}\newline\bsc{Valleix}] % (facultatif, à utiliser seulement avec plusieurs auteurs)
+{Antoine de \bsc{Roquemaurel}\newline Fabrice \bsc{Valleix}}
+
+% - Composez les noms dans l'ordre dans lequel ils apparaîtrons dans l'article
+% - Utilisez la commande \inst{?} uniquement si les auteurs ont des affiliations
+%   différentes.
+
+\institute[] % (facultatif mais généralement nécessaire)
+{
+  Université Toulouse III -- Paul Sabatier \\
+  L2 Informatique
+  \vspace{-10px}
+}
+% - Utilisez la commande \inst uniquement s'il y a plusieurs affectations
+% - Faîtes quelque chose de simple, personne ne s'intéresse à votre adresse
+
+\date[ ~ ~ ~ 22 / 05 / 2013] % (facultatif, peut être une abréviation du nom de la conférence)
+{22 / 05 / 2013}
+% - Utilisez à la fois le nom de la conférence et son abréviation.
+% - N'a pas réellement d'importance pour l'assistance qui sera présente lors de la conférence,
+%   mais en a surtout pour les personnes (y compris vous-même) qui liront les transparents en ligne.
+
+\subject{Soutenance du projet de Boggle}
+% Inséré uniquement dans la page d'information du fichier PDF. Peut être
+% supprimé.
+
+
+% Si vous avez un fichier nommé "université-logo-nomfichier.xxx", où xxx
+% est un format graphique accepté par latex ou pdflatex (comme par exemple .png),
+% alors vous pouvez insérer votre logo ainsi :
+
+ \pgfdeclareimage[width=2.0cm]{le-logo}{logo}
+ \logo{\pgfuseimage{le-logo}}
+
+
+% À supprimer si vous ne voulez pas que la table des matières apparaisse
+% au début de chaque sous-section : 
+\AtBeginSection[] {
+  \begin{frame}<beamer>{Ligne directrice}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+% Si vous souhaitez recouvrir vos transparents un à un,
+% utilisez la commande suivante (pour plus d'info, voir la page 74 du manuel
+% d'utilisation de Beamer (version 3.06) par Till Tantau) :
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\setbeamertemplate{footline}{
+	\leavevmode%
+	\hbox{\hspace*{-0.6cm}
+	\begin{beamercolorbox}[wd=.19\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+		\usebeamerfont{section in head/foot}\insertshortdate{}
+	\end{beamercolorbox}%
+
+	\begin{beamercolorbox}[wd=.76\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+		\usebeamerfont{section in head/foot} Développement d'un jeu de Boggle en C 
+	\end{beamercolorbox}%
+
+	\begin{beamercolorbox}[wd=.10\paperwidth,ht=2.27ex,dp=1ex,right]{section in head/foot}%
+		\usebeamerfont{section in head/foot}\hspace*{2em}
+		\hspace{-10px}\textbf{\insertframenumber{}} / \inserttotalframenumber\hspace*{2ex}
+	\end{beamercolorbox}}%
+					\vskip0pt%
+}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Pr\'esentation des acteurs} % ANTOINE
+	\begin{minipage}{4.6cm}
+		\begin{block}{\'Etudiants}
+				Antoine de \bsc{Roquemaurel}\\
+			\pause
+				Fabrice \bsc{Valleix}
+		\end{block}
+	\end{minipage}
+	\pause
+	~~  
+	\begin{minipage}[r]{4.4cm}
+		\begin{block}{Tutrice}
+			Bérangère \bsc{Mathieu}	
+			\newline
+		\end{block}
+	\end{minipage}
+\end{frame}
+\begin{frame}{Plan}
+	\tableofcontents
+\end{frame}
+\section{Objectifs} 
+\subsection{Le jeu de Boggle} % Poser problème/sujet
+\begin{frame}{Présentation du sujet : Jeu de Boggle} % TODO qu'est ce qu'un jeu de boggle.
+	\begin{itemize}
+		\item Grille de taille N contenant des lettres
+			\pause
+		\item 3 minutes pour trouver le maximum de mots formés par adjacence
+			\pause
+	\end{itemize}
+		\begin{figure}
+			\centering
+				\includegraphics[width=2.8cm]{grille.jpg} ~ ~
+		\end{figure}
+\end{frame}
+
+\subsection{Les différentes versions} 
+\begin{frame}{Les différentes versions} %% TODO expliquer les différentes versions
+	\begin{block}{Version 1 : Le solveur}
+		\begin{itemize}
+			\item Trouver les mots commençant par une case\\
+			\item Résoudre l'intégralité d'une grille
+		\end{itemize}
+	\end{block}
+	\pause
+	\begin{block}{Version 2 : Le mode texte}
+		\begin{itemize}
+			\item Jouer en mode texte
+			\item Taille de la grille donnée par l'utilisateur
+			\item Saisie au clavier
+		\end{itemize}
+	\end{block}
+	\pause
+	\begin{block}{Version 3 : Le mode NCurses}
+		\begin{itemize}
+			\item Jouer en utilisant la bibliothèque NCurses
+			\item saisie à l'aide des flèches directionnels
+			\item Implémentation d'une aide
+		\end{itemize}
+	\end{block}
+\end{frame}
+\section{Méthodes} % 4'
+\subsection{Gestion de projet} 
+\begin{frame}{Logiciel de versionnement : Git}
+	\begin{itemize}
+		\item Gestionnaire de versionnement
+	\end{itemize}
+	\vspace{-15px}
+	\begin{figure}
+		\centering
+		\includegraphics[width=7cm]{git.png}
+		\caption{Fonctionnement de Git}
+	\end{figure}
+\end{frame}
+\begin{frame}{Plateforme collaborative : Redmine} %% TODO screen
+	\hspace{-28px}
+	\begin{tabular}{ll}
+		\begin{minipage}{4.7cm}
+	\begin{itemize}
+				\item Calendrier
+				\item Distribution des tâches
+				\item Forums
+				\item Wiki
+	\end{itemize} 
+\end{minipage}&
+\begin{minipage}{4.8cm}
+\begin{figure}[H]
+	\vspace{20px}
+	\includegraphics[width=4.9cm]{redmine.png}
+	\caption{Liste des tâches}
+\end{figure}
+\end{minipage}
+	\end{tabular}\\
+	\pause
+	\vspace{20px}
+	\hspace{45px}	$\Rightarrow$ Distribution du travail
+\end{frame}
+\subsection{Qualité logiciel}
+\begin{frame}{Un code propre} %% TODO screen sonar
+	\only<1>{
+	\begin{itemize}
+		\item Conventions d'écritures
+		\item Utilisation de Sonar
+			\begin{itemize}
+				\item Conventions
+				\item Complexité
+				\item Duplication de code
+				\item \ldots
+			\end{itemize}
+	\end{itemize}
+	}
+	\only<2>{
+\begin{figure}[H]
+	\hspace{-68px}
+	\includegraphics[width=11.5cm]{sonar.png}
+	\caption{Liste des tâches}
+\end{figure}
+}
+\end{frame}
+\begin{frame}{Des tests : CUnit}
+	\begin{tabular}{ll}
+		\begin{minipage}{6cm}
+			\begin{itemize}
+				\item Framework de tests unitaires  
+					\begin{itemize}
+						\item Développement simplifié
+						\item Efficace
+						\item Rapide
+					\end{itemize}
+			\end{itemize}
+		\end{minipage} & 
+		\begin{minipage}{3cm}
+\begin{figure}[H]
+	\vspace{20px}
+	\includegraphics[width=3cm]{tests.png}
+	\caption{Les tests}
+\end{figure}
+\end{minipage}
+	\end{tabular}
+	\pause
+	% Tests
+	\lstinputlisting[language=C]{test}
+\end{frame}
+\begin{frame}{De la documentation : Doxygen}
+				Générateur de documentation
+				\pause
+		\begin{itemize}
+			\item Commentaires particuliers 
+				\pause
+				\begin{itemize}
+					\item Entêtes de fonctions
+				\pause
+					\item Entêtes de fichiers
+				\pause
+					\item Structures
+				\pause
+					\item Variables globales
+				\end{itemize}
+				\pause
+			\item Génération de HTML, PDF, RTF, XML, \ldots
+		\end{itemize}
+		\pause
+	\lstinputlisting[language=C, numbers=none]{doxygen.c}
+\end{frame}
+
+\section{Résultat} 
+\subsection{Résolveur}
+\begin{frame}{Résolveur}
+\end{frame}
+\subsection{Mode texte}
+\begin{frame}{Mode texte}
+\end{frame}
+\subsection{Mode NCurses}
+\begin{frame}{Mode NCurses}
+\end{frame}
+\section*{}
+\begin{frame}{Difficultés eu durant ce projet}
+	\begin{itemize}
+		\item Résolveur fiable, rapide et peu gourmand en RAM
+			\pause
+		\item Travail en binôme 
+			\pause
+		\item Apprentissage de la bibliothèque NCurses
+	\end{itemize}
+
+\end{frame}
+\begin{frame}{Avez-vous des questions ?}
+	\includegraphics[width=8cm]{questions.jpg}
+\end{frame}
+% Conclusion 2'
+
+\end{document}
+
