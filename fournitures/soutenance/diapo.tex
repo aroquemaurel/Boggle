@@ -123,7 +123,7 @@
 \begin{frame}
   \titlepage
 \end{frame}
-\begin{frame}{Pr\'esentation des acteurs} % ANTOINE
+\begin{frame}{Pr\'esentation des acteurs}
 	\begin{minipage}{4.6cm}
 		\begin{block}{\'Etudiants}
 				Antoine de \bsc{Roquemaurel}\\
@@ -145,7 +145,7 @@
 \end{frame}
 \section{Objectifs} 
 \subsection{Le jeu de Boggle} % Poser problème/sujet
-\begin{frame}{Présentation du sujet : Jeu de Boggle} % TODO qu'est ce qu'un jeu de boggle.
+\begin{frame}{Présentation du sujet : Jeu de Boggle} 
 	\begin{itemize}
 		\item Grille de taille N contenant des lettres
 			\pause
@@ -159,7 +159,7 @@
 \end{frame}
 
 \subsection{Les différentes versions} 
-\begin{frame}{Les différentes versions} %% TODO expliquer les différentes versions
+\begin{frame}{Les différentes versions}
 	\begin{block}{Version 1 : Le solveur}
 		\begin{itemize}
 			\item Trouver les mots commençant par une case\\
@@ -175,69 +175,81 @@
 		\end{itemize}
 	\end{block}
 	\pause
-	\begin{block}{Version 3 : Le mode NCurses}
+	\begin{block}{Version 3 : Le mode \textit{NCurses}}
 		\begin{itemize}
-			\item Jouer en utilisant la bibliothèque NCurses
-			\item saisie à l'aide des flèches directionnels
+			\item Jouer en utilisant la bibliothèque \textit{NCurses}
+			\item Saisie à l'aide des flèches directionnelles
 			\item Implémentation d'une aide
 		\end{itemize}
 	\end{block}
 \end{frame}
 \section{Méthodes} % 4'
 \subsection{Gestion de projet} 
-\begin{frame}{Logiciel de versionnement : Git}
+\begin{frame}{Logiciel de gestion de versions: \textit{Git}}
 	\begin{itemize}
 		\item Gestionnaire de versionnement
 	\end{itemize}
 	\vspace{-15px}
 	\begin{figure}
 		\centering
-		\includegraphics[width=7cm]{git.png}
-		\caption{Fonctionnement de Git}
+		\includegraphics[width=5cm]{git.png}
+		\caption{Fonctionnement de \textit{Git}}
 	\end{figure}
+	\vspace{-20px}
+			\pause
+	\begin{exampleblock}{Avantages}
+	\begin{itemize}
+		\item Le versionnement 
+			\pause
+		\item Le travail collaboratif 
+			\pause
+		\item Les logs 
+	\end{itemize}
+	\end{exampleblock}
 \end{frame}
 \begin{frame}{Plateforme collaborative : Redmine} %% TODO screen
-	\hspace{-28px}
-	\begin{tabular}{ll}
-		\begin{minipage}{4.7cm}
-	\begin{itemize}
-				\item Calendrier
-				\item Distribution des tâches
-				\item Forums
-				\item Wiki
-	\end{itemize} 
-\end{minipage}&
-\begin{minipage}{4.8cm}
+\vspace{-16px}
 \begin{figure}[H]
-	\vspace{20px}
-	\includegraphics[width=4.9cm]{redmine.png}
-	\caption{Liste des tâches}
+	\includegraphics[width=7.0cm]{redmine.png}
+	\caption{Liste des tâches sur \textit{Redmine}}
 \end{figure}
-\end{minipage}
-	\end{tabular}\\
-	\pause
-	\vspace{20px}
-	\hspace{45px}	$\Rightarrow$ Distribution du travail
+\vspace{-30px}
+	\begin{itemize}
+			\pause
+				\item Calendrier
+			\pause
+				\item Distribution des tâches
+			\pause
+				\item Forums
+			\pause
+				\item Wiki
+			\pause
+	\end{itemize} 
+	\vspace{-10px}
+	\hspace{45px}	$\Rightarrow$ Distribution et avancée du travail
 \end{frame}
-\subsection{Qualité logiciel}
-\begin{frame}{Un code propre} %% TODO screen sonar
-	\only<1>{
+\subsection{Qualité logicielle}
+\begin{frame}{Un code propre} %% TODO screen Sonar
+	\only<1-4>{
 	\begin{itemize}
 		\item Conventions d'écritures
-		\item Utilisation de Sonar
+			\pause
+		\item Utilisation de \textit{Sonar}
 			\begin{itemize}
-				\item Conventions
+				\item Conventions de \textit{Sonar}
+			\pause
 				\item Complexité
+			\pause
 				\item Duplication de code
 				\item \ldots
 			\end{itemize}
 	\end{itemize}
 	}
-	\only<2>{
+	\only<5>{
 \begin{figure}[H]
 	\hspace{-68px}
 	\includegraphics[width=11.5cm]{sonar.png}
-	\caption{Liste des tâches}
+	\caption{Tableau de bord de \textit{Sonar}}
 \end{figure}
 }
 \end{frame}
@@ -245,12 +257,16 @@
 	\begin{tabular}{ll}
 		\begin{minipage}{6cm}
 			\begin{itemize}
+					\visible<1->{
 				\item Framework de tests unitaires  
+					\visible<2-> {
 					\begin{itemize}
 						\item Développement simplifié
 						\item Efficace
 						\item Rapide
 					\end{itemize}
+					}
+					}
 			\end{itemize}
 		\end{minipage} & 
 		\begin{minipage}{3cm}
@@ -261,9 +277,10 @@
 \end{figure}
 \end{minipage}
 	\end{tabular}
-	\pause
 	% Tests
+	\only<3>{
 	\lstinputlisting[language=C]{test}
+	}
 \end{frame}
 \begin{frame}{De la documentation : Doxygen}
 				Générateur de documentation
@@ -283,29 +300,53 @@
 				\pause
 			\item Génération de HTML, PDF, RTF, XML, \ldots
 		\end{itemize}
-		\pause
+		\only<8>{
 	\lstinputlisting[language=C, numbers=none]{doxygen.c}
+	}
 \end{frame}
 
 \section{Résultat} 
 \subsection{Résolveur}
 \begin{frame}{Résolveur}
+	\texttt{./boggle -$ $-solveur -$ $-grilleFixe}
+	\begin{figure}
+		\includegraphics[height=5cm]{solveur.png}
+		\caption{Résolution à partir de la case $\{0,1\}$}
+	\end{figure}
 \end{frame}
 \subsection{Mode texte}
 \begin{frame}{Mode texte}
+	\only<1>{
+	\texttt{./boggle -$ $-text -$ $-grilleFixe}
+	\begin{figure}
+		\includegraphics[height=5cm]{text.png}
+		\caption{Fin d'une partie en mode texte}
+	\end{figure}
+	}
+	\only<2>{
+	\vspace{-20px}
+	\hspace{-30px}
+		\includegraphics[width=10cm]{text.png}
+	}
 \end{frame}
-\subsection{Mode NCurses}
-\begin{frame}{Mode NCurses}
+\subsection{Mode {NCurses}}
+\begin{frame}{Mode \textit{NCurses}}
+	\texttt{./boggle -$ $-ncurses -$ $-grilleFixe}
+	\begin{figure}
+		\includegraphics[height=5cm]{ncurses.png}
+		\caption{Partie en cours en mode \textit{Ncurses}}
+	\end{figure}
 \end{frame}
 \section*{}
-\begin{frame}{Difficultés eu durant ce projet}
+\begin{frame}{Difficultés surmontées durant ce projet}
 	\begin{itemize}
 		\item Résolveur fiable, rapide et peu gourmand en RAM
 			\pause
 		\item Travail en binôme 
 			\pause
-		\item Apprentissage de la bibliothèque NCurses
+		\item Apprentissage de la bibliothèque \textit{NCurses}
 	\end{itemize}
+	\hspace{45px}	$\Rightarrow$ Gain d'expérience 
 
 \end{frame}
 \begin{frame}{Avez-vous des questions ?}

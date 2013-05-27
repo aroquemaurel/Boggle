@@ -5,8 +5,8 @@
 \beamer@subsectionintoc {1}{2}{Les diff\'erentes versions}{10}{0}{1}
 \beamer@sectionintoc {2}{M\'ethodes}{13}{0}{2}
 \beamer@subsectionintoc {2}{1}{Gestion de projet}{14}{0}{2}
-\beamer@subsectionintoc {2}{2}{Qualit\'e logiciel}{17}{0}{2}
-\beamer@sectionintoc {3}{R\'esultat}{29}{0}{3}
-\beamer@subsectionintoc {3}{1}{R\'esolveur}{30}{0}{3}
-\beamer@subsectionintoc {3}{2}{Mode texte}{31}{0}{3}
-\beamer@subsectionintoc {3}{3}{Mode NCurses}{32}{0}{3}
+\beamer@subsectionintoc {2}{2}{Qualit\'e logicielle}{24}{0}{2}
+\beamer@sectionintoc {3}{R\'esultat}{40}{0}{3}
+\beamer@subsectionintoc {3}{1}{R\'esolveur}{41}{0}{3}
+\beamer@subsectionintoc {3}{2}{Mode texte}{42}{0}{3}
+\beamer@subsectionintoc {3}{3}{Mode {NCurses}}{44}{0}{3}
